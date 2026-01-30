@@ -19,6 +19,7 @@ import { CheckoutPage } from '@/pages/cart/CheckoutPage';
 import { ProfilePage } from '@/pages/account/ProfilePage';
 import { LoyaltyPage } from '@/pages/account/LoyaltyPage';
 import { OrdersPage } from '@/pages/account/OrdersPage';
+import { FavoritesPage } from '@/pages/account/FavoritesPage';
 import { AdminPage } from '@/pages/admin/AdminPage';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -40,6 +41,7 @@ function App() {
           <Route path="stores" element={<StoresPage />} />
           <Route path="promotions" element={<PromotionsPage />} />
           <Route path="cart" element={<CartPage />} />
+          <Route path="favorites" element={<FavoritesPage />} />
           <Route path="checkout" element={<ProtectedRoute><CheckoutPage /></ProtectedRoute>} />
           <Route path="account" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
           <Route path="account/loyalty" element={<ProtectedRoute><LoyaltyPage /></ProtectedRoute>} />

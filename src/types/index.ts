@@ -160,6 +160,8 @@ export interface Product {
   baseOldPrice?: number;
   isNew?: boolean;
   isBestseller?: boolean;
+  cardPrice?: number; // Special price for loyalty card holders
+  outOfStock?: boolean; // Product availability flag
 }
 
 export interface StockInfo {

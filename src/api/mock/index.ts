@@ -4,6 +4,7 @@ import type {
   Category, Product, Order,
   Promotion, Banner, ApiResponse, ScanResult, LoyaltyInfo, LoyaltyTransaction
 } from '@/types';
+import { PRODUCTS, CATEGORIES } from './data/products';
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -13,24 +14,8 @@ const MOCK_REGIONS: Region[] = [
   { id: 'r3', code: 'NSK', name: 'Новосибирск', timezone: 'Asia/Novosibirsk', currency: 'RUB', isActive: true },
 ];
 
-const MOCK_CATEGORIES: Category[] = [
-  { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-  { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-  { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-  { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-  { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-];
-
-const MOCK_PRODUCTS: Product[] = [
-  { id: 'p1', name: 'Молоко 3.2% 1л', slug: 'moloko-3-2-1l', basePrice: 89.99, baseOldPrice: 109.99, images: [{ id: 'i1', url: 'https://placehold.co/400x400/22c55e/white?text=Milk', thumbnailUrl: 'https://placehold.co/100x100/22c55e/white?text=Milk', alt: 'Молоко', sortOrder: 1 }], categoryId: 'c1', category: MOCK_CATEGORIES[0], barcode: '4601234567890', sku: 'MILK-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '', isNew: true },
-  { id: 'p2', name: 'Хлеб Бородинский 400г', slug: 'khleb-borodinskiy', basePrice: 45.50, images: [{ id: 'i2', url: 'https://placehold.co/400x400/8B4513/white?text=Bread', thumbnailUrl: 'https://placehold.co/100x100/8B4513/white?text=Bread', alt: 'Хлеб', sortOrder: 1 }], categoryId: 'c1', category: MOCK_CATEGORIES[0], barcode: '4601234567891', sku: 'BREAD-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '' },
-  { id: 'p3', name: 'Coca-Cola 1.5л', slug: 'coca-cola-1-5l', basePrice: 129.00, baseOldPrice: 149.00, images: [{ id: 'i3', url: 'https://placehold.co/400x400/DC143C/white?text=Cola', thumbnailUrl: 'https://placehold.co/100x100/DC143C/white?text=Cola', alt: 'Cola', sortOrder: 1 }], categoryId: 'c1', category: MOCK_CATEGORIES[0], barcode: '4601234567892', sku: 'COLA-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '', isBestseller: true },
-  { id: 'p4', name: 'Tide 3кг', slug: 'tide-3kg', basePrice: 599.00, images: [{ id: 'i4', url: 'https://placehold.co/400x400/FFA500/white?text=Tide', thumbnailUrl: 'https://placehold.co/100x100/FFA500/white?text=Tide', alt: 'Tide', sortOrder: 1 }], categoryId: 'c2', category: MOCK_CATEGORIES[1], barcode: '4601234567893', sku: 'TIDE-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '' },
-  { id: 'p5', name: 'Head & Shoulders 400мл', slug: 'head-shoulders-400ml', basePrice: 349.00, baseOldPrice: 399.00, images: [{ id: 'i5', url: 'https://placehold.co/400x400/4169E1/white?text=Shampoo', thumbnailUrl: 'https://placehold.co/100x100/4169E1/white?text=Shampoo', alt: 'Shampoo', sortOrder: 1 }], categoryId: 'c3', category: MOCK_CATEGORIES[2], barcode: '4601234567894', sku: 'SHAMPOO-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '', isNew: true },
-  { id: 'p6', name: 'Тарелка керамическая', slug: 'tarelka-keramicheskaya', basePrice: 159.00, images: [{ id: 'i6', url: 'https://placehold.co/400x400/FFF/333?text=Plate', thumbnailUrl: 'https://placehold.co/100x100/FFF/333?text=Plate', alt: 'Plate', sortOrder: 1 }], categoryId: 'c4', category: MOCK_CATEGORIES[3], barcode: '4601234567895', sku: 'PLATE-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '' },
-  { id: 'p7', name: 'Конструктор LEGO', slug: 'konstruktor-lego', basePrice: 1299.00, baseOldPrice: 1599.00, images: [{ id: 'i7', url: 'https://placehold.co/400x400/FFD700/333?text=LEGO', thumbnailUrl: 'https://placehold.co/100x100/FFD700/333?text=LEGO', alt: 'LEGO', sortOrder: 1 }], categoryId: 'c5', category: MOCK_CATEGORIES[4], barcode: '4601234567896', sku: 'LEGO-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '', isBestseller: true },
-  { id: 'p8', name: 'Шоколад молочный 90г', slug: 'shokolad-molochnyy', basePrice: 79.99, images: [{ id: 'i8', url: 'https://placehold.co/400x400/8B4513/white?text=Choco', thumbnailUrl: 'https://placehold.co/100x100/8B4513/white?text=Choco', alt: 'Шоколад', sortOrder: 1 }], categoryId: 'c1', category: MOCK_CATEGORIES[0], barcode: '4601234567897', sku: 'CHOCO-001', specifications: [], tags: [], isActive: true, createdAt: '', updatedAt: '' },
-];
+const MOCK_CATEGORIES = CATEGORIES;
+const MOCK_PRODUCTS = PRODUCTS;
 
 const MOCK_PROMOTIONS: Promotion[] = [
   { id: 'promo1', name: 'Скидка 20% на молочные продукты', description: 'Только этой неделе! Скидка на все молочные продукты.', bannerImage: 'https://placehold.co/800x400/22c55e/white?text=Sale', type: 'discount', discountType: 'percent', discountValue: 20, startDate: '2024-01-01', endDate: '2024-12-31', regionIds: ['r1', 'r2', 'r3'], categoryIds: ['c1'], isActive: true },

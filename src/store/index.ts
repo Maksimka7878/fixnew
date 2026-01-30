@@ -346,3 +346,42 @@ export const useMarketingStore = create<MarketingStore>((set) => ({
   setBanners: (banners) => set({ banners }),
   setPromotions: (promotions) => set({ promotions }),
 }));
+
+// ============================================================================
+// FAVORITES STORE
+// ============================================================================
+interface FavoritesStore {
+  favoriteIds: string[];
+  addFavorite: (productId: string) => void;
+  removeFavorite: (productId: string) => void;
+  toggleFavorite: (productId: string) => void;
+  isFavorite: (productId: string) => boolean;
+  clearFavorites: () => void;
+}
+
+export const useFavoritesStore = create<FavoritesStore>()(
+  persist(
+    (set, get) => ({
+      favoriteIds: [],
+      addFavorite: (productId: string) => {
+        if (!get().favoriteIds.includes(productId)) {
+          set({ favoriteIds: [...get().favoriteIds, productId] });
+        }
+      },
+      removeFavorite: (productId: string) => {
+        set({ favoriteIds: get().favoriteIds.filter((id) => id !== productId) });
+      },
+      toggleFavorite: (productId: string) => {
+        const exists = get().favoriteIds.includes(productId);
+        if (exists) {
+          set({ favoriteIds: get().favoriteIds.filter((id) => id !== productId) });
+        } else {
+          set({ favoriteIds: [...get().favoriteIds, productId] });
+        }
+      },
+      isFavorite: (productId: string) => get().favoriteIds.includes(productId),
+      clearFavorites: () => set({ favoriteIds: [] }),
+    }),
+    { name: 'favorites-storage' }
+  )
+);
