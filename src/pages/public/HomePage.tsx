@@ -8,6 +8,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { useAppStore, useCatalogStore, useAuthStore, useUIStore, useFavoritesStore } from '@/store';
 import { useMockCatalogApi, useMockMarketingApi } from '@/api/mock';
 import type { Product, Banner } from '@/types';
+import { Stories } from '@/components/home/Stories';
 
 const containerVariants: Variants = {
   hidden: {},
@@ -90,8 +91,13 @@ export function HomePage() {
 
   return (
     <div className="space-y-6 md:space-y-8 pb-8">
+      {/* Instagram-style Stories */}
+      <section className="pt-4 px-4 md:container md:mx-auto">
+        <Stories />
+      </section>
+
       {/* Horizontal Quick Tags */}
-      <section className="pt-4 md:pt-0">
+      <section className="pt-0 md:pt-0">
         <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 md:container md:mx-auto">
           {quickTags.map((tag) => (
             <Link

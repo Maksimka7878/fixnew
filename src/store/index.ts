@@ -385,3 +385,32 @@ export const useFavoritesStore = create<FavoritesStore>()(
     { name: 'favorites-storage' }
   )
 );
+
+// ============================================================================
+// SEARCH STORE
+// ============================================================================
+interface SearchStore {
+  searchHistory: string[];
+  popularQueries: string[];
+  addToHistory: (query: string) => void;
+  removeFromHistory: (query: string) => void;
+  clearHistory: () => void;
+}
+
+export const useSearchStore = create<SearchStore>()(
+  persist(
+    (set, get) => ({
+      searchHistory: [],
+      popularQueries: ['Молоко', 'Шампунь', 'Игрушки', 'Чипсы', 'Моющее', 'Конфеты', 'Подарки'],
+      addToHistory: (query: string) => {
+        const history = get().searchHistory.filter(q => q !== query);
+        set({ searchHistory: [query, ...history].slice(0, 10) });
+      },
+      removeFromHistory: (query: string) => {
+        set({ searchHistory: get().searchHistory.filter(q => q !== query) });
+      },
+      clearHistory: () => set({ searchHistory: [] }),
+    }),
+    { name: 'search-storage' }
+  )
+);

@@ -10,6 +10,7 @@ import { useMockCatalogApi } from '@/api/mock';
 import { ChevronRight, Minus, Plus, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 import type { Product } from '@/types';
+import { ProductReviews } from '@/components/product/ProductReviews';
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -252,6 +253,9 @@ export function ProductPage() {
           </motion.div>
         </section>
       )}
+
+      {/* Reviews Section */}
+      <ProductReviews productId={product.id} />
     </div>
   );
 }
