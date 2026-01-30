@@ -70,47 +70,86 @@ export function LoyaltyPage() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Программа лояльности</h1>
 
-      {/* Loyalty Card */}
-      <Card className="mb-8 overflow-hidden">
-        <div className={`bg-gradient-to-r ${loyaltyLevels[currentLevel]?.color || 'bg-amber-700'} p-8 text-white`}>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Award className="w-6 h-6" />
-                <span className="text-white/80">Уровень {loyaltyLevels[currentLevel]?.name}</span>
-              </div>
-              <h2 className="text-3xl font-bold mb-1">
-                {loyalty?.points.toLocaleString('ru-RU')} баллов
-              </h2>
-              <p className="text-white/80">
-                = {(loyalty?.points || 0 / 10).toFixed(0)} ₽ для оплаты покупок
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="text-sm text-white/80 mb-1">Номер карты</p>
-              <button
-                onClick={copyCardNumber}
-                className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-lg hover:bg-white/30 transition-colors"
-              >
-                <span className="font-mono text-lg">{loyalty?.cardNumber}</span>
-                <Copy className="w-4 h-4" />
-              </button>
-            </div>
+      {/* Loyalty Card - Virtual Card Design */}
+      <Card className="mb-8 overflow-hidden shadow-xl">
+        <div className="relative bg-gradient-to-br from-brand to-brand-700 p-6 md:p-8 text-white">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <circle cx="5" cy="5" r="1" fill="white" />
+              </pattern>
+              <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
           </div>
 
-          {nextLevel && (
-            <div className="mt-6">
-              <div className="flex justify-between text-sm mb-2">
-                <span>{loyalty?.points.toLocaleString('ru-RU')} баллов</span>
-                <span>{nextLevel.minPoints.toLocaleString('ru-RU')} баллов</span>
+          <div className="relative z-10">
+            {/* Top Row */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Award className="w-6 h-6" />
+                  <span className="text-white/80 text-sm uppercase tracking-wide">Уровень {loyaltyLevels[currentLevel]?.name}</span>
+                </div>
+                <h2 className="text-4xl font-bold mb-1">
+                  {loyalty?.points.toLocaleString('ru-RU')} <span className="text-2xl font-normal">баллов</span>
+                </h2>
+                <p className="text-white/80">
+                  = {((loyalty?.points || 0) / 10).toFixed(0)} ₽ для оплаты покупок
+                </p>
               </div>
-              <Progress value={progressToNext} className="h-2 bg-white/30" />
-              <p className="text-sm text-white/80 mt-2">
-                Наберите еще {(nextLevel.minPoints - (loyalty?.points || 0)).toLocaleString('ru-RU')} баллов
-                для уровня {nextLevel.name} ({nextLevel.discount}% скидка)
-              </p>
+              <div className="text-left md:text-right">
+                <p className="text-xs text-white/60 mb-1 uppercase tracking-wide">Карта лояльности</p>
+                <button
+                  onClick={copyCardNumber}
+                  className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-lg hover:bg-white/30 transition-colors backdrop-blur-sm"
+                >
+                  <span className="font-mono text-lg tracking-wider">{loyalty?.cardNumber}</span>
+                  <Copy className="w-4 h-4" />
+                </button>
+              </div>
             </div>
-          )}
+
+            {/* Barcode Visual */}
+            <div className="flex justify-center my-4">
+              <div className="bg-white rounded-lg px-4 py-2">
+                <div className="flex gap-[2px] items-end h-12">
+                  {Array.from({ length: 40 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-gray-900"
+                      style={{
+                        width: Math.random() > 0.3 ? '2px' : '3px',
+                        height: `${30 + Math.random() * 18}px`
+                      }}
+                    />
+                  ))}
+                </div>
+                <p className="text-center text-xs text-gray-600 mt-1 font-mono">{loyalty?.cardNumber}</p>
+              </div>
+            </div>
+
+            {/* Progress to Next Level */}
+            {nextLevel && (
+              <div className="mt-6 bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <div className="flex justify-between text-sm mb-2">
+                  <span className="flex items-center gap-2">
+                    <div className={`w-3 h-3 rounded-full ${loyaltyLevels[currentLevel]?.color || 'bg-amber-700'}`} />
+                    {loyaltyLevels[currentLevel]?.name}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    {nextLevel.name}
+                    <div className={`w-3 h-3 rounded-full ${nextLevel.color}`} />
+                  </span>
+                </div>
+                <Progress value={progressToNext} className="h-2 bg-white/30" />
+                <p className="text-sm text-white/80 mt-2 text-center">
+                  Ещё <span className="font-bold">{(nextLevel.minPoints - (loyalty?.points || 0)).toLocaleString('ru-RU')}</span> баллов
+                  до уровня <span className="font-bold">{nextLevel.name}</span> ({nextLevel.discount}% скидка)
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </Card>
 
