@@ -36,10 +36,12 @@ function ProductCardSkeleton() {
 
 function CategorySkeleton() {
   return (
-    <Card className="h-full">
-      <CardContent className="p-4 flex flex-col items-center text-center">
-        <Skeleton className="w-16 h-16 rounded-full mb-3" />
-        <Skeleton className="h-4 w-20" />
+    <Card className="h-full border-none shadow-sm bg-gray-50 overflow-hidden">
+      <CardContent className="p-0 flex flex-col h-full">
+        <Skeleton className="w-full aspect-square" />
+        <div className="p-3 flex items-center justify-center flex-1">
+          <Skeleton className="h-4 w-24" />
+        </div>
       </CardContent>
     </Card>
   );
@@ -89,14 +91,14 @@ export function CatalogPage() {
       <h1 className="text-3xl font-bold mb-8">Каталог товаров</h1>
 
       <section className="mb-8">
-        <h2 className="text-lg font-semibold mb-4">Категории</h2>
+        <h2 className="text-xl font-bold mb-4">Категории</h2>
         {isLoading ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {Array.from({ length: 5 }).map((_, i) => <CategorySkeleton key={i} />)}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {Array.from({ length: 7 }).map((_, i) => <CategorySkeleton key={i} />)}
           </div>
         ) : (
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
             variants={containerVariants}
             initial="hidden"
             animate="show"
@@ -104,10 +106,28 @@ export function CatalogPage() {
             {rootCategories.map((category) => (
               <motion.div key={category.id} variants={itemVariants}>
                 <Link to={`/catalog/${category.slug}`}>
-                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full hover:-translate-y-1">
-                    <CardContent className="p-4 flex flex-col items-center text-center">
-                      <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-3"><span className="text-2xl">📦</span></div>
-                      <h3 className="font-medium text-sm">{category.name}</h3>
+                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full group overflow-hidden border-none shadow-sm bg-gray-50">
+                    <CardContent className="p-0 flex flex-col items-center text-center h-full">
+                      <div className="w-full aspect-square overflow-hidden mb-2 bg-white relative">
+                        {category.image ? (
+                          <img
+                            src={category.image}
+                            alt={category.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-gray-300 bg-gray-100">
+                            <span className="text-4xl">📦</span>
+                          </div>
+                        )}
+                        {/* Gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                      <div className="p-3 w-full">
+                        <h3 className="font-semibold text-sm text-gray-800 line-clamp-2 leading-tight group-hover:text-brand transition-colors">
+                          {category.name}
+                        </h3>
+                      </div>
                     </CardContent>
                   </Card>
                 </Link>

@@ -2,13 +2,13 @@ import type { Product, Category } from '@/types';
 
 // Categories for reference
 export const CATEGORIES: Category[] = [
-    { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-    { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-    { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-    { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-    { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-    { id: 'c6', name: 'Текстиль', slug: 'tekstil', parentId: null, children: [], sortOrder: 6, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
-    { id: 'c7', name: 'Канцтовары', slug: 'kantstovary', parentId: null, children: [], sortOrder: 7, isActive: true, regionIds: ['r1', 'r2', 'r3'] },
+    { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/22c55e/white?text=Продукты', icon: 'Apple' },
+    { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/3b82f6/white?text=Химия', icon: 'Spray' },
+    { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/ec4899/white?text=Косметика', icon: 'Sparkles' },
+    { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/f59e0b/white?text=Дом', icon: 'Home' },
+    { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/8b5cf6/white?text=Игрушки', icon: 'Gamepad' },
+    { id: 'c6', name: 'Текстиль', slug: 'tekstil', parentId: null, children: [], sortOrder: 6, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/06b6d4/white?text=Текстиль', icon: 'Shirt' },
+    { id: 'c7', name: 'Канцтовары', slug: 'kantstovary', parentId: null, children: [], sortOrder: 7, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/ef4444/white?text=Канцтовары', icon: 'Pencil' },
 ];
 
 const cat = (id: string) => CATEGORIES.find(c => c.id === id)!;
