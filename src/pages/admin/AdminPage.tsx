@@ -39,7 +39,7 @@ const lowStockProducts = [
 ];
 
 const statusColors: Record<string, string> = {
-  completed: 'bg-green-100 text-green-800',
+  completed: 'bg-brand-100 text-green-800',
   processing: 'bg-blue-100 text-blue-800',
   pending: 'bg-yellow-100 text-yellow-800',
   shipped: 'bg-purple-100 text-purple-800',
@@ -113,8 +113,8 @@ export function AdminPage() {
                     </div>
                   </div>
                   <div className="flex items-center mt-2 text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-green-600 mr-1" />
-                    <span className="text-green-600">+{stats.ordersChange}%</span>
+                    <ArrowUpRight className="w-4 h-4 text-brand mr-1" />
+                    <span className="text-brand">+{stats.ordersChange}%</span>
                     <span className="text-gray-500 ml-1">за месяц</span>
                   </div>
                 </CardContent>
@@ -127,13 +127,13 @@ export function AdminPage() {
                       <p className="text-sm text-gray-500">Выручка</p>
                       <p className="text-2xl font-bold">{stats.totalRevenue.toLocaleString('ru-RU')} ₽</p>
                     </div>
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                      <DollarSign className="w-5 h-5 text-green-600" />
+                    <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
+                      <DollarSign className="w-5 h-5 text-brand" />
                     </div>
                   </div>
                   <div className="flex items-center mt-2 text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-green-600 mr-1" />
-                    <span className="text-green-600">+{stats.revenueChange}%</span>
+                    <ArrowUpRight className="w-4 h-4 text-brand mr-1" />
+                    <span className="text-brand">+{stats.revenueChange}%</span>
                     <span className="text-gray-500 ml-1">за месяц</span>
                   </div>
                 </CardContent>
@@ -151,8 +151,8 @@ export function AdminPage() {
                     </div>
                   </div>
                   <div className="flex items-center mt-2 text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-green-600 mr-1" />
-                    <span className="text-green-600">+{stats.usersChange}%</span>
+                    <ArrowUpRight className="w-4 h-4 text-brand mr-1" />
+                    <span className="text-brand">+{stats.usersChange}%</span>
                     <span className="text-gray-500 ml-1">за месяц</span>
                   </div>
                 </CardContent>

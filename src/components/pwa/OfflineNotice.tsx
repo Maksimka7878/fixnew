@@ -76,7 +76,7 @@ export function OfflineNotice() {
                 Проверьте подключение к интернету и попробуйте снова. Ваша корзина и данные сохранены.
               </p>
               <Button
-                className="bg-green-600 hover:bg-green-700 transition-all active:scale-[0.98]"
+                className="bg-brand hover:bg-brand-600 transition-all active:scale-[0.98]"
                 onClick={() => window.location.reload()}
               >
                 <RefreshCw className="w-4 h-4 mr-2" />

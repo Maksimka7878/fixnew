@@ -41,7 +41,7 @@ export function RegionModal() {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-green-600" />
+            <MapPin className="w-5 h-5 text-brand" />
             Выберите ваш город
           </DialogTitle>
         </DialogHeader>
@@ -57,7 +57,7 @@ export function RegionModal() {
               <div className="text-center py-8 text-gray-500">Города не найдены</div>
             ) : (
               filteredRegions.map((r) => (
-                <Button key={r.id} variant="ghost" className={`w-full justify-start gap-2 ${region?.id === r.id ? 'bg-green-50 text-green-700' : ''}`} onClick={() => handleSelectRegion(r)}>
+                <Button key={r.id} variant="ghost" className={`w-full justify-start gap-2 ${region?.id === r.id ? 'bg-brand-50 text-brand-600' : ''}`} onClick={() => handleSelectRegion(r)}>
                   {region?.id === r.id && <Check className="w-4 h-4" />}
                   <span>{r.name}</span>
                 </Button>

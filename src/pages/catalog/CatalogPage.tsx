@@ -82,7 +82,7 @@ export function CatalogPage() {
   return (
     <div className="container mx-auto px-4 py-6">
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-        <Link to="/" className="hover:text-green-600 transition-colors">Главная</Link>
+        <Link to="/" className="hover:text-brand transition-colors">Главная</Link>
         <ChevronRight className="w-4 h-4" />
         <span className="text-gray-900 font-medium">Каталог</span>
       </nav>
@@ -106,7 +106,7 @@ export function CatalogPage() {
                 <Link to={`/catalog/${category.slug}`}>
                   <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full hover:-translate-y-1">
                     <CardContent className="p-4 flex flex-col items-center text-center">
-                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3"><span className="text-2xl">📦</span></div>
+                      <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-3"><span className="text-2xl">📦</span></div>
                       <h3 className="font-medium text-sm">{category.name}</h3>
                     </CardContent>
                   </Card>
@@ -169,7 +169,7 @@ function ProductCard({ product, viewMode }: { product: Product; viewMode: 'grid'
             <div className="flex-1">
               <p className="text-xs text-gray-500">{product.sku}</p>
               <h3 className="font-medium mb-2">{product.name}</h3>
-              {regionData && <span className="font-bold text-green-600">{regionData.price.toLocaleString('ru-RU')} ₽</span>}
+              {regionData && <span className="font-bold text-brand">{regionData.price.toLocaleString('ru-RU')} ₽</span>}
             </div>
           </CardContent>
         </Card>
@@ -186,7 +186,7 @@ function ProductCard({ product, viewMode }: { product: Product; viewMode: 'grid'
         <CardContent className="p-3">
           <p className="text-xs text-gray-500 mb-1">{product.sku}</p>
           <h3 className="text-sm font-medium line-clamp-2 mb-2">{product.name}</h3>
-          {regionData && <span className="font-bold text-green-600">{regionData.price.toLocaleString('ru-RU')} ₽</span>}
+          {regionData && <span className="font-bold text-brand">{regionData.price.toLocaleString('ru-RU')} ₽</span>}
         </CardContent>
       </Card>
     </Link>

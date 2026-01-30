@@ -17,7 +17,7 @@ export default defineConfig({
         name: 'Fix Price Pro',
         short_name: 'FixPrice',
         description: 'Fix Price Pro — удобные покупки по фиксированным ценам',
-        theme_color: '#16a34a',
+        theme_color: '#43b02a',
         background_color: '#ffffff',
         display: 'standalone',
         lang: 'ru',

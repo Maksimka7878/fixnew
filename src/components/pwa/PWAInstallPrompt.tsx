@@ -83,10 +83,10 @@ export function PWAInstallPrompt() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 50 }}
-                            className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 bg-white rounded-xl shadow-2xl p-4 z-50 border border-green-100 flex items-center gap-4"
+                            className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 bg-white rounded-xl shadow-2xl p-4 z-50 border border-brand-100 flex items-center gap-4"
                         >
-                            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <span className="text-xl font-bold text-green-700">FP</span>
+                            <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span className="text-xl font-bold text-brand-600">FP</span>
                             </div>
                             <div className="flex-1">
                                 <h3 className="font-bold text-gray-900 leading-tight">Установить приложение</h3>
@@ -96,7 +96,7 @@ export function PWAInstallPrompt() {
                                 <Button size="sm" variant="ghost" className="h-8 w-8 p-0 text-gray-400 hover:text-gray-600" onClick={handleDismiss}>
                                     <X className="w-4 h-4" />
                                 </Button>
-                                <Button size="sm" className="bg-green-600 hover:bg-green-700 h-8 text-xs px-3" onClick={handleInstall}>
+                                <Button size="sm" className="bg-brand hover:bg-brand-600 h-8 text-xs px-3" onClick={handleInstall}>
                                     <Download className="w-3 h-3 mr-1.5" />
                                     {isIOS ? 'Инструкция' : 'Установить'}
                                 </Button>
@@ -141,7 +141,7 @@ export function PWAInstallPrompt() {
                                     </div>
                                     <div className="w-px h-4 bg-gray-200 ml-6"></div>
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 bg-gray-100 rounded-lg text-green-600">
+                                        <div className="p-2 bg-gray-100 rounded-lg text-brand">
                                             <span className="font-bold text-sm">Add</span>
                                         </div>
                                         <div>
@@ -151,7 +151,7 @@ export function PWAInstallPrompt() {
                                     </div>
                                 </div>
 
-                                <Button className="w-full mt-6 bg-green-600 hover:bg-green-700" onClick={handleDismiss}>
+                                <Button className="w-full mt-6 bg-brand hover:bg-brand-600" onClick={handleDismiss}>
                                     Понятно
                                 </Button>
                             </div>

@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { BottomNav } from './BottomNav';
 import { CartDrawer } from '../cart/CartDrawer';
 import { RegionModal } from '../modals/RegionModal';
 import { AuthModal } from '../modals/AuthModal';
@@ -15,7 +16,7 @@ export function MainLayout() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <OfflineNotice />
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -28,7 +29,11 @@ export function MainLayout() {
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer />
+      {/* Footer: hidden on mobile, visible on desktop */}
+      <div className="hidden md:block">
+        <Footer />
+      </div>
+      <BottomNav />
       <RegionModal />
       <AuthModal />
       <CartDrawer />

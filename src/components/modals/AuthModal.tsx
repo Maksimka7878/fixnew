@@ -60,7 +60,7 @@ export function AuthModal() {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             {step === 'otp' && <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => setStep('phone')}><ArrowLeft className="w-4 h-4" /></Button>}
-            <Phone className="w-5 h-5 text-green-600" />
+            <Phone className="w-5 h-5 text-brand" />
             {step === 'phone' ? 'Вход по номеру телефона' : 'Подтверждение'}
           </DialogTitle>
         </DialogHeader>
@@ -71,7 +71,7 @@ export function AuthModal() {
               <Input id="phone" type="tel" placeholder="+7 (999) 999-99-99" value={formatPhone(phone)} onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))} maxLength={18} />
               <p className="text-xs text-gray-500 mt-1">Мы отправим код подтверждения</p>
             </div>
-            <Button className="w-full bg-green-600 hover:bg-green-700" onClick={handleSendSms} disabled={isLoading || phone.length < 10}>
+            <Button className="w-full bg-brand hover:bg-brand-600" onClick={handleSendSms} disabled={isLoading || phone.length < 10}>
               {isLoading ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Отправка...</> : 'Получить код'}
             </Button>
           </div>
@@ -82,7 +82,7 @@ export function AuthModal() {
               <Input id="otp" type="text" placeholder="0000" value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 4))} maxLength={4} className="text-center text-2xl tracking-widest" />
               <p className="text-xs text-gray-500 mt-1">Код отправлен на {formatPhone(phone)}</p>
             </div>
-            <Button className="w-full bg-green-600 hover:bg-green-700" onClick={handleVerifyOtp} disabled={isLoading || otp.length !== 4}>
+            <Button className="w-full bg-brand hover:bg-brand-600" onClick={handleVerifyOtp} disabled={isLoading || otp.length !== 4}>
               {isLoading ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Проверка...</> : 'Подтвердить'}
             </Button>
           </div>

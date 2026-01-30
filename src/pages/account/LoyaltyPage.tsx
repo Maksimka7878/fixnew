@@ -172,7 +172,7 @@ export function LoyaltyPage() {
                           {new Date(transaction.createdAt).toLocaleDateString('ru-RU')}
                         </p>
                       </div>
-                      <span className={`font-bold ${transaction.type === 'earn' ? 'text-green-600' : 'text-red-600'
+                      <span className={`font-bold ${transaction.type === 'earn' ? 'text-brand' : 'text-red-600'
                         }`}>
                         {transaction.type === 'earn' ? '+' : '-'}{transaction.points}
                       </span>

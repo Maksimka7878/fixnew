@@ -34,7 +34,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         />
                         {product.isNew && (
-                            <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded font-semibold">
+                            <div className="absolute top-2 left-2 bg-brand-500 text-white text-xs px-2 py-1 rounded font-semibold">
                                 New
                             </div>
                         )}
@@ -60,7 +60,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                 </Link>
                 <CardFooter className="p-4 pt-0 mt-auto">
                     <Button
-                        className="w-full bg-green-600 hover:bg-green-700 text-white transition-all duration-200 active:scale-95"
+                        className="w-full bg-brand hover:bg-brand-600 text-white transition-all duration-200 active:scale-95"
                         onClick={handleAddToCart}
                     >
                         <ShoppingCart className="w-4 h-4 mr-2" />

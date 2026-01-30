@@ -156,7 +156,7 @@ export function CartPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Доставка</span>
-                  <span className="text-green-600">Бесплатно</span>
+                  <span className="text-brand">Бесплатно</span>
                 </div>
               </div>
 

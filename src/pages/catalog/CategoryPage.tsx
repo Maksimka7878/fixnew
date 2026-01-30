@@ -66,9 +66,9 @@ export function CategoryPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-        <Link to="/" className="hover:text-green-600 transition-colors">Главная</Link>
+        <Link to="/" className="hover:text-brand transition-colors">Главная</Link>
         <ChevronRight className="w-4 h-4" />
-        <Link to="/catalog" className="hover:text-green-600 transition-colors">Каталог</Link>
+        <Link to="/catalog" className="hover:text-brand transition-colors">Каталог</Link>
         <ChevronRight className="w-4 h-4" />
         <span className="text-gray-900 font-medium">{category.name}</span>
       </nav>

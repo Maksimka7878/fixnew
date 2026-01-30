@@ -11,9 +11,9 @@ const statusConfig: Record<string, { label: string; color: string; icon: typeof 
   new: { label: 'Новый', color: 'bg-yellow-100 text-yellow-800', icon: Clock },
   confirmed: { label: 'Подтвержден', color: 'bg-blue-100 text-blue-800', icon: Package },
   processing: { label: 'В обработке', color: 'bg-purple-100 text-purple-800', icon: Package },
-  ready: { label: 'Готов к выдаче', color: 'bg-green-100 text-green-800', icon: Package },
+  ready: { label: 'Готов к выдаче', color: 'bg-brand-100 text-green-800', icon: Package },
   delivering: { label: 'В пути', color: 'bg-indigo-100 text-indigo-800', icon: Truck },
-  completed: { label: 'Выполнен', color: 'bg-green-100 text-green-800', icon: CheckCircle },
+  completed: { label: 'Выполнен', color: 'bg-brand-100 text-green-800', icon: CheckCircle },
   cancelled: { label: 'Отменен', color: 'bg-red-100 text-red-800', icon: Clock },
   returned: { label: 'Возврат', color: 'bg-red-100 text-red-800', icon: Clock },
 };
@@ -158,7 +158,7 @@ export function OrdersPage() {
                       <span>{selectedOrder.summary.deliveryCost === 0 ? 'Бесплатно' : `${selectedOrder.summary.deliveryCost.toFixed(2)} ₽`}</span>
                     </div>
                     {selectedOrder.summary.discount > 0 && (
-                      <div className="flex justify-between text-green-600">
+                      <div className="flex justify-between text-brand">
                         <span>Скидка</span>
                         <span>-{selectedOrder.summary.discount.toFixed(2)} ₽</span>
                       </div>

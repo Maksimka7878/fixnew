@@ -24,7 +24,7 @@ export function InstallPrompt() {
       >
         <div className="bg-white rounded-xl shadow-2xl border p-4">
           <div className="flex items-start gap-3">
-            <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center flex-shrink-0">
               <span className="text-white font-bold text-lg">F</span>
             </div>
             <div className="flex-1 min-w-0">
@@ -45,7 +45,7 @@ export function InstallPrompt() {
           </div>
           {!isIOS && (
             <Button
-              className="w-full mt-3 bg-green-600 hover:bg-green-700 transition-all active:scale-[0.98]"
+              className="w-full mt-3 bg-brand hover:bg-brand-600 transition-all active:scale-[0.98]"
               onClick={promptInstall}
             >
               <Download className="w-4 h-4 mr-2" />

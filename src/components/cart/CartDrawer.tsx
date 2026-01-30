@@ -57,7 +57,7 @@ export function CartDrawer() {
               <ShoppingBag className="w-16 h-16 text-gray-300 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Корзина пуста</h3>
               <p className="text-gray-500 mb-4">Добавьте товары в корзину</p>
-              <Button onClick={() => { setCartDrawerOpen(false); navigate('/catalog'); }} className="bg-green-600 hover:bg-green-700">Перейти в каталог</Button>
+              <Button onClick={() => { setCartDrawerOpen(false); navigate('/catalog'); }} className="bg-brand hover:bg-brand-600">Перейти в каталог</Button>
             </motion.div>
           ) : (
             <motion.div
@@ -84,10 +84,10 @@ export function CartDrawer() {
                           {item.product.images && item.product.images[0] ? <img src={item.product.images[0].thumbnailUrl} alt={item.product.name} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-gray-400"><ShoppingBag className="w-8 h-8" /></div>}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <Link to={`/product/${item.product.id}`} className="text-sm font-medium text-gray-900 hover:text-green-600 line-clamp-2 transition-colors" onClick={() => setCartDrawerOpen(false)}>{item.product.name}</Link>
+                          <Link to={`/product/${item.product.id}`} className="text-sm font-medium text-gray-900 hover:text-brand line-clamp-2 transition-colors" onClick={() => setCartDrawerOpen(false)}>{item.product.name}</Link>
                           <p className="text-xs text-gray-500 mt-1">{item.product.sku}</p>
                           <div className="flex items-center justify-between mt-2">
-                            <span className="font-bold text-green-600">{(item.product.basePrice || 0).toLocaleString('ru-RU')} ₽</span>
+                            <span className="font-bold text-brand">{(item.product.basePrice || 0).toLocaleString('ru-RU')} ₽</span>
                           </div>
                         </div>
                         <div className="flex flex-col items-end gap-2">
@@ -123,7 +123,7 @@ export function CartDrawer() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-500">Доставка</span>
-                    <span className="text-green-600 font-medium">Бесплатно</span>
+                    <span className="text-brand font-medium">Бесплатно</span>
                   </div>
                 </div>
                 <div className="border-t pt-2 flex justify-between items-center">
@@ -133,12 +133,12 @@ export function CartDrawer() {
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    className="text-xl font-bold text-green-600"
+                    className="text-xl font-bold text-brand"
                   >
                     {totalPrice.toLocaleString('ru-RU')} ₽
                   </motion.span>
                 </div>
-                <Button className="w-full bg-green-600 hover:bg-green-700 h-12 transition-all active:scale-[0.98]" onClick={handleCheckout}>Оформить заказ</Button>
+                <Button className="w-full bg-brand hover:bg-brand-600 h-12 transition-all active:scale-[0.98]" onClick={handleCheckout}>Оформить заказ</Button>
                 <Button variant="ghost" className="w-full text-gray-500" onClick={clearCart}><Trash2 className="w-4 h-4 mr-2" />Очистить корзину</Button>
               </motion.div>
             </motion.div>

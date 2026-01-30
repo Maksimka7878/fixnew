@@ -65,7 +65,7 @@ export function SearchPage() {
             </button>
           )}
         </div>
-        <Button type="submit" className="bg-green-600 hover:bg-green-700">
+        <Button type="submit" className="bg-brand hover:bg-brand-600">
           Найти
         </Button>
       </form>
