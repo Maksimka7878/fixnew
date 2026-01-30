@@ -1,10 +1,11 @@
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+import { persist } from 'zustand/middleware';
 import type {
-  Region, User, AuthTokens, LoyaltyCard, LoyaltyPoints,
-  BonusTransaction, ReferralProgram, PaymentCard, NotificationSettings,
-  Cart, CartItem, CartSummary, Category, Product, ProductRegionData,
-  Order, Promotion, Banner, ProductImage
+  Region, User, AuthTokens,
+  Cart, CartItem, Category, Product, ProductRegionData,
+  Order, Promotion, Banner,
+  LoyaltyCard, LoyaltyPoints, BonusTransaction, ReferralProgram,
+  PaymentCard, NotificationSettings
 } from '@/types';
 
 // ============================================================================

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Download, X, Share, PlusSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useAuthStore } from '@/store'; // Assuming you might want auth check later, but optional
+
 
 export function PWAInstallPrompt() {
     const [deferredPrompt, setDeferredPrompt] = useState<any>(null);

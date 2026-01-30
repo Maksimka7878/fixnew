@@ -23,9 +23,9 @@ const paymentMethods = [
 export function CheckoutPage() {
   const navigate = useNavigate();
   const { items, totalPrice, clearCart } = useCartStore();
-  const { isAuthenticated, user } = useAuthStore();
+  const { user } = useAuthStore();
 
-  const [step, setStep] = useState(1);
+  const [step] = useState(1);
   const [deliveryMethod, setDeliveryMethod] = useState('courier');
   const [paymentMethod, setPaymentMethod] = useState('card');
   const [loading, setLoading] = useState(false);

@@ -183,6 +183,7 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+      <PWAInstallPrompt />
     </header>
   );
 }

@@ -6,11 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { useUIStore, useAuthStore } from '@/store';
 import { useMockAuthApi } from '@/api/mock';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 export function AuthModal() {
-  const navigate = useNavigate();
   const { isAuthModalOpen, setAuthModalOpen } = useUIStore();
   const { login } = useAuthStore();
   const { sendSms, verifyOtp } = useMockAuthApi();

@@ -1,8 +1,8 @@
 import { useState, useCallback } from 'react';
-import type { 
-  Region, User, AuthTokens, LoyaltyCard, LoyaltyPoints, BonusTransaction, 
-  ReferralProgram, Category, Product, ProductRegionData, Store, Order, 
-  Promotion, Banner, ApiResponse, ScanResult, LoyaltyInfo, LoyaltyTransaction 
+import type {
+  Region, User, AuthTokens,
+  Category, Product, Order,
+  Promotion, Banner, ApiResponse, ScanResult, LoyaltyInfo, LoyaltyTransaction
 } from '@/types';
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -85,7 +85,7 @@ const MOCK_ORDERS: Order[] = [
 export function useMockAuthApi() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const sendSms = useCallback(async (phone: string): Promise<ApiResponse<{ requestId: string }>> => {
+  const sendSms = useCallback(async (_phone: string): Promise<ApiResponse<{ requestId: string }>> => {
     setIsLoading(true);
     await delay(1000);
     setIsLoading(false);
@@ -155,15 +155,15 @@ export function useMockCatalogApi() {
     setIsLoading(true);
     await delay(500);
     const searchLower = query.toLowerCase();
-    const products = MOCK_PRODUCTS.filter(p => 
-      p.name.toLowerCase().includes(searchLower) || 
+    const products = MOCK_PRODUCTS.filter(p =>
+      p.name.toLowerCase().includes(searchLower) ||
       p.sku.toLowerCase().includes(searchLower)
     );
     setIsLoading(false);
     return { success: true, data: products };
   }, []);
 
-  const scanBarcode = useCallback(async (barcode: string, regionId: string): Promise<ApiResponse<ScanResult>> => {
+  const scanBarcode = useCallback(async (barcode: string, _regionId: string): Promise<ApiResponse<ScanResult>> => {
     setIsLoading(true);
     await delay(1000);
     setIsLoading(false);
@@ -203,7 +203,7 @@ export function useMockMarketingApi() {
 export function useMockOrdersApi() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const createOrder = useCallback(async (orderData: any): Promise<ApiResponse<Order>> => {
+  const createOrder = useCallback(async (_orderData: any): Promise<ApiResponse<Order>> => {
     setIsLoading(true);
     await delay(1500);
     const order: Order = { id: 'o1', orderNumber: 'FP-001', userId: 'u1', status: 'new', items: [], delivery: { method: 'pickup', cost: 0, estimatedDate: new Date().toISOString() }, payment: { method: 'card', status: 'pending' }, summary: { subtotal: 1000, deliveryCost: 0, discount: 0, bonusUsed: 0, total: 1000 }, bonuses: { earned: 50, used: 0, rate: 0.05 }, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
@@ -211,7 +211,7 @@ export function useMockOrdersApi() {
     return { success: true, data: order };
   }, []);
 
-  const getOrders = useCallback(async (userId: string): Promise<ApiResponse<Order[]>> => {
+  const getOrders = useCallback(async (_userId: string): Promise<ApiResponse<Order[]>> => {
     setIsLoading(true);
     await delay(800);
     setIsLoading(false);
@@ -227,7 +227,7 @@ export function useMockOrdersApi() {
 export function useMockLoyaltyApi() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const getLoyaltyInfo = useCallback(async (userId: string): Promise<ApiResponse<LoyaltyInfo>> => {
+  const getLoyaltyInfo = useCallback(async (_userId: string): Promise<ApiResponse<LoyaltyInfo>> => {
     setIsLoading(true);
     await delay(600);
     setIsLoading(false);
@@ -240,7 +240,7 @@ export function useMockLoyaltyApi() {
     return { success: true, data: info };
   }, []);
 
-  const getLoyaltyHistory = useCallback(async (userId: string): Promise<ApiResponse<LoyaltyTransaction[]>> => {
+  const getLoyaltyHistory = useCallback(async (_userId: string): Promise<ApiResponse<LoyaltyTransaction[]>> => {
     setIsLoading(true);
     await delay(500);
     const transactions: LoyaltyTransaction[] = [

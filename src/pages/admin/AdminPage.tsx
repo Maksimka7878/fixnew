@@ -10,8 +10,6 @@ import {
   DollarSign,
   ArrowUpRight,
   ArrowDownRight,
-  Settings, LogOut, Search, Bell, Menu, X, Home,
-  ShoppingBag, BarChart3, Plus, Edit, Trash2
 } from 'lucide-react';
 
 // Mock admin data

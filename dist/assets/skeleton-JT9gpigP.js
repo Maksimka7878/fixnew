@@ -1,1 +1,0 @@
-import{j as s,h as n}from"./index-q3d_ps4o.js";function a({className:e,...t}){return s.jsx("div",{"code-path":"src/components/ui/skeleton.tsx:5:5","data-slot":"skeleton",className:n("bg-accent animate-pulse rounded-md",e),...t})}export{a as S};

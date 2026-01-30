@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { useAppStore, useUIStore, useCatalogStore } from '@/store';
+import { useAppStore, useUIStore } from '@/store';
 import { useMockCatalogApi } from '@/api/mock';
 import type { Region } from '@/types';
 import { toast } from 'sonner';
