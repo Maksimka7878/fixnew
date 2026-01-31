@@ -23,7 +23,7 @@ interface BreadcrumbNavProps {
 export function BreadcrumbNav({ items, className = '' }: BreadcrumbNavProps) {
   // Prepare schema items
   const schemaItems = items
-    .map((item, idx) => ({
+    .map((item, _idx) => ({
       name: item.label,
       url: item.href || '/',
     }))

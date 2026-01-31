@@ -151,7 +151,7 @@ export const useCartStore = create<SimpleCartStore>()(
         set({ items, totalItems, totalPrice });
       },
       clearCart: () => set({ items: [], totalItems: 0, totalPrice: 0 }),
-      getMaxQuantityForProduct: (productId) => {
+      getMaxQuantityForProduct: (_productId) => {
         // Default max quantity is 10 units per product (can be customized per product)
         return 10;
       },

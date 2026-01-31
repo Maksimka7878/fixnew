@@ -8,7 +8,6 @@ import { useAuthStore, useAppStore, useUIStore } from '@/store';
 import { toast } from 'sonner';
 import { PWAInstallPrompt } from '@/components/pwa/PWAInstallPrompt';
 import { NotificationCenter } from '@/components/pwa/NotificationCenter';
-import { UpdatePrompt } from '@/components/pwa/UpdatePrompt';
 
 export function Header() {
   const navigate = useNavigate();

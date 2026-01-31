@@ -24,7 +24,7 @@ export function NotificationCenter() {
 
   useEffect(() => {
     // Проверить статус разрешений
-    const status = notificationService.constructor.getPermissionStatus();
+    const status = 'Notification' in window ? Notification.permission : 'default';
     setNotificationsEnabled(status === 'granted');
 
     // Слушать изменения соединения

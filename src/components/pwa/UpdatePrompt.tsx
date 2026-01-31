@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AlertCircle, Download, RotateCw } from 'lucide-react';
+import { Download, RotateCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from 'sonner';
@@ -96,14 +96,14 @@ export function UpdatePrompt() {
     toast.success('✅ Обновление отложено');
   };
 
-  const handleCheckForUpdates = async () => {
+  const _handleCheckForUpdates = async () => {
     toast.loading('🔍 Проверка обновлений...');
     try {
       const registrations = await navigator.serviceWorker?.getRegistrations() || [];
       let foundUpdate = false;
 
       for (const reg of registrations) {
-        const updateRequest = await reg.update();
+        const _updateRequest = await reg.update();
         if (reg.waiting) {
           foundUpdate = true;
           setRegistration(reg);

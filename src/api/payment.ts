@@ -1,5 +1,4 @@
-import axios from 'axios';
-
+// Mock payment service - no external dependencies
 const API_URL = 'http://localhost:3001/api';
 
 export interface CreatePaymentResponse {
@@ -17,12 +16,15 @@ export const PaymentService = {
      */
     async createPayment(amount: number, description: string = 'Оплата заказа', returnUrl: string): Promise<CreatePaymentResponse> {
         try {
-            const response = await axios.post<CreatePaymentResponse>(`${API_URL}/payment/create`, {
-                amount,
-                description,
-                returnUrl,
+            const response = await fetch(`${API_URL}/payment/create`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ amount, description, returnUrl }),
             });
-            return response.data;
+            if (!response.ok) {
+                throw new Error(`Payment API error: ${response.status}`);
+            }
+            return response.json();
         } catch (error) {
             console.error('Payment creation failed:', error);
             throw error;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { CheckCircle, Home, ShoppingBag } from 'lucide-react';
-import { useCartStore } from '@/stores/cartStore';
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { useCartStore } from '@/store';
 
 export const SuccessPage: React.FC = () => {
     const { clearCart } = useCartStore();

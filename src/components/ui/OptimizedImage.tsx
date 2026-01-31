@@ -7,7 +7,6 @@ interface OptimizedImageProps {
   className?: string;
   width?: number;
   height?: number;
-  placeholder?: string;
   priority?: boolean;
 }
 
@@ -17,7 +16,6 @@ export function OptimizedImage({
   className = '',
   width,
   height,
-  placeholder = 'bg-gray-200',
   priority = false,
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);

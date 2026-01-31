@@ -254,19 +254,10 @@ export function ProductPage() {
           </div>
 
           {/* Description */}
-          {(product.description || product.descriptionImage) && (
+          {product.description && (
             <div className="pt-6 border-t font-sans">
               <h3 className="font-semibold text-lg mb-3 font-heading">О товаре</h3>
-
-              {product.descriptionImage && (
-                <div className="mb-4 rounded-xl overflow-hidden shadow-sm aspect-video w-full">
-                  <img src={product.descriptionImage} alt={product.name} className="w-full h-full object-cover" />
-                </div>
-              )}
-
-              {product.description && (
-                <p className="text-gray-600 leading-relaxed text-base">{product.description}</p>
-              )}
+              <p className="text-gray-600 leading-relaxed text-base">{product.description}</p>
             </div>
           )}
         </div>
