@@ -96,32 +96,6 @@ export function UpdatePrompt() {
     toast.success('✅ Обновление отложено');
   };
 
-  const _handleCheckForUpdates = async () => {
-    toast.loading('🔍 Проверка обновлений...');
-    try {
-      const registrations = await navigator.serviceWorker?.getRegistrations() || [];
-      let foundUpdate = false;
-
-      for (const reg of registrations) {
-        const _updateRequest = await reg.update();
-        if (reg.waiting) {
-          foundUpdate = true;
-          setRegistration(reg);
-          setUpdateAvailable(true);
-        }
-      }
-
-      if (foundUpdate) {
-        toast.success('📦 Найдено обновление');
-      } else {
-        toast.info('✨ Приложение в актуальном состоянии');
-      }
-    } catch (error) {
-      console.error('❌ Ошибка при проверке:', error);
-      toast.error('❌ Ошибка при проверке обновлений');
-    }
-  };
-
   if (!updateAvailable) {
     return null;
   }

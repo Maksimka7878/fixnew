@@ -13,13 +13,6 @@ export const CATEGORIES: Category[] = [
 
 const cat = (id: string) => CATEGORIES.find(c => c.id === id)!;
 
-const _img = (text: string, color: string = '43b02a') => ({
-    id: `img-${Math.random().toString(36).substring(2, 8)}`,
-    url: `https://placehold.co/400x400/${color}/white?text=${encodeURIComponent(text)}`,
-    thumbnailUrl: `https://placehold.co/100x100/${color}/white?text=${encodeURIComponent(text)}`,
-    alt: text,
-    sortOrder: 1,
-});
 
 // Generate products with variations
 export const PRODUCTS: Product[] = [
