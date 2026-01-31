@@ -3,7 +3,18 @@ module.exports = {
   darkMode: ["class"],
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Oswald', 'sans-serif'],
+      },
       colors: {
         brand: {
           DEFAULT: '#43b02a',
@@ -64,14 +75,17 @@ module.exports = {
         },
       },
       borderRadius: {
-        xl: "calc(var(--radius) + 4px)",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-        xs: "calc(var(--radius) - 6px)",
+        xl: "1rem",   // Larger default radius
+        lg: "0.75rem",
+        md: "0.5rem",
+        sm: "0.25rem",
+        '2xl': "1.5rem", // Extra round for friendly UI
+        '3xl': "2rem",
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+        'brand': '0 4px 20px -2px rgba(67, 176, 42, 0.15)', // Green tinted shadow
       },
       keyframes: {
         "accordion-down": {

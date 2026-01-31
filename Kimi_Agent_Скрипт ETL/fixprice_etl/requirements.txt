@@ -1,0 +1,35 @@
+# ============================================
+# Fix-Price ETL Pipeline - Dependencies
+# ============================================
+
+# --- Core Async Libraries ---
+asyncio-throttle>=1.0.2
+aiohttp>=3.9.0
+aiofiles>=23.2.0
+
+# --- HTTP Client ---
+httpx[http2]>=0.25.0
+
+# --- Web Scraping ---
+playwright>=1.40.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# --- Retry Logic ---
+tenacity>=8.2.0
+
+# --- User-Agent Rotation ---
+fake-useragent>=1.4.0
+
+# --- Logging ---
+loguru>=0.7.0
+
+# --- Environment Variables ---
+python-dotenv>=1.0.0
+
+# --- Data Validation & Serialization ---
+pydantic>=2.5.0
+
+# --- Utilities ---
+Pillow>=10.1.0
+python-magic>=0.4.27

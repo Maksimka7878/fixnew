@@ -233,7 +233,68 @@ export function AdminPage() {
             </div>
           </TabsContent>
 
-          <TabsContent value="products">
+          <TabsContent value="products" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Импорт товаров с Fix Price</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-gray-500">
+                  Запустите парсер для автоматического импорта товаров с сайта fix-price.com
+                </p>
+                <div className="flex gap-4">
+                  <Button
+                    onClick={async () => {
+                      try {
+                        await fetch('http://localhost:3001/api/admin/import', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({ categoriesLimit: 3, productsPerCategory: 15 })
+                        });
+                        alert('Импорт запущен! Следите за прогрессом.');
+                      } catch (e) {
+                        alert('Ошибка: убедитесь что сервер запущен (node server/index.js)');
+                      }
+                    }}
+                    className="bg-brand hover:bg-brand-dark"
+                  >
+                    🚀 Запустить импорт
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={async () => {
+                      try {
+                        const res = await fetch('http://localhost:3001/api/admin/import/status');
+                        const data = await res.json();
+                        alert(`Статус: ${JSON.stringify(data.progress, null, 2)}`);
+                      } catch (e) {
+                        alert('Ошибка подключения к серверу');
+                      }
+                    }}
+                  >
+                    📊 Проверить статус
+                  </Button>
+
+                  <Button
+                    variant="secondary"
+                    onClick={async () => {
+                      try {
+                        await fetch('http://localhost:3001/api/admin/import-json', { method: 'POST' });
+                        alert('Импорт из JSON запущен!');
+                      } catch (e) {
+                        alert('Ошибка запуска импорта из JSON');
+                      }
+                    }}
+                  >
+                    📂 Импорт из JSON
+                  </Button>
+                </div>
+                <p className="text-sm text-gray-400">
+                  Примечание: сервер должен быть запущен командой <code className="bg-gray-100 px-1 rounded">node server/index.js</code>
+                </p>
+              </CardContent>
+            </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle>Управление товарами</CardTitle>

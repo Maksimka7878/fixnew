@@ -1,0 +1,47 @@
+{
+  "_comment": "Пример JSON payload, который скрипт отправляет на ваш API при создании товара",
+  "_note": "Все поля опциональные кроме 'name' и 'price'",
+  
+  "external_id": "12345",
+  "source_url": "https://fix-price.com/product/12345",
+  "name": "Кружка O'Kitchen 420 мл",
+  "description": "Керамическая кружка объемом 420 мл. Подходит для микроволновой печи и посудомоечной машины.",
+  "price": 174.50,
+  "old_price": 199.00,
+  "currency": "RUB",
+  "category": "Для дома",
+  "subcategory": "Посуда",
+  "categories_path": ["Для дома", "Посуда", "Кружки"],
+  "specifications": {
+    "brand": "O'Kitchen",
+    "weight": "0.35 кг",
+    "country": "Китай",
+    "dimensions": "12 x 9 x 10 см",
+    "material": "Керамика",
+    "additional": {
+      "объем": "420 мл",
+      "цвет": "в ассортименте"
+    }
+  },
+  "images": [
+    {
+      "url": "https://your-cdn.com/uploads/product_12345_0.jpg",
+      "is_primary": true,
+      "filename": "12345_0.jpg"
+    },
+    {
+      "url": "https://your-cdn.com/uploads/product_12345_1.jpg",
+      "is_primary": false,
+      "filename": "12345_1.jpg"
+    }
+  ],
+  "in_stock": true,
+  "stock_quantity": 150,
+  "sku": "SKU-12345",
+  "barcode": "4601234567890",
+  "metadata": {
+    "source": "fix-price.com",
+    "parsed_at": "2024-01-15T10:30:00Z",
+    "discount_percent": 12.3
+  }
+}

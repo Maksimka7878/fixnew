@@ -12,6 +12,8 @@ const HomePage = lazy(() => import('@/pages/public/HomePage').then(m => ({ defau
 const CatalogPage = lazy(() => import('@/pages/catalog/CatalogPage').then(m => ({ default: m.CatalogPage })));
 const CategoryPage = lazy(() => import('@/pages/catalog/CategoryPage').then(m => ({ default: m.CategoryPage })));
 const ProductPage = lazy(() => import('@/pages/catalog/ProductPage').then(m => ({ default: m.ProductPage })));
+import { SplashScreen } from '@/components/ui/SplashScreen';
+import { useState, useEffect } from 'react';
 const SearchPage = lazy(() => import('@/pages/catalog/SearchPage').then(m => ({ default: m.SearchPage })));
 const StoresPage = lazy(() => import('@/pages/public/StoresPage').then(m => ({ default: m.StoresPage })));
 const PromotionsPage = lazy(() => import('@/pages/public/PromotionsPage').then(m => ({ default: m.PromotionsPage })));
@@ -71,9 +73,23 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    // Show splash for at least 2 seconds (like a real app launch)
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <BrowserRouter>
       <Toaster position="top-right" richColors />
+      <AnimatePresence>
+        {showSplash && <SplashScreen key="splash" />}
+      </AnimatePresence>
       <AnimatedRoutes />
     </BrowserRouter>
   );

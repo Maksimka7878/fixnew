@@ -1,52 +1,41 @@
-# Mobile Redesign Plan (Fix Price Style)
+# Implementation Plan: Russian Payment Systems Integration (YooKassa)
 
-The goal is to align the mobile interface with the provided screenshot from [fix-price.com](https://fix-price.com/), creating a premium, app-like experience.
+## Goal
+Integrate real payment processing for the Russian market, supporting **Bank Cards (Mir, Visa, MC)** and **SBP (Fast Payment System)** using **YooKassa** (formerly Yandex.Checkout) as the provider.
+
+> [!IMPORTANT]
+> **Security Requirement**: Real payments require a **backend** to store API Secret Keys securely. We cannot do this client-side (in the browser) as it would expose our secrets. This plan includes setting up a lightweight backend (Node.js/Express).
 
 ## User Review Required
-> [!IMPORTANT]
-> This redesign implies significant layout changes for mobile. The desktop view will be largely preserved but adapted to shared components.
+- [ ] **Provider Choice**: Confirm **YooKassa** is acceptable (Standard for RU, supports SBP & Cards).
+- [ ] **Backend Hosting**: Currently running locally in `/server`. For production, this needs Vercel/VPS.
+- [ ] **Secrets**: Update `/server/.env` with **REAL** YooKassa Test Mode keys to verify payments.
 
 ## Proposed Changes
 
-### 1. Global Styling & Foundation
-- **Colors**: Update primary green to match Fix Price exact shade (`#43b02a`).
-- **Typography**: Ensure fonts are legible and match the premium rounded aesthetic.
-- **Micro-animations**: Add `framer-motion` touch feedback to all interactive elements.
+### 1. Architecture: Backend Service (BFF)
+**Status**: ✅ Initialized in `/server`.
+- **Stack**: Node.js, Express, Cors, Axios.
+- **Endpoints**:
+    - `POST /api/payment/create`: Generates payment link.
+    - `POST /api/payment/webhook`: Handles status updates.
 
-### 2. Mobile Header Redesign
-Refactor [Header.tsx](file:///Users/a1111/Downloads/app/src/components/layout/Header.tsx) to match the screenshot:
-- **Smart App Banner**: Style [PWAInstallPrompt](file:///Users/a1111/Downloads/app/src/components/pwa/PWAInstallPrompt.tsx#7-165) (or create a new banner) to look like the "Install in App Store" top bar.
-- **Top Bar Layout**:
-  - **Left**: Hamburger Menu (opens generic sidebar).
-  - **Center**: "Delivery or Pickup" green pill button.
-  - **Right**: Search Icon & Bookmark/Heart Icon.
-- **Mobile Menu**: Ensure the existing drawer works with the new trigger.
+### 2. Frontend Integration
+#### [NEW] `src/api/payment.ts`
+- Service to communicate with our backend server (`http://localhost:3001`).
 
-### 3. Bottom Navigation Bar (New)
-Create a new `BottomNav.tsx` component visible only on mobile:
-- **Fixed Position**: Sticky at bottom.
-- **5 Items**:
-  1. **Home** (Active state: Green pill background)
-  2. **Catalog**
-  3. **Cart**
-  4. **Stores** (Map/Pin)
-  5. **Profile**
-- **Integration**: Add to [MainLayout.tsx](file:///Users/a1111/Downloads/app/src/components/layout/MainLayout.tsx) and hide the standard Footer on mobile.
+#### [Modify] Checkout Logic (`CartPage` or `CartDrawer`)
+- Add "Pay with Card / SBP" button.
+- **Flow**:
+    1. User clicks "Pay".
+    2. Frontend calls `api/payment/create`.
+    3. Backend returns `confirmationUrl`.
+    4. Frontend redirects `window.location.href = confirmationUrl`.
 
-### 4. Home Page ([HomePage.tsx](file:///Users/a1111/Downloads/app/src/pages/public/HomePage.tsx))
-Restructure content to match the reference:
-- **Horizontal Tags**: Scrollable row (e.g., "Gifts", "Sale", "New").
-- **Hero Banners**: Large, rounded carousel with "dots" pagination.
-- **Navigation Blocks**:
-  - "Catalog of Goods" (White card, full width/large).
-  - "More profitable with authorization" (Green card, promo).
-- **Product Rails**: Horizontal scrolling lists ("Popular", "Recommendations") instead of simple grids.
+### 3. Verification
+- **Sandbox Mode**: Use YooKassa test bank card numbers.
+- **SBP**: Verify QR code generation in sandbox.
 
-### 5. Catalog & Menu
-- **Burger Menu**: Update content to match the site structure if needed.
-
-## Phased Execution
-1.  **Setup**: Colors, reusable UI components (HorizontalScroll, IconWrapper).
-2.  **Navigation**: Implement `BottomNav` and update [Header](file:///Users/a1111/Downloads/app/src/components/layout/Header.tsx#11-190).
-3.  **Home Content**: Rebuild [HomePage](file:///Users/a1111/Downloads/app/src/pages/public/HomePage.tsx#51-208) sections.
-4.  **Polish**: Animations and final alignment.
+## Next Steps
+- [ ] Implement `src/api/payment.ts` on frontend.
+- [ ] Connect "Pay" button in Cart.

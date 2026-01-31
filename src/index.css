@@ -83,6 +83,7 @@
 
 /* Micro-interactions and touch feedback */
 @layer components {
+
   /* Button and interactive touch feedback */
   button,
   [role="button"],
@@ -165,16 +166,17 @@
 
   /* Soft shadow utility */
   .shadow-soft {
-    @apply shadow-soft;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
   }
 
   /* Brand colored shadow */
   .shadow-brand-glow {
-    @apply shadow-brand;
+    box-shadow: 0 4px 14px 0 rgba(67, 176, 42, 0.3);
   }
 }
 
 @layer utilities {
+
   /* Safe area padding utilities */
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -205,15 +207,19 @@
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: calc(200% + 0px) 0;
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -224,6 +230,7 @@
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -235,13 +242,16 @@
     opacity: 0;
     transform: scale(0.3);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.05);
   }
+
   70% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }
@@ -251,6 +261,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -261,6 +272,7 @@
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -268,9 +280,12 @@
 }
 
 @keyframes pulseBrand {
-  0%, 100% {
+
+  0%,
+  100% {
     background-color: rgb(67, 176, 42, 0.1);
   }
+
   50% {
     background-color: rgb(67, 176, 42, 0.2);
   }
