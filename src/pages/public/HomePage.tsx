@@ -9,6 +9,8 @@ import { useAppStore, useCatalogStore, useAuthStore, useUIStore, useFavoritesSto
 import { useMockCatalogApi, useMockMarketingApi } from '@/api/mock';
 import type { Product, Banner } from '@/types';
 import { Stories } from '@/components/home/Stories';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { OrganizationSchema, ECommerceSchema } from '@/components/seo/JsonLdSchema';
 
 const containerVariants: Variants = {
   hidden: {},
@@ -90,7 +92,17 @@ export function HomePage() {
   const prevBanner = () => goToBanner((currentBanner - 1 + banners.length) % banners.length);
 
   return (
-    <div className="space-y-6 md:space-y-8 pb-8">
+    <>
+      <SEOHead
+        title="Магазин товаров для дома"
+        description="Fix Price Pro - магазин товаров для дома и быта. Более 2000 товаров по фиксированным ценам, бесплатная доставка от 1000₽ и программа лояльности."
+        keywords="магазин товаров, товары для дома, бытовая химия, косметика, доставка, фиксированные цены"
+        ogType="website"
+        ogImage={`${window.location.origin}/og-image.jpg`}
+      />
+      <OrganizationSchema />
+      <ECommerceSchema />
+      <div className="space-y-6 md:space-y-8 pb-8">
       {/* Instagram-style Stories */}
       <section className="pt-4 px-4 md:container md:mx-auto">
         <Stories />
@@ -330,7 +342,8 @@ export function HomePage() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

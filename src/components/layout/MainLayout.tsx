@@ -8,6 +8,7 @@ import { RegionModal } from '../modals/RegionModal';
 import { AuthModal } from '../modals/AuthModal';
 import { InstallPrompt } from '../pwa/InstallPrompt';
 import { OfflineNotice } from '../pwa/OfflineNotice';
+import { UpdatePrompt } from '../pwa/UpdatePrompt';
 
 export function MainLayout() {
   const location = useLocation();
@@ -15,6 +16,7 @@ export function MainLayout() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <OfflineNotice />
+      <UpdatePrompt />
       <Header />
       <main className="flex-1 pb-16 md:pb-0">
         <AnimatePresence mode="wait">

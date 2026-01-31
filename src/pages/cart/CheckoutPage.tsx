@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore, useAuthStore } from '@/store';
+import { PaymentService } from '@/api/payment';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -89,10 +90,36 @@ export function CheckoutPage() {
     }
 
     setLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    clearCart();
-    toast.success('Заказ успешно оформлен!');
-    navigate('/account/orders');
+
+    try {
+      if (paymentMethod === 'card') {
+        // Real payment via YooKassa
+        const returnUrl = `${window.location.origin}/cart`;
+        const description = `Заказ на сумму ${total.toFixed(2)} ₽. Покупатель: ${firstName} ${lastName}`;
+
+        const paymentResponse = await PaymentService.createPayment(
+          total,
+          description,
+          returnUrl
+        );
+
+        // Clear cart before redirecting to payment
+        clearCart();
+
+        // Redirect to YooKassa payment page
+        window.location.href = paymentResponse.confirmationUrl;
+      } else {
+        // Cash payment on delivery
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        clearCart();
+        toast.success('Заказ успешно оформлен!');
+        navigate('/account/orders');
+      }
+    } catch (error) {
+      console.error('Payment error:', error);
+      toast.error('Ошибка при обработке платежа. Попробуйте снова.');
+      setLoading(false);
+    }
   };
 
   return (

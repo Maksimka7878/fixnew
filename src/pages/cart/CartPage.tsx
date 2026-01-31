@@ -10,6 +10,12 @@ export function CartPage() {
   const navigate = useNavigate();
   const { items, totalItems, totalPrice, updateQuantity, removeItem, clearCart } = useCartStore();
 
+  // Delivery calculation
+  const FREE_SHIPPING_THRESHOLD = 1000;
+  const DELIVERY_COST = 199;
+  const deliveryCost = totalPrice >= FREE_SHIPPING_THRESHOLD ? 0 : DELIVERY_COST;
+  const totalWithDelivery = totalPrice + deliveryCost;
+
   const handleQuantityChange = (productId: string, quantity: number) => {
     if (quantity < 1) {
       removeItem(productId);
@@ -154,16 +160,30 @@ export function CartPage() {
                   <span className="text-gray-600">Товары ({totalItems})</span>
                   <span>{totalPrice.toFixed(2)} ₽</span>
                 </div>
+
+                {/* Free shipping message/threshold */}
+                {totalPrice < FREE_SHIPPING_THRESHOLD && (
+                  <div className="bg-brand/10 border border-brand/20 rounded-lg p-3 mb-2">
+                    <p className="text-xs text-brand font-medium">
+                      Ещё {(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(0)} ₽ до бесплатной доставки
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex justify-between">
                   <span className="text-gray-600">Доставка</span>
-                  <span className="text-brand">Бесплатно</span>
+                  {deliveryCost === 0 ? (
+                    <span className="text-brand font-medium">Бесплатно</span>
+                  ) : (
+                    <span>{deliveryCost} ₽</span>
+                  )}
                 </div>
               </div>
 
               <div className="border-t pt-4 mb-6">
                 <div className="flex justify-between text-xl font-bold">
                   <span>К оплате</span>
-                  <span className="text-red-600">{totalPrice.toFixed(2)} ₽</span>
+                  <span className="text-brand">{totalWithDelivery.toFixed(2)} ₽</span>
                 </div>
               </div>
 

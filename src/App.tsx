@@ -1,57 +1,80 @@
-// import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Toaster } from 'sonner';
+import { AnimatePresence } from 'framer-motion';
 import { MainLayout } from '@/components/layout/MainLayout';
+import { PageTransition } from '@/components/layout/PageTransition';
+import { Skeleton } from '@/components/ui/skeleton';
 import { useAuthStore } from '@/store';
 
-// Lazy load pages
-import { HomePage } from '@/pages/public/HomePage';
-import { CatalogPage } from '@/pages/catalog/CatalogPage';
-import { CategoryPage } from '@/pages/catalog/CategoryPage';
-import { ProductPage } from '@/pages/catalog/ProductPage';
-import { SearchPage } from '@/pages/catalog/SearchPage';
-import { StoresPage } from '@/pages/public/StoresPage';
-import { PromotionsPage } from '@/pages/public/PromotionsPage';
-import { LoginPage } from '@/pages/auth/LoginPage';
-import { OtpVerifyPage } from '@/pages/auth/OtpVerifyPage';
-import { CartPage } from '@/pages/cart/CartPage';
-import { CheckoutPage } from '@/pages/cart/CheckoutPage';
-import { ProfilePage } from '@/pages/account/ProfilePage';
-import { LoyaltyPage } from '@/pages/account/LoyaltyPage';
-import { OrdersPage } from '@/pages/account/OrdersPage';
-import { FavoritesPage } from '@/pages/account/FavoritesPage';
-import { AdminPage } from '@/pages/admin/AdminPage';
+// Lazy load all pages for code splitting
+const HomePage = lazy(() => import('@/pages/public/HomePage').then(m => ({ default: m.HomePage })));
+const CatalogPage = lazy(() => import('@/pages/catalog/CatalogPage').then(m => ({ default: m.CatalogPage })));
+const CategoryPage = lazy(() => import('@/pages/catalog/CategoryPage').then(m => ({ default: m.CategoryPage })));
+const ProductPage = lazy(() => import('@/pages/catalog/ProductPage').then(m => ({ default: m.ProductPage })));
+const SearchPage = lazy(() => import('@/pages/catalog/SearchPage').then(m => ({ default: m.SearchPage })));
+const StoresPage = lazy(() => import('@/pages/public/StoresPage').then(m => ({ default: m.StoresPage })));
+const PromotionsPage = lazy(() => import('@/pages/public/PromotionsPage').then(m => ({ default: m.PromotionsPage })));
+const LoginPage = lazy(() => import('@/pages/auth/LoginPage').then(m => ({ default: m.LoginPage })));
+const OtpVerifyPage = lazy(() => import('@/pages/auth/OtpVerifyPage').then(m => ({ default: m.OtpVerifyPage })));
+const CartPage = lazy(() => import('@/pages/cart/CartPage').then(m => ({ default: m.CartPage })));
+const CheckoutPage = lazy(() => import('@/pages/cart/CheckoutPage').then(m => ({ default: m.CheckoutPage })));
+const ProfilePage = lazy(() => import('@/pages/account/ProfilePage').then(m => ({ default: m.ProfilePage })));
+const LoyaltyPage = lazy(() => import('@/pages/account/LoyaltyPage').then(m => ({ default: m.LoyaltyPage })));
+const OrdersPage = lazy(() => import('@/pages/account/OrdersPage').then(m => ({ default: m.OrdersPage })));
+const FavoritesPage = lazy(() => import('@/pages/account/FavoritesPage').then(m => ({ default: m.FavoritesPage })));
+const AdminPage = lazy(() => import('@/pages/admin/AdminPage').then(m => ({ default: m.AdminPage })));
+
+// Loading fallback
+function PageLoader() {
+  return (
+    <div className="container mx-auto px-4 py-8 space-y-4">
+      <Skeleton className="h-96 w-full" />
+      <Skeleton className="h-48 w-full" />
+    </div>
+  );
+}
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated } = useAuthStore();
   return isAuthenticated ? <>{children}</> : <Navigate to="/auth/login" replace />;
 }
 
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Suspense fallback={<PageLoader />}><PageTransition><HomePage /></PageTransition></Suspense>} />
+          <Route path="catalog" element={<Suspense fallback={<PageLoader />}><PageTransition><CatalogPage /></PageTransition></Suspense>} />
+          <Route path="catalog/:slug" element={<Suspense fallback={<PageLoader />}><PageTransition><CategoryPage /></PageTransition></Suspense>} />
+          <Route path="product/:id" element={<Suspense fallback={<PageLoader />}><PageTransition><ProductPage /></PageTransition></Suspense>} />
+          <Route path="search" element={<Suspense fallback={<PageLoader />}><PageTransition><SearchPage /></PageTransition></Suspense>} />
+          <Route path="stores" element={<Suspense fallback={<PageLoader />}><PageTransition><StoresPage /></PageTransition></Suspense>} />
+          <Route path="promotions" element={<Suspense fallback={<PageLoader />}><PageTransition><PromotionsPage /></PageTransition></Suspense>} />
+          <Route path="cart" element={<Suspense fallback={<PageLoader />}><PageTransition><CartPage /></PageTransition></Suspense>} />
+          <Route path="favorites" element={<Suspense fallback={<PageLoader />}><PageTransition><FavoritesPage /></PageTransition></Suspense>} />
+          <Route path="checkout" element={<Suspense fallback={<PageLoader />}><ProtectedRoute><PageTransition><CheckoutPage /></PageTransition></ProtectedRoute></Suspense>} />
+          <Route path="account" element={<Suspense fallback={<PageLoader />}><ProtectedRoute><PageTransition><ProfilePage /></PageTransition></ProtectedRoute></Suspense>} />
+          <Route path="account/loyalty" element={<Suspense fallback={<PageLoader />}><ProtectedRoute><PageTransition><LoyaltyPage /></PageTransition></ProtectedRoute></Suspense>} />
+          <Route path="account/orders" element={<Suspense fallback={<PageLoader />}><ProtectedRoute><PageTransition><OrdersPage /></PageTransition></ProtectedRoute></Suspense>} />
+        </Route>
+        <Route path="/auth/login" element={<Suspense fallback={<PageLoader />}><PageTransition><LoginPage /></PageTransition></Suspense>} />
+        <Route path="/auth/verify" element={<Suspense fallback={<PageLoader />}><PageTransition><OtpVerifyPage /></PageTransition></Suspense>} />
+        <Route path="/admin/*" element={<Suspense fallback={<PageLoader />}><AdminPage /></Suspense>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
       <Toaster position="top-right" richColors />
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="catalog" element={<CatalogPage />} />
-          <Route path="catalog/:slug" element={<CategoryPage />} />
-          <Route path="product/:id" element={<ProductPage />} />
-          <Route path="search" element={<SearchPage />} />
-          <Route path="stores" element={<StoresPage />} />
-          <Route path="promotions" element={<PromotionsPage />} />
-          <Route path="cart" element={<CartPage />} />
-          <Route path="favorites" element={<FavoritesPage />} />
-          <Route path="checkout" element={<ProtectedRoute><CheckoutPage /></ProtectedRoute>} />
-          <Route path="account" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
-          <Route path="account/loyalty" element={<ProtectedRoute><LoyaltyPage /></ProtectedRoute>} />
-          <Route path="account/orders" element={<ProtectedRoute><OrdersPage /></ProtectedRoute>} />
-        </Route>
-        <Route path="/auth/login" element={<LoginPage />} />
-        <Route path="/auth/verify" element={<OtpVerifyPage />} />
-        <Route path="/admin/*" element={<AdminPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <AnimatedRoutes />
     </BrowserRouter>
   );
 }

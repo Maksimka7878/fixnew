@@ -25,6 +25,8 @@ export function ProductPage() {
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(!product);
   const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
+  const [boughtTogetherProducts, setBoughtTogetherProducts] = useState<Product[]>([]);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   const category = categories.find(c => c.id === product?.categoryId);
   const isLiked = product ? isFavorite(product.id) : false;
@@ -54,6 +56,22 @@ export function ProductPage() {
       getProducts({ regionId: region?.id || 'r1', categoryId: product.categoryId }).then((response) => {
         if (response.success && response.data) {
           setSimilarProducts(response.data.filter(p => p.id !== product.id).slice(0, 6));
+        }
+      });
+    }
+  }, [product, region, getProducts]);
+
+  // Load bought together products (from different categories)
+  useEffect(() => {
+    if (product) {
+      getProducts({ regionId: region?.id || 'r1' }).then((response) => {
+        if (response.success && response.data) {
+          // Get products from different categories (complementary items)
+          const complementary = response.data
+            .filter(p => p.id !== product.id && p.categoryId !== product.categoryId)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 4);
+          setBoughtTogetherProducts(complementary);
         }
       });
     }
@@ -128,15 +146,40 @@ export function ProductPage() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Product Image */}
-        <div className="relative aspect-square bg-gray-100 rounded-2xl overflow-hidden">
-          {product.images[0] ? (
-            <img src={product.images[0].url} alt={product.name} className="w-full h-full object-contain" />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-6xl">📦</div>
+        {/* Product Image & Gallery */}
+        <div className="space-y-4">
+          <div className="relative aspect-square bg-gray-100 rounded-2xl overflow-hidden">
+            {product.images[0] ? (
+              <img
+                src={product.images.length > 0 ? (activeImage || product.images[0].url) : product.images[0].url}
+                alt={product.name}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-gray-400 text-6xl">📦</div>
+            )}
+            {product.isNew && <Badge className="absolute top-4 left-4 bg-brand">Новинка</Badge>}
+            {product.isBestseller && <Badge className="absolute top-4 left-4 bg-orange-500">Хит</Badge>}
+            {product.outOfStock && <Badge className="absolute top-4 left-4 bg-gray-800">Нет в наличии</Badge>}
+          </div>
+
+          {/* Thumbnails */}
+          {product.images.length > 1 && (
+            <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+              {product.images.map((img) => (
+                <button
+                  key={img.id}
+                  onClick={() => setActiveImage(img.url)}
+                  className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${(activeImage || product.images[0].url) === img.url
+                    ? 'border-brand ring-2 ring-brand/20'
+                    : 'border-transparent hover:border-gray-200'
+                    }`}
+                >
+                  <img src={img.thumbnailUrl} alt={img.alt} className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
           )}
-          {product.isNew && <Badge className="absolute top-4 left-4 bg-brand">Новинка</Badge>}
-          {product.isBestseller && <Badge className="absolute top-4 left-4 bg-orange-500">Хит</Badge>}
-          {product.outOfStock && <Badge className="absolute top-4 left-4 bg-gray-800">Нет в наличии</Badge>}
         </div>
 
         {/* Product Info */}
@@ -211,10 +254,19 @@ export function ProductPage() {
           </div>
 
           {/* Description */}
-          {product.description && (
-            <div className="pt-6 border-t">
-              <h3 className="font-semibold mb-2">Описание</h3>
-              <p className="text-gray-600">{product.description}</p>
+          {(product.description || product.descriptionImage) && (
+            <div className="pt-6 border-t font-sans">
+              <h3 className="font-semibold text-lg mb-3 font-heading">О товаре</h3>
+
+              {product.descriptionImage && (
+                <div className="mb-4 rounded-xl overflow-hidden shadow-sm aspect-video w-full">
+                  <img src={product.descriptionImage} alt={product.name} className="w-full h-full object-cover" />
+                </div>
+              )}
+
+              {product.description && (
+                <p className="text-gray-600 leading-relaxed text-base">{product.description}</p>
+              )}
             </div>
           )}
         </div>
@@ -248,6 +300,27 @@ export function ProductPage() {
             animate={{ opacity: 1 }}
           >
             {similarProducts.map((p) => (
+              <SimilarProductCard key={p.id} product={p} />
+            ))}
+          </motion.div>
+        </section>
+      )}
+
+      {/* Bought Together Products */}
+      {boughtTogetherProducts.length > 0 && (
+        <section className="pt-8 border-t">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold">Часто покупают вместе</h2>
+            <Link to="/catalog" className="text-brand hover:underline flex items-center gap-1 text-sm">
+              Все <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <motion.div
+            className="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto scrollbar-hide pb-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            {boughtTogetherProducts.map((p) => (
               <SimilarProductCard key={p.id} product={p} />
             ))}
           </motion.div>

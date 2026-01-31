@@ -20,10 +20,11 @@ interface SimpleCartStore {
   items: SimpleCartItem[];
   totalItems: number;
   totalPrice: number;
-  addItem: (product: Product, quantity?: number) => void;
+  addItem: (product: Product, quantity?: number, maxAvailable?: number) => void;
   removeItem: (productId: string) => void;
-  updateQuantity: (productId: string, quantity: number) => void;
+  updateQuantity: (productId: string, quantity: number, maxAvailable?: number) => void;
   clearCart: () => void;
+  getMaxQuantityForProduct: (productId: string) => number;
 }
 
 // ============================================================================
@@ -113,13 +114,17 @@ export const useCartStore = create<SimpleCartStore>()(
       items: [],
       totalItems: 0,
       totalPrice: 0,
-      addItem: (product, quantity = 1) => {
+      addItem: (product, quantity = 1, maxAvailable = Infinity) => {
         const items = [...get().items];
         const existing = items.find(item => item.product.id === product.id);
-        if (existing) {
-          existing.quantity += quantity;
-        } else {
-          items.push({ product, quantity });
+        const quantityToAdd = Math.min(quantity, maxAvailable - (existing?.quantity || 0));
+
+        if (quantityToAdd > 0) {
+          if (existing) {
+            existing.quantity += quantityToAdd;
+          } else {
+            items.push({ product, quantity: quantityToAdd });
+          }
         }
         const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
         const totalPrice = items.reduce((sum, item) => sum + (item.product.basePrice || 0) * item.quantity, 0);
@@ -131,14 +136,14 @@ export const useCartStore = create<SimpleCartStore>()(
         const totalPrice = items.reduce((sum, item) => sum + (item.product.basePrice || 0) * item.quantity, 0);
         set({ items, totalItems, totalPrice });
       },
-      updateQuantity: (productId, quantity) => {
+      updateQuantity: (productId, quantity, maxAvailable = Infinity) => {
         let items = [...get().items];
         if (quantity <= 0) {
           items = items.filter(item => item.product.id !== productId);
         } else {
           const item = items.find(item => item.product.id === productId);
           if (item) {
-            item.quantity = quantity;
+            item.quantity = Math.min(quantity, maxAvailable);
           }
         }
         const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -146,6 +151,10 @@ export const useCartStore = create<SimpleCartStore>()(
         set({ items, totalItems, totalPrice });
       },
       clearCart: () => set({ items: [], totalItems: 0, totalPrice: 0 }),
+      getMaxQuantityForProduct: (productId) => {
+        // Default max quantity is 10 units per product (can be customized per product)
+        return 10;
+      },
     }),
     { name: 'cart-storage' }
   )
@@ -271,11 +280,17 @@ interface UserProfileStore {
   paymentCards: PaymentCard[];
   notificationSettings: NotificationSettings;
   addresses: any[];
+  favorites: string[]; // Array of product IDs
   setPaymentCards: (cards: PaymentCard[]) => void;
   addPaymentCard: (card: PaymentCard) => void;
   removePaymentCard: (cardId: string) => void;
   setNotificationSettings: (settings: NotificationSettings) => void;
   setAddresses: (addresses: any[]) => void;
+  addToFavorites: (productId: string) => void;
+  removeFromFavorites: (productId: string) => void;
+  isFavorite: (productId: string) => boolean;
+  setFavorites: (favorites: string[]) => void;
+  clearFavorites: () => void;
 }
 
 export const useUserProfileStore = create<UserProfileStore>()(
@@ -292,11 +307,25 @@ export const useUserProfileStore = create<UserProfileStore>()(
         loyaltyUpdates: true,
       },
       addresses: [],
+      favorites: [],
       setPaymentCards: (cards) => set({ paymentCards: cards }),
       addPaymentCard: (card) => set({ paymentCards: [...get().paymentCards, card] }),
       removePaymentCard: (cardId) => set({ paymentCards: get().paymentCards.filter((c) => c.id !== cardId) }),
       setNotificationSettings: (settings) => set({ notificationSettings: settings }),
       setAddresses: (addresses) => set({ addresses }),
+      addToFavorites: (productId) => {
+        const favorites = get().favorites;
+        if (!favorites.includes(productId)) {
+          set({ favorites: [...favorites, productId] });
+        }
+      },
+      removeFromFavorites: (productId) => {
+        const favorites = get().favorites.filter((id) => id !== productId);
+        set({ favorites });
+      },
+      isFavorite: (productId) => get().favorites.includes(productId),
+      setFavorites: (favorites) => set({ favorites }),
+      clearFavorites: () => set({ favorites: [] }),
     }),
     { name: 'user-profile-storage' }
   )

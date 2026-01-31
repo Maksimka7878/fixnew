@@ -7,6 +7,8 @@ import { Input } from '@/components/ui/input';
 import { useAuthStore, useAppStore, useUIStore } from '@/store';
 import { toast } from 'sonner';
 import { PWAInstallPrompt } from '@/components/pwa/PWAInstallPrompt';
+import { NotificationCenter } from '@/components/pwa/NotificationCenter';
+import { UpdatePrompt } from '@/components/pwa/UpdatePrompt';
 
 export function Header() {
   const navigate = useNavigate();
@@ -31,7 +33,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100/50 shadow-soft">
       {/* Smart App Banner (PWA) */}
       <PWAInstallPrompt />
 
@@ -91,6 +93,7 @@ export function Header() {
             >
               <Bookmark className="w-5 h-5" />
             </Button>
+            <NotificationCenter />
             <Button
               variant="ghost"
               size="icon"
@@ -179,7 +182,7 @@ export function Header() {
               <div className="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">F</span>
               </div>
-              <span className="text-xl font-bold text-brand">Fix Price</span>
+              <span className="text-xl font-bold font-heading text-brand uppercase tracking-wide">Fix Price</span>
             </Link>
 
             <form onSubmit={handleSearch} className="flex-1 max-w-xl mx-4">
@@ -199,6 +202,8 @@ export function Header() {
               <Button variant="ghost" size="icon" onClick={() => navigate('/account/loyalty')}>
                 <Heart className="w-5 h-5" />
               </Button>
+
+              <NotificationCenter />
 
               {isAuthenticated ? (
                 <div className="flex items-center gap-2">

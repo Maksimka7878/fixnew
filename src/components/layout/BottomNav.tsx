@@ -32,7 +32,7 @@ export function BottomNav() {
   };
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 pb-safe">
+    <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 bg-white/90 backdrop-blur-md border border-gray-100/50 shadow-brand rounded-2xl pb-safe">
       <div className="flex items-center justify-around h-16">
         {tabs.map((tab) => {
           const active = isActive(tab.path);
@@ -51,9 +51,8 @@ export function BottomNav() {
               )}
               <div className="relative">
                 <tab.icon
-                  className={`w-5 h-5 transition-colors ${
-                    active ? 'text-brand' : 'text-gray-400'
-                  }`}
+                  className={`w-5 h-5 transition-colors ${active ? 'text-brand' : 'text-gray-400'
+                    }`}
                 />
                 {/* Cart badge */}
                 <AnimatePresence>
@@ -71,9 +70,8 @@ export function BottomNav() {
                 </AnimatePresence>
               </div>
               <span
-                className={`text-[10px] mt-1 font-medium transition-colors ${
-                  active ? 'text-brand' : 'text-gray-400'
-                }`}
+                className={`text-[10px] mt-1 font-medium transition-colors ${active ? 'text-brand' : 'text-gray-400'
+                  }`}
               >
                 {tab.label}
               </span>

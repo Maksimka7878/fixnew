@@ -4,12 +4,12 @@ import { Heart, ArrowLeft, Trash2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { useFavoritesStore, useAppStore, useCatalogStore } from '@/store';
+import { useUserProfileStore, useAppStore, useCatalogStore } from '@/store';
 import { useMockCatalogApi } from '@/api/mock';
 import type { Product } from '@/types';
 
 export function FavoritesPage() {
-    const { favoriteIds, removeFavorite, clearFavorites } = useFavoritesStore();
+    const { favorites, removeFromFavorites: removeFavorite, clearFavorites } = useUserProfileStore();
     const { region } = useAppStore();
     const { products, setProducts, getProductRegionData } = useCatalogStore();
     const { getProducts } = useMockCatalogApi();
@@ -27,7 +27,7 @@ export function FavoritesPage() {
         loadProducts();
     }, [region]);
 
-    const favoriteProducts = products.filter((p) => favoriteIds.includes(p.id));
+    const favoriteProducts = products.filter((p) => favorites.includes(p.id));
 
     if (isLoading) {
         return (
