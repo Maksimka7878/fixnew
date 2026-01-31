@@ -50,7 +50,7 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,webp}'],
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
@@ -62,6 +62,34 @@ export default defineConfig({
                 maxEntries: 20,
                 maxAgeSeconds: 60 * 60 * 24 * 365
               }
+            }
+          },
+          // Cache external images (Fix Price CDN, placehold.co, etc.)
+          {
+            urlPattern: /^https:\/\/(.*)\.(jpg|jpeg|png|webp|gif|svg)$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images-cache',
+              expiration: {
+                maxEntries: 200,
+                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          // Cache API responses
+          {
+            urlPattern: /\/api\/.*/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'api-cache',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 5 // 5 minutes
+              },
+              networkTimeoutSeconds: 3
             }
           }
         ],
@@ -80,4 +108,34 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Enable minification
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    // Code splitting
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-ui': ['framer-motion', 'lucide-react', 'sonner'],
+          'vendor-utils': ['zustand', 'clsx', 'tailwind-merge', 'date-fns'],
+        }
+      }
+    },
+    // Target modern browsers
+    target: 'es2020',
+    // Asset size warnings
+    chunkSizeWarningLimit: 500,
+    // Enable source maps for debugging (optional, remove for smaller builds)
+    sourcemap: false
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'zustand']
+  }
 });
