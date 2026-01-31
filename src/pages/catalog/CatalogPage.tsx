@@ -10,14 +10,15 @@ import { useAppStore, useCatalogStore } from '@/store';
 import { useMockCatalogApi } from '@/api/mock';
 import type { Product } from '@/types';
 
+// Simplified animations for better mobile performance
 const containerVariants: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
+  show: { transition: { staggerChildren: 0.03 } }, // Faster stagger
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } },
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.2 } }, // Simpler, no transform
 };
 
 function ProductCardSkeleton() {

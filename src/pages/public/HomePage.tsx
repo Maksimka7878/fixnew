@@ -12,14 +12,15 @@ import { Stories } from '@/components/home/Stories';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { OrganizationSchema, ECommerceSchema } from '@/components/seo/JsonLdSchema';
 
+// Simplified animations for better mobile performance (no transforms)
 const containerVariants: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.06 } },
+  show: { transition: { staggerChildren: 0.04 } },
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } },
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.2 } },
 };
 
 function ProductCardSkeleton() {
