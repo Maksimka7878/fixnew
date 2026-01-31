@@ -103,245 +103,247 @@ export function HomePage() {
       <OrganizationSchema />
       <ECommerceSchema />
       <div className="space-y-6 md:space-y-8 pb-8">
-      {/* Instagram-style Stories */}
-      <section className="pt-4 px-4 md:container md:mx-auto">
-        <Stories />
-      </section>
+        {/* Instagram-style Stories */}
+        <section className="pt-4 px-4 md:container md:mx-auto">
+          <Stories />
+        </section>
 
-      {/* Horizontal Quick Tags */}
-      <section className="pt-0 md:pt-0">
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 md:container md:mx-auto">
-          {quickTags.map((tag) => (
-            <Link
-              key={tag.label}
-              to="/promotions"
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0 transition-all active:scale-95 ${tag.color}`}
-            >
-              <tag.icon className="w-4 h-4" />
-              {tag.label}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Hero Banner Carousel */}
-      {isLoading ? (
-        <BannerSkeleton />
-      ) : banners.length > 0 ? (
-        <section className="px-4 md:px-0">
-          <div className="md:container md:mx-auto">
-            <div className="relative rounded-2xl overflow-hidden">
-              <div className="relative h-[200px] md:h-[400px]">
-                {banners.map((banner, index) => (
-                  <div key={banner.id} className={`absolute inset-0 transition-opacity duration-500 ${index === currentBanner ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                    <img src={banner.image} alt={banner.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-end md:items-center p-6 md:p-10">
-                      <div className="max-w-lg text-white">
-                        <h1 className="text-xl md:text-4xl font-bold mb-2 md:mb-4">{banner.title}</h1>
-                        {banner.subtitle && <p className="text-sm md:text-lg mb-3 md:mb-6 text-white/90">{banner.subtitle}</p>}
-                        <Link to={banner.link}>
-                          <Button className="bg-brand hover:bg-brand-600 text-sm md:text-base active:scale-95 transition-transform">
-                            Подробнее <ArrowRight className="w-4 h-4 ml-2" />
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {banners.length > 1 && (
-                <>
-                  <Button variant="ghost" size="icon" className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full" onClick={prevBanner}><ChevronLeft className="w-6 h-6" /></Button>
-                  <Button variant="ghost" size="icon" className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full" onClick={nextBanner}><ChevronRight className="w-6 h-6" /></Button>
-                </>
-              )}
-              {banners.length > 1 && (
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                  {banners.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToBanner(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${index === currentBanner ? 'bg-white w-6' : 'bg-white/50 w-2'}`}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
+        {/* Horizontal Quick Tags */}
+        <section className="pt-0 md:pt-0">
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 md:container md:mx-auto">
+            {quickTags.map((tag) => (
+              <Link
+                key={tag.label}
+                to="/promotions"
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0 transition-all active:scale-95 ${tag.color}`}
+              >
+                <tag.icon className="w-4 h-4" />
+                {tag.label}
+              </Link>
+            ))}
           </div>
         </section>
-      ) : null}
 
-      {/* Navigation Blocks */}
-      <section className="px-4 md:container md:mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link to="/catalog">
-            <motion.div
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4 transition-shadow hover:shadow-md"
-            >
-              <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <Package className="w-7 h-7 text-brand" />
+        {/* Hero Banner Carousel */}
+        {isLoading ? (
+          <BannerSkeleton />
+        ) : banners.length > 0 ? (
+          <section className="px-4 md:px-0">
+            <div className="md:container md:mx-auto">
+              <div className="relative rounded-2xl overflow-hidden">
+                <div className="relative h-[200px] md:h-[400px]">
+                  {banners.map((banner, index) => (
+                    <div key={banner.id} className={`absolute inset-0 transition-opacity duration-500 ${index === currentBanner ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                      <img src={banner.image} alt={banner.title} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-end md:items-center p-6 md:p-10">
+                        <div className="max-w-lg text-white">
+                          <h1 className="text-xl md:text-4xl font-bold mb-2 md:mb-4">{banner.title}</h1>
+                          {banner.subtitle && <p className="text-sm md:text-lg mb-3 md:mb-6 text-white/90">{banner.subtitle}</p>}
+                          <Link to={banner.link}>
+                            <Button className="bg-brand hover:bg-brand-600 text-sm md:text-base active:scale-95 transition-transform">
+                              Подробнее <ArrowRight className="w-4 h-4 ml-2" />
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {banners.length > 1 && (
+                  <>
+                    <Button variant="ghost" size="icon" className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full" onClick={prevBanner}><ChevronLeft className="w-6 h-6" /></Button>
+                    <Button variant="ghost" size="icon" className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full" onClick={nextBanner}><ChevronRight className="w-6 h-6" /></Button>
+                  </>
+                )}
+                {banners.length > 1 && (
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {banners.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToBanner(index)}
+                        className={`h-2 rounded-full transition-all duration-300 ${index === currentBanner ? 'bg-white w-6' : 'bg-white/50 w-2'}`}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-bold text-gray-900">Каталог товаров</h3>
-                <p className="text-sm text-gray-500">Более 2000 товаров по фиксированным ценам</p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-gray-400 flex-shrink-0" />
-            </motion.div>
-          </Link>
+            </div>
+          </section>
+        ) : null}
 
-          {!isAuthenticated ? (
-            <button onClick={() => setAuthModalOpen(true)} className="text-left">
+        {/* Navigation Blocks */}
+        <section className="px-4 md:container md:mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link to="/catalog">
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
-                className="bg-brand rounded-2xl p-6 shadow-sm flex items-center gap-4 transition-shadow hover:shadow-md"
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4 transition-shadow hover:shadow-md"
               >
-                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Package className="w-7 h-7 text-brand" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white">Выгоднее с авторизацией</h3>
-                  <p className="text-sm text-white/80">Бонусы, скидки и персональные предложения</p>
+                  <h3 className="text-lg font-bold text-gray-900">Каталог товаров</h3>
+                  <p className="text-sm text-gray-500">Более 2000 товаров по фиксированным ценам</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-white/60 flex-shrink-0" />
-              </motion.div>
-            </button>
-          ) : (
-            <Link to="/account/loyalty">
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
-                className="bg-brand rounded-2xl p-6 shadow-sm flex items-center gap-4 transition-shadow hover:shadow-md"
-              >
-                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <Star className="w-7 h-7 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white">Бонусная программа</h3>
-                  <p className="text-sm text-white/80">Копите и тратьте баллы с каждой покупки</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-white/60 flex-shrink-0" />
+                <ArrowRight className="w-5 h-5 text-gray-400 flex-shrink-0" />
               </motion.div>
             </Link>
-          )}
-        </div>
-      </section>
 
-      {/* Categories Row */}
-      <section className="px-4 md:container md:mx-auto">
-        <motion.div
-          className="flex md:grid md:grid-cols-4 gap-3 overflow-x-auto scrollbar-hide"
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-        >
-          {[
-            { to: '/catalog/produkty', icon: Package, color: 'brand', label: 'Продукты' },
-            { to: '/catalog/bytovaya-khimiya', icon: Sparkles, color: 'blue', label: 'Бытовая химия' },
-            { to: '/catalog/kosmetika', icon: Shield, color: 'pink', label: 'Косметика' },
-            { to: '/promotions', icon: Tag, color: 'amber', label: 'Акции' },
-          ].map((cat) => (
-            <motion.div key={cat.to} variants={itemVariants} className="flex-shrink-0 w-[120px] md:w-auto">
-              <Link to={cat.to}>
-                <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full hover:-translate-y-1 active:scale-95">
-                  <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
-                    <div className={`w-12 h-12 bg-${cat.color}-100 rounded-2xl flex items-center justify-center mb-3`}>
-                      <cat.icon className={`w-6 h-6 text-${cat.color}-600`} />
-                    </div>
-                    <h3 className="font-semibold text-sm">{cat.label}</h3>
-                  </CardContent>
-                </Card>
+            {!isAuthenticated ? (
+              <button onClick={() => setAuthModalOpen(true)} className="text-left">
+                <motion.div
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
+                  className="bg-brand rounded-2xl p-6 shadow-sm flex items-center gap-4 transition-shadow hover:shadow-md"
+                >
+                  <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-white">Выгоднее с авторизацией</h3>
+                    <p className="text-sm text-white/80">Бонусы, скидки и персональные предложения</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-white/60 flex-shrink-0" />
+                </motion.div>
+              </button>
+            ) : (
+              <Link to="/account/loyalty">
+                <motion.div
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
+                  className="bg-brand rounded-2xl p-6 shadow-sm flex items-center gap-4 transition-shadow hover:shadow-md"
+                >
+                  <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Star className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-white">Бонусная программа</h3>
+                    <p className="text-sm text-white/80">Копите и тратьте баллы с каждой покупки</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-white/60 flex-shrink-0" />
+                </motion.div>
               </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      {/* Popular Products Rail */}
-      <section className="md:container md:mx-auto">
-        <div className="flex items-center justify-between mb-4 px-4 md:px-0">
-          <h2 className="text-xl md:text-2xl font-bold">Популярные товары</h2>
-          <Link to="/catalog" className="text-brand hover:underline flex items-center gap-1 font-medium text-sm">
-            Все <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        {isLoading ? (
-          <div className="flex gap-3 overflow-x-auto scrollbar-hide px-4 md:px-0">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <ProductCardSkeleton key={i} />
-            ))}
+            )}
           </div>
-        ) : (
-          <motion.div
-            className="flex md:grid md:grid-cols-6 gap-3 overflow-x-auto scrollbar-hide px-4 md:px-0"
-            variants={containerVariants}
-            initial="hidden"
-            animate="show"
-          >
-            {products.slice(0, 6).map((product) => (
-              <motion.div key={product.id} variants={itemVariants} className="flex-shrink-0 w-[160px] md:w-auto">
-                <ProductCard product={product} />
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </section>
+        </section>
 
-      {/* Recommendations Rail */}
-      {!isLoading && products.length > 6 && (
+        {/* Categories Row */}
+        <section className="px-4 md:container md:mx-auto">
+          <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+            <motion.div
+              className="flex md:grid md:grid-cols-4 gap-3 w-max md:w-full"
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+            >
+              {[
+                { to: '/catalog/produkty', icon: Package, color: 'brand', label: 'Продукты' },
+                { to: '/catalog/bytovaya-khimiya', icon: Sparkles, color: 'blue', label: 'Бытовая химия' },
+                { to: '/catalog/kosmetika', icon: Shield, color: 'pink', label: 'Косметика' },
+                { to: '/promotions', icon: Tag, color: 'amber', label: 'Акции' },
+              ].map((cat) => (
+                <motion.div key={cat.to} variants={itemVariants} className="flex-shrink-0 w-[120px] md:w-auto">
+                  <Link to={cat.to}>
+                    <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full hover:-translate-y-1 active:scale-95">
+                      <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
+                        <div className={`w-12 h-12 bg-${cat.color}-100 rounded-2xl flex items-center justify-center mb-3`}>
+                          <cat.icon className={`w-6 h-6 text-${cat.color}-600`} />
+                        </div>
+                        <h3 className="font-semibold text-sm">{cat.label}</h3>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Popular Products Rail */}
         <section className="md:container md:mx-auto">
           <div className="flex items-center justify-between mb-4 px-4 md:px-0">
-            <h2 className="text-xl md:text-2xl font-bold">Рекомендации</h2>
+            <h2 className="text-xl md:text-2xl font-bold">Популярные товары</h2>
             <Link to="/catalog" className="text-brand hover:underline flex items-center gap-1 font-medium text-sm">
               Все <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <motion.div
-            className="flex md:grid md:grid-cols-6 gap-3 overflow-x-auto scrollbar-hide px-4 md:px-0"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            {products.slice(6, 12).map((product) => (
-              <motion.div key={product.id} variants={itemVariants} className="flex-shrink-0 w-[160px] md:w-auto">
-                <ProductCard product={product} />
-              </motion.div>
-            ))}
-          </motion.div>
+          {isLoading ? (
+            <div className="flex gap-3 overflow-x-auto scrollbar-hide px-4 md:px-0">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <ProductCardSkeleton key={i} />
+              ))}
+            </div>
+          ) : (
+            <motion.div
+              className="flex md:grid md:grid-cols-6 gap-3 overflow-x-auto scrollbar-hide px-4 md:px-0"
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+            >
+              {products.slice(0, 6).map((product) => (
+                <motion.div key={product.id} variants={itemVariants} className="flex-shrink-0 w-[160px] md:w-auto">
+                  <ProductCard product={product} />
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
         </section>
-      )}
 
-      {/* Features */}
-      <section className="bg-brand-50 py-10 md:py-12">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="grid md:grid-cols-3 gap-6 md:gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-50px' }}
-          >
-            {[
-              { icon: Truck, title: 'Быстрая доставка', desc: 'Доставляем заказы в течение 1-3 дней' },
-              { icon: Shield, title: 'Гарантия качества', desc: 'Возврат товара в течение 14 дней' },
-              { icon: Sparkles, title: 'Бонусная программа', desc: 'Копите баллы с каждой покупки' },
-            ].map((feature) => (
-              <motion.div key={feature.title} variants={itemVariants} className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-brand rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-1">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm">{feature.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+        {/* Recommendations Rail */}
+        {!isLoading && products.length > 6 && (
+          <section className="md:container md:mx-auto">
+            <div className="flex items-center justify-between mb-4 px-4 md:px-0">
+              <h2 className="text-xl md:text-2xl font-bold">Рекомендации</h2>
+              <Link to="/catalog" className="text-brand hover:underline flex items-center gap-1 font-medium text-sm">
+                Все <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <motion.div
+              className="flex md:grid md:grid-cols-6 gap-3 overflow-x-auto scrollbar-hide px-4 md:px-0"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              {products.slice(6, 12).map((product) => (
+                <motion.div key={product.id} variants={itemVariants} className="flex-shrink-0 w-[160px] md:w-auto">
+                  <ProductCard product={product} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </section>
+        )}
+
+        {/* Features */}
+        <section className="bg-brand-50 py-10 md:py-12">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="grid md:grid-cols-3 gap-6 md:gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              {[
+                { icon: Truck, title: 'Быстрая доставка', desc: 'Доставляем заказы в течение 1-3 дней' },
+                { icon: Shield, title: 'Гарантия качества', desc: 'Возврат товара в течение 14 дней' },
+                { icon: Sparkles, title: 'Бонусная программа', desc: 'Копите баллы с каждой покупки' },
+              ].map((feature) => (
+                <motion.div key={feature.title} variants={itemVariants} className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-brand rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-1">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm">{feature.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
       </div>
     </>
   );

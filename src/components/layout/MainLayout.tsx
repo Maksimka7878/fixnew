@@ -18,7 +18,7 @@ export function MainLayout() {
       <OfflineNotice />
       <UpdatePrompt />
       <Header />
-      <main className="flex-1 pb-16 md:pb-0">
+      <main className="flex-1 pb-32 md:pb-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}

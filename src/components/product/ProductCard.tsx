@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Heart } from 'lucide-react';
+import { ShoppingCart, Heart, Plus, Minus } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Product } from '@/types';
 import { useCartStore, useUserProfileStore } from '@/store';
@@ -14,10 +14,13 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, index = 0 }: ProductCardProps) {
-    const { addItem } = useCartStore();
+    const { addItem, items, updateQuantity, removeItem } = useCartStore();
     const { startAnimation } = useAnimationStore();
     const { isFavorite, addToFavorites, removeFromFavorites } = useUserProfileStore();
     const [isHeart, setIsHeart] = useState(isFavorite(product.id));
+
+    const cartItem = items.find(i => i.product.id === product.id);
+    const quantity = cartItem ? cartItem.quantity : 0;
 
     const handleAddToCart = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -103,13 +106,45 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                     </CardContent>
                 </Link>
                 <CardFooter className="p-4 pt-0">
-                    <Button
-                        className="w-full bg-gray-900 hover:bg-brand text-white transition-all duration-300 rounded-xl font-medium active:scale-95 shadow-none hover:shadow-lg hover:shadow-brand/20"
-                        onClick={handleAddToCart}
-                    >
-                        <ShoppingCart className="w-4 h-4 mr-2" />
-                        В корзину
-                    </Button>
+                    {quantity > 0 ? (
+                        <div className="flex items-center justify-between w-full bg-brand/5 border border-brand/20 rounded-xl p-1">
+                            <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8 text-brand hover:text-brand-700 hover:bg-brand/10 rounded-lg"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    if (quantity > 1) {
+                                        updateQuantity(product.id, quantity - 1);
+                                    } else {
+                                        removeItem(product.id);
+                                    }
+                                }}
+                            >
+                                <Minus className="w-4 h-4" />
+                            </Button>
+                            <span className="font-bold text-brand text-sm">{quantity}</span>
+                            <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8 text-brand hover:text-brand-700 hover:bg-brand/10 rounded-lg"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    addItem(product);
+                                }}
+                            >
+                                <Plus className="w-4 h-4" />
+                            </Button>
+                        </div>
+                    ) : (
+                        <Button
+                            className="w-full bg-gray-900 hover:bg-brand text-white transition-all duration-300 rounded-xl font-medium active:scale-95 shadow-none hover:shadow-lg hover:shadow-brand/20"
+                            onClick={handleAddToCart}
+                        >
+                            <ShoppingCart className="w-4 h-4 mr-2" />
+                            В корзину
+                        </Button>
+                    )}
                 </CardFooter>
             </Card>
         </motion.div>
