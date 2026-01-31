@@ -44,6 +44,14 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         }
     };
 
+    // Prefetch product data on hover/touch
+    const handlePrefetch = () => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = `/product/${product.id}`;
+        document.head.appendChild(link);
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +59,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             transition={{ duration: 0.3, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
         >
             <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-brand hover:-translate-y-1 border-0 shadow-soft bg-white/50 backdrop-blur-sm group rounded-2xl">
-                <Link to={`/product/${product.id}`} className="flex-1 flex flex-col">
+                <Link
+                    to={`/product/${product.id}`}
+                    className="flex-1 flex flex-col"
+                    onMouseEnter={handlePrefetch}
+                    onTouchStart={handlePrefetch}
+                >
                     <div className="aspect-[4/5] relative overflow-hidden bg-gray-50">
                         <img
                             src={product.images[0]?.url || '/placeholder.png'}

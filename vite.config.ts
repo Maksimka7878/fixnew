@@ -40,6 +40,29 @@ export default defineConfig({
           }
         ],
         categories: ['shopping', 'business'],
+        shortcuts: [
+          {
+            name: 'Поиск товаров',
+            short_name: 'Поиск',
+            description: 'Быстрый поиск товаров',
+            url: '/search',
+            icons: [{ src: 'logo.svg', sizes: '96x96' }]
+          },
+          {
+            name: 'Корзина',
+            short_name: 'Корзина',
+            description: 'Перейти в корзину',
+            url: '/cart',
+            icons: [{ src: 'logo.svg', sizes: '96x96' }]
+          },
+          {
+            name: 'Каталог',
+            short_name: 'Каталог',
+            description: 'Просмотр каталога',
+            url: '/catalog',
+            icons: [{ src: 'logo.svg', sizes: '96x96' }]
+          }
+        ],
         screenshots: [
           {
             src: 'screenshot-mobile.png',
@@ -82,14 +105,16 @@ export default defineConfig({
           // Cache API responses
           {
             urlPattern: /\/api\/.*/i,
-            handler: 'NetworkFirst',
+            handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'api-cache',
               expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 5 // 5 minutes
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 // 24 hours
               },
-              networkTimeoutSeconds: 3
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
             }
           }
         ],

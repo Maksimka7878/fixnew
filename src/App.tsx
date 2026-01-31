@@ -1,11 +1,12 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation, ScrollRestoration } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { AnimatePresence } from 'framer-motion';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useAuthStore } from '@/store';
+import { useAppBadge } from '@/hooks/useAppBadge';
 
 // Lazy load all pages for code splitting
 const HomePage = lazy(() => import('@/pages/public/HomePage').then(m => ({ default: m.HomePage })));
@@ -75,6 +76,9 @@ function AnimatedRoutes() {
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
+  // Update app badge with cart item count
+  useAppBadge();
+
   useEffect(() => {
     // Show splash for at least 2 seconds (like a real app launch)
     const timer = setTimeout(() => {
@@ -86,6 +90,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollRestoration />
       <Toaster position="top-right" richColors />
       <AnimatePresence>
         {showSplash && <SplashScreen key="splash" />}
