@@ -162,6 +162,7 @@ export interface Product {
   isBestseller?: boolean;
   cardPrice?: number; // Special price for loyalty card holders
   outOfStock?: boolean; // Product availability flag
+  inStock?: boolean; // Product in stock flag
 }
 
 export interface StockInfo {
