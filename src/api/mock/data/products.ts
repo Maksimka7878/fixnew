@@ -746,8 +746,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5094039-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0116f04bb6c1953faebef58b92ff0ba.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0116f04bb6c1953faebef58b92ff0ba.jpg', alt: "Креманка, O'Kitchen, 320 мл", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c3',
+        category: cat('c3'),
         barcode: '4600000000034',
         sku: 'SKU-5094039',
         specifications: [],
@@ -935,8 +935,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5093541-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4f5b0b859eb0dd2a8d7276a99699a059.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4f5b0b859eb0dd2a8d7276a99699a059.png', alt: "Блюдо для закусок, O`Kitchen, 390 мл", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000043',
         sku: 'SKU-5093541',
         specifications: [],
@@ -1061,8 +1061,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5024280-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a49fc4bddce13d3da3234e328f20a4b4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a49fc4bddce13d3da3234e328f20a4b4.jpg', alt: "Скатерть, КОЛОРИТ, 135х110 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c6',
+        category: cat('c6'),
         barcode: '4600000000049',
         sku: 'SKU-5024280',
         specifications: [],
@@ -2006,8 +2006,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5091447-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a2a68767fc3803dac8400c7b1f0d5ac0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a2a68767fc3803dac8400c7b1f0d5ac0.jpg', alt: "Чашка чайная, O'Kitchen, 190 мл, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000094',
         sku: 'SKU-5091447',
         specifications: [],
@@ -2027,8 +2027,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5021480-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/865d61ada9d53c0ebbdb7125e04b0372.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/865d61ada9d53c0ebbdb7125e04b0372.jpg', alt: "Ложка чайная, TUN art", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000095',
         sku: 'SKU-5021480',
         specifications: [],
@@ -2153,8 +2153,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5091448-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1a88241618aefe2b9e2eae5bf6572ef.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1a88241618aefe2b9e2eae5bf6572ef.jpg', alt: "Блюдце чайное, O'Kitchen, 13,5 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000101',
         sku: 'SKU-5091448',
         specifications: [],
@@ -2552,8 +2552,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5024790-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8d1a70468b4b5679a8a13311217c65a.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8d1a70468b4b5679a8a13311217c65a.png', alt: "Набор маркеров для бокала, O'Kitchen, 6 шт., в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000120',
         sku: 'SKU-5024790',
         specifications: [],
@@ -2615,8 +2615,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5094089-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55e4acb340845db0c028a78d4e951d04.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55e4acb340845db0c028a78d4e951d04.jpg', alt: "Блюдо для закусок, O'Kitchen, 300 мл", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000123',
         sku: 'SKU-5094089',
         specifications: [],
@@ -2678,8 +2678,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5095064-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8640fbfe1d4e77b31cb30c4fcdf5f59.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8640fbfe1d4e77b31cb30c4fcdf5f59.jpg', alt: "Чайник заварочный, O'Kitchen, 1,1 л", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000126',
         sku: 'SKU-5095064',
         specifications: [],
@@ -3287,8 +3287,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5028615-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e06b9a549fceaa48f27eef0f2989143.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e06b9a549fceaa48f27eef0f2989143.jpg', alt: "Бульонница с ручками, O’Kitchen, 600 мл, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000155',
         sku: 'SKU-5028615',
         specifications: [],
@@ -8243,8 +8243,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312979-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7043e68705f8228fe2ce9d24cd28389.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7043e68705f8228fe2ce9d24cd28389.jpg', alt: "Пазл 3D новогодний, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000391',
         sku: 'SKU-5312979',
         specifications: [],
@@ -8285,8 +8285,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312810-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8a982dd51cc56a84baa748aced7806b6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8a982dd51cc56a84baa748aced7806b6.jpg', alt: "Наклейка новогодняя, Снежное кружево, 27х34 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000393',
         sku: 'SKU-5312810',
         specifications: [],
@@ -8390,8 +8390,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312965-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/43/431c5214ada29112641124e6a76f4dfc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/43/431c5214ada29112641124e6a76f4dfc.jpg', alt: "Наклейка флуоресцентная новогодняя \"Морозные узоры\", Снежное кружево, 38х30 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000398',
         sku: 'SKU-5312965',
         specifications: [],
@@ -8663,8 +8663,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312966-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c5424ced4fd6d030ea74162417b91845.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c5424ced4fd6d030ea74162417b91845.jpg', alt: "Наклейка новогодняя на окно \"Морозные узоры\", Снежное кружево, 41х29 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000411',
         sku: 'SKU-5312966',
         specifications: [],
@@ -8684,8 +8684,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312791-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bf8ed11925992b289535022ba3d785f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bf8ed11925992b289535022ba3d785f0.jpg', alt: "Наклейка новогодняя, Снежное кружево, 57х20,5 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000412',
         sku: 'SKU-5312791',
         specifications: [],
@@ -9188,8 +9188,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314215-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91cfc50271ebc7457d9b65dc28b131be.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91cfc50271ebc7457d9b65dc28b131be.jpg', alt: "Наклейка новогодняя, Снежное кружево, 24х33 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000436',
         sku: 'SKU-5314215',
         specifications: [],
@@ -9293,8 +9293,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312964-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ed/ed551651a6b6706b0706ae5c7667a585.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ed/ed551651a6b6706b0706ae5c7667a585.jpg', alt: "Наклейка новогодняя на окно \"Морозные узоры\", Снежное кружево, 42х30 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000441',
         sku: 'SKU-5312964',
         specifications: [],
@@ -9671,8 +9671,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314189-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/45/45e95ad9e251d25217c0e6186dcb0891.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/45/45e95ad9e251d25217c0e6186dcb0891.jpg', alt: "Наклейка новогодняя угловая \"Морозные узоры\", Снежное кружево, 31,5х30,5 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000459',
         sku: 'SKU-5314189',
         specifications: [],
@@ -9797,8 +9797,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314228-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b37840991b648d4ebd92e1f82217d3f.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b37840991b648d4ebd92e1f82217d3f.png', alt: "Игрушка ёлочная на клипсе \"Свеча\", Снежное кружево", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000465',
         sku: 'SKU-5314228',
         specifications: [],
@@ -9944,8 +9944,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314243-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a216d89bebef235fa02bc9d49022cac.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a216d89bebef235fa02bc9d49022cac.jpg', alt: "Носок новогодний, Снежное кружево, 35 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000472',
         sku: 'SKU-5314243',
         specifications: [],
@@ -10007,8 +10007,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314241-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/954a8c2d0a8ee7bd965d80e661a6cb14.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/954a8c2d0a8ee7bd965d80e661a6cb14.jpg', alt: "Игрушка-антистресс светящаяся, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000475',
         sku: 'SKU-5314241',
         specifications: [],
@@ -10028,8 +10028,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314194-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e07322ac999db23c6f587fd1a289e0e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e07322ac999db23c6f587fd1a289e0e.jpg', alt: "Наклейки новогодние интерьерные, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000476',
         sku: 'SKU-5314194',
         specifications: [],
@@ -10238,8 +10238,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5314213-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e4d2e121c83f0b37ec9ed9ab2599a90e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e4d2e121c83f0b37ec9ed9ab2599a90e.jpg', alt: "Наклейка новогодняя блестящая \"Морозные узоры\", Снежное кружево, 41х24 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000486',
         sku: 'SKU-5314213',
         specifications: [],
@@ -10448,8 +10448,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312790-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/40/40f8cddd8079331ade2350dfba22578a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/40/40f8cddd8079331ade2350dfba22578a.jpg', alt: "Наклейка новогодняя, Снежное кружево, 35х19,5 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000496',
         sku: 'SKU-5312790',
         specifications: [],
@@ -10637,8 +10637,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5321319-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/719fd5ef763d040665087aa0293b4a6d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/719fd5ef763d040665087aa0293b4a6d.jpg', alt: "Чайник заварочный, Снежное кружево, 800 мл", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000505',
         sku: 'SKU-5321319',
         specifications: [],
@@ -10805,8 +10805,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5311060-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bbae1e68fe1f3feb8d6636050f6bfbf3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bbae1e68fe1f3feb8d6636050f6bfbf3.jpg', alt: "Наклейки пасхальные с тиснением, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000513',
         sku: 'SKU-5311060',
         specifications: [],
@@ -10889,8 +10889,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5303156-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a225c8b216b630b144b2df0d1293cea9.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a225c8b216b630b144b2df0d1293cea9.JPG', alt: "Переводные наклейки, А5, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000517',
         sku: 'SKU-5303156',
         specifications: [],
@@ -10973,8 +10973,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5321404-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ff/ff178eacd3bfe067c9b545ee21549c28.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ff/ff178eacd3bfe067c9b545ee21549c28.jpg', alt: "Форма для выпечки \"Печенье\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000521',
         sku: 'SKU-5321404',
         specifications: [],
@@ -10994,8 +10994,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312957-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/022b7d20e53af85d4c1f04e3382cfa2d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/022b7d20e53af85d4c1f04e3382cfa2d.jpg', alt: "Наклейка новогодняя, Снежное кружево, 35х18 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000522',
         sku: 'SKU-5312957',
         specifications: [],
@@ -11099,8 +11099,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5303135-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/90/90bac084f025fe0c55388f8d69ef1bc9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/90/90bac084f025fe0c55388f8d69ef1bc9.jpg', alt: "Наклейки объёмные, Love is, 11х20 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000527',
         sku: 'SKU-5303135',
         specifications: [],
@@ -11456,8 +11456,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245209-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec9a66ffd12df8ef178812697f756b4a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec9a66ffd12df8ef178812697f756b4a.jpg', alt: "Наклейки объёмные \"Чебурашка\", 18х10 см", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000544',
         sku: 'SKU-5245209',
         specifications: [],
@@ -11477,8 +11477,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312986-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13109d8957080e2c1de8ede84aa24503.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13109d8957080e2c1de8ede84aa24503.jpg', alt: "Наклейка объёмная новогодняя, Снежное кружево, 41х29 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000545',
         sku: 'SKU-5312986',
         specifications: [],
@@ -12044,8 +12044,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5321377-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d027642f4967eca46b55c7d128cb8c22.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d027642f4967eca46b55c7d128cb8c22.jpg', alt: "Креманка \"Виктория\", With Love, 240 мл", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c3',
+        category: cat('c3'),
         barcode: '4600000000572',
         sku: 'SKU-5321377',
         specifications: [],
@@ -12107,8 +12107,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5312703-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/7210e1dc4bd4fd1569219fc749de0ae6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/7210e1dc4bd4fd1569219fc749de0ae6.jpg', alt: "Наклейка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000575',
         sku: 'SKU-5312703',
         specifications: [],
@@ -12212,8 +12212,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244793-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5d2d7a5cf264918dc2318e0256d7c5f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5d2d7a5cf264918dc2318e0256d7c5f.jpg', alt: "Наклейки переводные, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000580',
         sku: 'SKU-5244793',
         specifications: [],
@@ -12254,8 +12254,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244834-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/4785a2eb76c5886769eb02e31a739c07.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/4785a2eb76c5886769eb02e31a739c07.jpg', alt: "Наклейки для пасхального декора, Светлый праздник, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000582',
         sku: 'SKU-5244834',
         specifications: [],
@@ -12422,8 +12422,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244551-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8b44bd2762dd58ad29f9c42e34511a7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8b44bd2762dd58ad29f9c42e34511a7.jpg', alt: "Ручка \"Любимый пушистик\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000590',
         sku: 'SKU-5244551',
         specifications: [],
@@ -12443,8 +12443,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245037-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/32af2494e9c3715f9bb563c403e886df.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/32af2494e9c3715f9bb563c403e886df.jpg', alt: "Ручка гелевая \"Помада\", With Love, 10х1,5 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000591',
         sku: 'SKU-5245037',
         specifications: [],
@@ -12485,8 +12485,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244515-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44793fd1a73ed6df97a6e0682e9495ac.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44793fd1a73ed6df97a6e0682e9495ac.jpg', alt: "Игрушка-антистресс новогодняя, Снежное кружево, 7х8 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000593',
         sku: 'SKU-5244515',
         specifications: [],
@@ -12506,8 +12506,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245024-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9aae2415850dbc45eb1685294a7a1796.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9aae2415850dbc45eb1685294a7a1796.jpg', alt: "Ручка \"Машинка\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000594',
         sku: 'SKU-5245024',
         specifications: [],
@@ -12548,8 +12548,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245166-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85e2d371a567a420c10cf64a631da0f6.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85e2d371a567a420c10cf64a631da0f6.JPG', alt: "Игрушка светящаяся, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000596',
         sku: 'SKU-5245166',
         specifications: [],
@@ -12569,8 +12569,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245017-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4a7b3cd96c367e03e142147e163a778.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4a7b3cd96c367e03e142147e163a778.jpg', alt: "Набор подарочный, Men's Direction, блокнот 60 листов и ручка, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000597',
         sku: 'SKU-5245017',
         specifications: [],
@@ -12653,8 +12653,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244668-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/93/93461cfbccecd36544ee1d0a683de06b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/93/93461cfbccecd36544ee1d0a683de06b.jpg', alt: "Ручка \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000601',
         sku: 'SKU-5244668',
         specifications: [],
@@ -12821,8 +12821,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245036-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a96b6cf4d3e96eed68eedfb9c928c6e0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a96b6cf4d3e96eed68eedfb9c928c6e0.jpg', alt: "Набор подарочный \"Для тебя\", With Love, ручка и брелок, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000609',
         sku: 'SKU-5245036',
         specifications: [],
@@ -12884,8 +12884,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5243478-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/99/99c274b7de716bf85f41fd3c280b431d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/99/99c274b7de716bf85f41fd3c280b431d.jpg', alt: "Наклейка декоративная, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000612',
         sku: 'SKU-5243478',
         specifications: [],
@@ -12905,8 +12905,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245025-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/614003fc85fcf87b25d092cd541c5050.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/614003fc85fcf87b25d092cd541c5050.jpg', alt: "Набор ластиков, Men's Direction, 4 шт., в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000613',
         sku: 'SKU-5245025',
         specifications: [],
@@ -13010,8 +13010,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245018-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5bcb9516e867445dd1d62c430ef0f40.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5bcb9516e867445dd1d62c430ef0f40.jpg', alt: "Блокнот с калькулятором, 80 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000618',
         sku: 'SKU-5245018',
         specifications: [],
@@ -13052,8 +13052,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244679-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60f0e0719fb5191b956ef1c005a21df6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60f0e0719fb5191b956ef1c005a21df6.jpg', alt: "Ручка-антистресс, Men’s Direction, 18х4 см", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000620',
         sku: 'SKU-5244679',
         specifications: [],
@@ -13073,8 +13073,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244573-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d7/d7ebe5c18d81cbd247d9a725a94438e7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d7/d7ebe5c18d81cbd247d9a725a94438e7.jpg', alt: "Игрушка мягконабивная \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000621',
         sku: 'SKU-5244573',
         specifications: [],
@@ -13136,8 +13136,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244550-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9ffe06d716d272f29e48e3ef26cba3b1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9ffe06d716d272f29e48e3ef26cba3b1.jpg', alt: "Ручка-фонарик \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000624',
         sku: 'SKU-5244550',
         specifications: [],
@@ -13178,8 +13178,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245020-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8822cba3e3a74665aff578d0fedab614.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8822cba3e3a74665aff578d0fedab614.jpg', alt: "Набор подарочный, Men's Direction, ручка и фонарик-брелок с открывалкой, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000626',
         sku: 'SKU-5245020',
         specifications: [],
@@ -13241,8 +13241,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5301081-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e9d23ee33e5c024a13e5773117ff751.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e9d23ee33e5c024a13e5773117ff751.jpg', alt: "Маска карнавальная, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c3',
+        category: cat('c3'),
         barcode: '4600000000629',
         sku: 'SKU-5301081',
         specifications: [],
@@ -13283,8 +13283,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5246238-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7420e6f2e698a2bf57ee28de327096f2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7420e6f2e698a2bf57ee28de327096f2.jpg', alt: "Настольная игра \"Помощники Деда Мороза\"", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000631',
         sku: 'SKU-5246238',
         specifications: [],
@@ -13346,8 +13346,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244221-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cca98e35a7ee767295220b2cdcfc097e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cca98e35a7ee767295220b2cdcfc097e.jpg', alt: "Игрушка-антистресс \"Паук\", 15х10х6 см", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000634',
         sku: 'SKU-5244221',
         specifications: [],
@@ -13388,8 +13388,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245027-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/411500b8a98b41aa9c1ae8733e856ac1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/411500b8a98b41aa9c1ae8733e856ac1.jpg', alt: "Блокнот \"Для тебя\", Men's Direction, 80 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000636',
         sku: 'SKU-5245027',
         specifications: [],
@@ -13430,8 +13430,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245038-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ce38b227dc0dd00ea627ccda94a44b7d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ce38b227dc0dd00ea627ccda94a44b7d.jpg', alt: "Блокнот на кольцах cо значками \"Для тебя\", With Love, 64 листа, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000638',
         sku: 'SKU-5245038',
         specifications: [],
@@ -13451,8 +13451,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245082-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aafa5664a7def307a550bcfeb1aaf8a2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aafa5664a7def307a550bcfeb1aaf8a2.jpg', alt: "Игрушка \"Светящийся цыплёнок\", Товары к Пасхе, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000639',
         sku: 'SKU-5245082',
         specifications: [],
@@ -13514,8 +13514,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245061-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/724c0cf07cc85a1fc6350ea16f1dfb01.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/724c0cf07cc85a1fc6350ea16f1dfb01.jpg', alt: "Наклейки декоративные, Товары к Пасхе, 10 шт., в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000642',
         sku: 'SKU-5245061',
         specifications: [],
@@ -13598,8 +13598,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245035-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa5f0bc1cf075ac77c9fe7d9b755009.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa5f0bc1cf075ac77c9fe7d9b755009.jpg', alt: "Блокнот \"Для тебя\", With Love, 10,5х14,5 см, 80 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000646',
         sku: 'SKU-5245035',
         specifications: [],
@@ -13661,8 +13661,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245167-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a4812f3d896f104ad6ffe94abdc087e4.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a4812f3d896f104ad6ffe94abdc087e4.JPG', alt: "Игрушка-перевёртыш, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000649',
         sku: 'SKU-5245167',
         specifications: [],
@@ -13766,8 +13766,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245021-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7431ed985649b6f1b9965af1464d2a2d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7431ed985649b6f1b9965af1464d2a2d.jpg', alt: "Набор подарочный, Men's Direction, ручка, брелок, многофункциональный нож, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000654',
         sku: 'SKU-5245021',
         specifications: [],
@@ -13787,8 +13787,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244665-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1cd228fad3462a7fe5e7d5e6b2bc0b42.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1cd228fad3462a7fe5e7d5e6b2bc0b42.jpg', alt: "Точилка \"Духи\", With Love, 7х4,8х2,2 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000655',
         sku: 'SKU-5244665',
         specifications: [],
@@ -13808,8 +13808,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245155-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa3b00d7adb8b0d5c43a3e87e034142.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa3b00d7adb8b0d5c43a3e87e034142.jpg', alt: "Магнитный планер для заметок с маркером, PREZENT, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000656',
         sku: 'SKU-5245155',
         specifications: [],
@@ -13892,8 +13892,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245022-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e390ede804b4db371f0d44f4d7a07b3a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e390ede804b4db371f0d44f4d7a07b3a.jpg', alt: "Мяч-антистресс, Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000660',
         sku: 'SKU-5245022',
         specifications: [],
@@ -13976,8 +13976,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244996-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e32c69992a13ec6ef4a954ce29fc680.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e32c69992a13ec6ef4a954ce29fc680.jpg', alt: "Игрушка мягконабивная \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000664',
         sku: 'SKU-5244996',
         specifications: [],
@@ -13997,8 +13997,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244925-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad9741899d5f987043a0d20a36e1838c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad9741899d5f987043a0d20a36e1838c.jpg', alt: "Игрушка-перевёртыш, 20х10 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000665',
         sku: 'SKU-5244925',
         specifications: [],
@@ -14081,8 +14081,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b5/b5bccab42cc23bee1f61a27634a52792.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b5/b5bccab42cc23bee1f61a27634a52792.jpg', alt: "Ручка подарочная \"Для тебя\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000669',
         sku: 'SKU-5245019',
         specifications: [],
@@ -14102,8 +14102,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244674-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/61ce6529eec0c1089528480f67e71d40.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/61ce6529eec0c1089528480f67e71d40.jpg', alt: "Точилка \"Космонавт\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000670',
         sku: 'SKU-5244674',
         specifications: [],
@@ -14228,8 +14228,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244682-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c6bf8f1d4fead8ed0f65e51103f35b4c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c6bf8f1d4fead8ed0f65e51103f35b4c.jpg', alt: "Ручка в подарочной упаковке, With Love, 14,4 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000676',
         sku: 'SKU-5244682',
         specifications: [],
@@ -14270,8 +14270,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245026-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/badabed45d0e9902645b725c0dd2e89c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/badabed45d0e9902645b725c0dd2e89c.jpg', alt: "Набор подарочный, Men's Direction, блокнот 80 листов, ручка и лента, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000678',
         sku: 'SKU-5245026',
         specifications: [],
@@ -14333,8 +14333,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244997-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7f/7f8095d878151ca5d33b896e26ad043d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7f/7f8095d878151ca5d33b896e26ad043d.jpg', alt: "Блокнот \"Люблю\", With Love, 60 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000681',
         sku: 'SKU-5244997',
         specifications: [],
@@ -14354,8 +14354,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244279-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/87/87ae85d4f25875dbc53bfb930c73d456.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/87/87ae85d4f25875dbc53bfb930c73d456.jpg', alt: "Игрушка мягконабивная \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000682',
         sku: 'SKU-5244279',
         specifications: [],
@@ -14396,8 +14396,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244574-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6c/6c3a4b60b0e3e8313a1edbbc922ec075.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6c/6c3a4b60b0e3e8313a1edbbc922ec075.jpg', alt: "Подушка декоративная \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c6',
+        category: cat('c6'),
         barcode: '4600000000684',
         sku: 'SKU-5244574',
         specifications: [],
@@ -14438,8 +14438,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245040-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/3933be0a7dda33560753bea5ea0f8675.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/3933be0a7dda33560753bea5ea0f8675.jpg', alt: "Игрушка \"Мишка\", With Love, 30 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000686',
         sku: 'SKU-5245040',
         specifications: [],
@@ -14459,8 +14459,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245161-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b8e92a6d0af7b034bb637732b21c5e2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b8e92a6d0af7b034bb637732b21c5e2.jpg', alt: "Наклейки для пасхального декора \"МУЛЬТ\", Светлый праздник", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000687',
         sku: 'SKU-5245161',
         specifications: [],
@@ -14480,8 +14480,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245227-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/0606114a38b55f7358f2d1a4eca762f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/0606114a38b55f7358f2d1a4eca762f0.jpg', alt: "Блокнот \"Мур\", With Love, 60 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000688',
         sku: 'SKU-5245227',
         specifications: [],
@@ -14501,8 +14501,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245247-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/749339b6b2f70f7dbc0449fa873cda79.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/749339b6b2f70f7dbc0449fa873cda79.jpg', alt: "Набор \"Мур\": стикеры (40 листов) и ручка, With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000689',
         sku: 'SKU-5245247',
         specifications: [],
@@ -14522,8 +14522,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5210279-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/17a214d38554a29df918aec544e94c77.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/17a214d38554a29df918aec544e94c77.jpg', alt: "Набор подарочный, Men’s Direction, блокнот и ручка, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000690',
         sku: 'SKU-5210279',
         specifications: [],
@@ -14543,8 +14543,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244330-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/41904f4d44a111fe32c49c696da7d252.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/41904f4d44a111fe32c49c696da7d252.jpg', alt: "Набор подарочный, Men’s Direction, ручка, фонарик-брелок с открывалкой, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000691',
         sku: 'SKU-5244330',
         specifications: [],
@@ -14564,8 +14564,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244663-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91b1fc2db4d4e935a5b38ff24873b1fe.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91b1fc2db4d4e935a5b38ff24873b1fe.jpg', alt: "Ластик \"Помада\", With Love, 7,4х2 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000692',
         sku: 'SKU-5244663',
         specifications: [],
@@ -14585,8 +14585,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5210283-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f8b082e02a149088d4ac7826afe7c72.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f8b082e02a149088d4ac7826afe7c72.jpg', alt: "Блокнот \"23 февраля\", Men's Direction, 70 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000693',
         sku: 'SKU-5210283',
         specifications: [],
@@ -14606,8 +14606,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245029-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/523a7bbe8af78a894a57aa90b0df8bc7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/523a7bbe8af78a894a57aa90b0df8bc7.jpg', alt: "Игрушка \"Мячик\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000694',
         sku: 'SKU-5245029',
         specifications: [],
@@ -14648,8 +14648,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244322-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5b5ec8c1c67998e95c581a1cfa6dcc6b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5b5ec8c1c67998e95c581a1cfa6dcc6b.jpg', alt: "Набор подарочный, Men’s Direction, ручка, лента и блокнот, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000696',
         sku: 'SKU-5244322',
         specifications: [],
@@ -14711,8 +14711,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244320-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2dce049b0f4a4820830ea62638c6e488.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2dce049b0f4a4820830ea62638c6e488.jpg', alt: "Ручка подарочная \"Глобус\", Men's Direction, 14,5 см, синие чернила, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000699',
         sku: 'SKU-5244320',
         specifications: [],
@@ -14732,8 +14732,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244321-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/77770720b78f8d4b646b97158f7322e8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/77770720b78f8d4b646b97158f7322e8.jpg', alt: "Ручка-стилус подарочная с фонариком, Men's Direction, синие чернила, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000700',
         sku: 'SKU-5244321',
         specifications: [],
@@ -14753,8 +14753,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245023-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f56c73710b7f1ca90e486d0a44ceeff7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f56c73710b7f1ca90e486d0a44ceeff7.jpg', alt: "Ручка \"Динозаврик\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000701',
         sku: 'SKU-5245023',
         specifications: [],
@@ -14921,8 +14921,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245261-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/27e5c0b1c629311d878ae8b83924caeb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/27e5c0b1c629311d878ae8b83924caeb.jpg', alt: "Мячик на резинке \"Вертайка\", Men’s Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000709',
         sku: 'SKU-5245261',
         specifications: [],
@@ -15026,8 +15026,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5246265-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/23adba0e13cf71909e0a0ebc886854f7.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/23adba0e13cf71909e0a0ebc886854f7.png', alt: "Подушка декоративная, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c6',
+        category: cat('c6'),
         barcode: '4600000000714',
         sku: 'SKU-5246265',
         specifications: [],
@@ -15131,8 +15131,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244291-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/2116a6cddb57fe471c87ed9ebe9819b2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/2116a6cddb57fe471c87ed9ebe9819b2.jpg', alt: "Блокнот \"С любовью\", With Love, 32 л, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000719',
         sku: 'SKU-5244291',
         specifications: [],
@@ -15278,8 +15278,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245258-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/619854058863e6bc364810fdd5211679.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/619854058863e6bc364810fdd5211679.jpg', alt: "Игрушка-антистресс, Men's Direction, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000726',
         sku: 'SKU-5245258',
         specifications: [],
@@ -15299,8 +15299,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244687-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/bae230817cdfeb3a846e520960e3f9c1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/bae230817cdfeb3a846e520960e3f9c1.jpg', alt: "Блокнот \"Для тебя\", With Love, 10,5х14,5 см, 80 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000727',
         sku: 'SKU-5244687',
         specifications: [],
@@ -15320,8 +15320,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245252-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae05ff590ded5b4f631ade805692706f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae05ff590ded5b4f631ade805692706f.jpg', alt: "Ручка-фонарик, With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000728',
         sku: 'SKU-5245252',
         specifications: [],
@@ -15383,8 +15383,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244117-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4e507156107c131195992cdbabfaaedc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4e507156107c131195992cdbabfaaedc.jpg', alt: "Блокнот в подарочной коробке, With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000731',
         sku: 'SKU-5244117',
         specifications: [],
@@ -15467,8 +15467,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244327-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/22/22727b7cfe01765e7a5a8df152711ce9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/22/22727b7cfe01765e7a5a8df152711ce9.jpg', alt: "Ручка \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000735',
         sku: 'SKU-5244327',
         specifications: [],
@@ -15509,8 +15509,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245233-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/58d996b5a3af701fa70ad0cd12e42137.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/58d996b5a3af701fa70ad0cd12e42137.jpg', alt: "Точилка \"Транспорт\", в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000737',
         sku: 'SKU-5245233',
         specifications: [],
@@ -15530,8 +15530,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244276-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df2ec3dfc7e352d6ae62313bcd886ebf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df2ec3dfc7e352d6ae62313bcd886ebf.jpg', alt: "Гелевая ручка \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000738',
         sku: 'SKU-5244276',
         specifications: [],
@@ -15593,8 +15593,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245229-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70b20634a57e3e2e74a1bff131b930e8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70b20634a57e3e2e74a1bff131b930e8.jpg', alt: "Набор \"Мур\": ручка и значок, With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000741',
         sku: 'SKU-5245229',
         specifications: [],
@@ -15614,8 +15614,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245262-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/28/28852a95042f43c1563abfe00d9cc615.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/28/28852a95042f43c1563abfe00d9cc615.jpg', alt: "Блокнот, With Love, 80 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000742',
         sku: 'SKU-5245262',
         specifications: [],
@@ -15635,8 +15635,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245238-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cbf1c95a314b2198b06b9348199a4a7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cbf1c95a314b2198b06b9348199a4a7.jpg', alt: "3D-пазл \"Транспорт\", в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000743',
         sku: 'SKU-5245238',
         specifications: [],
@@ -15656,8 +15656,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244335-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a305a1280835c1b6ed6bc39dc4532dd4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a305a1280835c1b6ed6bc39dc4532dd4.jpg', alt: "Блокнот \"Для тебя\", With Love, 96 л, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000744',
         sku: 'SKU-5244335',
         specifications: [],
@@ -15677,8 +15677,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244572-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e3535b2032e9968500a494ead0d6e556.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e3535b2032e9968500a494ead0d6e556.jpg', alt: "Игрушка \"Светящееся сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000745',
         sku: 'SKU-5244572',
         specifications: [],
@@ -15698,8 +15698,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245264-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6d/6d435add562797ef149decb58e4bb151.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6d/6d435add562797ef149decb58e4bb151.jpg', alt: "Ластик \"Помада\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000746',
         sku: 'SKU-5245264',
         specifications: [],
@@ -15740,8 +15740,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244328-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7432194bf8e7693158073c290b771f72.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7432194bf8e7693158073c290b771f72.jpg', alt: "Блокнот \"Для тебя\", Men's Direction, 100 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000748',
         sku: 'SKU-5244328',
         specifications: [],
@@ -15782,8 +15782,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244544-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/98b0fc4c536832de49e330cd5669fac7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/98b0fc4c536832de49e330cd5669fac7.jpg', alt: "Блокнот \"Люблю\", With Love, 80 листов, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000750',
         sku: 'SKU-5244544',
         specifications: [],
@@ -15845,8 +15845,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244693-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81a33fcad524369e2834fb8183dffd1b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81a33fcad524369e2834fb8183dffd1b.jpg', alt: "Ручка-антистресс \"Самолётик\", Men’s Direction, 17 см, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000753',
         sku: 'SKU-5244693',
         specifications: [],
@@ -15908,8 +15908,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5245260-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8257299055a1bac6f9d3b49d1c26003.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8257299055a1bac6f9d3b49d1c26003.jpg', alt: "Набор ластиков \"Конструктор\", в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c5',
+        category: cat('c5'),
         barcode: '4600000000756',
         sku: 'SKU-5245260',
         specifications: [],
@@ -16055,8 +16055,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244318-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/71943df3188ea7855d5418ce621ddf53.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/71943df3188ea7855d5418ce621ddf53.jpg', alt: "Ручка \"Цветок\", With Love, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000763',
         sku: 'SKU-5244318',
         specifications: [],
@@ -16097,8 +16097,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5244333-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/42cea522d6d82d5e01d936f2e884c340.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/42cea522d6d82d5e01d936f2e884c340.jpg', alt: "Набор подарочный \"Для тебя\", With Love, ручка и брелок, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000765',
         sku: 'SKU-5244333',
         specifications: [],
@@ -16937,8 +16937,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5012138-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/afcfff76605d1987bb1f862af11d974f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/afcfff76605d1987bb1f862af11d974f.jpg', alt: "Светодиодный светильник, FLARX, с двухсторонним скотчем, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000805',
         sku: 'SKU-5012138',
         specifications: [],
@@ -17189,8 +17189,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5012111-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9b/9bfb53f672d2bb3daabb36d3d99146ef.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9b/9bfb53f672d2bb3daabb36d3d99146ef.jpg', alt: "Ручка-стилус с фонариком, FLARX, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000817',
         sku: 'SKU-5012111',
         specifications: [],
@@ -17336,8 +17336,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5013272-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/591fafdbf9a38da64cb9ffcde9aab799.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/591fafdbf9a38da64cb9ffcde9aab799.jpg', alt: "Ручка-стилус, FLARX, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000824',
         sku: 'SKU-5013272',
         specifications: [],
@@ -18281,8 +18281,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5093706-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/67/678c3d4434647242154429c76d185bc7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/67/678c3d4434647242154429c76d185bc7.jpg', alt: "Кофеварка электрическая, O'Kitchen, 420 мл, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c1',
+        category: cat('c1'),
         barcode: '4600000000869',
         sku: 'SKU-5093706',
         specifications: [],
@@ -18638,8 +18638,8 @@ export const PRODUCTS: Product[] = [
         images: [
             { id: 'img-5013426-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/84326500355e19eef1020f8664f27cc2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/84326500355e19eef1020f8664f27cc2.jpg', alt: "Ручка-стилус, FLARX, в ассортименте", sortOrder: 0 }
         ],
-        categoryId: 'c4',
-        category: cat('c4'),
+        categoryId: 'c7',
+        category: cat('c7'),
         barcode: '4600000000886',
         sku: 'SKU-5013426',
         specifications: [],
