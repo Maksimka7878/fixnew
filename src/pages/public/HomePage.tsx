@@ -61,13 +61,7 @@ export function HomePage() {
 
   useEffect(() => { loadData(); }, [region]);
 
-  useEffect(() => {
-    if (banners.length <= 1) return;
-    bannerInterval.current = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => { if (bannerInterval.current) clearInterval(bannerInterval.current); };
-  }, [banners.length]);
+
 
   const loadData = async () => {
     setIsLoading(true);
@@ -78,16 +72,7 @@ export function HomePage() {
     setIsLoading(false);
   };
 
-  const goToBanner = (index: number) => {
-    setCurrentBanner(index);
-    if (bannerInterval.current) clearInterval(bannerInterval.current);
-    bannerInterval.current = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
-  };
 
-  const nextBanner = () => goToBanner((currentBanner + 1) % banners.length);
-  const prevBanner = () => goToBanner((currentBanner - 1 + banners.length) % banners.length);
 
   return (
     <>
