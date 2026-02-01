@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, PanInfo } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import type { PanInfo } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Banner } from '@/types';
+import type { Banner } from '@/types';
 
 interface MainBannersProps {
     banners: Banner[];

@@ -1,6 +1,7 @@
-import { useState, useRef } from 'react';
-import { motion, AnimatePresence, PanInfo } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import type { PanInfo } from 'framer-motion';
+import { X, Play, Pause } from 'lucide-react';
 
 interface Story {
     id: string;

@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Package, Sparkles, Shield, Truck, Tag, Gift, Star, Flame, Percent, Heart } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useAppStore, useCatalogStore, useAuthStore, useUIStore, useFavoritesStore } from '@/store';
