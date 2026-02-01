@@ -178,9 +178,7 @@ export function Header() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-4">
             <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-              <div className="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">F</span>
-              </div>
+              <img src="/logo.webp" alt="Fix Price" className="h-10 w-auto object-contain" />
               <span className="text-xl font-bold font-heading text-brand uppercase tracking-wide">Fix Price</span>
             </Link>
 
