@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import { useAuthStore, useAppStore, useUIStore } from '@/store';
+import { usePreferredFrameRate } from '@/hooks/usePreferredFrameRate';
 import { toast } from 'sonner';
 import { PWAInstallPrompt } from '@/components/pwa/PWAInstallPrompt';
 import { NotificationCenter } from '@/components/pwa/NotificationCenter';
@@ -15,6 +16,7 @@ export function Header() {
   const { user, isAuthenticated, logout } = useAuthStore();
   const { region } = useAppStore();
   const { setRegionModalOpen, setAuthModalOpen, setMobileMenuOpen, isMobileMenuOpen } = useUIStore();
+  const { durationMultiplier, prefersReducedMotion } = usePreferredFrameRate();
   const [searchQuery, setSearchQuery] = useState('');
   const [showMobileSearch, setShowMobileSearch] = useState(false);
 
@@ -245,10 +247,14 @@ export function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            exit={{ opacity: 0, scaleY: 0 }}
+            transition={{
+              duration: prefersReducedMotion ? 0 : 0.25 * durationMultiplier,
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
+            style={{ originY: 0 }}
             className="md:hidden overflow-hidden border-t bg-white"
           >
             <nav className="p-4 space-y-1">
@@ -261,7 +267,10 @@ export function Header() {
                   key={item.to}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05, duration: 0.2 }}
+                  transition={{
+                    delay: prefersReducedMotion ? 0 : i * 0.05 * durationMultiplier,
+                    duration: prefersReducedMotion ? 0 : 0.2 * durationMultiplier
+                  }}
                 >
                   <Link
                     to={item.to}
@@ -285,7 +294,10 @@ export function Header() {
                       key={item.to}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: (i + 3) * 0.05, duration: 0.2 }}
+                      transition={{
+                        delay: prefersReducedMotion ? 0 : (i + 3) * 0.05 * durationMultiplier,
+                        duration: prefersReducedMotion ? 0 : 0.2 * durationMultiplier
+                      }}
                     >
                       <Link
                         to={item.to}
