@@ -4,6 +4,7 @@ import type { PanInfo } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import type { Banner } from '@/types';
 
 interface MainBannersProps {
@@ -81,11 +82,11 @@ export function MainBanners({ banners, isLoading }: MainBannersProps) {
                                 dragElastic={0.2}
                                 onDragEnd={handleDragEnd}
                             >
-                                <img
+                                <OptimizedImage
                                     src={banners[current].image}
                                     alt={banners[current].title}
-                                    className="w-full h-full object-cover"
-                                    draggable={false}
+                                    className="w-full h-full"
+                                    priority={true}
                                 />
                                 {/* Gradient Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent flex items-end md:items-center p-6 md:p-12">

@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { Skeleton } from '@/components/ui/skeleton';
+import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter';
 import { useAuthStore } from '@/store';
 import { useAppBadge } from '@/hooks/useAppBadge';
 import { broadcastService } from '@/services/broadcastService';
@@ -111,6 +112,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <WebVitalsReporter />
       <ScrollToTop />
       <Toaster position="top-right" richColors />
       <AnimatePresence>

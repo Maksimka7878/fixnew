@@ -5,9 +5,11 @@ import { ProductCard } from '@/components/product/ProductCard';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import { Search, X, Clock, TrendingUp, ArrowRight, Trash2 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { useMockCatalogApi } from '@/api/mock';
+import { useDebounce } from '@/hooks/useDebounce';
 import type { Product } from '@/types';
 
 export function SearchPage() {
@@ -24,6 +26,9 @@ export function SearchPage() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  // Debounce search query for autocomplete (300ms delay)
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+
   // Load all products for autocomplete
   useEffect(() => {
     getProducts({ regionId: region?.id || 'r1' }).then(res => {
@@ -31,14 +36,14 @@ export function SearchPage() {
     });
   }, [getProducts, region?.id]);
 
-  // Live autocomplete suggestions
+  // Live autocomplete suggestions (uses debounced query)
   const suggestions = useMemo(() => {
-    if (!searchQuery.trim() || searchQuery.length < 2) return [];
-    const q = searchQuery.toLowerCase();
+    if (!debouncedSearchQuery.trim() || debouncedSearchQuery.length < 2) return [];
+    const q = debouncedSearchQuery.toLowerCase();
     return allProducts
       .filter(p => p.name.toLowerCase().includes(q))
       .slice(0, 5);
-  }, [searchQuery, allProducts]);
+  }, [debouncedSearchQuery, allProducts]);
 
   useEffect(() => {
     if (query) {
@@ -119,9 +124,9 @@ export function SearchPage() {
                   onClick={() => navigate(`/product/${product.id}`)}
                   className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors text-left"
                 >
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
                     {product.images?.[0] && (
-                      <img src={product.images[0].thumbnailUrl} alt="" className="w-full h-full object-cover" />
+                      <OptimizedImage src={product.images[0].thumbnailUrl} alt={product.name} aspectRatio="1/1" />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">

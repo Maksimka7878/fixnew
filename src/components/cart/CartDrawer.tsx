@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import { useCartStore, useUIStore, useAppStore } from '@/store';
 import { toast } from 'sonner';
 
@@ -80,8 +81,12 @@ export function CartDrawer() {
                         transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
                         className="flex gap-4 py-2"
                       >
-                        <div className="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
-                          {item.product.images && item.product.images[0] ? <img src={item.product.images[0].thumbnailUrl} alt={item.product.name} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-gray-400"><ShoppingBag className="w-8 h-8" /></div>}
+                        <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                          {item.product.images && item.product.images[0] ? (
+                            <OptimizedImage src={item.product.images[0].thumbnailUrl} alt={item.product.name} aspectRatio="1/1" />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-gray-400 bg-gray-100"><ShoppingBag className="w-8 h-8" /></div>
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <Link to={`/product/${item.product.id}`} className="text-sm font-medium text-gray-900 hover:text-brand line-clamp-2 transition-colors" onClick={() => setCartDrawerOpen(false)}>{item.product.name}</Link>

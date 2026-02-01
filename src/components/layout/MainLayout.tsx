@@ -1,13 +1,16 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { lazy, Suspense } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { BottomNav } from './BottomNav';
-import { CartDrawer } from '../cart/CartDrawer';
-import { RegionModal } from '../modals/RegionModal';
-import { AuthModal } from '../modals/AuthModal';
 import { OfflineNotice } from '../pwa/OfflineNotice';
 import { UpdatePrompt } from '../pwa/UpdatePrompt';
+
+// Lazy load modals - they're only needed when user interacts with them
+const CartDrawer = lazy(() => import('../cart/CartDrawer').then(m => ({ default: m.CartDrawer })));
+const RegionModal = lazy(() => import('../modals/RegionModal').then(m => ({ default: m.RegionModal })));
+const AuthModal = lazy(() => import('../modals/AuthModal').then(m => ({ default: m.AuthModal })));
 
 export function MainLayout() {
   const location = useLocation();
@@ -35,9 +38,17 @@ export function MainLayout() {
         <Footer />
       </div>
       <BottomNav />
-      <RegionModal />
-      <AuthModal />
-      <CartDrawer />
+
+      {/* Lazy load modals - rendered only when needed */}
+      <Suspense fallback={null}>
+        <RegionModal />
+      </Suspense>
+      <Suspense fallback={null}>
+        <AuthModal />
+      </Suspense>
+      <Suspense fallback={null}>
+        <CartDrawer />
+      </Suspense>
     </div>
   );
 }

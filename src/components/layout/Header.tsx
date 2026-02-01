@@ -4,6 +4,7 @@ import { MapPin, Search, Menu, X, Heart, Bookmark, ChevronDown, LogOut, User, Pa
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import { useAuthStore, useAppStore, useUIStore } from '@/store';
 import { toast } from 'sonner';
 import { PWAInstallPrompt } from '@/components/pwa/PWAInstallPrompt';
@@ -178,7 +179,9 @@ export function Header() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-4">
             <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-              <img src="/logo.webp" alt="Fix Price" className="h-10 w-auto object-contain" />
+              <div className="w-10 h-10">
+                <OptimizedImage src="/logo.webp" alt="Fix Price" priority className="object-contain" />
+              </div>
               <span className="text-xl font-bold font-heading text-brand uppercase tracking-wide">Fix Price</span>
             </Link>
 

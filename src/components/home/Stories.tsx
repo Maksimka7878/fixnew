@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { PanInfo } from 'framer-motion';
 import { X, Play, Pause } from 'lucide-react';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 interface Story {
     id: string;
@@ -99,7 +100,7 @@ const mockStories: Story[] = [
     },
 ];
 
-export function Stories() {
+function StoriesComponent() {
     const [activeStory, setActiveStory] = useState<Story | null>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -171,10 +172,12 @@ export function Stories() {
                     >
                         <div className={`p-[3px] rounded-full bg-gradient-to-br ${story.color}`}>
                             <div className="bg-white p-[2px] rounded-full">
-                                <img
+                                <OptimizedImage
                                     src={story.image}
                                     alt={story.title}
-                                    className="w-16 h-16 rounded-full object-cover border border-gray-100"
+                                    className="rounded-full border border-gray-100"
+                                    aspectRatio="1/1"
+                                    priority
                                 />
                             </div>
                         </div>
@@ -228,7 +231,9 @@ export function Stories() {
                             {/* Header */}
                             <div className="absolute top-safe-area left-0 right-0 flex items-center justify-between p-4 pt-6 z-20">
                                 <div className="flex items-center gap-3">
-                                    <img src={activeStory.image} alt="" className="w-8 h-8 rounded-full border border-white/50" />
+                                    <div className="w-8 h-8">
+                                        <OptimizedImage src={activeStory.image} alt={activeStory.title} className="rounded-full border border-white/50" aspectRatio="1/1" />
+                                    </div>
                                     <span className="text-white font-medium text-sm drop-shadow-md">{activeStory.title}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -258,10 +263,11 @@ export function Stories() {
                                     transition={{ duration: 0.3 }}
                                     className="w-full h-full flex flex-col items-center justify-center relative bg-gray-900"
                                 >
-                                    <img
+                                    <OptimizedImage
                                         src={activeStory.slides[currentSlide].image}
-                                        alt={activeStory.slides[currentSlide].text}
-                                        className="w-full h-full object-contain"
+                                        alt={activeStory.slides[currentSlide].text || 'Story slide'}
+                                        className="w-full h-full"
+                                        priority
                                     />
 
                                     <div className="absolute bottom-0 left-0 right-0 p-8 pb-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
@@ -291,3 +297,5 @@ export function Stories() {
         </>
     );
 }
+
+export const Stories = memo(StoriesComponent);

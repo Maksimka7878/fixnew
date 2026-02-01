@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ShoppingCart, Heart, Plus, Minus } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -7,13 +7,14 @@ import { useCartStore, useUserProfileStore } from '@/store';
 import { useAnimationStore } from '@/store/animation';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 interface ProductCardProps {
     product: Product;
     index?: number;
 }
 
-export function ProductCard({ product, index = 0 }: ProductCardProps) {
+function ProductCardComponent({ product, index = 0 }: ProductCardProps) {
     const navigate = useNavigate();
     const { addItem, items, updateQuantity, removeItem } = useCartStore();
     const { startAnimation } = useAnimationStore();
@@ -60,11 +61,13 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                 onClick={handleCardClick}
             >
                 <div className="flex-1 flex flex-col">
-                    <div className="aspect-[4/5] relative overflow-hidden bg-gray-50">
-                        <img
+                    <div className="aspect-[4/5] relative overflow-hidden bg-gray-50 group">
+                        <OptimizedImage
                             src={product.images[0]?.url || '/placeholder.png'}
                             alt={product.name}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="transition-transform duration-700 group-hover:scale-105"
+                            aspectRatio="4/5"
+                            priority={index === 0}
                         />
                         {/* Badges */}
                         <div className="absolute top-3 left-3 flex flex-col gap-1">
@@ -158,3 +161,13 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         </motion.div>
     );
 }
+
+// Memoize with custom comparison to prevent unnecessary re-renders
+export const ProductCard = memo(ProductCardComponent, (prevProps, nextProps) => {
+    return (
+        prevProps.product.id === nextProps.product.id &&
+        prevProps.index === nextProps.index
+    );
+});
+
+ProductCard.displayName = 'ProductCard';

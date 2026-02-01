@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { memo } from 'react';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 // Icons are dynamically served from the public folder
 const categories = [
@@ -33,7 +35,7 @@ const categories = [
     }
 ];
 
-export function CategoryRow() {
+function CategoryRowComponent() {
     return (
         <div className="flex gap-4 overflow-x-auto scrollbar-hide px-4 md:container md:mx-auto py-2">
             {categories.map((category) => (
@@ -44,10 +46,12 @@ export function CategoryRow() {
                         className="flex flex-col items-center gap-2 w-[100px]"
                     >
                         <div className={`w-[80px] h-[80px] rounded-2xl flex items-center justify-center shadow-sm p-4 ${category.color}`}>
-                            <img
+                            <OptimizedImage
                                 src={category.image}
                                 alt={category.label}
-                                className="w-full h-full object-contain drop-shadow-md"
+                                className="drop-shadow-md"
+                                aspectRatio="1/1"
+                                priority
                             />
                         </div>
                         <span className="text-xs font-medium text-center text-gray-700 leading-tight">
@@ -59,3 +63,5 @@ export function CategoryRow() {
         </div>
     );
 }
+
+export const CategoryRow = memo(CategoryRowComponent);
