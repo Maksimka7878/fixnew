@@ -148,13 +148,40 @@ class NotificationService {
       }
     }
 
-    // Используем Service Worker registration для системных уведомлений
-    const registration = await navigator.serviceWorker.ready;
-    await registration.showNotification(title, {
-      icon: '/logo.svg',
-      badge: '/logo.svg',
-      ...options,
-    } as NotificationOptions & { vibrate?: number[] });
+    try {
+      // Используем Service Worker registration для системных уведомлений
+      const registration = await navigator.serviceWorker.ready;
+
+      if (!registration) {
+        throw new Error('Service Worker registration failed');
+      }
+
+      const notificationOptions: NotificationOptions & { vibrate?: number[] } = {
+        icon: '/logo.svg',
+        badge: '/logo.svg',
+        ...options,
+      };
+
+      // Показать уведомление через Service Worker
+      await registration.showNotification(title, notificationOptions);
+
+      console.log('✅ Notification sent:', title);
+    } catch (error) {
+      console.error('❌ SW notification error:', error);
+
+      // Fallback: отправить уведомление напрямую через Notification API
+      try {
+        new Notification(title, {
+          icon: '/logo.svg',
+          badge: '/logo.svg',
+          ...options,
+        });
+        console.log('✅ Fallback notification sent:', title);
+      } catch (fallbackError) {
+        console.error('❌ Fallback notification error:', fallbackError);
+        throw new Error('Не удалось отправить уведомление');
+      }
+    }
 
     // Сохранить в IndexedDB для логирования
     await this.storeNotification(title, options);

@@ -114,17 +114,21 @@ export function NotificationCenter() {
 
   const handleTestNotification = async () => {
     setLoading(true);
+    console.log('🧪 Sending test notification...');
+    console.log('Diagnostics:', diagnostics);
     try {
       await notificationService.show('Тестовое уведомление', {
         body: 'Если вы видите это, уведомления работают корректно!',
         icon: '/logo.svg',
         badge: '/logo.svg',
         tag: 'test',
+        requireInteraction: true,
       });
-      toast.success('Тестовое уведомление отправлено');
+      toast.success('Тестовое уведомление отправлено (проверьте центр уведомлений)');
       setTimeout(() => loadNotifications(), 1000);
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Ошибка при отправке уведомления';
+      console.error('❌ Test notification error:', error);
       toast.error(message);
     } finally {
       setLoading(false);
@@ -352,13 +356,24 @@ export function NotificationCenter() {
 
           {/* Diagnostics info (debug) */}
           {diagnostics && (
-            <div className="bg-gray-50 border border-gray-200 rounded p-3">
-              <p className="text-[10px] text-gray-400 font-mono">
-                iOS: {diagnostics.isIOS ? 'Да' : 'Нет'} |
-                PWA: {diagnostics.isStandalone ? 'Да' : 'Нет'} |
-                SW: {diagnostics.serviceWorkerActive ? 'Да' : 'Нет'} |
-                Разрешение: {diagnostics.permission}
-              </p>
+            <div className="space-y-2">
+              <div className="bg-gray-50 border border-gray-200 rounded p-3">
+                <p className="text-[10px] text-gray-600 font-mono mb-2">
+                  <strong>Диагностика:</strong>
+                </p>
+                <p className="text-[10px] text-gray-500 font-mono">
+                  iOS: {diagnostics.isIOS ? 'Да' : 'Нет'} | PWA: {diagnostics.isStandalone ? 'Да' : 'Нет'} | SW: {diagnostics.serviceWorkerActive ? 'Да' : 'Нет'}
+                </p>
+                <p className="text-[10px] text-gray-500 font-mono">
+                  Разрешение: {diagnostics.permission} | Статус: {diagnostics.reason}
+                </p>
+              </div>
+              <div className="bg-blue-50 border border-blue-200 rounded p-2">
+                <p className="text-[10px] text-blue-900">
+                  <strong>🔍 Совет:</strong> Откройте консоль (F12 → Console) чтобы увидеть детальные логи при отправке уведомления.
+                  Нажмите Тест и посмотрите логи в консоли.
+                </p>
+              </div>
             </div>
           )}
         </div>
