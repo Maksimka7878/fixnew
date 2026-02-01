@@ -4,24 +4,28 @@ export const AuthService = {
     /**
      * Request SMS code for phone number
      */
-    async sendCode(phone: string): Promise<{ success: boolean; debugCode?: string }> {
+    /**
+     * Request SMS/Email code
+     */
+    async sendCode(data: { phone?: string; email?: string }): Promise<{ success: boolean; message?: string; debugCode?: string }> {
         const response = await fetch(`${API_URL}/auth/send-code`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ phone }),
+            body: JSON.stringify(data),
         });
         return response.json();
     },
 
     /**
-     * Verify SMS code and get auth token
+     * Verify SMS/Email code and get auth token
      */
-    async verifyCode(phone: string, code: string): Promise<{
+    async verifyCode(data: { phone?: string; email?: string; code: string }): Promise<{
         success: boolean;
         token?: string;
         user?: {
             id: string;
             phone: string;
+            email: string;
             firstName: string;
             lastName: string;
             role: string;
@@ -31,7 +35,7 @@ export const AuthService = {
         const response = await fetch(`${API_URL}/auth/verify`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ phone, code }),
+            body: JSON.stringify(data),
         });
         return response.json();
     },

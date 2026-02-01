@@ -4,13 +4,15 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Phone, ArrowLeft } from 'lucide-react';
+import { Phone, ArrowLeft, Mail } from 'lucide-react';
 import { toast } from 'sonner';
 import { AuthService } from '@/api/auth';
 
 export function LoginPage() {
   const navigate = useNavigate();
+  const [method, setMethod] = useState<'phone' | 'email'>('phone');
   const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
   const formatPhone = (value: string) => {
@@ -31,23 +33,31 @@ export function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length !== 11) {
-      toast.error('Введите корректный номер телефона');
-      return;
+    let payload = {};
+    if (method === 'phone') {
+      const phoneDigits = phone.replace(/\D/g, '');
+      if (phoneDigits.length !== 11) {
+        toast.error('Введите корректный номер телефона');
+        return;
+      }
+      payload = { phone: phoneDigits };
+    } else {
+      if (!email || !email.includes('@')) {
+        toast.error('Введите корректный Email');
+        return;
+      }
+      payload = { email };
     }
 
     setLoading(true);
 
     try {
-      const result = await AuthService.sendCode(phoneDigits);
+      const result = await AuthService.sendCode(payload);
       if (result.success) {
-        toast.success('Код подтверждения отправлен');
-        // For development, show the debug code
-        if (result.debugCode) {
-          toast.info(`Код для теста: ${result.debugCode}`);
-        }
-        navigate('/auth/verify', { state: { phone } });
+        toast.success(result.message || 'Код подтверждения отправлен');
+        navigate('/auth/verify', { state: { ...payload, method } });
+      } else {
+        toast.error('Ошибка: ' + result.message);
       }
     } catch (error) {
       toast.error('Ошибка отправки кода. Убедитесь, что сервер запущен.');
@@ -70,27 +80,58 @@ export function LoginPage() {
         <Card>
           <CardHeader className="text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Phone className="w-8 h-8 text-red-600" />
+              {method === 'phone' ? <Phone className="w-8 h-8 text-red-600" /> : <Mail className="w-8 h-8 text-red-600" />}
             </div>
-            <CardTitle className="text-2xl">Вход по номеру телефона</CardTitle>
+            <CardTitle className="text-2xl">Вход в систему</CardTitle>
             <CardDescription>
-              Введите номер телефона, мы отправим код подтверждения
+              Выберите спосов входа
             </CardDescription>
           </CardHeader>
           <CardContent>
+            <div className="grid grid-cols-2 gap-2 mb-6 p-1 bg-gray-100 rounded-lg">
+              <button
+                type="button"
+                onClick={() => setMethod('phone')}
+                className={`py-2 text-sm font-medium rounded-md transition-all ${method === 'phone' ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
+              >
+                Телефон
+              </button>
+              <button
+                type="button"
+                onClick={() => setMethod('email')}
+                className={`py-2 text-sm font-medium rounded-md transition-all ${method === 'email' ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-900'}`}
+              >
+                Email
+              </button>
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="phone">Номер телефона</Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  placeholder="+7 (999) 999-99-99"
-                  value={phone}
-                  onChange={handlePhoneChange}
-                  className="text-lg"
-                  maxLength={18}
-                />
-              </div>
+              {method === 'phone' ? (
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Номер телефона</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="+7 (999) 999-99-99"
+                    value={phone}
+                    onChange={handlePhoneChange}
+                    className="text-lg"
+                    maxLength={18}
+                  />
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <Label htmlFor="email">Электронная почта</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="example@mail.ru"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="text-lg"
+                  />
+                </div>
+              )}
 
               <Button
                 type="submit"

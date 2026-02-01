@@ -11,7 +11,13 @@ export function OtpVerifyPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const { login } = useAuthStore();
+
+  // Get phone or email from state
   const phone = location.state?.phone || '';
+  const email = location.state?.email || '';
+  const method = location.state?.method || (phone ? 'phone' : 'email');
+
+  const destination = method === 'phone' ? phone : email;
 
   const [code, setCode] = useState(['', '', '', '']);
   const [loading, setLoading] = useState(false);
@@ -19,7 +25,7 @@ export function OtpVerifyPage() {
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
-    if (!phone) {
+    if (!destination) {
       navigate('/auth/login');
       return;
     }
@@ -29,7 +35,7 @@ export function OtpVerifyPage() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [phone, navigate]);
+  }, [destination, navigate]);
 
   const handleChange = (index: number, value: string) => {
     if (!/^\d*$/.test(value)) return;
@@ -60,17 +66,24 @@ export function OtpVerifyPage() {
     setLoading(true);
 
     try {
-      const phoneDigits = phone.replace(/\D/g, '');
-      const result = await AuthService.verifyCode(phoneDigits, fullCode);
+      // Prepare payload based on method
+      const payload: any = { code: fullCode };
+      if (method === 'phone') {
+        payload.phone = phone.replace(/\D/g, '');
+      } else {
+        payload.email = email;
+      }
+
+      const result = await AuthService.verifyCode(payload);
 
       if (result.success && result.user && result.token) {
         // Create user object for store
         const user = {
           id: result.user.id,
           phone: result.user.phone,
+          email: result.user.email,
           firstName: result.user.firstName || 'Пользователь',
           lastName: result.user.lastName || '',
-          email: '',
           regionId: '1',
           region: {
             id: '1',
@@ -130,7 +143,7 @@ export function OtpVerifyPage() {
             </div>
             <CardTitle className="text-2xl">Подтверждение</CardTitle>
             <CardDescription>
-              Введите код из SMS, отправленного на {phone}
+              Введите код, отправленный на {destination}
             </CardDescription>
           </CardHeader>
           <CardContent>
