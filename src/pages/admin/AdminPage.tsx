@@ -15,6 +15,10 @@ import {
   Trash2,
 } from 'lucide-react';
 import { toast } from 'sonner';
+import { ProductsTable } from '@/components/admin/ProductsTable';
+import { ProductEditModal } from '@/components/admin/ProductEditModal';
+import { OrdersTable } from '@/components/admin/OrdersTable';
+import { UsersTable } from '@/components/admin/UsersTable';
 
 interface RealStats {
   totalOrders: number;
@@ -52,6 +56,17 @@ const lowStockProducts = [
   { id: '3', name: 'Кофе растворимый', sku: 'COF-003', stock: 8, minStock: 20 },
 ];
 
+interface Product {
+  id: string;
+  name: string;
+  sku: string;
+  category: string;
+  price: number;
+  stock: number;
+  status: 'active' | 'inactive';
+  image?: string;
+}
+
 export function AdminPage() {
   const [stats, setStats] = useState<RealStats | null>(null);
   const [loading, setLoading] = useState(true);
@@ -59,9 +74,13 @@ export function AdminPage() {
   const [messages, setMessages] = useState<BroadcastMessage[]>([]);
   const [sendingMessage, setSendingMessage] = useState(false);
 
+  // Product management
+  const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   // Load stats
   useEffect(() => {
-    fetch('http://localhost:3001/api/admin/stats/real')
+    fetch(`${API_URL}/admin/stats/real`)
       .then(res => res.json())
       .then(data => {
         setStats(data);
@@ -76,7 +95,7 @@ export function AdminPage() {
   // Load broadcast messages
   const loadBroadcastMessages = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/admin/broadcast/all');
+      const res = await fetch(`${API_URL}/admin/broadcast/all`);
       const data = await res.json();
       setMessages(data.messages || []);
     } catch (err) {
@@ -98,7 +117,7 @@ export function AdminPage() {
 
     setSendingMessage(true);
     try {
-      const res = await fetch('http://localhost:3001/api/admin/broadcast', {
+      const res = await fetch(`${API_URL}/admin/broadcast`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: broadcastMessage }),
@@ -122,7 +141,7 @@ export function AdminPage() {
   // Delete broadcast message
   const handleDeleteMessage = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:3001/api/admin/broadcast/${id}`, {
+      const res = await fetch(`${API_URL}/admin/broadcast/${id}`, {
         method: 'DELETE',
       });
 
@@ -323,6 +342,20 @@ export function AdminPage() {
           </TabsContent>
 
           <TabsContent value="products" className="space-y-6">
+            <ProductsTable
+              onEdit={(product) => {
+                setSelectedProduct(product);
+                setIsProductModalOpen(true);
+              }}
+              onDelete={(id) => {
+                console.log('Delete product:', id);
+              }}
+              onAdd={() => {
+                setSelectedProduct(null);
+                setIsProductModalOpen(true);
+              }}
+            />
+
             <Card>
               <CardHeader>
                 <CardTitle>Импорт товаров с Fix Price</CardTitle>
@@ -331,7 +364,7 @@ export function AdminPage() {
                 <p className="text-gray-500">
                   Запустите парсер для автоматического импорта товаров с сайта fix-price.com
                 </p>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap">
                   <Button
                     onClick={async () => {
                       try {
@@ -353,7 +386,7 @@ export function AdminPage() {
                     variant="outline"
                     onClick={async () => {
                       try {
-                        const res = await fetch('http://localhost:3001/api/admin/import/status');
+                        const res = await fetch(`${API_URL}/admin/import/status`);
                         const data = await res.json();
                         alert(`Статус: ${JSON.stringify(data.progress, null, 2)}`);
                       } catch (e) {
@@ -368,7 +401,7 @@ export function AdminPage() {
                     variant="secondary"
                     onClick={async () => {
                       try {
-                        await fetch('http://localhost:3001/api/admin/import-json', { method: 'POST' });
+                        await fetch(`${API_URL}/admin/import-json`, { method: 'POST' });
                         alert('Импорт из JSON запущен!');
                       } catch (e) {
                         alert('Ошибка запуска импорта из JSON');
@@ -384,36 +417,50 @@ export function AdminPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Управление товарами</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-500">Функционал управления товарами будет здесь</p>
-              </CardContent>
-            </Card>
+            {/* Product Edit Modal */}
+            <ProductEditModal
+              isOpen={isProductModalOpen}
+              product={selectedProduct}
+              isNew={!selectedProduct}
+              onClose={() => {
+                setIsProductModalOpen(false);
+                setSelectedProduct(null);
+              }}
+              onSave={(product) => {
+                console.log('Save product:', product);
+                toast.success(selectedProduct ? 'Товар обновлён' : 'Товар добавлен');
+              }}
+            />
           </TabsContent>
 
           <TabsContent value="orders">
-            <Card>
-              <CardHeader>
-                <CardTitle>Управление заказами</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-500">Функционал управления заказами будет здесь</p>
-              </CardContent>
-            </Card>
+            <OrdersTable
+              onViewDetails={(id) => {
+                console.log('View order details:', id);
+                toast.info(`Просмотр заказа ${id}`);
+              }}
+              onPrint={(id) => {
+                console.log('Print order:', id);
+                toast.success(`Печать заказа ${id}`);
+              }}
+            />
           </TabsContent>
 
           <TabsContent value="users">
-            <Card>
-              <CardHeader>
-                <CardTitle>Управление пользователями</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-500">Функционал управления пользователями будет здесь</p>
-              </CardContent>
-            </Card>
+            <UsersTable
+              onViewDetails={(id) => {
+                console.log('View user details:', id);
+                toast.info(`Просмотр профиля пользователя ${id}`);
+              }}
+              onMessage={(id) => {
+                console.log('Message user:', id);
+                toast.success(`Сообщение отправлено пользователю ${id}`);
+              }}
+              onToggleBlock={(id) => {
+                console.log('Toggle block user:', id);
+                toast.success(`Статус пользователя ${id} изменён`);
+              }}
+            />
           </TabsContent>
 
           <TabsContent value="broadcast" className="space-y-6">

@@ -28,6 +28,7 @@ const LoyaltyPage = lazy(() => import('@/pages/account/LoyaltyPage').then(m => (
 const OrdersPage = lazy(() => import('@/pages/account/OrdersPage').then(m => ({ default: m.OrdersPage })));
 const FavoritesPage = lazy(() => import('@/pages/account/FavoritesPage').then(m => ({ default: m.FavoritesPage })));
 const AdminPage = lazy(() => import('@/pages/admin/AdminPage').then(m => ({ default: m.AdminPage })));
+const NotFoundPage = lazy(() => import('@/pages/error/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 // Loading fallback
 function PageLoader() {
@@ -79,7 +80,7 @@ function AnimatedRoutes() {
         <Route path="/auth/login" element={<Suspense fallback={<PageLoader />}><PageTransition><LoginPage /></PageTransition></Suspense>} />
         <Route path="/auth/verify" element={<Suspense fallback={<PageLoader />}><PageTransition><OtpVerifyPage /></PageTransition></Suspense>} />
         <Route path="/admin/*" element={<Suspense fallback={<PageLoader />}><AdminPage /></Suspense>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Suspense fallback={<PageLoader />}><PageTransition><NotFoundPage /></PageTransition></Suspense>} />
       </Routes>
     </AnimatePresence>
   );

@@ -140,7 +140,7 @@ export function CheckoutPage() {
         }
       } else {
         // Cash payment - create order directly
-        const response = await fetch('http://localhost:3001/api/orders/create', {
+        const response = await fetch(`${API_URL}/orders/create`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
