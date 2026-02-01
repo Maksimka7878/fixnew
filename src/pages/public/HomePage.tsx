@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package, Sparkles, Shield, Truck, Tag, Gift, Star, Flame, Percent, Heart } from 'lucide-react';
+import { ArrowRight, Package, Shield, Truck, Sparkles, Star, Tag, Heart } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,6 +10,7 @@ import { useMockCatalogApi, useMockMarketingApi } from '@/api/mock';
 import type { Product, Banner } from '@/types';
 import { Stories } from '@/components/home/Stories';
 import { MainBanners } from '@/components/home/MainBanners';
+import { CategoryRow } from '@/components/home/CategoryRow';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { OrganizationSchema, ECommerceSchema } from '@/components/seo/JsonLdSchema';
 
@@ -41,13 +42,7 @@ function ProductCardSkeleton() {
 
 
 
-const quickTags = [
-  { label: 'Подарки', icon: Gift, color: 'bg-pink-50 text-pink-600' },
-  { label: 'Распродажа', icon: Percent, color: 'bg-red-50 text-red-600' },
-  { label: 'Новинки', icon: Star, color: 'bg-amber-50 text-amber-600' },
-  { label: 'Хиты', icon: Flame, color: 'bg-orange-50 text-orange-600' },
-  { label: 'Акции', icon: Tag, color: 'bg-brand-50 text-brand' },
-];
+
 
 export function HomePage() {
   const { region } = useAppStore();
@@ -91,20 +86,9 @@ export function HomePage() {
           <Stories />
         </section>
 
-        {/* Horizontal Quick Tags */}
-        <section className="pt-0 md:pt-0">
-          <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 md:container md:mx-auto">
-            {quickTags.map((tag) => (
-              <Link
-                key={tag.label}
-                to="/promotions"
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0 transition-all active:scale-95 ${tag.color}`}
-              >
-                <tag.icon className="w-4 h-4" />
-                {tag.label}
-              </Link>
-            ))}
-          </div>
+        {/* Categories / Quick Actions */}
+        <section className="pt-2 md:pt-4">
+          <CategoryRow />
         </section>
 
         {/* Hero Banner Carousel */}
