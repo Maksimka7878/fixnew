@@ -94,9 +94,8 @@ class NotificationService {
       await registration.showNotification(title, {
         icon: '/logo.svg',
         badge: '/logo.svg',
-        vibrate: [100, 50, 100],
         ...options,
-      });
+      } as NotificationOptions & { vibrate?: number[] });
 
       // Сохранить в IndexedDB для логирования
       await this.storeNotification(title, options);
