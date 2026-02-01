@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ShoppingCart, Heart, Plus, Minus } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Product } from '@/types';
@@ -14,6 +14,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, index = 0 }: ProductCardProps) {
+    const navigate = useNavigate();
     const { addItem, items, updateQuantity, removeItem } = useCartStore();
     const { startAnimation } = useAnimationStore();
     const { isFavorite, addToFavorites, removeFromFavorites } = useUserProfileStore();
@@ -22,8 +23,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
     const cartItem = items.find(i => i.product.id === product.id);
     const quantity = cartItem ? cartItem.quantity : 0;
 
+    const handleCardClick = () => {
+        navigate(`/product/${product.id}`);
+    };
+
     const handleAddToCart = (e: React.MouseEvent) => {
-        e.preventDefault();
+        e.stopPropagation();
         addItem(product);
 
         // Start fly animation
@@ -34,7 +39,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
     };
 
     const handleToggleFavorite = (e: React.MouseEvent) => {
-        e.preventDefault();
+        e.stopPropagation();
         if (isHeart) {
             removeFromFavorites(product.id);
             setIsHeart(false);
@@ -44,27 +49,17 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         }
     };
 
-    // Prefetch product data on hover/touch
-    const handlePrefetch = () => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = `/product/${product.id}`;
-        document.head.appendChild(link);
-    };
-
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
         >
-            <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-brand hover:-translate-y-1 border-0 shadow-soft bg-white/50 backdrop-blur-sm group rounded-2xl">
-                <Link
-                    to={`/product/${product.id}`}
-                    className="flex-1 flex flex-col"
-                    onMouseEnter={handlePrefetch}
-                    onTouchStart={handlePrefetch}
-                >
+            <Card
+                className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-brand hover:-translate-y-1 border-0 shadow-soft bg-white/50 backdrop-blur-sm group rounded-2xl cursor-pointer"
+                onClick={handleCardClick}
+            >
+                <div className="flex-1 flex flex-col">
                     <div className="aspect-[4/5] relative overflow-hidden bg-gray-50">
                         <img
                             src={product.images[0]?.url || '/placeholder.png'}
@@ -117,7 +112,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                             </div>
                         </div>
                     </CardContent>
-                </Link>
+                </div>
                 <CardFooter className="p-4 pt-0">
                     {quantity > 0 ? (
                         <div className="flex items-center justify-between w-full bg-brand/5 border border-brand/20 rounded-xl p-1">
@@ -126,7 +121,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                                 variant="ghost"
                                 className="h-8 w-8 text-brand hover:text-brand-700 hover:bg-brand/10 rounded-lg"
                                 onClick={(e) => {
-                                    e.preventDefault();
+                                    e.stopPropagation();
                                     if (quantity > 1) {
                                         updateQuantity(product.id, quantity - 1);
                                     } else {
@@ -142,7 +137,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                                 variant="ghost"
                                 className="h-8 w-8 text-brand hover:text-brand-700 hover:bg-brand/10 rounded-lg"
                                 onClick={(e) => {
-                                    e.preventDefault();
+                                    e.stopPropagation();
                                     addItem(product);
                                 }}
                             >
