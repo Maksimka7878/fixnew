@@ -1,6 +1,7 @@
 /**
  * Notification Service для Web Push Notifications
  * Поддерживает offline режим с IndexedDB
+ * Поддерживает iOS 16.4+ (только в установленном PWA)
  */
 
 interface StoredNotification {
@@ -9,6 +10,15 @@ interface StoredNotification {
   options: NotificationOptions;
   timestamp: number;
   sent: boolean;
+}
+
+export interface NotificationDiagnostics {
+  isSupported: boolean;
+  isIOS: boolean;
+  isStandalone: boolean;
+  permission: NotificationPermission | 'unsupported';
+  serviceWorkerActive: boolean;
+  reason: string;
 }
 
 class NotificationService {
@@ -34,12 +44,23 @@ class NotificationService {
 
     request.onsuccess = (e) => {
       this.db = (e.target as IDBOpenDBRequest).result;
-      console.log('✅ NotificationDB инициализирована');
     };
 
     request.onerror = () => {
-      console.error('❌ Ошибка инициализации NotificationDB');
+      console.error('Ошибка инициализации NotificationDB');
     };
+  }
+
+  // Определить iOS
+  static isIOS(): boolean {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  }
+
+  // Проверить что приложение установлено как PWA (standalone)
+  static isStandalone(): boolean {
+    return window.matchMedia('(display-mode: standalone)').matches ||
+      (navigator as any).standalone === true;
   }
 
   // Проверить поддержку Notifications API
@@ -47,15 +68,50 @@ class NotificationService {
     return 'Notification' in window && 'serviceWorker' in navigator;
   }
 
+  // Полная диагностика состояния уведомлений
+  static async getDiagnostics(): Promise<NotificationDiagnostics> {
+    const isIOS = NotificationService.isIOS();
+    const isStandalone = NotificationService.isStandalone();
+    const isSupported = NotificationService.isSupported();
+
+    let serviceWorkerActive = false;
+    try {
+      const reg = await navigator.serviceWorker?.getRegistration();
+      serviceWorkerActive = !!reg?.active;
+    } catch { /* ignore */ }
+
+    let permission: NotificationPermission | 'unsupported' = 'unsupported';
+    if (isSupported) {
+      permission = Notification.permission;
+    }
+
+    let reason = '';
+    if (!isSupported) {
+      if (isIOS && !isStandalone) {
+        reason = 'ios_not_installed';
+      } else {
+        reason = 'not_supported';
+      }
+    } else if (permission === 'denied') {
+      reason = 'denied';
+    } else if (!serviceWorkerActive) {
+      reason = 'no_service_worker';
+    } else {
+      reason = 'ready';
+    }
+
+    return { isSupported, isIOS, isStandalone, permission, serviceWorkerActive, reason };
+  }
+
   // Получить статус разрешений
-  static getPermissionStatus(): NotificationPermission {
-    return Notification.permission || 'default';
+  static getPermissionStatus(): NotificationPermission | 'unsupported' {
+    if (!('Notification' in window)) return 'unsupported';
+    return Notification.permission;
   }
 
   // Запросить разрешение на уведомления
   async requestPermission(): Promise<boolean> {
     if (!NotificationService.isSupported()) {
-      console.warn('⚠️ Notifications API не поддерживается');
       return false;
     }
 
@@ -67,8 +123,7 @@ class NotificationService {
       try {
         const permission = await Notification.requestPermission();
         return permission === 'granted';
-      } catch (error) {
-        console.error('❌ Ошибка при запросе разрешения:', error);
+      } catch {
         return false;
       }
     }
@@ -79,36 +134,30 @@ class NotificationService {
   // Отправить простое уведомление
   async show(title: string, options?: NotificationOptions): Promise<void> {
     if (!NotificationService.isSupported()) {
-      console.warn('⚠️ Notifications не поддерживаются');
-      return;
+      throw new Error(
+        NotificationService.isIOS() && !NotificationService.isStandalone()
+          ? 'Добавьте приложение на домашний экран для получения уведомлений'
+          : 'Уведомления не поддерживаются в этом браузере'
+      );
     }
 
     if (Notification.permission !== 'granted') {
       const granted = await this.requestPermission();
-      if (!granted) return;
-    }
-
-    try {
-      // Используем Service Worker registration для системных уведомлений
-      const registration = await navigator.serviceWorker.ready;
-      await registration.showNotification(title, {
-        icon: '/logo.svg',
-        badge: '/logo.svg',
-        ...options,
-      } as NotificationOptions & { vibrate?: number[] });
-
-      // Сохранить в IndexedDB для логирования
-      await this.storeNotification(title, options);
-    } catch (error) {
-      console.error('❌ Ошибка при отправке уведомления:', error);
-      // Fallback на обычное уведомление
-      try {
-        new Notification(title, options);
-        await this.storeNotification(title, options);
-      } catch (fallbackError) {
-        console.error('❌ Fallback уведомление тоже не удалось:', fallbackError);
+      if (!granted) {
+        throw new Error('Разрешение на уведомления не получено');
       }
     }
+
+    // Используем Service Worker registration для системных уведомлений
+    const registration = await navigator.serviceWorker.ready;
+    await registration.showNotification(title, {
+      icon: '/logo.svg',
+      badge: '/logo.svg',
+      ...options,
+    } as NotificationOptions & { vibrate?: number[] });
+
+    // Сохранить в IndexedDB для логирования
+    await this.storeNotification(title, options);
   }
 
   // Сохранить уведомление в IndexedDB

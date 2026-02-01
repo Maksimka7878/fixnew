@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Bell, BellOff, Check, AlertCircle, Wifi, WifiOff } from 'lucide-react';
+import { Bell, BellOff, Check, AlertCircle, Wifi, WifiOff, Smartphone, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -13,6 +13,8 @@ import {
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { notificationService } from '@/services/notificationService';
+import NotificationService from '@/services/notificationService';
+import type { NotificationDiagnostics } from '@/services/notificationService';
 import { toast } from 'sonner';
 
 export function NotificationCenter() {
@@ -21,22 +23,26 @@ export function NotificationCenter() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [notifications, setNotifications] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [diagnostics, setDiagnostics] = useState<NotificationDiagnostics | null>(null);
 
   useEffect(() => {
     // Проверить статус разрешений
-    const status = 'Notification' in window ? Notification.permission : 'default';
+    const status = NotificationService.getPermissionStatus();
     setNotificationsEnabled(status === 'granted');
+
+    // Получить диагностику
+    NotificationService.getDiagnostics().then(setDiagnostics);
 
     // Слушать изменения соединения
     const handleOnline = () => {
       setIsOnline(true);
-      toast.success('✅ Вы в сети');
+      toast.success('Вы в сети');
       syncPendingNotifications();
     };
 
     const handleOffline = () => {
       setIsOnline(false);
-      toast.error('🔴 Вы в режиме offline');
+      toast.error('Вы в режиме offline');
     };
 
     window.addEventListener('online', handleOnline);
@@ -51,23 +57,44 @@ export function NotificationCenter() {
     };
   }, []);
 
+  // Обновить диагностику при открытии
+  useEffect(() => {
+    if (isOpen) {
+      NotificationService.getDiagnostics().then(setDiagnostics);
+    }
+  }, [isOpen]);
+
   const loadNotifications = async () => {
     const saved = await notificationService.getAllNotifications();
     setNotifications(saved.sort((a, b) => b.timestamp - a.timestamp).slice(0, 10));
   };
 
   const handleEnableNotifications = async () => {
+    if (diagnostics && !diagnostics.isSupported) {
+      if (diagnostics.isIOS && !diagnostics.isStandalone) {
+        toast.error('Сначала добавьте приложение на домашний экран');
+      } else {
+        toast.error('Уведомления не поддерживаются в этом браузере');
+      }
+      setNotificationsEnabled(false);
+      return;
+    }
+
     setLoading(true);
     try {
       const granted = await notificationService.requestPermission();
       if (granted) {
         setNotificationsEnabled(true);
-        toast.success('✅ Уведомления включены');
+        toast.success('Уведомления включены');
+        // Обновить диагностику
+        NotificationService.getDiagnostics().then(setDiagnostics);
       } else {
-        toast.error('❌ Вы отклонили уведомления');
+        setNotificationsEnabled(false);
+        toast.error('Разрешение на уведомления не получено');
       }
-    } catch (error) {
-      toast.error('❌ Ошибка при включении уведомлений');
+    } catch {
+      setNotificationsEnabled(false);
+      toast.error('Ошибка при включении уведомлений');
     } finally {
       setLoading(false);
     }
@@ -75,30 +102,30 @@ export function NotificationCenter() {
 
   const handleDisableNotifications = () => {
     setNotificationsEnabled(false);
-    toast.info('ℹ️ Уведомления отключены');
+    toast.info('Уведомления отключены');
   };
 
   const syncPendingNotifications = async () => {
-    toast.loading('🔄 Синхронизация...');
-    // Здесь должна быть логика синхронизации
-    // например, отправка ожидающих заказов, уведомлений и т.д.
+    toast.loading('Синхронизация...');
     setTimeout(() => {
-      toast.success('✅ Синхронизировано');
+      toast.success('Синхронизировано');
     }, 2000);
   };
 
   const handleTestNotification = async () => {
     setLoading(true);
     try {
-      await notificationService.show('🧪 Тестовое уведомление', {
+      await notificationService.show('Тестовое уведомление', {
         body: 'Если вы видите это, уведомления работают корректно!',
         icon: '/logo.svg',
         badge: '/logo.svg',
+        tag: 'test',
       });
-      toast.success('✅ Тестовое уведомление отправлено');
+      toast.success('Тестовое уведомление отправлено');
       setTimeout(() => loadNotifications(), 1000);
     } catch (error) {
-      toast.error('❌ Ошибка при отправке тестового уведомления');
+      const message = error instanceof Error ? error.message : 'Ошибка при отправке уведомления';
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -108,11 +135,15 @@ export function NotificationCenter() {
     try {
       await notificationService.clearNotifications();
       setNotifications([]);
-      toast.success('✅ Уведомления очищены');
-    } catch (error) {
-      toast.error('❌ Ошибка при очистке');
+      toast.success('Уведомления очищены');
+    } catch {
+      toast.error('Ошибка при очистке');
     }
   };
+
+  const showIOSWarning = diagnostics?.isIOS && !diagnostics?.isStandalone;
+  const showDeniedWarning = diagnostics?.permission === 'denied';
+  const showNotSupported = diagnostics && !diagnostics.isSupported && !showIOSWarning;
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -145,6 +176,62 @@ export function NotificationCenter() {
         </DialogHeader>
 
         <div className="space-y-4">
+          {/* iOS Warning */}
+          {showIOSWarning && (
+            <Card className="border-amber-300 bg-amber-50">
+              <CardContent className="pt-6">
+                <div className="flex gap-3">
+                  <Smartphone className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-amber-900">
+                      Установите приложение
+                    </p>
+                    <p className="text-xs text-amber-800 mt-1">
+                      На iPhone уведомления работают только в установленном приложении.
+                      Нажмите <strong>Поделиться</strong> (квадрат со стрелкой внизу Safari)
+                      → <strong>«На экран Домой»</strong>, затем откройте приложение с домашнего экрана.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Permission Denied Warning */}
+          {showDeniedWarning && (
+            <Card className="border-red-300 bg-red-50">
+              <CardContent className="pt-6">
+                <div className="flex gap-3">
+                  <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-red-900">
+                      Уведомления заблокированы
+                    </p>
+                    <p className="text-xs text-red-800 mt-1">
+                      Вы ранее запретили уведомления. Чтобы включить их, откройте
+                      настройки браузера → разрешения сайта → уведомления.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Not Supported */}
+          {showNotSupported && (
+            <Card className="border-gray-300 bg-gray-50">
+              <CardContent className="pt-6">
+                <div className="flex gap-3">
+                  <AlertCircle className="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-gray-700">
+                    Уведомления не поддерживаются в этом браузере.
+                    Используйте Chrome, Safari 16.4+ или Firefox.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Connection Status */}
           <Card>
             <CardContent className="pt-6">
@@ -190,7 +277,7 @@ export function NotificationCenter() {
                       handleDisableNotifications();
                     }
                   }}
-                  disabled={loading}
+                  disabled={loading || showDeniedWarning || showNotSupported || false}
                 />
               </div>
               <p className="text-xs text-gray-500 mt-2">
@@ -210,7 +297,7 @@ export function NotificationCenter() {
               disabled={!notificationsEnabled || loading}
               className="flex-1"
             >
-              🧪 Тест
+              Тест
             </Button>
             <Button
               variant="outline"
@@ -219,7 +306,7 @@ export function NotificationCenter() {
               disabled={!isOnline || loading}
               className="flex-1"
             >
-              🔄 Синхр.
+              Синхр.
             </Button>
           </div>
 
@@ -263,13 +350,17 @@ export function NotificationCenter() {
             </div>
           </div>
 
-          {/* Info */}
-          <div className="bg-blue-50 border border-blue-200 rounded p-3">
-            <p className="text-xs text-blue-900">
-              <strong>💡 Подсказка:</strong> Приложение работает offline и синхронизирует данные
-              при появлении интернета. Все уведомления хранятся локально.
-            </p>
-          </div>
+          {/* Diagnostics info (debug) */}
+          {diagnostics && (
+            <div className="bg-gray-50 border border-gray-200 rounded p-3">
+              <p className="text-[10px] text-gray-400 font-mono">
+                iOS: {diagnostics.isIOS ? 'Да' : 'Нет'} |
+                PWA: {diagnostics.isStandalone ? 'Да' : 'Нет'} |
+                SW: {diagnostics.serviceWorkerActive ? 'Да' : 'Нет'} |
+                Разрешение: {diagnostics.permission}
+              </p>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
