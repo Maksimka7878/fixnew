@@ -73,9 +73,24 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,webp}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'], // Removed webp from precache to avoid downloading 1000+ images on install
         cleanupOutdatedCaches: true,
         runtimeCaching: [
+          // Cache local product/category images (WebP)
+          {
+            urlPattern: /^\/images\/.*\.(webp|png|jpg|jpeg|svg)$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'local-images-cache',
+              expiration: {
+                maxEntries: 500,
+                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
           {
             urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\/.*/i,
             handler: 'CacheFirst',
@@ -87,12 +102,12 @@ export default defineConfig({
               }
             }
           },
-          // Cache external images (Fix Price CDN, placehold.co, etc.)
+          // Cache external images (if any remain)
           {
             urlPattern: /^https:\/\/(.*)\.(jpg|jpeg|png|webp|gif|svg)$/i,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'images-cache',
+              cacheName: 'external-images-cache',
               expiration: {
                 maxEntries: 200,
                 maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
@@ -105,7 +120,7 @@ export default defineConfig({
           // Cache API responses
           {
             urlPattern: /\/api\/.*/i,
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst', // Changed to NetworkFirst for fresh data, falling back to cache
             options: {
               cacheName: 'api-cache',
               expiration: {
