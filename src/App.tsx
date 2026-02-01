@@ -1,5 +1,5 @@
-import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation, ScrollRestoration } from 'react-router-dom';
+import { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { AnimatePresence } from 'framer-motion';
 import { MainLayout } from '@/components/layout/MainLayout';
@@ -7,6 +7,7 @@ import { PageTransition } from '@/components/layout/PageTransition';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useAuthStore } from '@/store';
 import { useAppBadge } from '@/hooks/useAppBadge';
+import { useState } from 'react';
 
 // Lazy load all pages for code splitting
 const HomePage = lazy(() => import('@/pages/public/HomePage').then(m => ({ default: m.HomePage })));
@@ -14,7 +15,6 @@ const CatalogPage = lazy(() => import('@/pages/catalog/CatalogPage').then(m => (
 const CategoryPage = lazy(() => import('@/pages/catalog/CategoryPage').then(m => ({ default: m.CategoryPage })));
 const ProductPage = lazy(() => import('@/pages/catalog/ProductPage').then(m => ({ default: m.ProductPage })));
 import { SplashScreen } from '@/components/ui/SplashScreen';
-import { useState, useEffect } from 'react';
 const SearchPage = lazy(() => import('@/pages/catalog/SearchPage').then(m => ({ default: m.SearchPage })));
 const StoresPage = lazy(() => import('@/pages/public/StoresPage').then(m => ({ default: m.StoresPage })));
 const PromotionsPage = lazy(() => import('@/pages/public/PromotionsPage').then(m => ({ default: m.PromotionsPage })));
@@ -36,6 +36,17 @@ function PageLoader() {
       <Skeleton className="h-48 w-full" />
     </div>
   );
+}
+
+// Scroll to top on route change (replaces ScrollRestoration which requires data router)
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -90,7 +101,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ScrollRestoration />
+      <ScrollToTop />
       <Toaster position="top-right" richColors />
       <AnimatePresence>
         {showSplash && <SplashScreen key="splash" />}
@@ -101,3 +112,4 @@ function App() {
 }
 
 export default App;
+
