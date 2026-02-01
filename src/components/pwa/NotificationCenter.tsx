@@ -367,7 +367,49 @@ export function NotificationCenter() {
                 <p className="text-[10px] text-gray-500 font-mono">
                   Разрешение: {diagnostics.permission} | Статус: {diagnostics.reason}
                 </p>
+                {(diagnostics as any).registrations?.length > 0 && (
+                  <p className="text-[10px] text-green-600 font-mono">
+                    Регистрации: {(diagnostics as any).registrations.join(', ')}
+                  </p>
+                )}
+                {(diagnostics as any).swUrl && (
+                  <p className="text-[10px] text-blue-600 font-mono truncate">
+                    SW URL: {(diagnostics as any).swUrl}
+                  </p>
+                )}
+                {(diagnostics as any).swError && (
+                  <p className="text-[10px] text-red-600 font-mono">
+                    Ошибка: {(diagnostics as any).swError}
+                  </p>
+                )}
               </div>
+
+              {/* Fix SW button - show only if SW not active */}
+              {!diagnostics.serviceWorkerActive && diagnostics.isStandalone && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full text-xs"
+                  onClick={async () => {
+                    setLoading(true);
+                    toast.loading('Регистрация Service Worker...');
+                    const result = await NotificationService.manualRegisterSW();
+                    if (result.success) {
+                      toast.success('Service Worker зарегистрирован!');
+                      // Refresh diagnostics
+                      const newDiag = await NotificationService.getDiagnostics();
+                      setDiagnostics(newDiag);
+                    } else {
+                      toast.error(`Ошибка: ${result.error}`);
+                    }
+                    setLoading(false);
+                  }}
+                  disabled={loading}
+                >
+                  🔧 Исправить SW
+                </Button>
+              )}
+
               <div className="bg-blue-50 border border-blue-200 rounded p-2">
                 <p className="text-[10px] text-blue-900">
                   <strong>🔍 Совет:</strong> Откройте консоль (F12 → Console) чтобы увидеть детальные логи при отправке уведомления.

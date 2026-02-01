@@ -69,16 +69,46 @@ class NotificationService {
   }
 
   // Полная диагностика состояния уведомлений
-  static async getDiagnostics(): Promise<NotificationDiagnostics> {
+  static async getDiagnostics(): Promise<NotificationDiagnostics & {
+    registrations?: string[];
+    swError?: string;
+    swUrl?: string;
+  }> {
     const isIOS = NotificationService.isIOS();
     const isStandalone = NotificationService.isStandalone();
     const isSupported = NotificationService.isSupported();
 
     let serviceWorkerActive = false;
+    let registrations: string[] = [];
+    let swError: string | undefined;
+    let swUrl: string | undefined;
+
     try {
-      const reg = await navigator.serviceWorker?.getRegistration();
-      serviceWorkerActive = !!reg?.active;
-    } catch { /* ignore */ }
+      if ('serviceWorker' in navigator) {
+        // Get all registrations
+        const regs = await navigator.serviceWorker.getRegistrations();
+        registrations = regs.map(r => r.scope);
+
+        // Get current registration
+        const reg = await navigator.serviceWorker.getRegistration();
+        if (reg) {
+          serviceWorkerActive = !!reg.active;
+          swUrl = reg.active?.scriptURL || reg.installing?.scriptURL || reg.waiting?.scriptURL;
+        }
+
+        // Log detailed info
+        console.log('🔍 SW Diagnostics:', {
+          registrations: regs.length,
+          scopes: registrations,
+          hasActive: serviceWorkerActive,
+          swUrl,
+          controller: !!navigator.serviceWorker.controller,
+        });
+      }
+    } catch (error) {
+      swError = error instanceof Error ? error.message : String(error);
+      console.error('❌ SW getRegistration error:', error);
+    }
 
     let permission: NotificationPermission | 'unsupported' = 'unsupported';
     if (isSupported) {
@@ -100,7 +130,57 @@ class NotificationService {
       reason = 'ready';
     }
 
-    return { isSupported, isIOS, isStandalone, permission, serviceWorkerActive, reason };
+    return {
+      isSupported,
+      isIOS,
+      isStandalone,
+      permission,
+      serviceWorkerActive,
+      reason,
+      registrations,
+      swError,
+      swUrl,
+    };
+  }
+
+  // Попытаться вручную зарегистрировать SW
+  static async manualRegisterSW(): Promise<{ success: boolean; error?: string; scope?: string }> {
+    try {
+      if (!('serviceWorker' in navigator)) {
+        return { success: false, error: 'serviceWorker not in navigator' };
+      }
+
+      console.log('🔧 Attempting manual SW registration...');
+
+      // Try to register /sw.js
+      const registration = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+      });
+
+      console.log('✅ Manual SW registration result:', {
+        scope: registration.scope,
+        active: !!registration.active,
+        installing: !!registration.installing,
+        waiting: !!registration.waiting,
+      });
+
+      // Wait for activation
+      if (registration.installing) {
+        await new Promise<void>((resolve) => {
+          registration.installing!.addEventListener('statechange', (e) => {
+            if ((e.target as ServiceWorker).state === 'activated') {
+              resolve();
+            }
+          });
+        });
+      }
+
+      return { success: true, scope: registration.scope };
+    } catch (error) {
+      const errorMsg = error instanceof Error ? error.message : String(error);
+      console.error('❌ Manual SW registration failed:', error);
+      return { success: false, error: errorMsg };
+    }
   }
 
   // Получить статус разрешений
