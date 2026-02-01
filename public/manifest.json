@@ -11,8 +11,10 @@
   "theme_color": "#43b02a",
   "background_color": "#ffffff",
   "prefer_related_applications": false,
-
-  "categories": ["shopping", "business"],
+  "categories": [
+    "shopping",
+    "business"
+  ],
   "screenshots": [
     {
       "src": "/screenshot-mobile.png",
@@ -27,46 +29,32 @@
       "form_factor": "wide"
     }
   ],
-
   "icons": [
     {
-      "src": "/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icon-192.png",
+      "src": "/pwa-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-192-maskable.png",
+      "src": "/pwa-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/pwa-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512-maskable.png",
+      "src": "/pwa-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-
   "shortcuts": [
     {
       "name": "Каталог товаров",
@@ -117,7 +105,6 @@
       ]
     }
   ],
-
   "share_target": {
     "action": "/share",
     "method": "POST",
@@ -128,13 +115,16 @@
       "url": "url"
     }
   },
-
   "file_handlers": [
     {
       "action": "/open-file",
       "accept": {
-        "text/plain": [".txt"],
-        "application/json": [".json"]
+        "text/plain": [
+          ".txt"
+        ],
+        "application/json": [
+          ".json"
+        ]
       }
     }
   ]
