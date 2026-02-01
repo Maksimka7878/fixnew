@@ -115,6 +115,7 @@ export interface Category {
   description?: string;
   image?: string;
   icon?: string;
+  color?: string;
   parentId?: string | null;
   children: Category[];
   sortOrder: number;

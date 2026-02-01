@@ -37,14 +37,10 @@ function ProductCardSkeleton() {
 
 function CategorySkeleton() {
   return (
-    <Card className="h-full border-none shadow-sm bg-gray-50 overflow-hidden">
-      <CardContent className="p-0 flex flex-col h-full">
-        <Skeleton className="w-full aspect-square" />
-        <div className="p-3 flex items-center justify-center flex-1">
-          <Skeleton className="h-4 w-24" />
-        </div>
-      </CardContent>
-    </Card>
+    <div className="flex flex-col items-center gap-2">
+      <Skeleton className="w-20 h-20 md:w-24 md:h-24 rounded-2xl" />
+      <Skeleton className="h-4 w-16" />
+    </div>
   );
 }
 
@@ -94,43 +90,33 @@ export function CatalogPage() {
       <section className="mb-8">
         <h2 className="text-xl font-bold mb-4">Категории</h2>
         {isLoading ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {Array.from({ length: 7 }).map((_, i) => <CategorySkeleton key={i} />)}
           </div>
         ) : (
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-6 gap-x-4"
             variants={containerVariants}
             initial="hidden"
             animate="show"
           >
             {rootCategories.map((category) => (
-              <motion.div key={category.id} variants={itemVariants}>
-                <Link to={`/catalog/${category.slug}`}>
-                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full group overflow-hidden border-none shadow-sm bg-gray-50">
-                    <CardContent className="p-0 flex flex-col items-center text-center h-full">
-                      <div className="w-full aspect-square overflow-hidden mb-2 bg-white relative">
-                        {category.image ? (
-                          <img
-                            src={category.image}
-                            alt={category.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-gray-300 bg-gray-100">
-                            <span className="text-4xl">📦</span>
-                          </div>
-                        )}
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
-                      <div className="p-3 w-full">
-                        <h3 className="font-semibold text-sm text-gray-800 line-clamp-2 leading-tight group-hover:text-brand transition-colors">
-                          {category.name}
-                        </h3>
-                      </div>
-                    </CardContent>
-                  </Card>
+              <motion.div key={category.id} variants={itemVariants} className="flex justify-center">
+                <Link to={`/catalog/${category.slug}`} className="flex flex-col items-center gap-2 group w-full max-w-[100px]">
+                  <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md group-active:scale-95 ${category.color || 'bg-gray-100'}`}>
+                    {category.image ? (
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="w-4/5 h-4/5 object-contain drop-shadow-md"
+                      />
+                    ) : (
+                      <span className="text-3xl">📦</span>
+                    )}
+                  </div>
+                  <span className="text-xs md:text-sm font-medium text-center text-gray-700 leading-tight group-hover:text-brand transition-colors line-clamp-2">
+                    {category.name}
+                  </span>
                 </Link>
               </motion.div>
             ))}

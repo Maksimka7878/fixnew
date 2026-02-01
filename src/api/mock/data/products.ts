@@ -2,13 +2,13 @@ import type { Product, Category } from '@/types';
 
 // Categories for reference
 export const CATEGORIES: Category[] = [
-    { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/продукты.webp', icon: 'Apple' },
-    { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/химия.webp', icon: 'Spray' },
-    { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/косметика.webp', icon: 'Sparkles' },
-    { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/дом.webp', icon: 'Home' },
-    { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/игрушки.webp', icon: 'Gamepad' },
-    { id: 'c6', name: 'Текстиль', slug: 'tekstil', parentId: null, children: [], sortOrder: 6, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/текстиль.webp', icon: 'Shirt' },
-    { id: 'c7', name: 'Канцтовары', slug: 'kantstovary', parentId: null, children: [], sortOrder: 7, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/канцтовары.webp', icon: 'Pencil' },
+    { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_products.png', color: 'bg-green-50', icon: 'Apple' },
+    { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_cleaning.png', color: 'bg-blue-50', icon: 'Spray' },
+    { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_cosmetics.png', color: 'bg-pink-50', icon: 'Sparkles' },
+    { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_home.png', color: 'bg-orange-50', icon: 'Home' },
+    { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_toys.png', color: 'bg-purple-50', icon: 'Gamepad' },
+    { id: 'c6', name: 'Текстиль', slug: 'tekstil', parentId: null, children: [], sortOrder: 6, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_textiles.png', color: 'bg-cyan-50', icon: 'Shirt' },
+    { id: 'c7', name: 'Канцтовары', slug: 'kantstovary', parentId: null, children: [], sortOrder: 7, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/icons/icon_stationery.png', color: 'bg-red-50', icon: 'Pencil' },
 ];
 
 const cat = (id: string) => CATEGORIES.find(c => c.id === id)!;
