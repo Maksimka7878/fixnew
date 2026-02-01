@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Shield } from 'lucide-react';
 import { toast } from 'sonner';
 import { useAuthStore } from '@/store';
+import { AuthService } from '@/api/auth';
 
 export function OtpVerifyPage() {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ export function OtpVerifyPage() {
     }
 
     if (newCode.every(digit => digit)) {
-      handleVerify();
+      handleVerify(newCode.join(''));
     }
   };
 
@@ -52,43 +53,58 @@ export function OtpVerifyPage() {
     }
   };
 
-  const handleVerify = async () => {
+  const handleVerify = async (codeStr?: string) => {
+    const fullCode = codeStr || code.join('');
+    if (fullCode.length !== 4) return;
+
     setLoading(true);
 
-    // Simulate verification
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const phoneDigits = phone.replace(/\D/g, '');
+      const result = await AuthService.verifyCode(phoneDigits, fullCode);
 
-    // Mock successful login
-    const mockUser = {
-      id: '1',
-      phone: phone,
-      firstName: 'Пользователь',
-      lastName: '',
-      email: '',
-      regionId: '1',
-      region: {
-        id: '1',
-        code: 'MOW',
-        name: 'Москва',
-        timezone: 'Europe/Moscow',
-        currency: 'RUB',
-        isActive: true,
-      },
-      role: 'user' as const,
-      isVerified: true,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
+      if (result.success && result.user && result.token) {
+        // Create user object for store
+        const user = {
+          id: result.user.id,
+          phone: result.user.phone,
+          firstName: result.user.firstName || 'Пользователь',
+          lastName: result.user.lastName || '',
+          email: '',
+          regionId: '1',
+          region: {
+            id: '1',
+            code: 'MOW',
+            name: 'Москва',
+            timezone: 'Europe/Moscow',
+            currency: 'RUB',
+            isActive: true,
+          },
+          role: result.user.role as 'user' | 'admin',
+          isVerified: true,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        };
 
-    const mockTokens = {
-      accessToken: 'mock_access_token',
-      refreshToken: 'mock_refresh_token',
-      expiresAt: Date.now() + 3600000,
-    };
+        const tokens = {
+          accessToken: result.token,
+          refreshToken: result.token,
+          expiresAt: Date.now() + 30 * 24 * 60 * 60 * 1000, // 30 days
+        };
 
-    login(mockUser, mockTokens);
-    toast.success('Вы успешно вошли');
-    navigate('/');
+        login(user, tokens);
+        toast.success('Вы успешно вошли');
+        navigate('/');
+      } else {
+        toast.error(result.error || 'Неверный код');
+        setCode(['', '', '', '']);
+        inputRefs.current[0]?.focus();
+      }
+    } catch (error) {
+      toast.error('Ошибка проверки кода. Проверьте сервер.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleResend = () => {

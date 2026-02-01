@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Phone, ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
+import { AuthService } from '@/api/auth';
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -38,11 +39,21 @@ export function LoginPage() {
 
     setLoading(true);
 
-    // Simulate SMS sending
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    toast.success('Код подтверждения отправлен');
-    navigate('/auth/verify', { state: { phone } });
+    try {
+      const result = await AuthService.sendCode(phoneDigits);
+      if (result.success) {
+        toast.success('Код подтверждения отправлен');
+        // For development, show the debug code
+        if (result.debugCode) {
+          toast.info(`Код для теста: ${result.debugCode}`);
+        }
+        navigate('/auth/verify', { state: { phone } });
+      }
+    } catch (error) {
+      toast.error('Ошибка отправки кода. Убедитесь, что сервер запущен.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

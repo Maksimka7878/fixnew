@@ -20,40 +20,119 @@ const API_URL = 'https://api.yookassa.ru/v3/payments';
 // Routes
 // -----------------------------------------------------------------------------
 
+// Storage
+const Storage = require('./storage');
+const jwt = require('jsonwebtoken'); // You installed this earlier
+
+const JWT_SECRET = process.env.JWT_SECRET || 'secret-key-change-me';
+
+// -----------------------------------------------------------------------------
+// Routes
+// -----------------------------------------------------------------------------
+
 // Health Check
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', service: 'Payment Service (BFF)' });
+    res.json({ status: 'ok', service: 'Fix Price Pro Backend (JSON Storage)' });
 });
 
 /**
- * Create Payment
- * POST /api/payment/create
- * Body: { amount: number, description: string, returnUrl: string }
+ * AUTH: Send Code (Mock SMS)
+ */
+app.post('/api/auth/send-code', async (req, res) => {
+    const { phone } = req.body;
+    // In real app: Send SMS via provider
+    console.log(`🔐 SMS Code for ${phone}: 1234`);
+    res.json({ success: true, message: 'Code sent', debugCode: '1234' });
+});
+
+/**
+ * AUTH: Verify Code & Login
+ */
+app.post('/api/auth/verify', async (req, res) => {
+    const { phone, code } = req.body;
+
+    // Validate mock code
+    if (code !== '1234') {
+        return res.status(400).json({ error: 'Invalid code' });
+    }
+
+    // Find or Create User
+    let user = await Storage.findUserByPhone(phone);
+    if (!user) {
+        user = {
+            id: uuidv4(),
+            phone,
+            role: 'user',
+            firstName: '',
+            lastName: ''
+        };
+        await Storage.saveUser(user);
+    }
+
+    // Generate Token
+    const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, { expiresIn: '30d' });
+
+    res.json({
+        success: true,
+        token,
+        user
+    });
+});
+
+/**
+ * AUTH: Update Profile
+ */
+app.post('/api/auth/profile', async (req, res) => {
+    const { id, firstName, lastName, email } = req.body;
+    // Basic update - in real app verify JWT first
+    let user = await Storage.getUsers().then(users => users.find(u => u.id === id));
+
+    if (user) {
+        user = { ...user, firstName, lastName, email };
+        await Storage.saveUser(user);
+        res.json({ success: true, user });
+    } else {
+        res.status(404).json({ error: 'User not found' });
+    }
+});
+
+/**
+ * Create Payment (YooKassa) & Init Order
  */
 app.post('/api/payment/create', async (req, res) => {
     try {
-        const { amount, description, returnUrl } = req.body;
+        const { amount, description, returnUrl, user, items, shipping } = req.body;
 
         if (!amount || !returnUrl) {
-            return res.status(400).json({ error: 'Missing required fields: amount, returnUrl' });
+            return res.status(400).json({ error: 'Missing fields' });
         }
 
         const idempotenceKey = uuidv4();
-
-        const payload = {
-            amount: {
-                value: amount.toFixed(2),
-                currency: 'RUB'
-            },
-            capture: true,
-            confirmation: {
-                type: 'redirect',
-                return_url: returnUrl
-            },
-            description: description || 'Оплата заказа'
-        };
-
         const auth = Buffer.from(`${YOOKASSA_SHOP_ID}:${YOOKASSA_SECRET_KEY}`).toString('base64');
+
+        // 1. Create Order in JSON Store (Pending)
+        const orderId = uuidv4();
+        const newOrder = {
+            id: orderId,
+            user_id: user?.id || 'guest',
+            user_phone: user?.phone,
+            items: items,
+            total: amount,
+            status: 'pending',
+            shipping_info: shipping,
+            payment_status: 'pending',
+            created_at: new Date()
+        };
+        await Storage.saveOrder(newOrder);
+
+        // 2. Request Payment URL from YooKassa
+        const payload = {
+            amount: { value: amount.toFixed(2), currency: 'RUB' },
+            capture: true,
+            confirmation: { type: 'redirect', return_url: returnUrl },
+            description: `Заказ #${orderId.slice(0, 8)}`,
+            metadata: { order_id: orderId }
+        };
 
         const response = await axios.post(API_URL, payload, {
             headers: {
@@ -63,31 +142,87 @@ app.post('/api/payment/create', async (req, res) => {
             }
         });
 
-        // Return the confirmation URL to the frontend
+        // 3. Update Order with Payment ID
+        newOrder.payment_id = response.data.id;
+        await Storage.saveOrder(newOrder);
+
         res.json({
             id: response.data.id,
             status: response.data.status,
-            confirmationUrl: response.data.confirmation.confirmation_url
+            confirmationUrl: response.data.confirmation.confirmation_url,
+            orderId: orderId
         });
 
     } catch (error) {
-        console.error('YooKassa Error:', error.response?.data || error.message);
-        res.status(500).json({
-            error: 'Payment creation failed',
-            details: error.response?.data || error.message
-        });
+        console.error('Payment/Order failed:', error.message);
+        res.status(500).json({ error: 'Payment creation failed' });
     }
 });
 
 /**
- * Webhook Handler (Optional for simple version, but good to have)
- * POST /api/payment/webhook
+ * ADMIN: Get Real Stats from JSON
  */
-app.post('/api/payment/webhook', (req, res) => {
-    const event = req.body;
-    // In a real app, verify signature and update DB
-    console.log('Received Webhook:', event.event, event.object.id);
-    res.sendStatus(200);
+app.get('/api/admin/stats/real', async (req, res) => {
+    const orders = await Storage.getOrders();
+    const users = await Storage.getUsers();
+
+    const totalRevenue = orders
+        .filter(o => o.status !== 'cancelled')
+        .reduce((sum, o) => sum + (o.total || 0), 0);
+
+    res.json({
+        totalOrders: orders.length,
+        totalRevenue,
+        totalUsers: users.length,
+        recentOrders: orders.slice(0, 10)
+    });
+});
+
+/**
+ * Orders: Create Cash Order (no payment)
+ */
+app.post('/api/orders/create', async (req, res) => {
+    try {
+        const { user, items, total, paymentMethod, shipping } = req.body;
+
+        const orderId = uuidv4();
+        const newOrder = {
+            id: orderId,
+            user_id: user?.id || 'guest',
+            user_phone: user?.phone,
+            items,
+            total,
+            status: 'confirmed',
+            payment_method: paymentMethod,
+            payment_status: paymentMethod === 'cash' ? 'pending' : 'pending',
+            shipping_info: shipping,
+            created_at: new Date()
+        };
+
+        await Storage.saveOrder(newOrder);
+        console.log(`📦 New Order #${orderId.slice(0, 8)} created (${paymentMethod})`);
+
+        res.json({ success: true, orderId });
+    } catch (error) {
+        console.error('Order creation failed:', error);
+        res.status(500).json({ error: 'Failed to create order' });
+    }
+});
+
+/**
+ * Orders: Get User Orders
+ */
+app.get('/api/orders/my', async (req, res) => {
+    const { userId } = req.query;
+
+    if (!userId) {
+        return res.json({ orders: [] });
+    }
+
+    const allOrders = await Storage.getOrders();
+    const userOrders = allOrders.filter(o => o.user_id === userId);
+
+    res.json({ orders: userOrders });
 });
 
 // -----------------------------------------------------------------------------

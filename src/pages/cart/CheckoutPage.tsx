@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore, useAuthStore } from '@/store';
-import { PaymentService } from '@/api/payment';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -92,32 +91,83 @@ export function CheckoutPage() {
     setLoading(true);
 
     try {
+      // Build order items
+      const orderItems = items.map(({ product, quantity }) => ({
+        productId: product.id,
+        name: product.name,
+        price: product.basePrice,
+        quantity,
+        imageUrl: product.images[0]?.url,
+      }));
+
+      // Determine delivery address
+      const address = deliveryMethod === 'pickup'
+        ? 'Самовывоз'
+        : selectedAddress === 'new'
+          ? newAddress
+          : savedAddresses.find(a => a.id === selectedAddress)?.address || '';
+
       if (paymentMethod === 'card') {
-        // Real payment via YooKassa
-        const returnUrl = `${window.location.origin}/cart`;
-        const description = `Заказ на сумму ${total.toFixed(2)} ₽. Покупатель: ${firstName} ${lastName}`;
+        // Create order + payment via server
+        const returnUrl = `${window.location.origin}/account/orders`;
 
-        const paymentResponse = await PaymentService.createPayment(
-          total,
-          description,
-          returnUrl
-        );
+        const response = await fetch('http://localhost:3001/api/payment/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            amount: total,
+            returnUrl,
+            user: user ? { id: user.id, phone: user.phone } : null,
+            items: orderItems,
+            shipping: {
+              address,
+              method: deliveryMethod,
+              timeSlot: timeSlots.find(s => s.id === selectedTimeSlot)?.time || '',
+              contact: { firstName, lastName, phone, email, comment },
+            },
+          }),
+        });
 
-        // Clear cart before redirecting to payment
-        clearCart();
+        const data = await response.json();
 
-        // Redirect to YooKassa payment page
-        window.location.href = paymentResponse.confirmationUrl;
+        if (data.confirmationUrl) {
+          // Clear cart and redirect to payment
+          clearCart();
+          window.location.href = data.confirmationUrl;
+        } else {
+          throw new Error('No confirmation URL');
+        }
       } else {
-        // Cash payment on delivery
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        clearCart();
-        toast.success('Заказ успешно оформлен!');
-        navigate('/account/orders');
+        // Cash payment - create order directly
+        const response = await fetch('http://localhost:3001/api/orders/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            user: user ? { id: user.id, phone: user.phone } : null,
+            items: orderItems,
+            total,
+            paymentMethod: 'cash',
+            shipping: {
+              address,
+              method: deliveryMethod,
+              timeSlot: timeSlots.find(s => s.id === selectedTimeSlot)?.time || '',
+              contact: { firstName, lastName, phone, email, comment },
+            },
+          }),
+        });
+
+        if (response.ok) {
+          clearCart();
+          toast.success('Заказ успешно оформлен!');
+          navigate('/account/orders');
+        } else {
+          throw new Error('Failed to create order');
+        }
       }
     } catch (error) {
-      console.error('Payment error:', error);
-      toast.error('Ошибка при обработке платежа. Попробуйте снова.');
+      console.error('Order error:', error);
+      toast.error('Ошибка при оформлении заказа. Попробуйте снова.');
+    } finally {
       setLoading(false);
     }
   };

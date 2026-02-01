@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -8,38 +9,18 @@ import {
   Users,
   ShoppingCart,
   DollarSign,
-  ArrowUpRight,
-  ArrowDownRight,
 } from 'lucide-react';
 
-// Mock admin data
-const stats = {
-  totalOrders: 1234,
-  totalRevenue: 456780,
-  totalUsers: 5678,
-  totalProducts: 890,
-  ordersChange: 12.5,
-  revenueChange: 8.3,
-  usersChange: 23.1,
-  productsChange: -2.4,
-};
-
-const recentOrders = [
-  { id: '1', number: 'ORD-001', customer: 'Иван Иванов', total: 2345, status: 'completed', date: '2024-01-15' },
-  { id: '2', number: 'ORD-002', customer: 'Мария Петрова', total: 1567, status: 'processing', date: '2024-01-15' },
-  { id: '3', number: 'ORD-003', customer: 'Алексей Сидоров', total: 3890, status: 'pending', date: '2024-01-14' },
-  { id: '4', number: 'ORD-004', customer: 'Ольга Козлова', total: 890, status: 'completed', date: '2024-01-14' },
-  { id: '5', number: 'ORD-005', customer: 'Дмитрий Новиков', total: 4567, status: 'shipped', date: '2024-01-13' },
-];
-
-const lowStockProducts = [
-  { id: '1', name: 'Шоколад молочный', sku: 'CH-001', stock: 5, minStock: 10 },
-  { id: '2', name: 'Чай зеленый', sku: 'TEA-002', stock: 3, minStock: 15 },
-  { id: '3', name: 'Кофе растворимый', sku: 'COF-003', stock: 8, minStock: 20 },
-];
+interface RealStats {
+  totalOrders: number;
+  totalRevenue: number;
+  totalUsers: number;
+  recentOrders: any[];
+}
 
 const statusColors: Record<string, string> = {
   completed: 'bg-brand-100 text-green-800',
+  confirmed: 'bg-brand-100 text-green-800',
   processing: 'bg-blue-100 text-blue-800',
   pending: 'bg-yellow-100 text-yellow-800',
   shipped: 'bg-purple-100 text-purple-800',
@@ -47,12 +28,45 @@ const statusColors: Record<string, string> = {
 
 const statusLabels: Record<string, string> = {
   completed: 'Выполнен',
+  confirmed: 'Подтвержден',
   processing: 'В обработке',
   pending: 'Ожидает',
   shipped: 'Отправлен',
 };
 
+const lowStockProducts = [
+  { id: '1', name: 'Шоколад молочный', sku: 'CH-001', stock: 5, minStock: 10 },
+  { id: '2', name: 'Чай зеленый', sku: 'TEA-002', stock: 3, minStock: 15 },
+  { id: '3', name: 'Кофе растворимый', sku: 'COF-003', stock: 8, minStock: 20 },
+];
+
 export function AdminPage() {
+  const [stats, setStats] = useState<RealStats | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/admin/stats/real')
+      .then(res => res.json())
+      .then(data => {
+        setStats(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to fetch stats:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  // Format order for display
+  const formatOrder = (order: any) => ({
+    id: order.id,
+    number: `ORD-${order.id.slice(0, 6).toUpperCase()}`,
+    customer: order.shipping_info?.contact?.firstName || order.user_phone || 'Гость',
+    total: order.total || 0,
+    status: order.status || 'pending',
+    date: new Date(order.created_at).toLocaleDateString('ru-RU'),
+  });
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Admin Header */}
@@ -100,83 +114,69 @@ export function AdminPage() {
 
           <TabsContent value="dashboard" className="space-y-6">
             {/* Stats Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-gray-500">Заказы</p>
-                      <p className="text-2xl font-bold">{stats.totalOrders.toLocaleString('ru-RU')}</p>
+            {loading ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[1, 2, 3, 4].map(i => <div key={i} className="h-32 bg-gray-100 animate-pulse rounded-xl" />)}
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm text-gray-500">Заказы</p>
+                        <p className="text-2xl font-bold">{(stats?.totalOrders || 0).toLocaleString('ru-RU')}</p>
+                      </div>
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <ShoppingCart className="w-5 h-5 text-blue-600" />
+                      </div>
                     </div>
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <ShoppingCart className="w-5 h-5 text-blue-600" />
-                    </div>
-                  </div>
-                  <div className="flex items-center mt-2 text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-brand mr-1" />
-                    <span className="text-brand">+{stats.ordersChange}%</span>
-                    <span className="text-gray-500 ml-1">за месяц</span>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-gray-500">Выручка</p>
-                      <p className="text-2xl font-bold">{stats.totalRevenue.toLocaleString('ru-RU')} ₽</p>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm text-gray-500">Выручка</p>
+                        <p className="text-2xl font-bold">{(stats?.totalRevenue || 0).toLocaleString('ru-RU')} ₽</p>
+                      </div>
+                      <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
+                        <DollarSign className="w-5 h-5 text-brand" />
+                      </div>
                     </div>
-                    <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                      <DollarSign className="w-5 h-5 text-brand" />
-                    </div>
-                  </div>
-                  <div className="flex items-center mt-2 text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-brand mr-1" />
-                    <span className="text-brand">+{stats.revenueChange}%</span>
-                    <span className="text-gray-500 ml-1">за месяц</span>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-gray-500">Пользователи</p>
-                      <p className="text-2xl font-bold">{stats.totalUsers.toLocaleString('ru-RU')}</p>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm text-gray-500">Пользователи</p>
+                        <p className="text-2xl font-bold">{(stats?.totalUsers || 0).toLocaleString('ru-RU')}</p>
+                      </div>
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                        <Users className="w-5 h-5 text-purple-600" />
+                      </div>
                     </div>
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <Users className="w-5 h-5 text-purple-600" />
-                    </div>
-                  </div>
-                  <div className="flex items-center mt-2 text-sm">
-                    <ArrowUpRight className="w-4 h-4 text-brand mr-1" />
-                    <span className="text-brand">+{stats.usersChange}%</span>
-                    <span className="text-gray-500 ml-1">за месяц</span>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-gray-500">Товары</p>
-                      <p className="text-2xl font-bold">{stats.totalProducts.toLocaleString('ru-RU')}</p>
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm text-gray-500">Товары (импорт)</p>
+                        <p className="text-2xl font-bold">~600</p>
+                      </div>
+                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                        <Package className="w-5 h-5 text-orange-600" />
+                      </div>
                     </div>
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <Package className="w-5 h-5 text-orange-600" />
-                    </div>
-                  </div>
-                  <div className="flex items-center mt-2 text-sm">
-                    <ArrowDownRight className="w-4 h-4 text-red-600 mr-1" />
-                    <span className="text-red-600">{stats.productsChange}%</span>
-                    <span className="text-gray-500 ml-1">за месяц</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
 
             <div className="grid lg:grid-cols-2 gap-6">
               {/* Recent Orders */}
@@ -187,20 +187,26 @@ export function AdminPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {recentOrders.map((order) => (
-                      <div key={order.id} className="flex items-center justify-between p-3 border rounded-lg">
-                        <div>
-                          <p className="font-medium">{order.number}</p>
-                          <p className="text-sm text-gray-500">{order.customer}</p>
+                    {(stats?.recentOrders || []).map((order: any) => {
+                      const formattedOrder = formatOrder(order);
+                      return (
+                        <div key={formattedOrder.id} className="flex items-center justify-between p-3 border rounded-lg">
+                          <div>
+                            <p className="font-medium">{formattedOrder.number}</p>
+                            <p className="text-sm text-gray-500">{formattedOrder.customer}</p>
+                          </div>
+                          <div className="text-right">
+                            <p className="font-medium">{formattedOrder.total.toLocaleString('ru-RU')} ₽</p>
+                            <Badge className={statusColors[formattedOrder.status] || 'bg-gray-100'} variant="secondary">
+                              {statusLabels[formattedOrder.status] || formattedOrder.status}
+                            </Badge>
+                          </div>
                         </div>
-                        <div className="text-right">
-                          <p className="font-medium">{order.total.toLocaleString('ru-RU')} ₽</p>
-                          <Badge className={statusColors[order.status]} variant="secondary">
-                            {statusLabels[order.status]}
-                          </Badge>
-                        </div>
-                      </div>
-                    ))}
+                      )
+                    })}
+                    {(!stats?.recentOrders || stats.recentOrders.length === 0) && (
+                      <p className="text-gray-500 text-center py-4">Заказов пока нет</p>
+                    )}
                   </div>
                 </CardContent>
               </Card>
