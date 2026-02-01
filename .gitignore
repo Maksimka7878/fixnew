@@ -33,3 +33,4 @@ yarn-error.log*
 # Server specific
 server/node_modules
 server/.env
+dev-dist
