@@ -4,19 +4,30 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
+import { Textarea } from '@/components/ui/textarea';
 import {
   LayoutDashboard,
   Package,
   Users,
   ShoppingCart,
   DollarSign,
+  Send,
+  Trash2,
 } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface RealStats {
   totalOrders: number;
   totalRevenue: number;
   totalUsers: number;
   recentOrders: any[];
+}
+
+interface BroadcastMessage {
+  id: string;
+  text: string;
+  timestamp: number;
+  read_count: number;
 }
 
 const statusColors: Record<string, string> = {
@@ -44,7 +55,11 @@ const lowStockProducts = [
 export function AdminPage() {
   const [stats, setStats] = useState<RealStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [broadcastMessage, setBroadcastMessage] = useState('');
+  const [messages, setMessages] = useState<BroadcastMessage[]>([]);
+  const [sendingMessage, setSendingMessage] = useState(false);
 
+  // Load stats
   useEffect(() => {
     fetch('http://localhost:3001/api/admin/stats/real')
       .then(res => res.json())
@@ -57,6 +72,69 @@ export function AdminPage() {
         setLoading(false);
       });
   }, []);
+
+  // Load broadcast messages
+  const loadBroadcastMessages = async () => {
+    try {
+      const res = await fetch('http://localhost:3001/api/admin/broadcast/all');
+      const data = await res.json();
+      setMessages(data.messages || []);
+    } catch (err) {
+      console.error('Failed to load messages:', err);
+    }
+  };
+
+  // Load messages on mount
+  useEffect(() => {
+    loadBroadcastMessages();
+  }, []);
+
+  // Send broadcast message
+  const handleSendBroadcast = async () => {
+    if (!broadcastMessage.trim()) {
+      toast.error('Введите текст сообщения');
+      return;
+    }
+
+    setSendingMessage(true);
+    try {
+      const res = await fetch('http://localhost:3001/api/admin/broadcast', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: broadcastMessage }),
+      });
+
+      if (res.ok) {
+        toast.success('Сообщение отправлено всем пользователям!');
+        setBroadcastMessage('');
+        await loadBroadcastMessages();
+      } else {
+        toast.error('Ошибка при отправке сообщения');
+      }
+    } catch (err) {
+      toast.error('Ошибка подключения к серверу');
+      console.error(err);
+    } finally {
+      setSendingMessage(false);
+    }
+  };
+
+  // Delete broadcast message
+  const handleDeleteMessage = async (id: string) => {
+    try {
+      const res = await fetch(`http://localhost:3001/api/admin/broadcast/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (res.ok) {
+        toast.success('Сообщение удалено');
+        await loadBroadcastMessages();
+      }
+    } catch (err) {
+      toast.error('Ошибка при удалении');
+      console.error(err);
+    }
+  };
 
   // Format order for display
   const formatOrder = (order: any) => ({
@@ -94,7 +172,7 @@ export function AdminPage() {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="dashboard" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4 lg:w-auto">
+          <TabsList className="grid w-full grid-cols-5 lg:w-auto">
             <TabsTrigger value="dashboard">
               <LayoutDashboard className="w-4 h-4 mr-2" />
               Обзор
@@ -110,6 +188,10 @@ export function AdminPage() {
             <TabsTrigger value="users">
               <Users className="w-4 h-4 mr-2" />
               Пользователи
+            </TabsTrigger>
+            <TabsTrigger value="broadcast">
+              <Send className="w-4 h-4 mr-2" />
+              Рассылка
             </TabsTrigger>
           </TabsList>
 
@@ -330,6 +412,74 @@ export function AdminPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-500">Функционал управления пользователями будет здесь</p>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="broadcast" className="space-y-6">
+            {/* Send Broadcast */}
+            <Card>
+              <CardHeader>
+                <CardTitle>📢 Отправить сообщение всем пользователям</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Textarea
+                  placeholder="Введите текст сообщения для всех пользователей PWA приложения..."
+                  value={broadcastMessage}
+                  onChange={(e) => setBroadcastMessage(e.target.value)}
+                  rows={5}
+                  className="resize-none"
+                />
+                <div className="text-sm text-gray-500">
+                  Символов: {broadcastMessage.length}
+                </div>
+                <Button
+                  onClick={handleSendBroadcast}
+                  disabled={sendingMessage || !broadcastMessage.trim()}
+                  className="bg-brand hover:bg-brand-dark w-full"
+                >
+                  {sendingMessage ? '⏳ Отправка...' : '📤 Отправить всем'}
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Messages History */}
+            <Card>
+              <CardHeader>
+                <CardTitle>История сообщений</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {messages.length === 0 ? (
+                  <p className="text-gray-500 text-center py-8">Сообщений пока нет</p>
+                ) : (
+                  <div className="space-y-3 max-h-96 overflow-y-auto">
+                    {messages.map((msg) => (
+                      <div key={msg.id} className="p-3 border rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex-1">
+                            <p className="text-sm font-medium text-gray-900">{msg.text}</p>
+                            <div className="flex items-center gap-3 mt-2">
+                              <span className="text-xs text-gray-500">
+                                {new Date(msg.timestamp).toLocaleString('ru-RU')}
+                              </span>
+                              <Badge variant="secondary" className="text-xs">
+                                👁️ {msg.read_count} {msg.read_count === 1 ? 'просмотр' : 'просмотров'}
+                              </Badge>
+                            </div>
+                          </div>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => handleDeleteMessage(msg.id)}
+                            className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </CardContent>
             </Card>
           </TabsContent>

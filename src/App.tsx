@@ -7,6 +7,7 @@ import { PageTransition } from '@/components/layout/PageTransition';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useAuthStore } from '@/store';
 import { useAppBadge } from '@/hooks/useAppBadge';
+import { broadcastService } from '@/services/broadcastService';
 import { useState } from 'react';
 
 // Lazy load all pages for code splitting
@@ -89,6 +90,14 @@ function App() {
 
   // Update app badge with cart item count
   useAppBadge();
+
+  // Initialize broadcast service for admin messages
+  useEffect(() => {
+    broadcastService.start();
+    return () => {
+      broadcastService.stop();
+    };
+  }, []);
 
   useEffect(() => {
     // Show splash for at least 2 seconds (like a real app launch)

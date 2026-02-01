@@ -505,6 +505,97 @@ app.post('/api/v1/media/upload', upload.single('file'), (req, res) => {
     });
 });
 
+// =============================================================================
+// Broadcast Messages (Admin)
+// =============================================================================
+
+// In-memory store for broadcast messages
+let broadcastMessages = []; // { id, text, timestamp, read_count }
+const MAX_MESSAGES = 100;
+
+/**
+ * Send Broadcast Message
+ * POST /api/admin/broadcast
+ * Body: { text: string }
+ */
+app.post('/api/admin/broadcast', async (req, res) => {
+    const { text } = req.body;
+
+    if (!text || text.trim().length === 0) {
+        return res.status(400).json({ error: 'Message text is required' });
+    }
+
+    const message = {
+        id: `msg_${Date.now()}`,
+        text: text.trim(),
+        timestamp: Date.now(),
+        read_count: 0
+    };
+
+    // Add to beginning (newest first)
+    broadcastMessages.unshift(message);
+
+    // Keep only last MAX_MESSAGES
+    if (broadcastMessages.length > MAX_MESSAGES) {
+        broadcastMessages = broadcastMessages.slice(0, MAX_MESSAGES);
+    }
+
+    console.log(`📢 Broadcast message sent: "${text}"`);
+    res.json({
+        success: true,
+        message,
+        totalMessages: broadcastMessages.length
+    });
+});
+
+/**
+ * Get New Broadcast Messages
+ * GET /api/messages?since=timestamp (optional)
+ */
+app.get('/api/messages', (req, res) => {
+    const { since } = req.query;
+    const sinceTime = since ? parseInt(since) : 0;
+
+    // Filter messages newer than 'since' timestamp
+    const newMessages = broadcastMessages.filter(m => m.timestamp > sinceTime);
+
+    // Increment read count for each message returned
+    newMessages.forEach(m => m.read_count++);
+
+    res.json({
+        messages: newMessages,
+        timestamp: Date.now(),
+        total: broadcastMessages.length
+    });
+});
+
+/**
+ * Get All Broadcast Messages (for admin panel)
+ * GET /api/admin/broadcast/all
+ */
+app.get('/api/admin/broadcast/all', (_req, res) => {
+    res.json({
+        messages: broadcastMessages,
+        total: broadcastMessages.length
+    });
+});
+
+/**
+ * Delete Broadcast Message
+ * DELETE /api/admin/broadcast/:id
+ */
+app.delete('/api/admin/broadcast/:id', (req, res) => {
+    const { id } = req.params;
+    const index = broadcastMessages.findIndex(m => m.id === id);
+
+    if (index === -1) {
+        return res.status(404).json({ error: 'Message not found' });
+    }
+
+    const deleted = broadcastMessages.splice(index, 1)[0];
+    res.json({ success: true, deleted });
+});
+
 // Start Server
 app.listen(PORT, () => {
     console.log(`Payment Service running on http://localhost:${PORT}`);
