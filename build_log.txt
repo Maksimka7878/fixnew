@@ -1,0 +1,45 @@
+
+> my-app@0.0.0 build
+> npm run generate-seo && tsc -b && vite build
+
+
+> my-app@0.0.0 generate-seo
+> node scripts/generate-sitemap.js
+
+✅ Sitemap generated: /Users/a1111/Downloads/app/public/sitemap.xml (1001 URLs)
+✅ Robots.txt generated: /Users/a1111/Downloads/app/public/robots.txt
+vite v7.3.1 building client environment for production...
+✓ 0 modules transformed.
+✗ Build failed in 47ms
+error during build:
+[vite-plugin-pwa:build] [plugin vite-plugin-pwa:build] index.html: There was an error during the build:
+  [BABEL]: Cannot find module 'yallist'
+Require stack:
+- /Users/a1111/Downloads/app/node_modules/lru-cache/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/helper-compilation-targets/lib/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/preset-env/lib/debug.js
+- /Users/a1111/Downloads/app/node_modules/@babel/preset-env/lib/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/config/files/module-types.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/config/files/configuration.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/config/files/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/index.js (While processing: /Users/a1111/Downloads/app/node_modules/@babel/preset-env/lib/index.js)
+Additionally, handling the error in the 'buildEnd' hook caused the following error:
+  [BABEL]: Cannot find module 'yallist'
+Require stack:
+- /Users/a1111/Downloads/app/node_modules/lru-cache/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/helper-compilation-targets/lib/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/preset-env/lib/debug.js
+- /Users/a1111/Downloads/app/node_modules/@babel/preset-env/lib/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/config/files/module-types.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/config/files/configuration.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/config/files/index.js
+- /Users/a1111/Downloads/app/node_modules/@babel/core/lib/index.js (While processing: /Users/a1111/Downloads/app/node_modules/@babel/preset-env/lib/index.js)
+file: /Users/a1111/Downloads/app/index.html
+    at getRollupError (file:///Users/a1111/Downloads/app/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at file:///Users/a1111/Downloads/app/node_modules/rollup/dist/es/shared/node-entry.js:23444:39
+    at async catchUnfinishedHookActions (file:///Users/a1111/Downloads/app/node_modules/rollup/dist/es/shared/node-entry.js:22902:16)
+    at async rollupInternal (file:///Users/a1111/Downloads/app/node_modules/rollup/dist/es/shared/node-entry.js:23427:5)
+    at async buildEnvironment (file:///Users/a1111/Downloads/app/node_modules/vite/dist/node/chunks/config.js:33541:12)
+    at async Object.build (file:///Users/a1111/Downloads/app/node_modules/vite/dist/node/chunks/config.js:33900:19)
+    at async Object.buildApp (file:///Users/a1111/Downloads/app/node_modules/vite/dist/node/chunks/config.js:33897:153)
+    at async CAC.<anonymous> (file:///Users/a1111/Downloads/app/node_modules/vite/dist/node/cli.js:629:3)

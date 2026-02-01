@@ -1,5 +1,5 @@
 // Mock payment service - no external dependencies
-const API_URL = 'http://localhost:3001/api';
+import { API_URL } from '../config';
 
 export interface CreatePaymentResponse {
     id: string;

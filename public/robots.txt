@@ -1,0 +1,25 @@
+# Robots file for Fix Price Pro
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /checkout
+Disallow: /*.json$
+
+# Crawl delays
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://fixprice-pro.com/sitemap.xml
+
+# Google Search Console
+User-agent: Googlebot
+Crawl-delay: 0
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /

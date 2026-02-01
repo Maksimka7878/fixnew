@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API_URL } from '@/config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -252,7 +253,7 @@ export function AdminPage() {
                   <Button
                     onClick={async () => {
                       try {
-                        await fetch('http://localhost:3001/api/admin/import', {
+                        await fetch(`${API_URL}/admin/import`, {
                           method: 'POST',
                           headers: { 'Content-Type': 'application/json' },
                           body: JSON.stringify({ categoriesLimit: 3, productsPerCategory: 15 })

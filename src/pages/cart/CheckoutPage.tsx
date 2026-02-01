@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { API_URL } from '@/config';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore, useAuthStore } from '@/store';
@@ -111,7 +112,7 @@ export function CheckoutPage() {
         // Create order + payment via server
         const returnUrl = `${window.location.origin}/account/orders`;
 
-        const response = await fetch('http://localhost:3001/api/payment/create', {
+        const response = await fetch(`${API_URL}/payment/create`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
