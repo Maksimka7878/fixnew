@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [
     inspectAttr(),
     react(),
@@ -17,7 +17,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo.svg', 'manifest.json'],
       manifestFilename: 'manifest.json',
-      useCredentials: true,
+
       manifest: {
         name: 'Fix Price Pro - Магазин товаров для дома',
         short_name: 'FixPrice',
