@@ -6,7 +6,6 @@ import { BottomNav } from './BottomNav';
 import { CartDrawer } from '../cart/CartDrawer';
 import { RegionModal } from '../modals/RegionModal';
 import { AuthModal } from '../modals/AuthModal';
-import { InstallPrompt } from '../pwa/InstallPrompt';
 import { OfflineNotice } from '../pwa/OfflineNotice';
 import { UpdatePrompt } from '../pwa/UpdatePrompt';
 
@@ -39,7 +38,6 @@ export function MainLayout() {
       <RegionModal />
       <AuthModal />
       <CartDrawer />
-      <InstallPrompt />
     </div>
   );
 }

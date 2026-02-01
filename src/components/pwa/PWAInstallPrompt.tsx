@@ -27,19 +27,20 @@ export function PWAInstallPrompt() {
         const handler = (e: Event) => {
             e.preventDefault();
             setDeferredPrompt(e);
-            // Only show prompt if not dismissed recently (could use localStorage)
+            // Delay before showing prompt (5 seconds) to not annoy users immediately
             const dismissed = localStorage.getItem('pwa_prompt_dismissed');
-            if (!dismissed) setIsVisible(true);
+            if (!dismissed) {
+                setTimeout(() => setIsVisible(true), 5000);
+            }
         };
 
         window.addEventListener('beforeinstallprompt', handler);
 
-        // For iOS, show prompt spread out or after some time if not installed
+        // For iOS, show prompt after 5 seconds if not installed
         if (isIOSDevice && !isStandalone) {
             const dismissed = localStorage.getItem('pwa_prompt_dismissed');
             if (!dismissed) {
-                // Delay slightly to not annoy immediately on load
-                setTimeout(() => setIsVisible(true), 3000);
+                setTimeout(() => setIsVisible(true), 5000);
             }
         }
 
