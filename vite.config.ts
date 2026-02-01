@@ -11,6 +11,9 @@ export default defineConfig({
     inspectAttr(),
     react(),
     VitePWA({
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.ts',
       registerType: 'autoUpdate',
       includeAssets: ['logo.svg', 'manifest.json'],
       manifestFilename: 'manifest.json',
@@ -72,74 +75,14 @@ export default defineConfig({
           }
         ]
       },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'], // Removed webp from precache to avoid downloading 1000+ images on install
-        cleanupOutdatedCaches: true,
-        runtimeCaching: [
-          // Cache local product/category images (WebP)
-          {
-            urlPattern: /^\/images\/.*\.(webp|png|jpg|jpeg|svg)$/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'local-images-cache',
-              expiration: {
-                maxEntries: 500,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts',
-              expiration: {
-                maxEntries: 20,
-                maxAgeSeconds: 60 * 60 * 24 * 365
-              }
-            }
-          },
-          // Cache external images (if any remain)
-          {
-            urlPattern: /^https:\/\/(.*)\.(jpg|jpeg|png|webp|gif|svg)$/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'external-images-cache',
-              expiration: {
-                maxEntries: 200,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
-          // Cache API responses
-          {
-            urlPattern: /\/api\/.*/i,
-            handler: 'NetworkFirst', // Changed to NetworkFirst for fresh data, falling back to cache
-            options: {
-              cacheName: 'api-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 // 24 hours
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          }
-        ],
-        skipWaiting: true,
-        clientsClaim: true
+      injectManifest: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
       },
       devOptions: {
         enabled: true,
         suppressWarnings: true,
-        navigateFallback: '/'
+        navigateFallback: '/',
+        type: 'module',
       }
     })
   ],

@@ -216,7 +216,7 @@ export function NotificationCenter() {
               variant="outline"
               size="sm"
               onClick={syncPendingNotifications}
-              disabled={isOnline || loading}
+              disabled={!isOnline || loading}
               className="flex-1"
             >
               🔄 Синхр.

@@ -89,22 +89,26 @@ class NotificationService {
     }
 
     try {
-      // Если есть Service Worker, используем его
-      if (navigator.serviceWorker?.controller) {
-        navigator.serviceWorker.controller.postMessage({
-          type: 'SHOW_NOTIFICATION',
-          title,
-          options: options || {},
-        });
-      } else {
-        // Fallback на обычное уведомление
-        new Notification(title, options);
-      }
+      // Используем Service Worker registration для системных уведомлений
+      const registration = await navigator.serviceWorker.ready;
+      await registration.showNotification(title, {
+        icon: '/logo.svg',
+        badge: '/logo.svg',
+        vibrate: [100, 50, 100],
+        ...options,
+      });
 
       // Сохранить в IndexedDB для логирования
       await this.storeNotification(title, options);
     } catch (error) {
       console.error('❌ Ошибка при отправке уведомления:', error);
+      // Fallback на обычное уведомление
+      try {
+        new Notification(title, options);
+        await this.storeNotification(title, options);
+      } catch (fallbackError) {
+        console.error('❌ Fallback уведомление тоже не удалось:', fallbackError);
+      }
     }
   }
 
