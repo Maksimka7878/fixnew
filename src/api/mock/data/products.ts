@@ -2,13 +2,13 @@ import type { Product, Category } from '@/types';
 
 // Categories for reference
 export const CATEGORIES: Category[] = [
-    { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/22c55e/white?text=Продукты', icon: 'Apple' },
-    { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/3b82f6/white?text=Химия', icon: 'Spray' },
-    { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/ec4899/white?text=Косметика', icon: 'Sparkles' },
-    { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/f59e0b/white?text=Дом', icon: 'Home' },
-    { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/8b5cf6/white?text=Игрушки', icon: 'Gamepad' },
-    { id: 'c6', name: 'Текстиль', slug: 'tekstil', parentId: null, children: [], sortOrder: 6, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/06b6d4/white?text=Текстиль', icon: 'Shirt' },
-    { id: 'c7', name: 'Канцтовары', slug: 'kantstovary', parentId: null, children: [], sortOrder: 7, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: 'https://placehold.co/400x400/ef4444/white?text=Канцтовары', icon: 'Pencil' },
+    { id: 'c1', name: 'Продукты', slug: 'produkty', parentId: null, children: [], sortOrder: 1, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/продукты.webp', icon: 'Apple' },
+    { id: 'c2', name: 'Бытовая химия', slug: 'bytovaya-khimiya', parentId: null, children: [], sortOrder: 2, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/химия.webp', icon: 'Spray' },
+    { id: 'c3', name: 'Косметика', slug: 'kosmetika', parentId: null, children: [], sortOrder: 3, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/косметика.webp', icon: 'Sparkles' },
+    { id: 'c4', name: 'Дом и сад', slug: 'dom-i-sad', parentId: null, children: [], sortOrder: 4, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/дом.webp', icon: 'Home' },
+    { id: 'c5', name: 'Игрушки', slug: 'igrushki', parentId: null, children: [], sortOrder: 5, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/игрушки.webp', icon: 'Gamepad' },
+    { id: 'c6', name: 'Текстиль', slug: 'tekstil', parentId: null, children: [], sortOrder: 6, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/текстиль.webp', icon: 'Shirt' },
+    { id: 'c7', name: 'Канцтовары', slug: 'kantstovary', parentId: null, children: [], sortOrder: 7, isActive: true, regionIds: ['r1', 'r2', 'r3'], image: '/images/categories/канцтовары.webp', icon: 'Pencil' },
 ];
 
 const cat = (id: string) => CATEGORIES.find(c => c.id === id)!;
@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: 116,
         images: [
-            { id: 'img-5024542-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bfbaef91a975ade106b8496fb72f5f01.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bfbaef91a975ade106b8496fb72f5f01.jpg', alt: "Салфетки бумажные, Plushe, 2 слоя, 230 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5024542-1', url: '/images/products/bfbaef91a975ade106b8496fb72f5f01.webp', thumbnailUrl: '/images/products/bfbaef91a975ade106b8496fb72f5f01.webp', alt: "Салфетки бумажные, Plushe, 2 слоя, 230 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 51,
         baseOldPrice: 59,
         images: [
-            { id: 'img-5025171-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/541f029e5ad38f437901f9474bfe2233.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/541f029e5ad38f437901f9474bfe2233.jpg', alt: "Пакеты для хранения, BonHome, 26х40 см, 100 шт.", sortOrder: 0 }
+            { id: 'img-5025171-1', url: '/images/products/541f029e5ad38f437901f9474bfe2233.webp', thumbnailUrl: '/images/products/541f029e5ad38f437901f9474bfe2233.webp', alt: "Пакеты для хранения, BonHome, 26х40 см, 100 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024276-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c349b441dcc149c4e23e248bd9572eb1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c349b441dcc149c4e23e248bd9572eb1.jpg', alt: "Салфетки бумажные \"Duet\", PLUSHE, 1 слой, 250 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5024276-1', url: '/images/products/c349b441dcc149c4e23e248bd9572eb1.webp', thumbnailUrl: '/images/products/c349b441dcc149c4e23e248bd9572eb1.webp', alt: "Салфетки бумажные \"Duet\", PLUSHE, 1 слой, 250 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -86,7 +86,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: 87,
         images: [
-            { id: 'img-5025205-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0f/0f1068a2d887f41a7cef7030a817376b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0f/0f1068a2d887f41a7cef7030a817376b.jpg', alt: "Бумага для выпечки, BonHome, 8 м х 38 см", sortOrder: 0 }
+            { id: 'img-5025205-1', url: '/images/products/0f1068a2d887f41a7cef7030a817376b.webp', thumbnailUrl: '/images/products/0f1068a2d887f41a7cef7030a817376b.webp', alt: "Бумага для выпечки, BonHome, 8 м х 38 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025325-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/63e5d88ae9985b8430228194c6615a8b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/63e5d88ae9985b8430228194c6615a8b.jpg', alt: "Крышка на резинке, BonHome, 38 см, 100 шт.", sortOrder: 0 }
+            { id: 'img-5025325-1', url: '/images/products/63e5d88ae9985b8430228194c6615a8b.webp', thumbnailUrl: '/images/products/63e5d88ae9985b8430228194c6615a8b.webp', alt: "Крышка на резинке, BonHome, 38 см, 100 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -128,7 +128,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025154-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/57/570092f2b8fa8860afadc8ec43ceea81.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/57/570092f2b8fa8860afadc8ec43ceea81.jpg', alt: "Пакеты фасовочные в рулоне, BonHome, повышенной прочности, 24х37 см, 70 шт.", sortOrder: 0 }
+            { id: 'img-5025154-1', url: '/images/products/570092f2b8fa8860afadc8ec43ceea81.webp', thumbnailUrl: '/images/products/570092f2b8fa8860afadc8ec43ceea81.webp', alt: "Пакеты фасовочные в рулоне, BonHome, повышенной прочности, 24х37 см, 70 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -149,7 +149,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025059-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c0/c0d7e83d4895d392fe09e2a799f96afc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c0/c0d7e83d4895d392fe09e2a799f96afc.jpg', alt: "Пакеты для завтраков, BonHome, 1 л, 200 шт.", sortOrder: 0 }
+            { id: 'img-5025059-1', url: '/images/products/c0d7e83d4895d392fe09e2a799f96afc.webp', thumbnailUrl: '/images/products/c0d7e83d4895d392fe09e2a799f96afc.webp', alt: "Пакеты для завтраков, BonHome, 1 л, 200 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -170,7 +170,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025056-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6ad6d5e3be6c376e231ec1dd3f29f1c6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6ad6d5e3be6c376e231ec1dd3f29f1c6.jpg', alt: "Пакеты для замораживания с завязками, BonHome, 3 л, 50 шт.", sortOrder: 0 }
+            { id: 'img-5025056-1', url: '/images/products/6ad6d5e3be6c376e231ec1dd3f29f1c6.webp', thumbnailUrl: '/images/products/6ad6d5e3be6c376e231ec1dd3f29f1c6.webp', alt: "Пакеты для замораживания с завязками, BonHome, 3 л, 50 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -191,7 +191,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5026181-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/524b016745568e11c95e18248c887118.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/524b016745568e11c95e18248c887118.jpg', alt: "Набор губок для сильных загрязнений, BonHome, 7 шт.", sortOrder: 0 }
+            { id: 'img-5026181-1', url: '/images/products/524b016745568e11c95e18248c887118.webp', thumbnailUrl: '/images/products/524b016745568e11c95e18248c887118.webp', alt: "Набор губок для сильных загрязнений, BonHome, 7 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -212,7 +212,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092205-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d6203786ae533ec44e21a4931dbae244.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d6203786ae533ec44e21a4931dbae244.jpg', alt: "Силиконовый коврик для выпечки, O`Kitchen, 40х50 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092205-1', url: '/images/products/d6203786ae533ec44e21a4931dbae244.webp', thumbnailUrl: '/images/products/d6203786ae533ec44e21a4931dbae244.webp', alt: "Силиконовый коврик для выпечки, O`Kitchen, 40х50 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -233,7 +233,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5026182-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/ebec7635ae41e74aad17c223fec24324.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/ebec7635ae41e74aad17c223fec24324.jpg', alt: "Губка для мытья посуды профильная, BonHome, 5 шт.", sortOrder: 0 }
+            { id: 'img-5026182-1', url: '/images/products/ebec7635ae41e74aad17c223fec24324.webp', thumbnailUrl: '/images/products/ebec7635ae41e74aad17c223fec24324.webp', alt: "Губка для мытья посуды профильная, BonHome, 5 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -254,7 +254,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 71,
         baseOldPrice: 79,
         images: [
-            { id: 'img-5025250-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/dab028e9305294a91b2d006efbb9d614.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/dab028e9305294a91b2d006efbb9d614.jpg', alt: "Плёнка пищевая \"Биоразлагаемая\", BonHome, 29 см х 100 м", sortOrder: 0 }
+            { id: 'img-5025250-1', url: '/images/products/dab028e9305294a91b2d006efbb9d614.webp', thumbnailUrl: '/images/products/dab028e9305294a91b2d006efbb9d614.webp', alt: "Плёнка пищевая \"Биоразлагаемая\", BonHome, 29 см х 100 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -275,7 +275,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 22.6,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5023321-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/491fed1ff3be704e82599833bb050f12.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/491fed1ff3be704e82599833bb050f12.jpg', alt: "Форма для выпечки круглая, O'Kitchen, 21,5 см", sortOrder: 0 }
+            { id: 'img-5023321-1', url: '/images/products/491fed1ff3be704e82599833bb050f12.webp', thumbnailUrl: '/images/products/491fed1ff3be704e82599833bb050f12.webp', alt: "Форма для выпечки круглая, O'Kitchen, 21,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -296,7 +296,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 255,
         baseOldPrice: 299,
         images: [
-            { id: 'img-5025284-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ee/ee038608b7b95c7ab71e20652974d01f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ee/ee038608b7b95c7ab71e20652974d01f.jpg', alt: "Фольга \"Гриль\", Саянская, 15 м", sortOrder: 0 }
+            { id: 'img-5025284-1', url: '/images/products/ee038608b7b95c7ab71e20652974d01f.webp', thumbnailUrl: '/images/products/ee038608b7b95c7ab71e20652974d01f.webp', alt: "Фольга \"Гриль\", Саянская, 15 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -317,7 +317,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 41.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5090574-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8eddb6c95ff45311172cf3feb7d156cd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8eddb6c95ff45311172cf3feb7d156cd.jpg', alt: "Форма для выпечки, O'Kitchen, 2,5 л", sortOrder: 0 }
+            { id: 'img-5090574-1', url: '/images/products/8eddb6c95ff45311172cf3feb7d156cd.webp', thumbnailUrl: '/images/products/8eddb6c95ff45311172cf3feb7d156cd.webp', alt: "Форма для выпечки, O'Kitchen, 2,5 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -338,7 +338,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025132-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d38f3329998be5d401a561c32137a237.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d38f3329998be5d401a561c32137a237.jpg', alt: "Рукав для запекания, BonHome, 3 м х 30 см", sortOrder: 0 }
+            { id: 'img-5025132-1', url: '/images/products/d38f3329998be5d401a561c32137a237.webp', thumbnailUrl: '/images/products/d38f3329998be5d401a561c32137a237.webp', alt: "Рукав для запекания, BonHome, 3 м х 30 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -359,7 +359,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036343-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8f/8fb5997a7bbe3d63b1f3d4b19c727c6d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8f/8fb5997a7bbe3d63b1f3d4b19c727c6d.jpg', alt: "Контейнер с замком, 0,8/0,9 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036343-1', url: '/images/products/8fb5997a7bbe3d63b1f3d4b19c727c6d.webp', thumbnailUrl: '/images/products/8fb5997a7bbe3d63b1f3d4b19c727c6d.webp', alt: "Контейнер с замком, 0,8/0,9 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -380,7 +380,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025217-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4ef396b537e524e04a0041dcfb3e6862.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4ef396b537e524e04a0041dcfb3e6862.jpg', alt: "Пакеты фасовочные, BonHome, 30х40 см", sortOrder: 0 }
+            { id: 'img-5025217-1', url: '/images/products/4ef396b537e524e04a0041dcfb3e6862.webp', thumbnailUrl: '/images/products/4ef396b537e524e04a0041dcfb3e6862.webp', alt: "Пакеты фасовочные, BonHome, 30х40 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -401,7 +401,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 100,
         baseOldPrice: 124,
         images: [
-            { id: 'img-5021355-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e51bb1e4daef05fa50c26d70f29b6b6c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e51bb1e4daef05fa50c26d70f29b6b6c.jpg', alt: "Нож керамический, O'Kitchen, 19 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021355-1', url: '/images/products/e51bb1e4daef05fa50c26d70f29b6b6c.webp', thumbnailUrl: '/images/products/e51bb1e4daef05fa50c26d70f29b6b6c.webp', alt: "Нож керамический, O'Kitchen, 19 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -422,7 +422,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5071094-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/584ba6e9e67b13e73b5f59f9a02f20f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/584ba6e9e67b13e73b5f59f9a02f20f0.jpg', alt: "Коврик под посуду, 38х50 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5071094-1', url: '/images/products/584ba6e9e67b13e73b5f59f9a02f20f0.webp', thumbnailUrl: '/images/products/584ba6e9e67b13e73b5f59f9a02f20f0.webp', alt: "Коврик под посуду, 38х50 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -443,7 +443,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094045-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6ac861e7a2871bcdda6db325259d8102.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6ac861e7a2871bcdda6db325259d8102.jpg', alt: "Конфетница с крышкой, O'Kitchen, 490 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094045-1', url: '/images/products/6ac861e7a2871bcdda6db325259d8102.webp', thumbnailUrl: '/images/products/6ac861e7a2871bcdda6db325259d8102.webp', alt: "Конфетница с крышкой, O'Kitchen, 490 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -464,7 +464,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024266-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c9/c983bc975441b67509bc8ddf3a67e706.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c9/c983bc975441b67509bc8ddf3a67e706.jpg', alt: "Набор многофункциональных кухонных ковриков, O'Kitchen, 45х29 см, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5024266-1', url: '/images/products/c983bc975441b67509bc8ddf3a67e706.webp', thumbnailUrl: '/images/products/c983bc975441b67509bc8ddf3a67e706.webp', alt: "Набор многофункциональных кухонных ковриков, O'Kitchen, 45х29 см, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -485,7 +485,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036393-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1eeeb074bb861e15c4935826dbc2e674.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1eeeb074bb861e15c4935826dbc2e674.jpg', alt: "Контейнер с замком, 0,4 л/0,5 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036393-1', url: '/images/products/1eeeb074bb861e15c4935826dbc2e674.webp', thumbnailUrl: '/images/products/1eeeb074bb861e15c4935826dbc2e674.webp', alt: "Контейнер с замком, 0,4 л/0,5 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -506,7 +506,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5090033-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1c7521f2ba03a628ce06ba175683c8df.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1c7521f2ba03a628ce06ba175683c8df.jpg', alt: "Термобокал, O’Kitchen, 310 мл", sortOrder: 0 }
+            { id: 'img-5090033-1', url: '/images/products/1c7521f2ba03a628ce06ba175683c8df.webp', thumbnailUrl: '/images/products/1c7521f2ba03a628ce06ba175683c8df.webp', alt: "Термобокал, O’Kitchen, 310 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -527,7 +527,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093144-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/136125fb0c8797f66ce9fca07700ea3f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/136125fb0c8797f66ce9fca07700ea3f.jpg', alt: "Тарелка, O`Kitchen, 15,5 см", sortOrder: 0 }
+            { id: 'img-5093144-1', url: '/images/products/136125fb0c8797f66ce9fca07700ea3f.webp', thumbnailUrl: '/images/products/136125fb0c8797f66ce9fca07700ea3f.webp', alt: "Тарелка, O`Kitchen, 15,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -548,7 +548,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025358-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/1054c3d1cfd93a7dffc1fdd0da363870.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/1054c3d1cfd93a7dffc1fdd0da363870.jpg', alt: "Фольга алюминиевая, BonHome, 10 м", sortOrder: 0 }
+            { id: 'img-5025358-1', url: '/images/products/1054c3d1cfd93a7dffc1fdd0da363870.webp', thumbnailUrl: '/images/products/1054c3d1cfd93a7dffc1fdd0da363870.webp', alt: "Фольга алюминиевая, BonHome, 10 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -569,7 +569,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025283-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/163d061957184fb6545db444979ebc96.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/163d061957184fb6545db444979ebc96.jpg', alt: "Алюминиевая фольга \"Запекание\", Саянская, 10 м", sortOrder: 0 }
+            { id: 'img-5025283-1', url: '/images/products/163d061957184fb6545db444979ebc96.webp', thumbnailUrl: '/images/products/163d061957184fb6545db444979ebc96.webp', alt: "Алюминиевая фольга \"Запекание\", Саянская, 10 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -590,7 +590,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091399-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4d/4d3ebe7532dba32e8b20a8c93edbca28.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4d/4d3ebe7532dba32e8b20a8c93edbca28.jpg', alt: "Чашка, O'Kitchen, 200 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091399-1', url: '/images/products/4d3ebe7532dba32e8b20a8c93edbca28.webp', thumbnailUrl: '/images/products/4d3ebe7532dba32e8b20a8c93edbca28.webp', alt: "Чашка, O'Kitchen, 200 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -611,7 +611,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 22.6,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024553-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a95457306340698d9b3668a1ce726da1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a95457306340698d9b3668a1ce726da1.jpg', alt: "Термосалфетка, O`Kitchen, 43х28 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5024553-1', url: '/images/products/a95457306340698d9b3668a1ce726da1.webp', thumbnailUrl: '/images/products/a95457306340698d9b3668a1ce726da1.webp', alt: "Термосалфетка, O`Kitchen, 43х28 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -632,7 +632,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025242-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5971e8d893071365a5b2d4c38043eb7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5971e8d893071365a5b2d4c38043eb7.jpg', alt: "Пергамент силиконизированный в листах, Gurmanoff, 38х42 см, 14 шт.", sortOrder: 0 }
+            { id: 'img-5025242-1', url: '/images/products/a5971e8d893071365a5b2d4c38043eb7.webp', thumbnailUrl: '/images/products/a5971e8d893071365a5b2d4c38043eb7.webp', alt: "Пергамент силиконизированный в листах, Gurmanoff, 38х42 см, 14 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -653,7 +653,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5071166-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cf/cfb4ba3b4b097b55277d7eb56536d1da.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cf/cfb4ba3b4b097b55277d7eb56536d1da.jpg', alt: "Коврик для посуды, BonHome, 30х40 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5071166-1', url: '/images/products/cfb4ba3b4b097b55277d7eb56536d1da.webp', thumbnailUrl: '/images/products/cfb4ba3b4b097b55277d7eb56536d1da.webp', alt: "Коврик для посуды, BonHome, 30х40 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -674,7 +674,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5023542-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1aebfbe78e0569821efda940e15d6e22.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1aebfbe78e0569821efda940e15d6e22.jpg', alt: "Контейнер-кружка для супа, 880 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5023542-1', url: '/images/products/1aebfbe78e0569821efda940e15d6e22.webp', thumbnailUrl: '/images/products/1aebfbe78e0569821efda940e15d6e22.webp', alt: "Контейнер-кружка для супа, 880 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -695,7 +695,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036603-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/95961ad2a845596698b4bd5b9a958dd3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/95961ad2a845596698b4bd5b9a958dd3.jpg', alt: "Контейнер винтовой, ARXИМЕD, 0,66 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036603-1', url: '/images/products/95961ad2a845596698b4bd5b9a958dd3.webp', thumbnailUrl: '/images/products/95961ad2a845596698b4bd5b9a958dd3.webp', alt: "Контейнер винтовой, ARXИМЕD, 0,66 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -716,7 +716,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036137-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7a/7aab5078286883219f21f81a29d170e4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7a/7aab5078286883219f21f81a29d170e4.jpg', alt: "Контейнер квадратный, FunCook, 0,63 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036137-1', url: '/images/products/7aab5078286883219f21f81a29d170e4.webp', thumbnailUrl: '/images/products/7aab5078286883219f21f81a29d170e4.webp', alt: "Контейнер квадратный, FunCook, 0,63 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -737,7 +737,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094039-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0116f04bb6c1953faebef58b92ff0ba.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0116f04bb6c1953faebef58b92ff0ba.jpg', alt: "Креманка, O'Kitchen, 320 мл", sortOrder: 0 }
+            { id: 'img-5094039-1', url: '/images/products/d0116f04bb6c1953faebef58b92ff0ba.webp', thumbnailUrl: '/images/products/d0116f04bb6c1953faebef58b92ff0ba.webp', alt: "Креманка, O'Kitchen, 320 мл", sortOrder: 0 }
         ],
         categoryId: 'c3',
         category: cat('c3'),
@@ -758,7 +758,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036602-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bb0352d416061e5449b42ed1649e8711.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bb0352d416061e5449b42ed1649e8711.jpg', alt: "Контейнер винтовой, ARXИМЕD, 0,33 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036602-1', url: '/images/products/bb0352d416061e5449b42ed1649e8711.webp', thumbnailUrl: '/images/products/bb0352d416061e5449b42ed1649e8711.webp', alt: "Контейнер винтовой, ARXИМЕD, 0,33 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -779,7 +779,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024228-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e382cfc2c8fc2707660ed14478cd8c5c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e382cfc2c8fc2707660ed14478cd8c5c.jpg', alt: "Клеёнка кухонная, O'Kitchen, 60х100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5024228-1', url: '/images/products/e382cfc2c8fc2707660ed14478cd8c5c.webp', thumbnailUrl: '/images/products/e382cfc2c8fc2707660ed14478cd8c5c.webp', alt: "Клеёнка кухонная, O'Kitchen, 60х100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -800,7 +800,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022996-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f41629d970fb6e2266df1322c09f24d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f41629d970fb6e2266df1322c09f24d.jpg', alt: "Доска разделочная гибкая, Ханпласт, 28х20 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5022996-1', url: '/images/products/9f41629d970fb6e2266df1322c09f24d.webp', thumbnailUrl: '/images/products/9f41629d970fb6e2266df1322c09f24d.webp', alt: "Доска разделочная гибкая, Ханпласт, 28х20 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -821,7 +821,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 18.3,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024793-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/1210ca0f4cbec1c8d7bc2bf8c9eb5dae.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/1210ca0f4cbec1c8d7bc2bf8c9eb5dae.jpg', alt: "Стакан, FunCook, 400 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5024793-1', url: '/images/products/1210ca0f4cbec1c8d7bc2bf8c9eb5dae.webp', thumbnailUrl: '/images/products/1210ca0f4cbec1c8d7bc2bf8c9eb5dae.webp', alt: "Стакан, FunCook, 400 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -842,7 +842,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 90,
         baseOldPrice: 99,
         images: [
-            { id: 'img-5093650-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5d/5d3c76aad1fa7e40987a580bfc95c843.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5d/5d3c76aad1fa7e40987a580bfc95c843.jpg', alt: "Тарелка, O'Kitchen, 20 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093650-1', url: '/images/products/5d3c76aad1fa7e40987a580bfc95c843.webp', thumbnailUrl: '/images/products/5d3c76aad1fa7e40987a580bfc95c843.webp', alt: "Тарелка, O'Kitchen, 20 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -863,7 +863,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022988-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e6efbbbd0bd797faa2ae986552edd9f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e6efbbbd0bd797faa2ae986552edd9f.jpg', alt: "Подставка под ложку, O`Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5022988-1', url: '/images/products/2e6efbbbd0bd797faa2ae986552edd9f.webp', thumbnailUrl: '/images/products/2e6efbbbd0bd797faa2ae986552edd9f.webp', alt: "Подставка под ложку, O`Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -884,7 +884,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 16.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036253-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/6337b99425b44b9a31887b4fae1cecff.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/6337b99425b44b9a31887b4fae1cecff.jpg', alt: "Контейнер квадратный, FunCook, 0,15 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036253-1', url: '/images/products/6337b99425b44b9a31887b4fae1cecff.webp', thumbnailUrl: '/images/products/6337b99425b44b9a31887b4fae1cecff.webp', alt: "Контейнер квадратный, FunCook, 0,15 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -905,7 +905,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093818-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d3bf5359222bb0419a9ecb9662e9e9d9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d3bf5359222bb0419a9ecb9662e9e9d9.jpg', alt: "Набор формочек для печенья \"Zoo\", Уника Пласт, 8 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5093818-1', url: '/images/products/d3bf5359222bb0419a9ecb9662e9e9d9.webp', thumbnailUrl: '/images/products/d3bf5359222bb0419a9ecb9662e9e9d9.webp', alt: "Набор формочек для печенья \"Zoo\", Уника Пласт, 8 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -926,7 +926,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093541-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4f5b0b859eb0dd2a8d7276a99699a059.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4f5b0b859eb0dd2a8d7276a99699a059.png', alt: "Блюдо для закусок, O`Kitchen, 390 мл", sortOrder: 0 }
+            { id: 'img-5093541-1', url: '/images/products/4f5b0b859eb0dd2a8d7276a99699a059.webp', thumbnailUrl: '/images/products/4f5b0b859eb0dd2a8d7276a99699a059.webp', alt: "Блюдо для закусок, O`Kitchen, 390 мл", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -947,7 +947,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 339,
         baseOldPrice: 399,
         images: [
-            { id: 'img-5025285-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e8631d685037bf1a7e511fe8b305b4f6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e8631d685037bf1a7e511fe8b305b4f6.jpg', alt: "Профессиональная бумага для выпечки, Gurmanoff, 40 м х 38 см", sortOrder: 0 }
+            { id: 'img-5025285-1', url: '/images/products/e8631d685037bf1a7e511fe8b305b4f6.webp', thumbnailUrl: '/images/products/e8631d685037bf1a7e511fe8b305b4f6.webp', alt: "Профессиональная бумага для выпечки, Gurmanoff, 40 м х 38 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -968,7 +968,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036158-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/6124a7d8741be3d94ca164247ed54e1e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/6124a7d8741be3d94ca164247ed54e1e.jpg', alt: "Ёмкость с завинчивающейся крышкой, FunCook, 0,55 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036158-1', url: '/images/products/6124a7d8741be3d94ca164247ed54e1e.webp', thumbnailUrl: '/images/products/6124a7d8741be3d94ca164247ed54e1e.webp', alt: "Ёмкость с завинчивающейся крышкой, FunCook, 0,55 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -989,7 +989,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036348-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/35c5c6e1660602d5d408ddda5518eafa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/35c5c6e1660602d5d408ddda5518eafa.jpg', alt: "Контейнер с замком, 1,4 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036348-1', url: '/images/products/35c5c6e1660602d5d408ddda5518eafa.webp', thumbnailUrl: '/images/products/35c5c6e1660602d5d408ddda5518eafa.webp', alt: "Контейнер с замком, 1,4 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1010,7 +1010,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022951-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e9/e97270f6a5157b6dc3b52fd1ac880ba2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e9/e97270f6a5157b6dc3b52fd1ac880ba2.jpg', alt: "Доска разделочная, 20х31 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5022951-1', url: '/images/products/e97270f6a5157b6dc3b52fd1ac880ba2.webp', thumbnailUrl: '/images/products/e97270f6a5157b6dc3b52fd1ac880ba2.webp', alt: "Доска разделочная, 20х31 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1031,7 +1031,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 56,
         baseOldPrice: 62,
         images: [
-            { id: 'img-5093206-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/73755c65cf5937995a0f58dab9afa179.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/73755c65cf5937995a0f58dab9afa179.jpg', alt: "Тарелка, O'Kitchen, 17,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093206-1', url: '/images/products/73755c65cf5937995a0f58dab9afa179.webp', thumbnailUrl: '/images/products/73755c65cf5937995a0f58dab9afa179.webp', alt: "Тарелка, O'Kitchen, 17,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1052,7 +1052,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024280-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a49fc4bddce13d3da3234e328f20a4b4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a49fc4bddce13d3da3234e328f20a4b4.jpg', alt: "Скатерть, КОЛОРИТ, 135х110 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5024280-1', url: '/images/products/a49fc4bddce13d3da3234e328f20a4b4.webp', thumbnailUrl: '/images/products/a49fc4bddce13d3da3234e328f20a4b4.webp', alt: "Скатерть, КОЛОРИТ, 135х110 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c6',
         category: cat('c6'),
@@ -1073,7 +1073,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 17.4,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036306-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2bbfa9775b150bbca288f30cd735f46.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2bbfa9775b150bbca288f30cd735f46.jpg', alt: "Салатник, FunCook, 0,43 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036306-1', url: '/images/products/b2bbfa9775b150bbca288f30cd735f46.webp', thumbnailUrl: '/images/products/b2bbfa9775b150bbca288f30cd735f46.webp', alt: "Салатник, FunCook, 0,43 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1094,7 +1094,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094036-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/25/2524a54d487fb8781b1d9658139516e2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/25/2524a54d487fb8781b1d9658139516e2.jpg', alt: "Соусница с крышкой, O'Kitchen, 80 мл", sortOrder: 0 }
+            { id: 'img-5094036-1', url: '/images/products/2524a54d487fb8781b1d9658139516e2.webp', thumbnailUrl: '/images/products/2524a54d487fb8781b1d9658139516e2.webp', alt: "Соусница с крышкой, O'Kitchen, 80 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1115,7 +1115,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025253-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/4738a1bd7b1e8f78ad521d71c37bd091.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/4738a1bd7b1e8f78ad521d71c37bd091.jpg', alt: "Пакеты для хранения и заморозки продуктов, BonHome, 40 шт.", sortOrder: 0 }
+            { id: 'img-5025253-1', url: '/images/products/4738a1bd7b1e8f78ad521d71c37bd091.webp', thumbnailUrl: '/images/products/4738a1bd7b1e8f78ad521d71c37bd091.webp', alt: "Пакеты для хранения и заморозки продуктов, BonHome, 40 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1136,7 +1136,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092689-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/63c3563b9d504bfb42481bdcda01b360.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/63c3563b9d504bfb42481bdcda01b360.jpg', alt: "Доска разделочная, Ханпласт, 35х25 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092689-1', url: '/images/products/63c3563b9d504bfb42481bdcda01b360.webp', thumbnailUrl: '/images/products/63c3563b9d504bfb42481bdcda01b360.webp', alt: "Доска разделочная, Ханпласт, 35х25 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1157,7 +1157,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025301-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c854ddc7bfb9882f24e40c9fe77d996c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c854ddc7bfb9882f24e40c9fe77d996c.jpg', alt: "Пакетики для льда \"Freezing LAB\", с клапаном, 10 шт., 280 кубиков", sortOrder: 0 }
+            { id: 'img-5025301-1', url: '/images/products/c854ddc7bfb9882f24e40c9fe77d996c.webp', thumbnailUrl: '/images/products/c854ddc7bfb9882f24e40c9fe77d996c.webp', alt: "Пакетики для льда \"Freezing LAB\", с клапаном, 10 шт., 280 кубиков", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1178,7 +1178,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093296-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c2/c2352825c3ae2b09b58755603b484636.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c2/c2352825c3ae2b09b58755603b484636.jpg', alt: "Форма для кулича, O'Kitchen, 12 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093296-1', url: '/images/products/c2352825c3ae2b09b58755603b484636.webp', thumbnailUrl: '/images/products/c2352825c3ae2b09b58755603b484636.webp', alt: "Форма для кулича, O'Kitchen, 12 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1199,7 +1199,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025346-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/628b33d5f32dd22f5109ca50183e9910.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/628b33d5f32dd22f5109ca50183e9910.jpg', alt: "Фольга \"Классическая\", 11 м", sortOrder: 0 }
+            { id: 'img-5025346-1', url: '/images/products/628b33d5f32dd22f5109ca50183e9910.webp', thumbnailUrl: '/images/products/628b33d5f32dd22f5109ca50183e9910.webp', alt: "Фольга \"Классическая\", 11 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1220,7 +1220,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095035-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/27e3751e54345b046cd3fe4e3fd666c3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/27e3751e54345b046cd3fe4e3fd666c3.jpg', alt: "Форма для выпечки, O'Kitchen, 31,5х26 см", sortOrder: 0 }
+            { id: 'img-5095035-1', url: '/images/products/27e3751e54345b046cd3fe4e3fd666c3.webp', thumbnailUrl: '/images/products/27e3751e54345b046cd3fe4e3fd666c3.webp', alt: "Форма для выпечки, O'Kitchen, 31,5х26 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1241,7 +1241,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025183-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/31/312ec229b7c6892268cc2d10c164311c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/31/312ec229b7c6892268cc2d10c164311c.jpg', alt: "Пакеты с застёжкой, BonHome, 18х16 см, 25 шт.", sortOrder: 0 }
+            { id: 'img-5025183-1', url: '/images/products/312ec229b7c6892268cc2d10c164311c.webp', thumbnailUrl: '/images/products/312ec229b7c6892268cc2d10c164311c.webp', alt: "Пакеты с застёжкой, BonHome, 18х16 см, 25 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1262,7 +1262,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094037-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/20/201456be92ee444f46c62956e6adb7fe.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/20/201456be92ee444f46c62956e6adb7fe.jpg', alt: "Бокал для вина, O'Kitchen, 380 мл", sortOrder: 0 }
+            { id: 'img-5094037-1', url: '/images/products/201456be92ee444f46c62956e6adb7fe.webp', thumbnailUrl: '/images/products/201456be92ee444f46c62956e6adb7fe.webp', alt: "Бокал для вина, O'Kitchen, 380 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1283,7 +1283,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093205-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/1532ab07b6afaffc6d57068bcf2e2097.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/1532ab07b6afaffc6d57068bcf2e2097.jpg', alt: "Пиала (боул), O'Kitchen, 370 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093205-1', url: '/images/products/1532ab07b6afaffc6d57068bcf2e2097.webp', thumbnailUrl: '/images/products/1532ab07b6afaffc6d57068bcf2e2097.webp', alt: "Пиала (боул), O'Kitchen, 370 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1304,7 +1304,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 75,
         baseOldPrice: 83,
         images: [
-            { id: 'img-5091425-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/36/3667a921c4096462ec78c344f2e3f809.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/36/3667a921c4096462ec78c344f2e3f809.jpg', alt: "Кружка, O'Kitchen, 440 мл", sortOrder: 0 }
+            { id: 'img-5091425-1', url: '/images/products/3667a921c4096462ec78c344f2e3f809.webp', thumbnailUrl: '/images/products/3667a921c4096462ec78c344f2e3f809.webp', alt: "Кружка, O'Kitchen, 440 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1325,7 +1325,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5026313-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c0/c040a1f86d456a7ac72fcfa187808b72.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c0/c040a1f86d456a7ac72fcfa187808b72.jpg', alt: "Губки универсальные \"Деликатные\", 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5026313-1', url: '/images/products/c040a1f86d456a7ac72fcfa187808b72.webp', thumbnailUrl: '/images/products/c040a1f86d456a7ac72fcfa187808b72.webp', alt: "Губки универсальные \"Деликатные\", 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1346,7 +1346,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093545-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/38/3859d4ae42beb13f8aa652e6547b6c5f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/38/3859d4ae42beb13f8aa652e6547b6c5f.jpg', alt: "Соусница с крышкой, O'Kitchen, 80 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093545-1', url: '/images/products/3859d4ae42beb13f8aa652e6547b6c5f.webp', thumbnailUrl: '/images/products/3859d4ae42beb13f8aa652e6547b6c5f.webp', alt: "Соусница с крышкой, O'Kitchen, 80 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1367,7 +1367,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091801-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/db7045dd64cb8518ee5399b1353e7db3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/db7045dd64cb8518ee5399b1353e7db3.jpg', alt: "Кружка с крышкой, O’Kitchen, 380 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091801-1', url: '/images/products/db7045dd64cb8518ee5399b1353e7db3.webp', thumbnailUrl: '/images/products/db7045dd64cb8518ee5399b1353e7db3.webp', alt: "Кружка с крышкой, O’Kitchen, 380 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1388,7 +1388,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094042-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/68/681b6b03b6ab4ff79bb157be75d3a645.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/68/681b6b03b6ab4ff79bb157be75d3a645.jpg', alt: "Стакан, O'Kitchen, 390 мл", sortOrder: 0 }
+            { id: 'img-5094042-1', url: '/images/products/681b6b03b6ab4ff79bb157be75d3a645.webp', thumbnailUrl: '/images/products/681b6b03b6ab4ff79bb157be75d3a645.webp', alt: "Стакан, O'Kitchen, 390 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1409,7 +1409,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025310-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/189667695594b31b7ce8461da267bf6b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/189667695594b31b7ce8461da267bf6b.jpg', alt: "Пакеты для мусора, Bon Home, 200 л, 10 шт.", sortOrder: 0 }
+            { id: 'img-5025310-1', url: '/images/products/189667695594b31b7ce8461da267bf6b.webp', thumbnailUrl: '/images/products/189667695594b31b7ce8461da267bf6b.webp', alt: "Пакеты для мусора, Bon Home, 200 л, 10 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1430,7 +1430,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093200-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/adc730aa1f3e6d0dac71143085a0ced9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/adc730aa1f3e6d0dac71143085a0ced9.jpg', alt: "Пиала (боул), O'Kitchen, 610 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093200-1', url: '/images/products/adc730aa1f3e6d0dac71143085a0ced9.webp', thumbnailUrl: '/images/products/adc730aa1f3e6d0dac71143085a0ced9.webp', alt: "Пиала (боул), O'Kitchen, 610 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1451,7 +1451,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092801-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01c54297f37da83177b69f3967ae5263.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01c54297f37da83177b69f3967ae5263.jpg', alt: "Доска разделочная, Ханпласт, 28х20 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092801-1', url: '/images/products/01c54297f37da83177b69f3967ae5263.webp', thumbnailUrl: '/images/products/01c54297f37da83177b69f3967ae5263.webp', alt: "Доска разделочная, Ханпласт, 28х20 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1472,7 +1472,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036071-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/246c755e897605b6e9181bf776114b37.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/246c755e897605b6e9181bf776114b37.jpg', alt: "Банка с ложкой, O`Kitchen, 900 мл", sortOrder: 0 }
+            { id: 'img-5036071-1', url: '/images/products/246c755e897605b6e9181bf776114b37.webp', thumbnailUrl: '/images/products/246c755e897605b6e9181bf776114b37.webp', alt: "Банка с ложкой, O`Kitchen, 900 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1493,7 +1493,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036730-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f6/f6212d77a1ca42dbcbca3c8bdab5ed37.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f6/f6212d77a1ca42dbcbca3c8bdab5ed37.jpg', alt: "Банка, O’Kitchen, 650 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036730-1', url: '/images/products/f6212d77a1ca42dbcbca3c8bdab5ed37.webp', thumbnailUrl: '/images/products/f6212d77a1ca42dbcbca3c8bdab5ed37.webp', alt: "Банка, O’Kitchen, 650 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1514,7 +1514,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094113-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/58b65e86924aa52896add1618efbdae3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/58b65e86924aa52896add1618efbdae3.jpg', alt: "Салатник, O'Kitchen, 330 мл", sortOrder: 0 }
+            { id: 'img-5094113-1', url: '/images/products/58b65e86924aa52896add1618efbdae3.webp', thumbnailUrl: '/images/products/58b65e86924aa52896add1618efbdae3.webp', alt: "Салатник, O'Kitchen, 330 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1535,7 +1535,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025373-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be24925ce84a8e481356c402e1286f51.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be24925ce84a8e481356c402e1286f51.jpg', alt: "Губки меламиновые, 4 шт.", sortOrder: 0 }
+            { id: 'img-5025373-1', url: '/images/products/be24925ce84a8e481356c402e1286f51.webp', thumbnailUrl: '/images/products/be24925ce84a8e481356c402e1286f51.webp', alt: "Губки меламиновые, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1556,7 +1556,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036443-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1f88789f353cef71cd07143744393c63.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1f88789f353cef71cd07143744393c63.JPG', alt: "Маслёнка, Уника Пласт, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036443-1', url: '/images/products/1f88789f353cef71cd07143744393c63.webp', thumbnailUrl: '/images/products/1f88789f353cef71cd07143744393c63.webp', alt: "Маслёнка, Уника Пласт, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1577,7 +1577,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094074-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2a0ef05bf1da2e2c6da6b9df67911e8f.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2a0ef05bf1da2e2c6da6b9df67911e8f.png', alt: "Конфетница, O'Kitchen, 650 мл", sortOrder: 0 }
+            { id: 'img-5094074-1', url: '/images/products/2a0ef05bf1da2e2c6da6b9df67911e8f.webp', thumbnailUrl: '/images/products/2a0ef05bf1da2e2c6da6b9df67911e8f.webp', alt: "Конфетница, O'Kitchen, 650 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1598,7 +1598,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5023527-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85cd0cb2d4329f6ad1081aaa08969b42.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85cd0cb2d4329f6ad1081aaa08969b42.jpg', alt: "Ланч-бокс 4-секционный, в ассортименте", sortOrder: 0 }
+            { id: 'img-5023527-1', url: '/images/products/85cd0cb2d4329f6ad1081aaa08969b42.webp', thumbnailUrl: '/images/products/85cd0cb2d4329f6ad1081aaa08969b42.webp', alt: "Ланч-бокс 4-секционный, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1619,7 +1619,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094262-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/65/65598736899b9ce259826acaa233871e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/65/65598736899b9ce259826acaa233871e.jpg', alt: "Салатник, O'Kitchen, 1,8 л", sortOrder: 0 }
+            { id: 'img-5094262-1', url: '/images/products/65598736899b9ce259826acaa233871e.webp', thumbnailUrl: '/images/products/65598736899b9ce259826acaa233871e.webp', alt: "Салатник, O'Kitchen, 1,8 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1640,7 +1640,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036444-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/75/75cf2cbe9c0fb37a51f52d79dc89d28c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/75/75cf2cbe9c0fb37a51f52d79dc89d28c.jpg', alt: "Сырница, 20х20х11,3 см", sortOrder: 0 }
+            { id: 'img-5036444-1', url: '/images/products/75cf2cbe9c0fb37a51f52d79dc89d28c.webp', thumbnailUrl: '/images/products/75cf2cbe9c0fb37a51f52d79dc89d28c.webp', alt: "Сырница, 20х20х11,3 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1661,7 +1661,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092599-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/33/3344551bfca46f0635e96a125fcf278e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/33/3344551bfca46f0635e96a125fcf278e.jpg', alt: "Доска разделочная, O'Kitchen, 25х20 см", sortOrder: 0 }
+            { id: 'img-5092599-1', url: '/images/products/3344551bfca46f0635e96a125fcf278e.webp', thumbnailUrl: '/images/products/3344551bfca46f0635e96a125fcf278e.webp', alt: "Доска разделочная, O'Kitchen, 25х20 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1682,7 +1682,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036732-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abe76d8a8ba429a38f1dc1584d12c7ea.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abe76d8a8ba429a38f1dc1584d12c7ea.jpg', alt: "Банка, O’Kitchen, 800 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036732-1', url: '/images/products/abe76d8a8ba429a38f1dc1584d12c7ea.webp', thumbnailUrl: '/images/products/abe76d8a8ba429a38f1dc1584d12c7ea.webp', alt: "Банка, O’Kitchen, 800 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1703,7 +1703,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094110-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bf4990716e6b664bad637a520cdfb1be.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bf4990716e6b664bad637a520cdfb1be.jpg', alt: "Тарелка суповая, O'Kitchen, 21,5 см", sortOrder: 0 }
+            { id: 'img-5094110-1', url: '/images/products/bf4990716e6b664bad637a520cdfb1be.webp', thumbnailUrl: '/images/products/bf4990716e6b664bad637a520cdfb1be.webp', alt: "Тарелка суповая, O'Kitchen, 21,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1724,7 +1724,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091651-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85d0afb3a4826b1f46d4bb0595a4cce2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85d0afb3a4826b1f46d4bb0595a4cce2.jpg', alt: "Кружка, O'Kitchen, 350 мл", sortOrder: 0 }
+            { id: 'img-5091651-1', url: '/images/products/85d0afb3a4826b1f46d4bb0595a4cce2.webp', thumbnailUrl: '/images/products/85d0afb3a4826b1f46d4bb0595a4cce2.webp', alt: "Кружка, O'Kitchen, 350 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1745,7 +1745,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094288-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0e/0e45a8470c52dcc640cf133092a2f741.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0e/0e45a8470c52dcc640cf133092a2f741.jpg', alt: "Тарелка обеденная, O’Kitchen, 26,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094288-1', url: '/images/products/0e45a8470c52dcc640cf133092a2f741.webp', thumbnailUrl: '/images/products/0e45a8470c52dcc640cf133092a2f741.webp', alt: "Тарелка обеденная, O’Kitchen, 26,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1766,7 +1766,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036239-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5e820fb70e1186ac3fc14600f76227c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5e820fb70e1186ac3fc14600f76227c.jpg', alt: "Форма для льда, O’Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036239-1', url: '/images/products/e5e820fb70e1186ac3fc14600f76227c.webp', thumbnailUrl: '/images/products/e5e820fb70e1186ac3fc14600f76227c.webp', alt: "Форма для льда, O’Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1787,7 +1787,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093652-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fb/fb3c16a7ca9e0884b40bac13e89ca1f8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fb/fb3c16a7ca9e0884b40bac13e89ca1f8.jpg', alt: "Тарелка, O'Kitchen, 26 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093652-1', url: '/images/products/fb3c16a7ca9e0884b40bac13e89ca1f8.webp', thumbnailUrl: '/images/products/fb3c16a7ca9e0884b40bac13e89ca1f8.webp', alt: "Тарелка, O'Kitchen, 26 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1808,7 +1808,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094153-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1f1b3574eb1a98964bd5198c91775d59.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1f1b3574eb1a98964bd5198c91775d59.jpg', alt: "Бокал для шампанского, ОСЗ, 170 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094153-1', url: '/images/products/1f1b3574eb1a98964bd5198c91775d59.webp', thumbnailUrl: '/images/products/1f1b3574eb1a98964bd5198c91775d59.webp', alt: "Бокал для шампанского, ОСЗ, 170 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1829,7 +1829,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022706-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/34/347956ebb726b9bbe13789c256c7eb84.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/34/347956ebb726b9bbe13789c256c7eb84.jpg', alt: "Набор пакетиков для заваривания чая, O'Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5022706-1', url: '/images/products/347956ebb726b9bbe13789c256c7eb84.webp', thumbnailUrl: '/images/products/347956ebb726b9bbe13789c256c7eb84.webp', alt: "Набор пакетиков для заваривания чая, O'Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1850,7 +1850,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021647-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9d53f948eee15d42f3c8f9b47485b41f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9d53f948eee15d42f3c8f9b47485b41f.jpg', alt: "Ножницы кухонные, O`Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021647-1', url: '/images/products/9d53f948eee15d42f3c8f9b47485b41f.webp', thumbnailUrl: '/images/products/9d53f948eee15d42f3c8f9b47485b41f.webp', alt: "Ножницы кухонные, O`Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1871,7 +1871,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093033-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0c57a66f710078bc4edb9d100655ee3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0c57a66f710078bc4edb9d100655ee3.jpg', alt: "Тарелка, O'Kitchen, 20,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093033-1', url: '/images/products/b0c57a66f710078bc4edb9d100655ee3.webp', thumbnailUrl: '/images/products/b0c57a66f710078bc4edb9d100655ee3.webp', alt: "Тарелка, O'Kitchen, 20,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1892,7 +1892,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093601-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/ab38c706dee1938c2c4924209edc723c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/ab38c706dee1938c2c4924209edc723c.jpg', alt: "Салатник, O'Kitchen, 1,2 л", sortOrder: 0 }
+            { id: 'img-5093601-1', url: '/images/products/ab38c706dee1938c2c4924209edc723c.webp', thumbnailUrl: '/images/products/ab38c706dee1938c2c4924209edc723c.webp', alt: "Салатник, O'Kitchen, 1,2 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1913,7 +1913,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5071167-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec1e557007f0ceda4ca09fc3343e351f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec1e557007f0ceda4ca09fc3343e351f.jpg', alt: "Коврик для посуды, BonHome, 45х40 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5071167-1', url: '/images/products/ec1e557007f0ceda4ca09fc3343e351f.webp', thumbnailUrl: '/images/products/ec1e557007f0ceda4ca09fc3343e351f.webp', alt: "Коврик для посуды, BonHome, 45х40 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1934,7 +1934,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021694-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d1b8def5e8db71749d261cb752f5589a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d1b8def5e8db71749d261cb752f5589a.jpg', alt: "Нож для пиццы, O'Kitchen, 20 см", sortOrder: 0 }
+            { id: 'img-5021694-1', url: '/images/products/d1b8def5e8db71749d261cb752f5589a.webp', thumbnailUrl: '/images/products/d1b8def5e8db71749d261cb752f5589a.webp', alt: "Нож для пиццы, O'Kitchen, 20 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1955,7 +1955,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 23,
         baseOldPrice: 24.7,
         images: [
-            { id: 'img-5028962-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3e/3e926188bb8befde6ffb8467ec6abf97.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3e/3e926188bb8befde6ffb8467ec6abf97.jpg', alt: "Стопка, ОСЗ, 50 мл", sortOrder: 0 }
+            { id: 'img-5028962-1', url: '/images/products/3e926188bb8befde6ffb8467ec6abf97.webp', thumbnailUrl: '/images/products/3e926188bb8befde6ffb8467ec6abf97.webp', alt: "Стопка, ОСЗ, 50 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1976,7 +1976,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036579-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a77945253167c3f9b36194bbd34cef97.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a77945253167c3f9b36194bbd34cef97.jpg', alt: "Бутылка для масла, O’Kitchen, 300 мл", sortOrder: 0 }
+            { id: 'img-5036579-1', url: '/images/products/a77945253167c3f9b36194bbd34cef97.webp', thumbnailUrl: '/images/products/a77945253167c3f9b36194bbd34cef97.webp', alt: "Бутылка для масла, O’Kitchen, 300 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -1997,7 +1997,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091447-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a2a68767fc3803dac8400c7b1f0d5ac0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a2a68767fc3803dac8400c7b1f0d5ac0.jpg', alt: "Чашка чайная, O'Kitchen, 190 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091447-1', url: '/images/products/a2a68767fc3803dac8400c7b1f0d5ac0.webp', thumbnailUrl: '/images/products/a2a68767fc3803dac8400c7b1f0d5ac0.webp', alt: "Чашка чайная, O'Kitchen, 190 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -2018,7 +2018,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021480-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/865d61ada9d53c0ebbdb7125e04b0372.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/865d61ada9d53c0ebbdb7125e04b0372.jpg', alt: "Ложка чайная, TUN art", sortOrder: 0 }
+            { id: 'img-5021480-1', url: '/images/products/865d61ada9d53c0ebbdb7125e04b0372.webp', thumbnailUrl: '/images/products/865d61ada9d53c0ebbdb7125e04b0372.webp', alt: "Ложка чайная, TUN art", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -2039,7 +2039,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036575-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/97/979f67f09b586896989f09f23ae2c3fe.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/97/979f67f09b586896989f09f23ae2c3fe.jpg', alt: "Миска с крышкой, Уника Пласт, 2,5 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036575-1', url: '/images/products/979f67f09b586896989f09f23ae2c3fe.webp', thumbnailUrl: '/images/products/979f67f09b586896989f09f23ae2c3fe.webp', alt: "Миска с крышкой, Уника Пласт, 2,5 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2060,7 +2060,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094116-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e1/e11e96469a9fcbec71f2bc8d4d76b828.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e1/e11e96469a9fcbec71f2bc8d4d76b828.jpg', alt: "Блюдо сервировочное, O'Kitchen, 30,5х22 см", sortOrder: 0 }
+            { id: 'img-5094116-1', url: '/images/products/e11e96469a9fcbec71f2bc8d4d76b828.webp', thumbnailUrl: '/images/products/e11e96469a9fcbec71f2bc8d4d76b828.webp', alt: "Блюдо сервировочное, O'Kitchen, 30,5х22 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2081,7 +2081,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094117-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e80af10a14ec5f07333f355650d4b42e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e80af10a14ec5f07333f355650d4b42e.jpg', alt: "Салатник, O’Kitchen, 305 мл", sortOrder: 0 }
+            { id: 'img-5094117-1', url: '/images/products/e80af10a14ec5f07333f355650d4b42e.webp', thumbnailUrl: '/images/products/e80af10a14ec5f07333f355650d4b42e.webp', alt: "Салатник, O’Kitchen, 305 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2102,7 +2102,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022526-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f5a9c5e31f22c90cec970c9997ff398.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f5a9c5e31f22c90cec970c9997ff398.jpg', alt: "Форма для кулича, O'Kitchen, 18 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5022526-1', url: '/images/products/9f5a9c5e31f22c90cec970c9997ff398.webp', thumbnailUrl: '/images/products/9f5a9c5e31f22c90cec970c9997ff398.webp', alt: "Форма для кулича, O'Kitchen, 18 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2123,7 +2123,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094289-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2ff5bfa6137084f497496e1b433d036.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2ff5bfa6137084f497496e1b433d036.jpg', alt: "Тарелка десертная, O’Kitchen, 19 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094289-1', url: '/images/products/b2ff5bfa6137084f497496e1b433d036.webp', thumbnailUrl: '/images/products/b2ff5bfa6137084f497496e1b433d036.webp', alt: "Тарелка десертная, O’Kitchen, 19 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2144,7 +2144,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 41.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091448-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1a88241618aefe2b9e2eae5bf6572ef.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1a88241618aefe2b9e2eae5bf6572ef.jpg', alt: "Блюдце чайное, O'Kitchen, 13,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091448-1', url: '/images/products/a1a88241618aefe2b9e2eae5bf6572ef.webp', thumbnailUrl: '/images/products/a1a88241618aefe2b9e2eae5bf6572ef.webp', alt: "Блюдце чайное, O'Kitchen, 13,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -2165,7 +2165,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022780-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5665023086506312763e8ade7b8e796.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5665023086506312763e8ade7b8e796.jpg', alt: "Сито с воронкой, O'Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5022780-1', url: '/images/products/d5665023086506312763e8ade7b8e796.webp', thumbnailUrl: '/images/products/d5665023086506312763e8ade7b8e796.webp', alt: "Сито с воронкой, O'Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2186,7 +2186,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094109-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/89d3974d35bfd482ccb05b8fcd429db7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/89d3974d35bfd482ccb05b8fcd429db7.jpg', alt: "Тарелка десертная, O'Kitchen, 20 см", sortOrder: 0 }
+            { id: 'img-5094109-1', url: '/images/products/89d3974d35bfd482ccb05b8fcd429db7.webp', thumbnailUrl: '/images/products/89d3974d35bfd482ccb05b8fcd429db7.webp', alt: "Тарелка десертная, O'Kitchen, 20 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2207,7 +2207,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021478-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5b48697e4b69a074aa07cde78b869d53.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5b48697e4b69a074aa07cde78b869d53.jpg', alt: "Ложка столовая, TUN art", sortOrder: 0 }
+            { id: 'img-5021478-1', url: '/images/products/5b48697e4b69a074aa07cde78b869d53.webp', thumbnailUrl: '/images/products/5b48697e4b69a074aa07cde78b869d53.webp', alt: "Ложка столовая, TUN art", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2228,7 +2228,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021479-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b0e6b99c245ab7c3555365aa3e91e5d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b0e6b99c245ab7c3555365aa3e91e5d.jpg', alt: "Вилка столовая, TUN art", sortOrder: 0 }
+            { id: 'img-5021479-1', url: '/images/products/1b0e6b99c245ab7c3555365aa3e91e5d.webp', thumbnailUrl: '/images/products/1b0e6b99c245ab7c3555365aa3e91e5d.webp', alt: "Вилка столовая, TUN art", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2249,7 +2249,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5023659-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b1bb01b0a64491619603b20e41536d5d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b1bb01b0a64491619603b20e41536d5d.jpg', alt: "Мерный стакан с 5 мерными ложками, O'Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5023659-1', url: '/images/products/b1bb01b0a64491619603b20e41536d5d.webp', thumbnailUrl: '/images/products/b1bb01b0a64491619603b20e41536d5d.webp', alt: "Мерный стакан с 5 мерными ложками, O'Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2270,7 +2270,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094125-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a57cfc0cc92c4b2f8dca7bd0a4c3d649.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a57cfc0cc92c4b2f8dca7bd0a4c3d649.jpg', alt: "Салатник, ОСЗ, 800 мл, 18 см", sortOrder: 0 }
+            { id: 'img-5094125-1', url: '/images/products/a57cfc0cc92c4b2f8dca7bd0a4c3d649.webp', thumbnailUrl: '/images/products/a57cfc0cc92c4b2f8dca7bd0a4c3d649.webp', alt: "Салатник, ОСЗ, 800 мл, 18 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2291,7 +2291,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5022573-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/57/57a1ea01189e55374c58ed8a2cacb298.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/57/57a1ea01189e55374c58ed8a2cacb298.png', alt: "Форма для выпечки круглая 3D, Ø22,5 см", sortOrder: 0 }
+            { id: 'img-5022573-1', url: '/images/products/57a1ea01189e55374c58ed8a2cacb298.webp', thumbnailUrl: '/images/products/57a1ea01189e55374c58ed8a2cacb298.webp', alt: "Форма для выпечки круглая 3D, Ø22,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2312,7 +2312,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036574-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0c/0cf182e890c13f187e693ba164b1f357.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0c/0cf182e890c13f187e693ba164b1f357.jpg', alt: "Миска с крышкой, Уника Пласт, 1,5 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036574-1', url: '/images/products/0cf182e890c13f187e693ba164b1f357.webp', thumbnailUrl: '/images/products/0cf182e890c13f187e693ba164b1f357.webp', alt: "Миска с крышкой, Уника Пласт, 1,5 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2333,7 +2333,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036109-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d4/d4af44da6cda8ffcd4c567634155ef44.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d4/d4af44da6cda8ffcd4c567634155ef44.jpg', alt: "Банка для сыпучих продуктов, 0,5 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036109-1', url: '/images/products/d4af44da6cda8ffcd4c567634155ef44.webp', thumbnailUrl: '/images/products/d4af44da6cda8ffcd4c567634155ef44.webp', alt: "Банка для сыпучих продуктов, 0,5 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2354,7 +2354,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024708-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/9198ae3de85227f026bca29f06108960.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/9198ae3de85227f026bca29f06108960.jpg', alt: "Доска сервировочная, O'Kitchen, 24,5х11,5 см", sortOrder: 0 }
+            { id: 'img-5024708-1', url: '/images/products/9198ae3de85227f026bca29f06108960.webp', thumbnailUrl: '/images/products/9198ae3de85227f026bca29f06108960.webp', alt: "Доска сервировочная, O'Kitchen, 24,5х11,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2375,7 +2375,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093032-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0d300eb7e9a48af7f4e5e43819b091c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0d300eb7e9a48af7f4e5e43819b091c.jpg', alt: "Тарелка, O'Kitchen, 17,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093032-1', url: '/images/products/d0d300eb7e9a48af7f4e5e43819b091c.webp', thumbnailUrl: '/images/products/d0d300eb7e9a48af7f4e5e43819b091c.webp', alt: "Тарелка, O'Kitchen, 17,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2396,7 +2396,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095001-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e6/e699e44ee7d8e792877cc386f114d922.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e6/e699e44ee7d8e792877cc386f114d922.jpg', alt: "Форма для выпечки, O'Kitchen, 24 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5095001-1', url: '/images/products/e699e44ee7d8e792877cc386f114d922.webp', thumbnailUrl: '/images/products/e699e44ee7d8e792877cc386f114d922.webp', alt: "Форма для выпечки, O'Kitchen, 24 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2417,7 +2417,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094290-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/84141605988b6c3351965c6e4e5b2379.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/84141605988b6c3351965c6e4e5b2379.jpg', alt: "Салатник, O’Kitchen, 800 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094290-1', url: '/images/products/84141605988b6c3351965c6e4e5b2379.webp', thumbnailUrl: '/images/products/84141605988b6c3351965c6e4e5b2379.webp', alt: "Салатник, O’Kitchen, 800 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2438,7 +2438,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021693-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5fe4db942bfdfe062d5679996fce1f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5fe4db942bfdfe062d5679996fce1f0.jpg', alt: "Тёрка с ручкой, O'Kitchen, 23 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021693-1', url: '/images/products/d5fe4db942bfdfe062d5679996fce1f0.webp', thumbnailUrl: '/images/products/d5fe4db942bfdfe062d5679996fce1f0.webp', alt: "Тёрка с ручкой, O'Kitchen, 23 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2459,7 +2459,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036636-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d36a2a1a624227053bb2f578ee14606a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d36a2a1a624227053bb2f578ee14606a.jpg', alt: "Набор банок, O`Kitchen, 110 мл, 2 шт.", sortOrder: 0 }
+            { id: 'img-5036636-1', url: '/images/products/d36a2a1a624227053bb2f578ee14606a.webp', thumbnailUrl: '/images/products/d36a2a1a624227053bb2f578ee14606a.webp', alt: "Набор банок, O`Kitchen, 110 мл, 2 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2480,7 +2480,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036342-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f2a57bc29fb3d826dbfb4c32a0c6764d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f2a57bc29fb3d826dbfb4c32a0c6764d.jpg', alt: "Контейнер с замком, 2,3 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036342-1', url: '/images/products/f2a57bc29fb3d826dbfb4c32a0c6764d.webp', thumbnailUrl: '/images/products/f2a57bc29fb3d826dbfb4c32a0c6764d.webp', alt: "Контейнер с замком, 2,3 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2501,7 +2501,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021673-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/951bc9e59873187aceb60871850f3dc6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/951bc9e59873187aceb60871850f3dc6.jpg', alt: "Нож овощной, O'Kitchen, 23 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021673-1', url: '/images/products/951bc9e59873187aceb60871850f3dc6.webp', thumbnailUrl: '/images/products/951bc9e59873187aceb60871850f3dc6.webp', alt: "Нож овощной, O'Kitchen, 23 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2522,7 +2522,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036110-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/166cc524eaf394d15da0f883a100911c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/166cc524eaf394d15da0f883a100911c.jpg', alt: "Банка для сыпучих продуктов, 1 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036110-1', url: '/images/products/166cc524eaf394d15da0f883a100911c.webp', thumbnailUrl: '/images/products/166cc524eaf394d15da0f883a100911c.webp', alt: "Банка для сыпучих продуктов, 1 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2543,7 +2543,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024790-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8d1a70468b4b5679a8a13311217c65a.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8d1a70468b4b5679a8a13311217c65a.png', alt: "Набор маркеров для бокала, O'Kitchen, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5024790-1', url: '/images/products/b8d1a70468b4b5679a8a13311217c65a.webp', thumbnailUrl: '/images/products/b8d1a70468b4b5679a8a13311217c65a.webp', alt: "Набор маркеров для бокала, O'Kitchen, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -2564,7 +2564,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5028518-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4bb2afd5ce91fc56739cfa4567161824.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4bb2afd5ce91fc56739cfa4567161824.jpg', alt: "Тарелка глубокая, O'Kitchen, 17 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5028518-1', url: '/images/products/4bb2afd5ce91fc56739cfa4567161824.webp', thumbnailUrl: '/images/products/4bb2afd5ce91fc56739cfa4567161824.webp', alt: "Тарелка глубокая, O'Kitchen, 17 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2585,7 +2585,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036594-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1ffee5bab0fb67c9fc505c90afeb27d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1ffee5bab0fb67c9fc505c90afeb27d.jpg', alt: "Набор банок для специй с ложкой на подставке, O`Kitchen, 2 х 350 мл", sortOrder: 0 }
+            { id: 'img-5036594-1', url: '/images/products/c1ffee5bab0fb67c9fc505c90afeb27d.webp', thumbnailUrl: '/images/products/c1ffee5bab0fb67c9fc505c90afeb27d.webp', alt: "Набор банок для специй с ложкой на подставке, O`Kitchen, 2 х 350 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2606,7 +2606,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094089-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55e4acb340845db0c028a78d4e951d04.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55e4acb340845db0c028a78d4e951d04.jpg', alt: "Блюдо для закусок, O'Kitchen, 300 мл", sortOrder: 0 }
+            { id: 'img-5094089-1', url: '/images/products/55e4acb340845db0c028a78d4e951d04.webp', thumbnailUrl: '/images/products/55e4acb340845db0c028a78d4e951d04.webp', alt: "Блюдо для закусок, O'Kitchen, 300 мл", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -2627,7 +2627,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091673-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/dedf21f1594321a1cd3fe0e2b08d6817.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/dedf21f1594321a1cd3fe0e2b08d6817.png', alt: "Кружка с двойными стенками, O'Kitchen, 340 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091673-1', url: '/images/products/dedf21f1594321a1cd3fe0e2b08d6817.webp', thumbnailUrl: '/images/products/dedf21f1594321a1cd3fe0e2b08d6817.webp', alt: "Кружка с двойными стенками, O'Kitchen, 340 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2648,7 +2648,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093720-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6a95d6ab88a58e3ab4baf2126fc4332d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6a95d6ab88a58e3ab4baf2126fc4332d.jpg', alt: "Стакан, O'Kitchen, 410 мл", sortOrder: 0 }
+            { id: 'img-5093720-1', url: '/images/products/6a95d6ab88a58e3ab4baf2126fc4332d.webp', thumbnailUrl: '/images/products/6a95d6ab88a58e3ab4baf2126fc4332d.webp', alt: "Стакан, O'Kitchen, 410 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2669,7 +2669,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095064-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8640fbfe1d4e77b31cb30c4fcdf5f59.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8640fbfe1d4e77b31cb30c4fcdf5f59.jpg', alt: "Чайник заварочный, O'Kitchen, 1,1 л", sortOrder: 0 }
+            { id: 'img-5095064-1', url: '/images/products/c8640fbfe1d4e77b31cb30c4fcdf5f59.webp', thumbnailUrl: '/images/products/c8640fbfe1d4e77b31cb30c4fcdf5f59.webp', alt: "Чайник заварочный, O'Kitchen, 1,1 л", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -2690,7 +2690,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036650-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/18fbd562f29df698fcad0e7c7a93481a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/18fbd562f29df698fcad0e7c7a93481a.jpg', alt: "Миска, O'Kitchen, 1,5 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036650-1', url: '/images/products/18fbd562f29df698fcad0e7c7a93481a.webp', thumbnailUrl: '/images/products/18fbd562f29df698fcad0e7c7a93481a.webp', alt: "Миска, O'Kitchen, 1,5 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2711,7 +2711,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093203-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1621c5f175337684ae0b7cbf87c8798.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1621c5f175337684ae0b7cbf87c8798.jpg', alt: "Тарелка, O'Kitchen, 22 см", sortOrder: 0 }
+            { id: 'img-5093203-1', url: '/images/products/c1621c5f175337684ae0b7cbf87c8798.webp', thumbnailUrl: '/images/products/c1621c5f175337684ae0b7cbf87c8798.webp', alt: "Тарелка, O'Kitchen, 22 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2732,7 +2732,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025364-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/38/38b698d4c252b2752b100466ad8a2e0b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/38/38b698d4c252b2752b100466ad8a2e0b.jpg', alt: "Пакеты для заморозки, Clear Line, 30х40 см, 50 шт.", sortOrder: 0 }
+            { id: 'img-5025364-1', url: '/images/products/38b698d4c252b2752b100466ad8a2e0b.webp', thumbnailUrl: '/images/products/38b698d4c252b2752b100466ad8a2e0b.webp', alt: "Пакеты для заморозки, Clear Line, 30х40 см, 50 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2753,7 +2753,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025354-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e7/e78d54014685ef74c3b1920344feaa0b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e7/e78d54014685ef74c3b1920344feaa0b.jpg', alt: "Пакеты для пищевых продуктов, 30 шт.", sortOrder: 0 }
+            { id: 'img-5025354-1', url: '/images/products/e78d54014685ef74c3b1920344feaa0b.webp', thumbnailUrl: '/images/products/e78d54014685ef74c3b1920344feaa0b.webp', alt: "Пакеты для пищевых продуктов, 30 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2774,7 +2774,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036593-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a8/a82654f3def96b03eaa2569844931513.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a8/a82654f3def96b03eaa2569844931513.jpg', alt: "Банка с ложкой, O`Kitchen, 1 л", sortOrder: 0 }
+            { id: 'img-5036593-1', url: '/images/products/a82654f3def96b03eaa2569844931513.webp', thumbnailUrl: '/images/products/a82654f3def96b03eaa2569844931513.webp', alt: "Банка с ложкой, O`Kitchen, 1 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2795,7 +2795,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 78,
         baseOldPrice: 83,
         images: [
-            { id: 'img-5091387-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b4efc0cf57b774f4eeae61d06daf3c6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b4efc0cf57b774f4eeae61d06daf3c6.jpg', alt: "Кружка, O'Kitchen, 420 мл", sortOrder: 0 }
+            { id: 'img-5091387-1', url: '/images/products/8b4efc0cf57b774f4eeae61d06daf3c6.webp', thumbnailUrl: '/images/products/8b4efc0cf57b774f4eeae61d06daf3c6.webp', alt: "Кружка, O'Kitchen, 420 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2816,7 +2816,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5023512-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2a337353796bf0de73083078a24626c7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2a337353796bf0de73083078a24626c7.jpg', alt: "Ёмкость для сыпучих продуктов, 1,75 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5023512-1', url: '/images/products/2a337353796bf0de73083078a24626c7.webp', thumbnailUrl: '/images/products/2a337353796bf0de73083078a24626c7.webp', alt: "Ёмкость для сыпучих продуктов, 1,75 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2837,7 +2837,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092713-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d8c99f8f3be64a7475f8780a46b4b28.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d8c99f8f3be64a7475f8780a46b4b28.jpg', alt: "Коврик для сушки посуды, O'Kitchen, 30х20 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092713-1', url: '/images/products/8d8c99f8f3be64a7475f8780a46b4b28.webp', thumbnailUrl: '/images/products/8d8c99f8f3be64a7475f8780a46b4b28.webp', alt: "Коврик для сушки посуды, O'Kitchen, 30х20 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2858,7 +2858,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024852-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b09dac2b3bea4326dca3d9b92e596c78.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b09dac2b3bea4326dca3d9b92e596c78.jpg', alt: "Поднос, O'Kitchen, 40х31 см", sortOrder: 0 }
+            { id: 'img-5024852-1', url: '/images/products/b09dac2b3bea4326dca3d9b92e596c78.webp', thumbnailUrl: '/images/products/b09dac2b3bea4326dca3d9b92e596c78.webp', alt: "Поднос, O'Kitchen, 40х31 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2879,7 +2879,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093546-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9e/9e7dc8297a66127461c36760f3aaf58c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9e/9e7dc8297a66127461c36760f3aaf58c.jpg', alt: "Розетка для варенья, O'Kitchen, 310 мл", sortOrder: 0 }
+            { id: 'img-5093546-1', url: '/images/products/9e7dc8297a66127461c36760f3aaf58c.webp', thumbnailUrl: '/images/products/9e7dc8297a66127461c36760f3aaf58c.webp', alt: "Розетка для варенья, O'Kitchen, 310 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2900,7 +2900,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094282-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0e/0ef27cf36e743bcceaa6c29c2671102b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0e/0ef27cf36e743bcceaa6c29c2671102b.jpg', alt: "Тарелка десертная \"Opal Gold Line\", 17см", sortOrder: 0 }
+            { id: 'img-5094282-1', url: '/images/products/0ef27cf36e743bcceaa6c29c2671102b.webp', thumbnailUrl: '/images/products/0ef27cf36e743bcceaa6c29c2671102b.webp', alt: "Тарелка десертная \"Opal Gold Line\", 17см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2921,7 +2921,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036458-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0ef88f5963c845f017f1be6df0fc684.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d0ef88f5963c845f017f1be6df0fc684.jpg', alt: "Бутылка для воды, O'Kitchen, 1 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036458-1', url: '/images/products/d0ef88f5963c845f017f1be6df0fc684.webp', thumbnailUrl: '/images/products/d0ef88f5963c845f017f1be6df0fc684.webp', alt: "Бутылка для воды, O'Kitchen, 1 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2942,7 +2942,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036299-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/026e0fca970f521d04e570447d4a15f9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/026e0fca970f521d04e570447d4a15f9.jpg', alt: "Корзина навесная, O’Kitchen", sortOrder: 0 }
+            { id: 'img-5036299-1', url: '/images/products/026e0fca970f521d04e570447d4a15f9.webp', thumbnailUrl: '/images/products/026e0fca970f521d04e570447d4a15f9.webp', alt: "Корзина навесная, O’Kitchen", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2963,7 +2963,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095072-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/2705438a8da98a5302357d7183014122.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/2705438a8da98a5302357d7183014122.jpg', alt: "Форма для выпечки с замком, O’Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5095072-1', url: '/images/products/2705438a8da98a5302357d7183014122.webp', thumbnailUrl: '/images/products/2705438a8da98a5302357d7183014122.webp', alt: "Форма для выпечки с замком, O’Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -2984,7 +2984,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095065-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50c9935347dbf25552dea44eb92de7d6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50c9935347dbf25552dea44eb92de7d6.jpg', alt: "Ковш, O'Kitchen, 770 мл", sortOrder: 0 }
+            { id: 'img-5095065-1', url: '/images/products/50c9935347dbf25552dea44eb92de7d6.webp', thumbnailUrl: '/images/products/50c9935347dbf25552dea44eb92de7d6.webp', alt: "Ковш, O'Kitchen, 770 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3005,7 +3005,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092487-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f82d5d28e78e859893bae3b8091e73e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f82d5d28e78e859893bae3b8091e73e.jpg', alt: "Щипцы кухонные, O'Kitchen, 39,5 см", sortOrder: 0 }
+            { id: 'img-5092487-1', url: '/images/products/9f82d5d28e78e859893bae3b8091e73e.webp', thumbnailUrl: '/images/products/9f82d5d28e78e859893bae3b8091e73e.webp', alt: "Щипцы кухонные, O'Kitchen, 39,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3026,7 +3026,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094122-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f28cdc4fa3ec80c56d5e688b49adb773.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f28cdc4fa3ec80c56d5e688b49adb773.jpg', alt: "Тарелка, ОСЗ, 24 см", sortOrder: 0 }
+            { id: 'img-5094122-1', url: '/images/products/f28cdc4fa3ec80c56d5e688b49adb773.webp', thumbnailUrl: '/images/products/f28cdc4fa3ec80c56d5e688b49adb773.webp', alt: "Тарелка, ОСЗ, 24 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3047,7 +3047,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093653-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/5467d7ea7ce29e0e3cc06f5112f6bd65.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/5467d7ea7ce29e0e3cc06f5112f6bd65.jpg', alt: "Тарелка глубокая, O'Kitchen, 1,03 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093653-1', url: '/images/products/5467d7ea7ce29e0e3cc06f5112f6bd65.webp', thumbnailUrl: '/images/products/5467d7ea7ce29e0e3cc06f5112f6bd65.webp', alt: "Тарелка глубокая, O'Kitchen, 1,03 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3068,7 +3068,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094127-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6d/6d660c88ff5368473eb363b223c37576.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6d/6d660c88ff5368473eb363b223c37576.jpg', alt: "Соусница, O’Kitchen, 30 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094127-1', url: '/images/products/6d660c88ff5368473eb363b223c37576.webp', thumbnailUrl: '/images/products/6d660c88ff5368473eb363b223c37576.webp', alt: "Соусница, O’Kitchen, 30 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3089,7 +3089,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092625-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/37/3705cce62ac8e445e148b72833db6185.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/37/3705cce62ac8e445e148b72833db6185.jpg', alt: "Толкушка для картофеля, O’Kitchen", sortOrder: 0 }
+            { id: 'img-5092625-1', url: '/images/products/3705cce62ac8e445e148b72833db6185.webp', thumbnailUrl: '/images/products/3705cce62ac8e445e148b72833db6185.webp', alt: "Толкушка для картофеля, O’Kitchen", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3110,7 +3110,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5025342-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/6246b68ea40e23f9eface6ce90dac529.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/6246b68ea40e23f9eface6ce90dac529.jpg', alt: "Пакеты для запекания \"Kitchen Lab\", с клипсами, 30х40 см, 8 шт.", sortOrder: 0 }
+            { id: 'img-5025342-1', url: '/images/products/6246b68ea40e23f9eface6ce90dac529.webp', thumbnailUrl: '/images/products/6246b68ea40e23f9eface6ce90dac529.webp', alt: "Пакеты для запекания \"Kitchen Lab\", с клипсами, 30х40 см, 8 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3131,7 +3131,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093034-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/05/05317c267243d14cf76ab6200e179788.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/05/05317c267243d14cf76ab6200e179788.jpg', alt: "Тарелка глубокая, O'Kitchen, 1 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093034-1', url: '/images/products/05317c267243d14cf76ab6200e179788.webp', thumbnailUrl: '/images/products/05317c267243d14cf76ab6200e179788.webp', alt: "Тарелка глубокая, O'Kitchen, 1 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3152,7 +3152,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095073-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/de4a88d914fd7666fa8863caaa39868c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/de4a88d914fd7666fa8863caaa39868c.jpg', alt: "Набор форм для выпечки, O’Kitchen, 75 мл, 30 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5095073-1', url: '/images/products/de4a88d914fd7666fa8863caaa39868c.webp', thumbnailUrl: '/images/products/de4a88d914fd7666fa8863caaa39868c.webp', alt: "Набор форм для выпечки, O’Kitchen, 75 мл, 30 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3173,7 +3173,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021668-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a225c549bbd64eda3293a77ae88a8ae0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a225c549bbd64eda3293a77ae88a8ae0.jpg', alt: "Ножницы кухонные, O'Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021668-1', url: '/images/products/a225c549bbd64eda3293a77ae88a8ae0.webp', thumbnailUrl: '/images/products/a225c549bbd64eda3293a77ae88a8ae0.webp', alt: "Ножницы кухонные, O'Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3194,7 +3194,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094073-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/2429548c39fe53608802f75a4f436f12.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/2429548c39fe53608802f75a4f436f12.jpg', alt: "Салатник, O'Kitchen, 350 мл", sortOrder: 0 }
+            { id: 'img-5094073-1', url: '/images/products/2429548c39fe53608802f75a4f436f12.webp', thumbnailUrl: '/images/products/2429548c39fe53608802f75a4f436f12.webp', alt: "Салатник, O'Kitchen, 350 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3215,7 +3215,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013539-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48ef08dc465214437f0d547e6134062a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48ef08dc465214437f0d547e6134062a.jpg', alt: "Кружка с подогревом, More Choice, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013539-1', url: '/images/products/48ef08dc465214437f0d547e6134062a.webp', thumbnailUrl: '/images/products/48ef08dc465214437f0d547e6134062a.webp', alt: "Кружка с подогревом, More Choice, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3236,7 +3236,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021601-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/6295f45f8261bbc553b91f4196096760.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/6295f45f8261bbc553b91f4196096760.jpg', alt: "Тёрка конусная, O'Kitchen, 12,5х25 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021601-1', url: '/images/products/6295f45f8261bbc553b91f4196096760.webp', thumbnailUrl: '/images/products/6295f45f8261bbc553b91f4196096760.webp', alt: "Тёрка конусная, O'Kitchen, 12,5х25 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3257,7 +3257,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091341-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91c53e60762ef771dda70dcf13b5d18b.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91c53e60762ef771dda70dcf13b5d18b.png', alt: "Кружка, ОСЗ, 200 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091341-1', url: '/images/products/91c53e60762ef771dda70dcf13b5d18b.webp', thumbnailUrl: '/images/products/91c53e60762ef771dda70dcf13b5d18b.webp', alt: "Кружка, ОСЗ, 200 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3278,7 +3278,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5028615-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e06b9a549fceaa48f27eef0f2989143.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e06b9a549fceaa48f27eef0f2989143.jpg', alt: "Бульонница с ручками, O’Kitchen, 600 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5028615-1', url: '/images/products/1e06b9a549fceaa48f27eef0f2989143.webp', thumbnailUrl: '/images/products/1e06b9a549fceaa48f27eef0f2989143.webp', alt: "Бульонница с ручками, O’Kitchen, 600 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -3299,7 +3299,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094123-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f7/f7ad0c2218e85fc7093bc9588ed5aafc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f7/f7ad0c2218e85fc7093bc9588ed5aafc.jpg', alt: "Тарелка глубокая, ОСЗ, 20 см", sortOrder: 0 }
+            { id: 'img-5094123-1', url: '/images/products/f7ad0c2218e85fc7093bc9588ed5aafc.webp', thumbnailUrl: '/images/products/f7ad0c2218e85fc7093bc9588ed5aafc.webp', alt: "Тарелка глубокая, ОСЗ, 20 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3320,7 +3320,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092767-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/857b9c63c818775829b348a0c89fc5b7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/857b9c63c818775829b348a0c89fc5b7.jpg', alt: "Лопатка кулинарная, O’Kitchen, 24 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092767-1', url: '/images/products/857b9c63c818775829b348a0c89fc5b7.webp', thumbnailUrl: '/images/products/857b9c63c818775829b348a0c89fc5b7.webp', alt: "Лопатка кулинарная, O’Kitchen, 24 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3341,7 +3341,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094233-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a24fdaa030f73eeb9b6932b517a99ec7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a24fdaa030f73eeb9b6932b517a99ec7.jpg', alt: "Стакан, O'Kitchen, 450 мл", sortOrder: 0 }
+            { id: 'img-5094233-1', url: '/images/products/a24fdaa030f73eeb9b6932b517a99ec7.webp', thumbnailUrl: '/images/products/a24fdaa030f73eeb9b6932b517a99ec7.webp', alt: "Стакан, O'Kitchen, 450 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3362,7 +3362,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091321-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/427ad64bf8b4eb149d173773f6f53808.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/427ad64bf8b4eb149d173773f6f53808.jpg', alt: "Кружка, O'Kitchen, 500 мл", sortOrder: 0 }
+            { id: 'img-5091321-1', url: '/images/products/427ad64bf8b4eb149d173773f6f53808.webp', thumbnailUrl: '/images/products/427ad64bf8b4eb149d173773f6f53808.webp', alt: "Кружка, O'Kitchen, 500 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3383,7 +3383,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 360,
         baseOldPrice: 399,
         images: [
-            { id: 'img-5092663-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5bea96a951b0e55b27704e019b0555ea.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5bea96a951b0e55b27704e019b0555ea.jpg', alt: "Весы электронные кухонные с мерным стаканом, O'Kitchen, 1,2 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092663-1', url: '/images/products/5bea96a951b0e55b27704e019b0555ea.webp', thumbnailUrl: '/images/products/5bea96a951b0e55b27704e019b0555ea.webp', alt: "Весы электронные кухонные с мерным стаканом, O'Kitchen, 1,2 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3404,7 +3404,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5095025-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a328e1d6bdd8d475334ae3c5c15c6d84.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a328e1d6bdd8d475334ae3c5c15c6d84.jpg', alt: "Форма для кекса, O'Kitchen, 11 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5095025-1', url: '/images/products/a328e1d6bdd8d475334ae3c5c15c6d84.webp', thumbnailUrl: '/images/products/a328e1d6bdd8d475334ae3c5c15c6d84.webp', alt: "Форма для кекса, O'Kitchen, 11 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3425,7 +3425,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021648-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4b3cb7e319c619af57556a058b00dbc0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4b3cb7e319c619af57556a058b00dbc0.jpg', alt: "Овощечистка, O`Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021648-1', url: '/images/products/4b3cb7e319c619af57556a058b00dbc0.webp', thumbnailUrl: '/images/products/4b3cb7e319c619af57556a058b00dbc0.webp', alt: "Овощечистка, O`Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3446,7 +3446,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036551-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/cae3b83d0333d3d09cf1d9954ca4ec1c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/cae3b83d0333d3d09cf1d9954ca4ec1c.jpg', alt: "Бутылка для воды, 600 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036551-1', url: '/images/products/cae3b83d0333d3d09cf1d9954ca4ec1c.webp', thumbnailUrl: '/images/products/cae3b83d0333d3d09cf1d9954ca4ec1c.webp', alt: "Бутылка для воды, 600 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3467,7 +3467,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094114-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6be8bde77b05bc62bc8cac20c5f2883a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6be8bde77b05bc62bc8cac20c5f2883a.jpg', alt: "Салатник, O'Kitchen, 800 мл", sortOrder: 0 }
+            { id: 'img-5094114-1', url: '/images/products/6be8bde77b05bc62bc8cac20c5f2883a.webp', thumbnailUrl: '/images/products/6be8bde77b05bc62bc8cac20c5f2883a.webp', alt: "Салатник, O'Kitchen, 800 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3488,7 +3488,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036578-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/08/082cf3b8f16cfc4dedde94583d182813.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/08/082cf3b8f16cfc4dedde94583d182813.jpg', alt: "Банка, O’Kitchen, 500 мл", sortOrder: 0 }
+            { id: 'img-5036578-1', url: '/images/products/082cf3b8f16cfc4dedde94583d182813.webp', thumbnailUrl: '/images/products/082cf3b8f16cfc4dedde94583d182813.webp', alt: "Банка, O’Kitchen, 500 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3509,7 +3509,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092368-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/2436a75ca422b4cff75d81b1cfcb7256.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/2436a75ca422b4cff75d81b1cfcb7256.jpg', alt: "Молоток для мяса, O'Kitchen", sortOrder: 0 }
+            { id: 'img-5092368-1', url: '/images/products/2436a75ca422b4cff75d81b1cfcb7256.webp', thumbnailUrl: '/images/products/2436a75ca422b4cff75d81b1cfcb7256.webp', alt: "Молоток для мяса, O'Kitchen", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3530,7 +3530,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021692-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/31/3137a79e73aff96bc700b9ae128b6f21.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/31/3137a79e73aff96bc700b9ae128b6f21.jpg', alt: "Подставка для ножей, O'Kitchen, 11х22,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021692-1', url: '/images/products/3137a79e73aff96bc700b9ae128b6f21.webp', thumbnailUrl: '/images/products/3137a79e73aff96bc700b9ae128b6f21.webp', alt: "Подставка для ножей, O'Kitchen, 11х22,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3551,7 +3551,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5090452-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/96/96c1b0ede63c861484946ba9a7502263.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/96/96c1b0ede63c861484946ba9a7502263.jpg', alt: "Соусница, O`Kitchen, 8 см", sortOrder: 0 }
+            { id: 'img-5090452-1', url: '/images/products/96c1b0ede63c861484946ba9a7502263.webp', thumbnailUrl: '/images/products/96c1b0ede63c861484946ba9a7502263.webp', alt: "Соусница, O`Kitchen, 8 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3572,7 +3572,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036648-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ea/ea77ac832b9cf79748a13c5bd4c39713.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ea/ea77ac832b9cf79748a13c5bd4c39713.jpg', alt: "Ёмкость для сыпучих продуктов, O’Kitchen, 1,4 л", sortOrder: 0 }
+            { id: 'img-5036648-1', url: '/images/products/ea77ac832b9cf79748a13c5bd4c39713.webp', thumbnailUrl: '/images/products/ea77ac832b9cf79748a13c5bd4c39713.webp', alt: "Ёмкость для сыпучих продуктов, O’Kitchen, 1,4 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3593,7 +3593,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093036-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b1e3c48b84d872be3450c413a7abddc0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b1e3c48b84d872be3450c413a7abddc0.jpg', alt: "Пиала (боул), O’Kitchen, 750 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093036-1', url: '/images/products/b1e3c48b84d872be3450c413a7abddc0.webp', thumbnailUrl: '/images/products/b1e3c48b84d872be3450c413a7abddc0.webp', alt: "Пиала (боул), O’Kitchen, 750 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3614,7 +3614,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5036459-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/897b9b017cf1a540cd940172bbed64c4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/897b9b017cf1a540cd940172bbed64c4.jpg', alt: "Бутылка с дозатором для масла, O'Kitchen, 480 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5036459-1', url: '/images/products/897b9b017cf1a540cd940172bbed64c4.webp', thumbnailUrl: '/images/products/897b9b017cf1a540cd940172bbed64c4.webp', alt: "Бутылка с дозатором для масла, O'Kitchen, 480 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3635,7 +3635,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091472-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/80/80a246b02d77c09d1991cfaba5069d67.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/80/80a246b02d77c09d1991cfaba5069d67.jpg', alt: "Кружка, O`Kitchen, 335 мл", sortOrder: 0 }
+            { id: 'img-5091472-1', url: '/images/products/80a246b02d77c09d1991cfaba5069d67.webp', thumbnailUrl: '/images/products/80a246b02d77c09d1991cfaba5069d67.webp', alt: "Кружка, O`Kitchen, 335 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3656,7 +3656,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092744-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6bb67f660f1d236c8c3e9dcc4dc741f9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6bb67f660f1d236c8c3e9dcc4dc741f9.jpg', alt: "Венчик, O'Kitchen, 24,5 см", sortOrder: 0 }
+            { id: 'img-5092744-1', url: '/images/products/6bb67f660f1d236c8c3e9dcc4dc741f9.webp', thumbnailUrl: '/images/products/6bb67f660f1d236c8c3e9dcc4dc741f9.webp', alt: "Венчик, O'Kitchen, 24,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3677,7 +3677,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094283-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d583d9958d3c71d0682ffd47b83d5815.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d583d9958d3c71d0682ffd47b83d5815.jpg', alt: "Тарелка обеденная \"Opal Gold Line\", 25 с", sortOrder: 0 }
+            { id: 'img-5094283-1', url: '/images/products/d583d9958d3c71d0682ffd47b83d5815.webp', thumbnailUrl: '/images/products/d583d9958d3c71d0682ffd47b83d5815.webp', alt: "Тарелка обеденная \"Opal Gold Line\", 25 с", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3698,7 +3698,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5006024-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d5ed7d0c3bbfa9fde4f712e9535203a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d5ed7d0c3bbfa9fde4f712e9535203a.jpg', alt: "Точильный камень, Master Hand", sortOrder: 0 }
+            { id: 'img-5006024-1', url: '/images/products/8d5ed7d0c3bbfa9fde4f712e9535203a.webp', thumbnailUrl: '/images/products/8d5ed7d0c3bbfa9fde4f712e9535203a.webp', alt: "Точильный камень, Master Hand", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3719,7 +3719,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091672-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2ae1652ced2f3bed02ae88fd394c8f2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2ae1652ced2f3bed02ae88fd394c8f2.jpg', alt: "Кружка, O'Kitchen, 410 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091672-1', url: '/images/products/b2ae1652ced2f3bed02ae88fd394c8f2.webp', thumbnailUrl: '/images/products/b2ae1652ced2f3bed02ae88fd394c8f2.webp', alt: "Кружка, O'Kitchen, 410 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3740,7 +3740,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094087-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6f/6fff1ed88c8010090242b9ab7e1af7e2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6f/6fff1ed88c8010090242b9ab7e1af7e2.jpg', alt: "Набор конфетниц с крышкой, O'Kitchen, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5094087-1', url: '/images/products/6fff1ed88c8010090242b9ab7e1af7e2.webp', thumbnailUrl: '/images/products/6fff1ed88c8010090242b9ab7e1af7e2.webp', alt: "Набор конфетниц с крышкой, O'Kitchen, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3761,7 +3761,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093604-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bdf885b8fd97a0322356beab1f32005e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bdf885b8fd97a0322356beab1f32005e.jpg', alt: "Солонка и перечница, O’Kitchen", sortOrder: 0 }
+            { id: 'img-5093604-1', url: '/images/products/bdf885b8fd97a0322356beab1f32005e.webp', thumbnailUrl: '/images/products/bdf885b8fd97a0322356beab1f32005e.webp', alt: "Солонка и перечница, O’Kitchen", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3782,7 +3782,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094128-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5a/5abfd86551b69cb53d5bd5d0a3576963.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5a/5abfd86551b69cb53d5bd5d0a3576963.jpg', alt: "Стакан, O’Kitchen, 350 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094128-1', url: '/images/products/5abfd86551b69cb53d5bd5d0a3576963.webp', thumbnailUrl: '/images/products/5abfd86551b69cb53d5bd5d0a3576963.webp', alt: "Стакан, O’Kitchen, 350 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3803,7 +3803,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5024886-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f7/f748ee164c0cac8280a905b88dbf8536.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f7/f748ee164c0cac8280a905b88dbf8536.jpg', alt: "Кувшин, Phibo, 1,4 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5024886-1', url: '/images/products/f748ee164c0cac8280a905b88dbf8536.webp', thumbnailUrl: '/images/products/f748ee164c0cac8280a905b88dbf8536.webp', alt: "Кувшин, Phibo, 1,4 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3824,7 +3824,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094240-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/3528aee73a4c4948b8da853ce27aefb3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/3528aee73a4c4948b8da853ce27aefb3.jpg', alt: "Салатник, O'Kitchen, 430 мл", sortOrder: 0 }
+            { id: 'img-5094240-1', url: '/images/products/3528aee73a4c4948b8da853ce27aefb3.webp', thumbnailUrl: '/images/products/3528aee73a4c4948b8da853ce27aefb3.webp', alt: "Салатник, O'Kitchen, 430 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3845,7 +3845,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094041-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b4bdefd5df586b1b441886c315da0bc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b4bdefd5df586b1b441886c315da0bc.jpg', alt: "Пиала (боул), O'Kitchen, 600 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5094041-1', url: '/images/products/1b4bdefd5df586b1b441886c315da0bc.webp', thumbnailUrl: '/images/products/1b4bdefd5df586b1b441886c315da0bc.webp', alt: "Пиала (боул), O'Kitchen, 600 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3866,7 +3866,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5069779-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e46dafb116f1ebf880d53cf7157df261.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e46dafb116f1ebf880d53cf7157df261.jpg', alt: "Корзинка \"Лофт\" прямоугольная, 3 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5069779-1', url: '/images/products/e46dafb116f1ebf880d53cf7157df261.webp', thumbnailUrl: '/images/products/e46dafb116f1ebf880d53cf7157df261.webp', alt: "Корзинка \"Лофт\" прямоугольная, 3 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3887,7 +3887,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 41.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094112-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9b/9bb5a73c143e639edfc1bdeab9b6f035.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9b/9bb5a73c143e639edfc1bdeab9b6f035.jpg', alt: "Салатник, O'Kitchen, 210 мл", sortOrder: 0 }
+            { id: 'img-5094112-1', url: '/images/products/9bb5a73c143e639edfc1bdeab9b6f035.webp', thumbnailUrl: '/images/products/9bb5a73c143e639edfc1bdeab9b6f035.webp', alt: "Салатник, O'Kitchen, 210 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3908,7 +3908,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094155-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e1d643813a981056f3080e2076724b7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e1d643813a981056f3080e2076724b7.jpg', alt: "Сахарница, KAVEH", sortOrder: 0 }
+            { id: 'img-5094155-1', url: '/images/products/8e1d643813a981056f3080e2076724b7.webp', thumbnailUrl: '/images/products/8e1d643813a981056f3080e2076724b7.webp', alt: "Сахарница, KAVEH", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3929,7 +3929,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094124-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c36277fd50645a8eda3fbf7dea8f59e1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c36277fd50645a8eda3fbf7dea8f59e1.jpg', alt: "Тарелка, ОСЗ, 19 см", sortOrder: 0 }
+            { id: 'img-5094124-1', url: '/images/products/c36277fd50645a8eda3fbf7dea8f59e1.webp', thumbnailUrl: '/images/products/c36277fd50645a8eda3fbf7dea8f59e1.webp', alt: "Тарелка, ОСЗ, 19 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3950,7 +3950,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021615-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/03/0334c6f76159bd166b253976bf52bf13.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/03/0334c6f76159bd166b253976bf52bf13.jpg', alt: "Открывалка для банок, O’Kitchen", sortOrder: 0 }
+            { id: 'img-5021615-1', url: '/images/products/0334c6f76159bd166b253976bf52bf13.webp', thumbnailUrl: '/images/products/0334c6f76159bd166b253976bf52bf13.webp', alt: "Открывалка для банок, O’Kitchen", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3971,7 +3971,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094138-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/886bbe623fde8d26797079bc80f01659.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/886bbe623fde8d26797079bc80f01659.jpg', alt: "Набор конфетниц с крышкой, O'Kitchen, 310 мл, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5094138-1', url: '/images/products/886bbe623fde8d26797079bc80f01659.webp', thumbnailUrl: '/images/products/886bbe623fde8d26797079bc80f01659.webp', alt: "Набор конфетниц с крышкой, O'Kitchen, 310 мл, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -3992,7 +3992,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5091677-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/38/38f94686370b23fb9cb971e8bbc39c03.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/38/38f94686370b23fb9cb971e8bbc39c03.jpg', alt: "Кружка с двойными стенками, O'Kitchen, 380 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5091677-1', url: '/images/products/38f94686370b23fb9cb971e8bbc39c03.webp', thumbnailUrl: '/images/products/38f94686370b23fb9cb971e8bbc39c03.webp', alt: "Кружка с двойными стенками, O'Kitchen, 380 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -4013,7 +4013,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5021610-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fd/fda11378f38f64a069ffc3140f8b3a8b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fd/fda11378f38f64a069ffc3140f8b3a8b.jpg', alt: "Ложка столовая, O'Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5021610-1', url: '/images/products/fda11378f38f64a069ffc3140f8b3a8b.webp', thumbnailUrl: '/images/products/fda11378f38f64a069ffc3140f8b3a8b.webp', alt: "Ложка столовая, O'Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -4034,7 +4034,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5094280-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d399dc5389c4f67c59ad80ebe4a9ac97.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d399dc5389c4f67c59ad80ebe4a9ac97.jpg', alt: "Салатник \"Opal Gold Line\", 670 мл", sortOrder: 0 }
+            { id: 'img-5094280-1', url: '/images/products/d399dc5389c4f67c59ad80ebe4a9ac97.webp', thumbnailUrl: '/images/products/d399dc5389c4f67c59ad80ebe4a9ac97.webp', alt: "Салатник \"Opal Gold Line\", 670 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -4055,7 +4055,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 169,
         baseOldPrice: 174.5,
         images: [
-            { id: 'img-1950692-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/b5c9f4c71af573e6ad753ac7131192cd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/b5c9f4c71af573e6ad753ac7131192cd.jpg', alt: "Кондитерское изделие \"Choco Pie\", Orion, 360 г", sortOrder: 0 }
+            { id: 'img-1950692-1', url: '/images/products/b5c9f4c71af573e6ad753ac7131192cd.webp', thumbnailUrl: '/images/products/b5c9f4c71af573e6ad753ac7131192cd.webp', alt: "Кондитерское изделие \"Choco Pie\", Orion, 360 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4076,7 +4076,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 19.6,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912102-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/44a30790ffc83bfb4d9b8b4f0bb63822.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/44a30790ffc83bfb4d9b8b4f0bb63822.jpg', alt: "Воздушное суфле \"Mini\", Пухлый кролик, 40 г", sortOrder: 0 }
+            { id: 'img-1912102-1', url: '/images/products/44a30790ffc83bfb4d9b8b4f0bb63822.webp', thumbnailUrl: '/images/products/44a30790ffc83bfb4d9b8b4f0bb63822.webp', alt: "Воздушное суфле \"Mini\", Пухлый кролик, 40 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4097,7 +4097,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902248-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902248.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902248.jpg', alt: "Шоколадные конфеты \"Minis\", Snickers, 135 г", sortOrder: 0 }
+            { id: 'img-1902248-1', url: '/images/products/1902248.webp', thumbnailUrl: '/images/products/1902248.webp', alt: "Шоколадные конфеты \"Minis\", Snickers, 135 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4118,7 +4118,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902247-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902247.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902247.jpg', alt: "Шоколадные конфеты, Twix, 138 г", sortOrder: 0 }
+            { id: 'img-1902247-1', url: '/images/products/1902247.webp', thumbnailUrl: '/images/products/1902247.webp', alt: "Шоколадные конфеты, Twix, 138 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4139,7 +4139,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950476-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950476.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950476.jpg', alt: "Печенье-мюсли, Любятово, с клюквой и изюмом, 120 г", sortOrder: 0 }
+            { id: 'img-1950476-1', url: '/images/products/1950476.webp', thumbnailUrl: '/images/products/1950476.webp', alt: "Печенье-мюсли, Любятово, с клюквой и изюмом, 120 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4160,7 +4160,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43,
         baseOldPrice: 49.5,
         images: [
-            { id: 'img-1950696-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/37979a961edb5922ffd9aaa79e26d367.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/37979a961edb5922ffd9aaa79e26d367.jpg', alt: "Печенье \"CHOCOBOY\", Orion, 45 г", sortOrder: 0 }
+            { id: 'img-1950696-1', url: '/images/products/37979a961edb5922ffd9aaa79e26d367.webp', thumbnailUrl: '/images/products/37979a961edb5922ffd9aaa79e26d367.webp', alt: "Печенье \"CHOCOBOY\", Orion, 45 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4181,7 +4181,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 107,
         baseOldPrice: 116,
         images: [
-            { id: 'img-1952128-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1952128_1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1952128_1500.jpg', alt: "Вафельные трубочки, 500 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1952128-1', url: '/images/products/1952128_1500.webp', thumbnailUrl: '/images/products/1952128_1500.webp', alt: "Вафельные трубочки, 500 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4202,7 +4202,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 109,
         baseOldPrice: 116,
         images: [
-            { id: 'img-1930466-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930466.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930466.jpg', alt: "Конфеты \"Батончики\", Рот Фронт, 250 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1930466-1', url: '/images/products/1930466.webp', thumbnailUrl: '/images/products/1930466.webp', alt: "Конфеты \"Батончики\", Рот Фронт, 250 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4223,7 +4223,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902246-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902246.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902246.jpg', alt: "Шоколадные конфеты, Milky Way, 132 г", sortOrder: 0 }
+            { id: 'img-1902246-1', url: '/images/products/1902246.webp', thumbnailUrl: '/images/products/1902246.webp', alt: "Шоколадные конфеты, Milky Way, 132 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4244,7 +4244,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1911034-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/a31f3554f28be1bea48d94ec983eb248.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/a31f3554f28be1bea48d94ec983eb248.jpg', alt: "Пастила, Белёвская, 100 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1911034-1', url: '/images/products/a31f3554f28be1bea48d94ec983eb248.webp', thumbnailUrl: '/images/products/a31f3554f28be1bea48d94ec983eb248.webp', alt: "Пастила, Белёвская, 100 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4265,7 +4265,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962043-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/3782ee32b18c1659fca3adfe18728718.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/3782ee32b18c1659fca3adfe18728718.jpg', alt: "Десерт \"Ломтишка\", Акконд, 140 г", sortOrder: 0 }
+            { id: 'img-1962043-1', url: '/images/products/3782ee32b18c1659fca3adfe18728718.webp', thumbnailUrl: '/images/products/3782ee32b18c1659fca3adfe18728718.webp', alt: "Десерт \"Ломтишка\", Акконд, 140 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4286,7 +4286,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930477-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/dd/dd6f4dca8629364f850c964a81732b8e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/dd/dd6f4dca8629364f850c964a81732b8e.jpg', alt: "Конфеты \"Крокант\", с миндалём, 180 г", sortOrder: 0 }
+            { id: 'img-1930477-1', url: '/images/products/dd6f4dca8629364f850c964a81732b8e.webp', thumbnailUrl: '/images/products/dd6f4dca8629364f850c964a81732b8e.webp', alt: "Конфеты \"Крокант\", с миндалём, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4307,7 +4307,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: 249,
         images: [
-            { id: 'img-1902203-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/67cb2999f27fcf1089434c7c0be6fdd2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/67cb2999f27fcf1089434c7c0be6fdd2.jpg', alt: "Батончик шоколадный, Snickers, 9 шт., 360 г", sortOrder: 0 }
+            { id: 'img-1902203-1', url: '/images/products/67cb2999f27fcf1089434c7c0be6fdd2.webp', thumbnailUrl: '/images/products/67cb2999f27fcf1089434c7c0be6fdd2.webp', alt: "Батончик шоколадный, Snickers, 9 шт., 360 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4328,7 +4328,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950373-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950373.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950373.jpg', alt: "Печенье с какао и начинкой, Oreo, 228 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950373-1', url: '/images/products/1950373.webp', thumbnailUrl: '/images/products/1950373.webp', alt: "Печенье с какао и начинкой, Oreo, 228 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4349,7 +4349,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 20.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902108-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/eb06e75aab08e065ebe5d42473dca661.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/eb06e75aab08e065ebe5d42473dca661.jpg', alt: "Конфета вафельная \"Обыкновенное чудо\", Славянка, 40 г", sortOrder: 0 }
+            { id: 'img-1902108-1', url: '/images/products/eb06e75aab08e065ebe5d42473dca661.webp', thumbnailUrl: '/images/products/eb06e75aab08e065ebe5d42473dca661.webp', alt: "Конфета вафельная \"Обыкновенное чудо\", Славянка, 40 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4370,7 +4370,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950908-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950908.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950908.jpg', alt: "Кондитерское изделие \"Choco Pie\", Orion, с карамельной начинкой, 360 г", sortOrder: 0 }
+            { id: 'img-1950908-1', url: '/images/products/1950908.webp', thumbnailUrl: '/images/products/1950908.webp', alt: "Кондитерское изделие \"Choco Pie\", Orion, с карамельной начинкой, 360 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4391,7 +4391,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902225-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6652d8a2ecfc4e32234eaeb563c0fa68.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6652d8a2ecfc4e32234eaeb563c0fa68.jpg', alt: "Батончик шоколадный, Bounty, 165 г", sortOrder: 0 }
+            { id: 'img-1902225-1', url: '/images/products/6652d8a2ecfc4e32234eaeb563c0fa68.webp', thumbnailUrl: '/images/products/6652d8a2ecfc4e32234eaeb563c0fa68.webp', alt: "Батончик шоколадный, Bounty, 165 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4412,7 +4412,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 73,
         baseOldPrice: 79,
         images: [
-            { id: 'img-1950603-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/91d327168ab6e930aaa0a9cfe906fe49.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/91d327168ab6e930aaa0a9cfe906fe49.jpg', alt: "Печенье со злаками, Хлебный Спас, 250 г", sortOrder: 0 }
+            { id: 'img-1950603-1', url: '/images/products/91d327168ab6e930aaa0a9cfe906fe49.webp', thumbnailUrl: '/images/products/91d327168ab6e930aaa0a9cfe906fe49.webp', alt: "Печенье со злаками, Хлебный Спас, 250 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4433,7 +4433,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902308-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f8/f84cd474d0d792532ef889aae741b543.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f8/f84cd474d0d792532ef889aae741b543.jpg', alt: "Twix, \"Солёная карамель\" шоколадные конфеты, 138 г", sortOrder: 0 }
+            { id: 'img-1902308-1', url: '/images/products/f84cd474d0d792532ef889aae741b543.webp', thumbnailUrl: '/images/products/f84cd474d0d792532ef889aae741b543.webp', alt: "Twix, \"Солёная карамель\" шоколадные конфеты, 138 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4454,7 +4454,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1921042-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/8473658796454c588539a003dffe1c95.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/8473658796454c588539a003dffe1c95.jpg', alt: "Карамель \"Пчёлка-Шепёлка\", b&b, ассорти, 180 г", sortOrder: 0 }
+            { id: 'img-1921042-1', url: '/images/products/8473658796454c588539a003dffe1c95.webp', thumbnailUrl: '/images/products/8473658796454c588539a003dffe1c95.webp', alt: "Карамель \"Пчёлка-Шепёлка\", b&b, ассорти, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4475,7 +4475,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 31.1,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912069-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/f30bafe8d78b1ecdd82f8826a71302c2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/f30bafe8d78b1ecdd82f8826a71302c2.jpg', alt: "Конфеты, Пухлый кролик, 85 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1912069-1', url: '/images/products/f30bafe8d78b1ecdd82f8826a71302c2.webp', thumbnailUrl: '/images/products/f30bafe8d78b1ecdd82f8826a71302c2.webp', alt: "Конфеты, Пухлый кролик, 85 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4496,7 +4496,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962085-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4ec49245cc17cbce6e8237e602d9c46e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4ec49245cc17cbce6e8237e602d9c46e.jpg', alt: "Пирожное \"Моти\", 120 г", sortOrder: 0 }
+            { id: 'img-1962085-1', url: '/images/products/4ec49245cc17cbce6e8237e602d9c46e.webp', thumbnailUrl: '/images/products/4ec49245cc17cbce6e8237e602d9c46e.webp', alt: "Пирожное \"Моти\", 120 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4517,7 +4517,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 155,
         baseOldPrice: 174.5,
         images: [
-            { id: 'img-1900328-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c51c1a1076a5afeb8f58b4f454b22790.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c51c1a1076a5afeb8f58b4f454b22790.jpg', alt: "Шоколад молочный дубайский, Nelino, 62 г", sortOrder: 0 }
+            { id: 'img-1900328-1', url: '/images/products/c51c1a1076a5afeb8f58b4f454b22790.webp', thumbnailUrl: '/images/products/c51c1a1076a5afeb8f58b4f454b22790.webp', alt: "Шоколад молочный дубайский, Nelino, 62 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4538,7 +4538,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: 69,
         images: [
-            { id: 'img-1931042-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/61fc0d7d2cb30273fe4c753c4455c9ce.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/61fc0d7d2cb30273fe4c753c4455c9ce.jpg', alt: "Желейные конфеты с начинкой \"Задорная пчёлка\", b&b, микс, 250 г", sortOrder: 0 }
+            { id: 'img-1931042-1', url: '/images/products/61fc0d7d2cb30273fe4c753c4455c9ce.webp', thumbnailUrl: '/images/products/61fc0d7d2cb30273fe4c753c4455c9ce.webp', alt: "Желейные конфеты с начинкой \"Задорная пчёлка\", b&b, микс, 250 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4559,7 +4559,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1901075-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1901075_3_1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1901075_3_1500.jpg', alt: "Шоколадная бомбочка с маршмеллоу, Happy boom, 28 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1901075-1', url: '/images/products/1901075_3_1500.webp', thumbnailUrl: '/images/products/1901075_3_1500.webp', alt: "Шоколадная бомбочка с маршмеллоу, Happy boom, 28 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4580,7 +4580,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1923105-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/61844d8098dc29ebb0f0d9917f267524.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/61844d8098dc29ebb0f0d9917f267524.jpg', alt: "Драже, M&M's, с молочным шоколадом, 45 г", sortOrder: 0 }
+            { id: 'img-1923105-1', url: '/images/products/61844d8098dc29ebb0f0d9917f267524.webp', thumbnailUrl: '/images/products/61844d8098dc29ebb0f0d9917f267524.webp', alt: "Драже, M&M's, с молочным шоколадом, 45 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4601,7 +4601,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 89,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1910146-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/c5d6dac685102c7e60a451945afc7627.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/c5d6dac685102c7e60a451945afc7627.jpg', alt: "Мармелад \"Роллсы\", Chupa Chups, апельсин/лимон, 100 г", sortOrder: 0 }
+            { id: 'img-1910146-1', url: '/images/products/c5d6dac685102c7e60a451945afc7627.webp', thumbnailUrl: '/images/products/c5d6dac685102c7e60a451945afc7627.webp', alt: "Мармелад \"Роллсы\", Chupa Chups, апельсин/лимон, 100 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4622,7 +4622,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 84,
         baseOldPrice: 87,
         images: [
-            { id: 'img-1950171-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/CP_klassika_6st.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/CP_klassika_6st.jpg', alt: "Печенье прослоенное глазированное, Choco Pie, 168 г", sortOrder: 0 }
+            { id: 'img-1950171-1', url: '/images/products/CP_klassika_6st.webp', thumbnailUrl: '/images/products/CP_klassika_6st.webp', alt: "Печенье прослоенное глазированное, Choco Pie, 168 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4643,7 +4643,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950572-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950572_Kreker_Askino_s_syrom_135g_2_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950572_Kreker_Askino_s_syrom_135g_2_1.jpg', alt: "Крекер с сыром, Яшкино, 135 г", sortOrder: 0 }
+            { id: 'img-1950572-1', url: '/images/products/1950572_Kreker_Askino_s_syrom_135g_2_1.webp', thumbnailUrl: '/images/products/1950572_Kreker_Askino_s_syrom_135g_2_1.webp', alt: "Крекер с сыром, Яшкино, 135 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4664,7 +4664,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 95,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1930412-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/ea76b214d0684fc02c8944984c543986.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/ea76b214d0684fc02c8944984c543986.jpg', alt: "Конфеты с кокосовой начинкой, Konfesta, 180 г", sortOrder: 0 }
+            { id: 'img-1930412-1', url: '/images/products/ea76b214d0684fc02c8944984c543986.webp', thumbnailUrl: '/images/products/ea76b214d0684fc02c8944984c543986.webp', alt: "Конфеты с кокосовой начинкой, Konfesta, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4685,7 +4685,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930534-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f93d180a5139a3c7adc9a3b1fdf5e75c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f93d180a5139a3c7adc9a3b1fdf5e75c.jpg', alt: "Конфеты \"Чио Рио\", 180 г", sortOrder: 0 }
+            { id: 'img-1930534-1', url: '/images/products/f93d180a5139a3c7adc9a3b1fdf5e75c.webp', thumbnailUrl: '/images/products/f93d180a5139a3c7adc9a3b1fdf5e75c.webp', alt: "Конфеты \"Чио Рио\", 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4706,7 +4706,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1881057-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1881057_2_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1881057_2_1.jpg', alt: "Хрустящие палочки в глазури \"ChoK-ki\", 40 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1881057-1', url: '/images/products/1881057_2_1.webp', thumbnailUrl: '/images/products/1881057_2_1.webp', alt: "Хрустящие палочки в глазури \"ChoK-ki\", 40 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4727,7 +4727,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950685-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950685_1500h1500_info.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950685_1500h1500_info.jpg', alt: "Крекер \"Классический\", Сладиал, 400 г", sortOrder: 0 }
+            { id: 'img-1950685-1', url: '/images/products/1950685_1500h1500_info.webp', thumbnailUrl: '/images/products/1950685_1500h1500_info.webp', alt: "Крекер \"Классический\", Сладиал, 400 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4748,7 +4748,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962074-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/199b94315f1791f33b2a108d1cb1c38e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/199b94315f1791f33b2a108d1cb1c38e.jpg', alt: "Бисквитное пирожное \"Fresh Pie\", ORION, 12 шт., 300 г", sortOrder: 0 }
+            { id: 'img-1962074-1', url: '/images/products/199b94315f1791f33b2a108d1cb1c38e.webp', thumbnailUrl: '/images/products/199b94315f1791f33b2a108d1cb1c38e.webp', alt: "Бисквитное пирожное \"Fresh Pie\", ORION, 12 шт., 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4769,7 +4769,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920115-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/ce0b9ed0ad899e361fad57d261f37b8e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/ce0b9ed0ad899e361fad57d261f37b8e.jpg', alt: "Жевательные драже Skittles \"2в1\", 38 г", sortOrder: 0 }
+            { id: 'img-1920115-1', url: '/images/products/ce0b9ed0ad899e361fad57d261f37b8e.webp', thumbnailUrl: '/images/products/ce0b9ed0ad899e361fad57d261f37b8e.webp', alt: "Жевательные драже Skittles \"2в1\", 38 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4790,7 +4790,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: 69,
         images: [
-            { id: 'img-1950580-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/068e11745f1192e0974fa760f7e7964e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/068e11745f1192e0974fa760f7e7964e.jpg', alt: "Печенье сдобное \"Малышки Хрустишки\", 250 г", sortOrder: 0 }
+            { id: 'img-1950580-1', url: '/images/products/068e11745f1192e0974fa760f7e7964e.webp', thumbnailUrl: '/images/products/068e11745f1192e0974fa760f7e7964e.webp', alt: "Печенье сдобное \"Малышки Хрустишки\", 250 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4811,7 +4811,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: 87,
         images: [
-            { id: 'img-1950632-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/117b9af87606353524cb7aa553619d38.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/117b9af87606353524cb7aa553619d38.JPG', alt: "Печенье овсяное \"Классическое\", Впрок!, 500 г", sortOrder: 0 }
+            { id: 'img-1950632-1', url: '/images/products/117b9af87606353524cb7aa553619d38.webp', thumbnailUrl: '/images/products/117b9af87606353524cb7aa553619d38.webp', alt: "Печенье овсяное \"Классическое\", Впрок!, 500 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4832,7 +4832,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49,
         baseOldPrice: 55,
         images: [
-            { id: 'img-1972031-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1972031_1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1972031_1500.jpg', alt: "Козинак \"Микс\", Тимоша, 150 г", sortOrder: 0 }
+            { id: 'img-1972031-1', url: '/images/products/1972031_1500.webp', thumbnailUrl: '/images/products/1972031_1500.webp', alt: "Козинак \"Микс\", Тимоша, 150 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4853,7 +4853,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 65,
         baseOldPrice: 69,
         images: [
-            { id: 'img-1922026-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6aab068d909b2a577e842dc3e1e2eac5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6aab068d909b2a577e842dc3e1e2eac5.jpg', alt: "Карамель BS Fruit, 250 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1922026-1', url: '/images/products/6aab068d909b2a577e842dc3e1e2eac5.webp', thumbnailUrl: '/images/products/6aab068d909b2a577e842dc3e1e2eac5.webp', alt: "Карамель BS Fruit, 250 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4874,7 +4874,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 65,
         baseOldPrice: 69,
         images: [
-            { id: 'img-1950711-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950711_Pecen_e_Hlebnyj_spas_ovsanoe_230g_Ass.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950711_Pecen_e_Hlebnyj_spas_ovsanoe_230g_Ass.jpg', alt: "Овсяное печенье, Хлебный Спас, 230 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950711-1', url: '/images/products/1950711_Pecen_e_Hlebnyj_spas_ovsanoe_230g_Ass.webp', thumbnailUrl: '/images/products/1950711_Pecen_e_Hlebnyj_spas_ovsanoe_230g_Ass.webp', alt: "Овсяное печенье, Хлебный Спас, 230 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4895,7 +4895,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902006-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/4f5187a2eda6e3d47bbeb7afd6b2402a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/4f5187a2eda6e3d47bbeb7afd6b2402a.jpg', alt: "Батончик шоколадный, Twix, 55 г", sortOrder: 0 }
+            { id: 'img-1902006-1', url: '/images/products/4f5187a2eda6e3d47bbeb7afd6b2402a.webp', thumbnailUrl: '/images/products/4f5187a2eda6e3d47bbeb7afd6b2402a.webp', alt: "Батончик шоколадный, Twix, 55 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4916,7 +4916,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: 59,
         images: [
-            { id: 'img-1911038-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/30/30f21fb7830db9eb62678cf6ccc1c0db.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/30/30f21fb7830db9eb62678cf6ccc1c0db.jpg', alt: "Пастила \"Белёвская\", Белёвский десерт, без сахара, 55 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1911038-1', url: '/images/products/30f21fb7830db9eb62678cf6ccc1c0db.webp', thumbnailUrl: '/images/products/30f21fb7830db9eb62678cf6ccc1c0db.webp', alt: "Пастила \"Белёвская\", Белёвский десерт, без сахара, 55 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4937,7 +4937,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 179,
         baseOldPrice: 199,
         images: [
-            { id: 'img-1852028-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/26f897222e98f3abca56e49a1d16a0db.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/26f897222e98f3abca56e49a1d16a0db.jpg', alt: "Кремобон классический, Сдобная Особа, 380 г", sortOrder: 0 }
+            { id: 'img-1852028-1', url: '/images/products/26f897222e98f3abca56e49a1d16a0db.webp', thumbnailUrl: '/images/products/26f897222e98f3abca56e49a1d16a0db.webp', alt: "Кремобон классический, Сдобная Особа, 380 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4958,7 +4958,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902270-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4c/4cd498f44dec2a99bf6f2fbfc65cffc0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4c/4cd498f44dec2a99bf6f2fbfc65cffc0.jpg', alt: "Bounty, шоколадные конфеты, 302 г", sortOrder: 0 }
+            { id: 'img-1902270-1', url: '/images/products/4cd498f44dec2a99bf6f2fbfc65cffc0.webp', thumbnailUrl: '/images/products/4cd498f44dec2a99bf6f2fbfc65cffc0.webp', alt: "Bounty, шоколадные конфеты, 302 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -4979,7 +4979,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1851037-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration1_Import/004d4ad646a000f5364c1bc3fb07e3cb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration1_Import/004d4ad646a000f5364c1bc3fb07e3cb.jpg', alt: "Круассаны “Mini”, 7DAYS, 65 г", sortOrder: 0 }
+            { id: 'img-1851037-1', url: '/images/products/004d4ad646a000f5364c1bc3fb07e3cb.webp', thumbnailUrl: '/images/products/004d4ad646a000f5364c1bc3fb07e3cb.webp', alt: "Круассаны “Mini”, 7DAYS, 65 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5000,7 +5000,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1930268-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/88be39504ea19be19bdf655ab8ff5cb6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/88be39504ea19be19bdf655ab8ff5cb6.jpg', alt: "Глазированные конфеты \"Лёвушка\", Славянка, 199 г", sortOrder: 0 }
+            { id: 'img-1930268-1', url: '/images/products/88be39504ea19be19bdf655ab8ff5cb6.webp', thumbnailUrl: '/images/products/88be39504ea19be19bdf655ab8ff5cb6.webp', alt: "Глазированные конфеты \"Лёвушка\", Славянка, 199 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5021,7 +5021,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 24.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950401-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/TRIO_65_novyj_dizajn.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/TRIO_65_novyj_dizajn.jpg', alt: "Печенье \"Трио\", Акконд, с какао, 65 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950401-1', url: '/images/products/TRIO_65_novyj_dizajn.webp', thumbnailUrl: '/images/products/TRIO_65_novyj_dizajn.webp', alt: "Печенье \"Трио\", Акконд, с какао, 65 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5042,7 +5042,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1954014-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1954014_anons_1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1954014_anons_1500.jpg', alt: "Рулет бисквитный с джемом \"Dolche Ame\", 145 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1954014-1', url: '/images/products/1954014_anons_1500.webp', thumbnailUrl: '/images/products/1954014_anons_1500.webp', alt: "Рулет бисквитный с джемом \"Dolche Ame\", 145 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5063,7 +5063,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 74,
         baseOldPrice: 83,
         images: [
-            { id: 'img-1912107-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1912107_Zefir_Nevskij_desert_275_gr_Ass_3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1912107_Zefir_Nevskij_desert_275_gr_Ass_3.jpg', alt: "Зефир, Невский десерт, 275 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1912107-1', url: '/images/products/1912107_Zefir_Nevskij_desert_275_gr_Ass_3.webp', thumbnailUrl: '/images/products/1912107_Zefir_Nevskij_desert_275_gr_Ass_3.webp', alt: "Зефир, Невский десерт, 275 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5084,7 +5084,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950909-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15a27400ae13c9a5051d130954aa28a9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15a27400ae13c9a5051d130954aa28a9.jpg', alt: "Кондитерское изделие \"Choco Pie\", Orion, вишня, 360 г", sortOrder: 0 }
+            { id: 'img-1950909-1', url: '/images/products/15a27400ae13c9a5051d130954aa28a9.webp', thumbnailUrl: '/images/products/15a27400ae13c9a5051d130954aa28a9.webp', alt: "Кондитерское изделие \"Choco Pie\", Orion, вишня, 360 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5105,7 +5105,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 22.6,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1970013-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/42accbce6c6768a06563a267caeae5a6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/42accbce6c6768a06563a267caeae5a6.jpg', alt: "Чак-Чак медовый, Тимоша, 50 г", sortOrder: 0 }
+            { id: 'img-1970013-1', url: '/images/products/42accbce6c6768a06563a267caeae5a6.webp', thumbnailUrl: '/images/products/42accbce6c6768a06563a267caeae5a6.webp', alt: "Чак-Чак медовый, Тимоша, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5126,7 +5126,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 84,
         baseOldPrice: 87,
         images: [
-            { id: 'img-1950360-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/CP_kakao_6st.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/CP_kakao_6st.jpg', alt: "Печенье прослоенное глазированное, Choco Pie, какао, 168 г", sortOrder: 0 }
+            { id: 'img-1950360-1', url: '/images/products/CP_kakao_6st.webp', thumbnailUrl: '/images/products/CP_kakao_6st.webp', alt: "Печенье прослоенное глазированное, Choco Pie, какао, 168 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5147,7 +5147,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1911046-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da1bb23b200150dc7bea2172f0018505.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da1bb23b200150dc7bea2172f0018505.jpg', alt: "Пастила фруктовая ассорти \"Пастилушка\", без сахара, 100 г", sortOrder: 0 }
+            { id: 'img-1911046-1', url: '/images/products/da1bb23b200150dc7bea2172f0018505.webp', thumbnailUrl: '/images/products/da1bb23b200150dc7bea2172f0018505.webp', alt: "Пастила фруктовая ассорти \"Пастилушка\", без сахара, 100 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5168,7 +5168,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 84,
         baseOldPrice: 87,
         images: [
-            { id: 'img-1950506-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950506_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950506_1.jpg', alt: "Печенье прослоенное глазированное, Choco Pie, клубника, 168 г", sortOrder: 0 }
+            { id: 'img-1950506-1', url: '/images/products/1950506_1.webp', thumbnailUrl: '/images/products/1950506_1.webp', alt: "Печенье прослоенное глазированное, Choco Pie, клубника, 168 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5189,7 +5189,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 26.3,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902007-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/9e34129cae7d1d1f4ee01e784e850c12.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/9e34129cae7d1d1f4ee01e784e850c12.jpg', alt: "Батончик шоколадный, Milky Way, 26 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1902007-1', url: '/images/products/9e34129cae7d1d1f4ee01e784e850c12.webp', thumbnailUrl: '/images/products/9e34129cae7d1d1f4ee01e784e850c12.webp', alt: "Батончик шоколадный, Milky Way, 26 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5210,7 +5210,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950616-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/0071b100d300476a864720721235b5c1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/0071b100d300476a864720721235b5c1.jpg', alt: "Печенье затяжное \"Crack It\", Orion, сливочный, 160 г", sortOrder: 0 }
+            { id: 'img-1950616-1', url: '/images/products/0071b100d300476a864720721235b5c1.webp', thumbnailUrl: '/images/products/0071b100d300476a864720721235b5c1.webp', alt: "Печенье затяжное \"Crack It\", Orion, сливочный, 160 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5231,7 +5231,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950662-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/0690e6c89bc32cfa729ba548593c5325.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/0690e6c89bc32cfa729ba548593c5325.jpg', alt: "Печенье сахарное \"Говорушки\", 400 г", sortOrder: 0 }
+            { id: 'img-1950662-1', url: '/images/products/0690e6c89bc32cfa729ba548593c5325.webp', thumbnailUrl: '/images/products/0690e6c89bc32cfa729ba548593c5325.webp', alt: "Печенье сахарное \"Говорушки\", 400 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5252,7 +5252,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912117-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b962288e2612e0369201c128b0f947cb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b962288e2612e0369201c128b0f947cb.jpg', alt: "Зефирная палочка, Князев, 310 г", sortOrder: 0 }
+            { id: 'img-1912117-1', url: '/images/products/b962288e2612e0369201c128b0f947cb.webp', thumbnailUrl: '/images/products/b962288e2612e0369201c128b0f947cb.webp', alt: "Зефирная палочка, Князев, 310 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5273,7 +5273,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1932198-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1932198_4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1932198_4.jpg', alt: "Конфеты \"PINK\", Truffle, 163 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1932198-1', url: '/images/products/1932198_4.webp', thumbnailUrl: '/images/products/1932198_4.webp', alt: "Конфеты \"PINK\", Truffle, 163 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5294,7 +5294,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902128-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/1964d768ee5b9b454d607ee93ff946f3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/1964d768ee5b9b454d607ee93ff946f3.jpg', alt: "Шоколадный батончик, Nuts, 50 г", sortOrder: 0 }
+            { id: 'img-1902128-1', url: '/images/products/1964d768ee5b9b454d607ee93ff946f3.webp', thumbnailUrl: '/images/products/1964d768ee5b9b454d607ee93ff946f3.webp', alt: "Шоколадный батончик, Nuts, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5315,7 +5315,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920071-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/5bdf98e5fe09e5230ac12c6de39ad05c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/5bdf98e5fe09e5230ac12c6de39ad05c.jpg', alt: "Драже жевательное, Skittles, 38 г", sortOrder: 0 }
+            { id: 'img-1920071-1', url: '/images/products/5bdf98e5fe09e5230ac12c6de39ad05c.webp', thumbnailUrl: '/images/products/5bdf98e5fe09e5230ac12c6de39ad05c.webp', alt: "Драже жевательное, Skittles, 38 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5336,7 +5336,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902005-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/4644db7ec0a6fd10a98869724be3978f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/4644db7ec0a6fd10a98869724be3978f.jpg', alt: "Батончик шоколадный, Bounty, 55 г", sortOrder: 0 }
+            { id: 'img-1902005-1', url: '/images/products/4644db7ec0a6fd10a98869724be3978f.webp', thumbnailUrl: '/images/products/4644db7ec0a6fd10a98869724be3978f.webp', alt: "Батончик шоколадный, Bounty, 55 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5357,7 +5357,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950579-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/03f948819b16f4330724837e4a7a69a3.jpeg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/03f948819b16f4330724837e4a7a69a3.jpeg', alt: "Печенье сдобное \"Пиччи\", 320 г", sortOrder: 0 }
+            { id: 'img-1950579-1', url: '/images/products/03f948819b16f4330724837e4a7a69a3.webp', thumbnailUrl: '/images/products/03f948819b16f4330724837e4a7a69a3.webp', alt: "Печенье сдобное \"Пиччи\", 320 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5378,7 +5378,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1606060-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1606060_Trubocka_dla_moloka_v_ass_30g_1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1606060_Trubocka_dla_moloka_v_ass_30g_1500.jpg', alt: "Трубочка для молока, 30 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1606060-1', url: '/images/products/1606060_Trubocka_dla_moloka_v_ass_30g_1500.webp', thumbnailUrl: '/images/products/1606060_Trubocka_dla_moloka_v_ass_30g_1500.webp', alt: "Трубочка для молока, 30 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5399,7 +5399,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950716-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/a14dcb12189c0b4592d59d0f14cbd0da.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/a14dcb12189c0b4592d59d0f14cbd0da.jpg', alt: "Печенье злаковое, Кас-Кад, 150 г", sortOrder: 0 }
+            { id: 'img-1950716-1', url: '/images/products/a14dcb12189c0b4592d59d0f14cbd0da.webp', thumbnailUrl: '/images/products/a14dcb12189c0b4592d59d0f14cbd0da.webp', alt: "Печенье злаковое, Кас-Кад, 150 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5420,7 +5420,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962069-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962069_malina_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962069_malina_1.jpg', alt: "Пирожное миндальное \"Макарон\", Акульчев, 60 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1962069-1', url: '/images/products/1962069_malina_1.webp', thumbnailUrl: '/images/products/1962069_malina_1.webp', alt: "Пирожное миндальное \"Макарон\", Акульчев, 60 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5441,7 +5441,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1923092-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/d2fcf6cab395f6befb7dbfaabb047f9f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/d2fcf6cab395f6befb7dbfaabb047f9f.jpg', alt: "Драже, M&M's, с арахисом, 45 г", sortOrder: 0 }
+            { id: 'img-1923092-1', url: '/images/products/d2fcf6cab395f6befb7dbfaabb047f9f.webp', thumbnailUrl: '/images/products/d2fcf6cab395f6befb7dbfaabb047f9f.webp', alt: "Драже, M&M's, с арахисом, 45 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5462,7 +5462,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 89,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1930304-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/152849f2500ab8767408e9b929b50ba1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/152849f2500ab8767408e9b929b50ba1.jpg', alt: "Драже кремовое \"ZOO-ZOO\", 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1930304-1', url: '/images/products/152849f2500ab8767408e9b929b50ba1.webp', thumbnailUrl: '/images/products/152849f2500ab8767408e9b929b50ba1.webp', alt: "Драже кремовое \"ZOO-ZOO\", 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5483,7 +5483,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 41.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920247-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/896a819ac38cfc4fcd6674d0f227dc25.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/896a819ac38cfc4fcd6674d0f227dc25.jpg', alt: "Карамель леденцовая \"Каприз\", мини ассорти, 200 г", sortOrder: 0 }
+            { id: 'img-1920247-1', url: '/images/products/896a819ac38cfc4fcd6674d0f227dc25.webp', thumbnailUrl: '/images/products/896a819ac38cfc4fcd6674d0f227dc25.webp', alt: "Карамель леденцовая \"Каприз\", мини ассорти, 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5504,7 +5504,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930465-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930465_3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930465_3.jpg', alt: "Конфеты, MODA, 168 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1930465-1', url: '/images/products/1930465_3.webp', thumbnailUrl: '/images/products/1930465_3.webp', alt: "Конфеты, MODA, 168 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5525,7 +5525,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 95,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1920150-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/fb7b004b2ea8f50072c86b818cbb5633.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/fb7b004b2ea8f50072c86b818cbb5633.jpg', alt: "Карамель, Sula, без сахара, 60 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1920150-1', url: '/images/products/fb7b004b2ea8f50072c86b818cbb5633.webp', thumbnailUrl: '/images/products/fb7b004b2ea8f50072c86b818cbb5633.webp', alt: "Карамель, Sula, без сахара, 60 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5546,7 +5546,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 11.8,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920138-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1920138_2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1920138_2.jpg', alt: "Леденец, Chupa Chups, 12 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1920138-1', url: '/images/products/1920138_2.webp', thumbnailUrl: '/images/products/1920138_2.webp', alt: "Леденец, Chupa Chups, 12 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5567,7 +5567,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1900296-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d320cb784c04b2dd62c9e064a5a8ff2a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d320cb784c04b2dd62c9e064a5a8ff2a.jpg', alt: "Шоколад \"Oreo\", Alpen Gold, 85 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1900296-1', url: '/images/products/d320cb784c04b2dd62c9e064a5a8ff2a.webp', thumbnailUrl: '/images/products/d320cb784c04b2dd62c9e064a5a8ff2a.webp', alt: "Шоколад \"Oreo\", Alpen Gold, 85 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5588,7 +5588,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950777-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9a37e8e9ca1a38f1098ef3071bc97ff1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9a37e8e9ca1a38f1098ef3071bc97ff1.jpg', alt: "Печенье с апельсиновым вкусом \"Вихарёк\", Яшкино, 155 г", sortOrder: 0 }
+            { id: 'img-1950777-1', url: '/images/products/9a37e8e9ca1a38f1098ef3071bc97ff1.webp', thumbnailUrl: '/images/products/9a37e8e9ca1a38f1098ef3071bc97ff1.webp', alt: "Печенье с апельсиновым вкусом \"Вихарёк\", Яшкино, 155 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5609,7 +5609,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950710-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/pecen_e_vozdusnoe_limon_i_mata_200g.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/pecen_e_vozdusnoe_limon_i_mata_200g.jpg', alt: "Сдобное печенье, Любятово, 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950710-1', url: '/images/products/pecen_e_vozdusnoe_limon_i_mata_200g.webp', thumbnailUrl: '/images/products/pecen_e_vozdusnoe_limon_i_mata_200g.webp', alt: "Сдобное печенье, Любятово, 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5630,7 +5630,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902329-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6f/6fd3a6b72972c0773bfb870e91361286.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6f/6fd3a6b72972c0773bfb870e91361286.jpg', alt: "Вафли в молочном шоколаде, KitKat, 41,5 г", sortOrder: 0 }
+            { id: 'img-1902329-1', url: '/images/products/6fd3a6b72972c0773bfb870e91361286.webp', thumbnailUrl: '/images/products/6fd3a6b72972c0773bfb870e91361286.webp', alt: "Вафли в молочном шоколаде, KitKat, 41,5 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5651,7 +5651,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902242-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902242_Sok_bat_Snickers_lesnoj_oreh_81gr_2_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902242_Sok_bat_Snickers_lesnoj_oreh_81gr_2_1.jpg', alt: "Шоколадный батончик, Snickers, лесной орех, 81 г", sortOrder: 0 }
+            { id: 'img-1902242-1', url: '/images/products/1902242_Sok_bat_Snickers_lesnoj_oreh_81gr_2_1.webp', thumbnailUrl: '/images/products/1902242_Sok_bat_Snickers_lesnoj_oreh_81gr_2_1.webp', alt: "Шоколадный батончик, Snickers, лесной орех, 81 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5672,7 +5672,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910194-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/10aa651de10e9ad260e9dbd980dccc2a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/10aa651de10e9ad260e9dbd980dccc2a.jpg', alt: "Мармелад желейный \"3D фрукты\", 70 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1910194-1', url: '/images/products/10aa651de10e9ad260e9dbd980dccc2a.webp', thumbnailUrl: '/images/products/10aa651de10e9ad260e9dbd980dccc2a.webp', alt: "Мармелад желейный \"3D фрукты\", 70 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5693,7 +5693,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950820-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1eb96188808e1c0a8fd4f9375bfbc83.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1eb96188808e1c0a8fd4f9375bfbc83.jpg', alt: "Печенье сахарное \"К кофе\", Сладиал, 500 г", sortOrder: 0 }
+            { id: 'img-1950820-1', url: '/images/products/c1eb96188808e1c0a8fd4f9375bfbc83.webp', thumbnailUrl: '/images/products/c1eb96188808e1c0a8fd4f9375bfbc83.webp', alt: "Печенье сахарное \"К кофе\", Сладиал, 500 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5714,7 +5714,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 41.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902305-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f4a54c120d687672e1ed155f415beda.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f4a54c120d687672e1ed155f415beda.jpg', alt: "Батончик, Nut and Go, 34 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1902305-1', url: '/images/products/9f4a54c120d687672e1ed155f415beda.webp', thumbnailUrl: '/images/products/9f4a54c120d687672e1ed155f415beda.webp', alt: "Батончик, Nut and Go, 34 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5735,7 +5735,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 84,
         baseOldPrice: 87,
         images: [
-            { id: 'img-1950453-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/CP_banan_6st.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/CP_banan_6st.jpg', alt: "Печенье прослоенное глазированное, Choco Pie, банан, 168 г", sortOrder: 0 }
+            { id: 'img-1950453-1', url: '/images/products/CP_banan_6st.webp', thumbnailUrl: '/images/products/CP_banan_6st.webp', alt: "Печенье прослоенное глазированное, Choco Pie, банан, 168 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5756,7 +5756,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902078-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/1a5ddb454d93b578875ce6350014eecd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/1a5ddb454d93b578875ce6350014eecd.jpg', alt: "Батончик шоколадный, Snickers, 50,5 г", sortOrder: 0 }
+            { id: 'img-1902078-1', url: '/images/products/1a5ddb454d93b578875ce6350014eecd.webp', thumbnailUrl: '/images/products/1a5ddb454d93b578875ce6350014eecd.webp', alt: "Батончик шоколадный, Snickers, 50,5 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5777,7 +5777,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1920285-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d1a268954eb9a5994ce06c1cf3773fc2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d1a268954eb9a5994ce06c1cf3773fc2.jpg', alt: "Леденцы на светящихся палочках \"Люмик\", 7 шт., 70 г", sortOrder: 0 }
+            { id: 'img-1920285-1', url: '/images/products/d1a268954eb9a5994ce06c1cf3773fc2.webp', thumbnailUrl: '/images/products/d1a268954eb9a5994ce06c1cf3773fc2.webp', alt: "Леденцы на светящихся палочках \"Люмик\", 7 шт., 70 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5798,7 +5798,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1950586-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/a52f6b66cfc32449b36ab096ee0d2a5e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/a52f6b66cfc32449b36ab096ee0d2a5e.jpg', alt: "Печенье сахарное \"Дымка\" классическое, 550 г", sortOrder: 0 }
+            { id: 'img-1950586-1', url: '/images/products/a52f6b66cfc32449b36ab096ee0d2a5e.webp', thumbnailUrl: '/images/products/a52f6b66cfc32449b36ab096ee0d2a5e.webp', alt: "Печенье сахарное \"Дымка\" классическое, 550 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5819,7 +5819,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902258-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/7df494599a98d562d3825a0d40361f3c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/7df494599a98d562d3825a0d40361f3c.jpg', alt: "Шоколадный батончик \"Белый\", Snickers, 81 г", sortOrder: 0 }
+            { id: 'img-1902258-1', url: '/images/products/7df494599a98d562d3825a0d40361f3c.webp', thumbnailUrl: '/images/products/7df494599a98d562d3825a0d40361f3c.webp', alt: "Шоколадный батончик \"Белый\", Snickers, 81 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5840,7 +5840,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902083-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/cc553c3388fee913c647736932f28a27.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/cc553c3388fee913c647736932f28a27.jpg', alt: "Шоколад пористый \"Classic\", Победа, 65 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1902083-1', url: '/images/products/cc553c3388fee913c647736932f28a27.webp', thumbnailUrl: '/images/products/cc553c3388fee913c647736932f28a27.webp', alt: "Шоколад пористый \"Classic\", Победа, 65 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5861,7 +5861,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: 83,
         images: [
-            { id: 'img-1930336-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930336_Marsianka_tryufel_200g_firmennaya_upakovka_2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930336_Marsianka_tryufel_200g_firmennaya_upakovka_2.jpg', alt: "Конфеты, Марсианка, трюфель, 200 г", sortOrder: 0 }
+            { id: 'img-1930336-1', url: '/images/products/1930336_Marsianka_tryufel_200g_firmennaya_upakovka_2.webp', thumbnailUrl: '/images/products/1930336_Marsianka_tryufel_200g_firmennaya_upakovka_2.webp', alt: "Конфеты, Марсианка, трюфель, 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5882,7 +5882,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910205-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cd2f83cf54abd17b8e4d22251b980c2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cd2f83cf54abd17b8e4d22251b980c2.jpg', alt: "Мармелад жевательный с фруктовым соком \"L.O.L. Surprise!\", 70 г", sortOrder: 0 }
+            { id: 'img-1910205-1', url: '/images/products/7cd2f83cf54abd17b8e4d22251b980c2.webp', thumbnailUrl: '/images/products/7cd2f83cf54abd17b8e4d22251b980c2.webp', alt: "Мармелад жевательный с фруктовым соком \"L.O.L. Surprise!\", 70 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5903,7 +5903,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902094-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/3b4197ae944a7564f74d833c68f06aa2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/3b4197ae944a7564f74d833c68f06aa2.jpg', alt: "Батончик протеиновый, Protein Bar, кокос, 50 г", sortOrder: 0 }
+            { id: 'img-1902094-1', url: '/images/products/3b4197ae944a7564f74d833c68f06aa2.webp', thumbnailUrl: '/images/products/3b4197ae944a7564f74d833c68f06aa2.webp', alt: "Батончик протеиновый, Protein Bar, кокос, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5924,7 +5924,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902241-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902241.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902241.jpg', alt: "Шоколадный батончик \"Белый\", Snickers, 5 шт., 202,5 г", sortOrder: 0 }
+            { id: 'img-1902241-1', url: '/images/products/1902241.webp', thumbnailUrl: '/images/products/1902241.webp', alt: "Шоколадный батончик \"Белый\", Snickers, 5 шт., 202,5 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5945,7 +5945,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902164-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/b0bd0aceccbffa61229b6dc94e9f9bbd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/b0bd0aceccbffa61229b6dc94e9f9bbd.jpg', alt: "Конфеты шоколадные \"Minis\", Twix, 184 г", sortOrder: 0 }
+            { id: 'img-1902164-1', url: '/images/products/b0bd0aceccbffa61229b6dc94e9f9bbd.webp', thumbnailUrl: '/images/products/b0bd0aceccbffa61229b6dc94e9f9bbd.webp', alt: "Конфеты шоколадные \"Minis\", Twix, 184 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5966,7 +5966,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902169-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/529e064ab66ceb09b97465260e20bea6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/529e064ab66ceb09b97465260e20bea6.jpg', alt: "Батончик шоколадный, Mars, 50 г", sortOrder: 0 }
+            { id: 'img-1902169-1', url: '/images/products/529e064ab66ceb09b97465260e20bea6.webp', thumbnailUrl: '/images/products/529e064ab66ceb09b97465260e20bea6.webp', alt: "Батончик шоколадный, Mars, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -5987,7 +5987,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 73,
         baseOldPrice: 79,
         images: [
-            { id: 'img-1930536-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/94/940b0260981b0df1f499131b86580914.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/94/940b0260981b0df1f499131b86580914.jpg', alt: "Конфеты сбивные глазированные \"Тирамису\", Марсианка, 200 г", sortOrder: 0 }
+            { id: 'img-1930536-1', url: '/images/products/940b0260981b0df1f499131b86580914.webp', thumbnailUrl: '/images/products/940b0260981b0df1f499131b86580914.webp', alt: "Конфеты сбивные глазированные \"Тирамису\", Марсианка, 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6008,7 +6008,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950737-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/0f7a5e17f4d511ad7a66d56ba8612131.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/0f7a5e17f4d511ad7a66d56ba8612131.jpg', alt: "Печенье-сендвич \"Mulinare\", Белогорье, 215 г", sortOrder: 0 }
+            { id: 'img-1950737-1', url: '/images/products/0f7a5e17f4d511ad7a66d56ba8612131.webp', thumbnailUrl: '/images/products/0f7a5e17f4d511ad7a66d56ba8612131.webp', alt: "Печенье-сендвич \"Mulinare\", Белогорье, 215 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6029,7 +6029,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: 83,
         images: [
-            { id: 'img-1930163-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930163_Tiramisu_200g_kopia.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930163_Tiramisu_200g_kopia.jpg', alt: "Конфеты, Марсианка, 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1930163-1', url: '/images/products/1930163_Tiramisu_200g_kopia.webp', thumbnailUrl: '/images/products/1930163_Tiramisu_200g_kopia.webp', alt: "Конфеты, Марсианка, 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6050,7 +6050,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1931044-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6e900882a4d3f21f611fdff1b02acbc2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6e900882a4d3f21f611fdff1b02acbc2.jpg', alt: "Желейные конфеты с начинкой, Konti Life, имбирь/лимон, 220 г", sortOrder: 0 }
+            { id: 'img-1931044-1', url: '/images/products/6e900882a4d3f21f611fdff1b02acbc2.webp', thumbnailUrl: '/images/products/6e900882a4d3f21f611fdff1b02acbc2.webp', alt: "Желейные конфеты с начинкой, Konti Life, имбирь/лимон, 220 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6071,7 +6071,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962072-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/ebdab2934ab97a5763a487dfbeb25844.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/ebdab2934ab97a5763a487dfbeb25844.jpg', alt: "Пирожное бисквитное \"Медвежонок Барни\", 10 бисквитов, 300 г", sortOrder: 0 }
+            { id: 'img-1962072-1', url: '/images/products/ebdab2934ab97a5763a487dfbeb25844.webp', thumbnailUrl: '/images/products/ebdab2934ab97a5763a487dfbeb25844.webp', alt: "Пирожное бисквитное \"Медвежонок Барни\", 10 бисквитов, 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6092,7 +6092,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: 116,
         images: [
-            { id: 'img-1902365-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c3286c7c282344af98574b0bbcc156ab.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c3286c7c282344af98574b0bbcc156ab.jpg', alt: "Twix, \"Имбирное печенье\" шоколадные конфеты, 138 г", sortOrder: 0 }
+            { id: 'img-1902365-1', url: '/images/products/c3286c7c282344af98574b0bbcc156ab.webp', thumbnailUrl: '/images/products/c3286c7c282344af98574b0bbcc156ab.webp', alt: "Twix, \"Имбирное печенье\" шоколадные конфеты, 138 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6113,7 +6113,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930485-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/66f870ba1d66903af81f7e34eab0b2a4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/66f870ba1d66903af81f7e34eab0b2a4.jpg', alt: "Конфеты шоколадные \"Мишки в лесу\", Победа вкуса, 200 г", sortOrder: 0 }
+            { id: 'img-1930485-1', url: '/images/products/66f870ba1d66903af81f7e34eab0b2a4.webp', thumbnailUrl: '/images/products/66f870ba1d66903af81f7e34eab0b2a4.webp', alt: "Конфеты шоколадные \"Мишки в лесу\", Победа вкуса, 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6134,7 +6134,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930398-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/930190bfd4a03048b6b0f90fd0992f67.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/930190bfd4a03048b6b0f90fd0992f67.jpg', alt: "Конфеты \"Cocoberry\", кокос/малина, 200 г", sortOrder: 0 }
+            { id: 'img-1930398-1', url: '/images/products/930190bfd4a03048b6b0f90fd0992f67.webp', thumbnailUrl: '/images/products/930190bfd4a03048b6b0f90fd0992f67.webp', alt: "Конфеты \"Cocoberry\", кокос/малина, 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6155,7 +6155,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950653-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/02258036a2c933ae8ff37269b99b3c31.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/02258036a2c933ae8ff37269b99b3c31.JPG', alt: "Десерт \"QVINTO\", Essen, 174 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950653-1', url: '/images/products/02258036a2c933ae8ff37269b99b3c31.webp', thumbnailUrl: '/images/products/02258036a2c933ae8ff37269b99b3c31.webp', alt: "Десерт \"QVINTO\", Essen, 174 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6176,7 +6176,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1922063-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1922063_KONFETA_FRUTTELLA_KISLYJ_MIKS_2v1_41gr.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1922063_KONFETA_FRUTTELLA_KISLYJ_MIKS_2v1_41gr.jpg', alt: "Жевательные конфеты, Fruittella, 2 в 1, 41 г", sortOrder: 0 }
+            { id: 'img-1922063-1', url: '/images/products/1922063_KONFETA_FRUTTELLA_KISLYJ_MIKS_2v1_41gr.webp', thumbnailUrl: '/images/products/1922063_KONFETA_FRUTTELLA_KISLYJ_MIKS_2v1_41gr.webp', alt: "Жевательные конфеты, Fruittella, 2 в 1, 41 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6197,7 +6197,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910176-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bbf479faf9e93dd556142e38a23b4f73.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bbf479faf9e93dd556142e38a23b4f73.jpg', alt: "Мармелад жевательный с 3D-фигурками животных, 60 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1910176-1', url: '/images/products/bbf479faf9e93dd556142e38a23b4f73.webp', thumbnailUrl: '/images/products/bbf479faf9e93dd556142e38a23b4f73.webp', alt: "Мармелад жевательный с 3D-фигурками животных, 60 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6218,7 +6218,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1951075-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1951075.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1951075.jpg', alt: "Пряники \"Дымка\", Добрые сладости, 400 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1951075-1', url: '/images/products/1951075.webp', thumbnailUrl: '/images/products/1951075.webp', alt: "Пряники \"Дымка\", Добрые сладости, 400 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6239,7 +6239,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 95,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1930456-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/53dce811022609654cc102873fe45084.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/53dce811022609654cc102873fe45084.jpg', alt: "Конфеты глазированные, Konfesta, 180 г", sortOrder: 0 }
+            { id: 'img-1930456-1', url: '/images/products/53dce811022609654cc102873fe45084.webp', thumbnailUrl: '/images/products/53dce811022609654cc102873fe45084.webp', alt: "Конфеты глазированные, Konfesta, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6260,7 +6260,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 76,
         baseOldPrice: 79,
         images: [
-            { id: 'img-1851078-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1851078.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1851078.jpg', alt: "Круассаны, SK, со вкусом варёной сгущёнки, 250 г", sortOrder: 0 }
+            { id: 'img-1851078-1', url: '/images/products/1851078.webp', thumbnailUrl: '/images/products/1851078.webp', alt: "Круассаны, SK, со вкусом варёной сгущёнки, 250 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6281,7 +6281,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902106-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902106_Sok_bat_Protein_Bar_sokolad_50_g_LBC.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902106_Sok_bat_Protein_Bar_sokolad_50_g_LBC.jpg', alt: "Батончик, Protein Bar, со вкусом шоколада, 50 г", sortOrder: 0 }
+            { id: 'img-1902106-1', url: '/images/products/1902106_Sok_bat_Protein_Bar_sokolad_50_g_LBC.webp', thumbnailUrl: '/images/products/1902106_Sok_bat_Protein_Bar_sokolad_50_g_LBC.webp', alt: "Батончик, Protein Bar, со вкусом шоколада, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6302,7 +6302,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910063-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/ccc6984acf23a5f2431879dd04f4b2f4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/ccc6984acf23a5f2431879dd04f4b2f4.jpg', alt: "Мармелад жевательный \"Ju-Ju-Juv\", 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1910063-1', url: '/images/products/ccc6984acf23a5f2431879dd04f4b2f4.webp', thumbnailUrl: '/images/products/ccc6984acf23a5f2431879dd04f4b2f4.webp', alt: "Мармелад жевательный \"Ju-Ju-Juv\", 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6323,7 +6323,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1851086-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/4a55e345cbbff6fbae81f7e3b02a9ded.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/4a55e345cbbff6fbae81f7e3b02a9ded.jpg', alt: "Круассан, 7DAYS, 3+1 шт., 260 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1851086-1', url: '/images/products/4a55e345cbbff6fbae81f7e3b02a9ded.webp', thumbnailUrl: '/images/products/4a55e345cbbff6fbae81f7e3b02a9ded.webp', alt: "Круассан, 7DAYS, 3+1 шт., 260 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6344,7 +6344,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902254-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/afc70357b6450fdbe757f644d580ff54.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/afc70357b6450fdbe757f644d580ff54.jpg', alt: "Шоколадный батончик \"Xtra\", Twix, солёная карамель, 82 г", sortOrder: 0 }
+            { id: 'img-1902254-1', url: '/images/products/afc70357b6450fdbe757f644d580ff54.webp', thumbnailUrl: '/images/products/afc70357b6450fdbe757f644d580ff54.webp', alt: "Шоколадный батончик \"Xtra\", Twix, солёная карамель, 82 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6365,7 +6365,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962049-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962049_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962049_1.jpg', alt: "Десерт \"Bonjour\", Konti, 232 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1962049-1', url: '/images/products/1962049_1.webp', thumbnailUrl: '/images/products/1962049_1.webp', alt: "Десерт \"Bonjour\", Konti, 232 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6386,7 +6386,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1932228-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/1715965261dd6f6e474317b534f9d178.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/1715965261dd6f6e474317b534f9d178.jpg', alt: "Конфеты \"Марсианка\", 180 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1932228-1', url: '/images/products/1715965261dd6f6e474317b534f9d178.webp', thumbnailUrl: '/images/products/1715965261dd6f6e474317b534f9d178.webp', alt: "Конфеты \"Марсианка\", 180 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6407,7 +6407,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1920284-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d60cdc5f0b3fca1e794db524099aee64.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d60cdc5f0b3fca1e794db524099aee64.jpg', alt: "Леденцы с витамином С \"Люмик\", 56 г", sortOrder: 0 }
+            { id: 'img-1920284-1', url: '/images/products/d60cdc5f0b3fca1e794db524099aee64.webp', thumbnailUrl: '/images/products/d60cdc5f0b3fca1e794db524099aee64.webp', alt: "Леденцы с витамином С \"Люмик\", 56 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6428,7 +6428,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950630-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c64da0acba386ffdba2880a127ce9a53.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c64da0acba386ffdba2880a127ce9a53.jpg', alt: "Печенье сахарное \"Топлёное молоко\", Любятово, 356 г", sortOrder: 0 }
+            { id: 'img-1950630-1', url: '/images/products/c64da0acba386ffdba2880a127ce9a53.webp', thumbnailUrl: '/images/products/c64da0acba386ffdba2880a127ce9a53.webp', alt: "Печенье сахарное \"Топлёное молоко\", Любятово, 356 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6449,7 +6449,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1922028-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/ef9dfac7c5edd04eee13e565bca43fd2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/ef9dfac7c5edd04eee13e565bca43fd2.jpg', alt: "Ирис, Meller, 38 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1922028-1', url: '/images/products/ef9dfac7c5edd04eee13e565bca43fd2.webp', thumbnailUrl: '/images/products/ef9dfac7c5edd04eee13e565bca43fd2.webp', alt: "Ирис, Meller, 38 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6470,7 +6470,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950358-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950358_4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950358_4.jpg', alt: "Вафли мягкие \"Мяфли\", Акульчев, 310 г", sortOrder: 0 }
+            { id: 'img-1950358-1', url: '/images/products/1950358_4.webp', thumbnailUrl: '/images/products/1950358_4.webp', alt: "Вафли мягкие \"Мяфли\", Акульчев, 310 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6491,7 +6491,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902234-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902234.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902234.jpg', alt: "Батончик, 50 г", sortOrder: 0 }
+            { id: 'img-1902234-1', url: '/images/products/1902234.webp', thumbnailUrl: '/images/products/1902234.webp', alt: "Батончик, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6512,7 +6512,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1923012-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration_Import/e11214bcae0914af4b780571024eadf4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration_Import/e11214bcae0914af4b780571024eadf4.jpg', alt: "Конфеты-драже, Rondo \"Мята\", 30 г", sortOrder: 0 }
+            { id: 'img-1923012-1', url: '/images/products/e11214bcae0914af4b780571024eadf4.webp', thumbnailUrl: '/images/products/e11214bcae0914af4b780571024eadf4.webp', alt: "Конфеты-драже, Rondo \"Мята\", 30 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6533,7 +6533,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950957-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/ca568c6379cd9093bfde453f78e0b1cc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/ca568c6379cd9093bfde453f78e0b1cc.jpg', alt: "Кондитерское изделие \"Choco Pie\", Lotte, сыр, 336 г", sortOrder: 0 }
+            { id: 'img-1950957-1', url: '/images/products/ca568c6379cd9093bfde453f78e0b1cc.webp', thumbnailUrl: '/images/products/ca568c6379cd9093bfde453f78e0b1cc.webp', alt: "Кондитерское изделие \"Choco Pie\", Lotte, сыр, 336 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6554,7 +6554,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: 83,
         images: [
-            { id: 'img-1930252-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930252_Marsianka_kokosovyj_puding_200g_fP_kopia.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930252_Marsianka_kokosovyj_puding_200g_fP_kopia.jpg', alt: "Конфеты \"Марсианка\" с кокосовым пудингом, 200 г", sortOrder: 0 }
+            { id: 'img-1930252-1', url: '/images/products/1930252_Marsianka_kokosovyj_puding_200g_fP_kopia.webp', thumbnailUrl: '/images/products/1930252_Marsianka_kokosovyj_puding_200g_fP_kopia.webp', alt: "Конфеты \"Марсианка\" с кокосовым пудингом, 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6575,7 +6575,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 22.6,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1972032-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1972032_Kozinak_s_vozdus_zern_risa_3040_gr_Ass_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1972032_Kozinak_s_vozdus_zern_risa_3040_gr_Ass_1.jpg', alt: "Козинак с воздушными зёрнами риса и глазурью, 30/40 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1972032-1', url: '/images/products/1972032_Kozinak_s_vozdus_zern_risa_3040_gr_Ass_1.webp', thumbnailUrl: '/images/products/1972032_Kozinak_s_vozdus_zern_risa_3040_gr_Ass_1.webp', alt: "Козинак с воздушными зёрнами риса и глазурью, 30/40 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6596,7 +6596,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912119-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0f/0ff81b633033e01c03ca6cb3f95516c0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0f/0ff81b633033e01c03ca6cb3f95516c0.jpg', alt: "Маршмеллоу, Сладкий снег, 130 г, со вкусом клубники со сливками и пломбира", sortOrder: 0 }
+            { id: 'img-1912119-1', url: '/images/products/0ff81b633033e01c03ca6cb3f95516c0.webp', thumbnailUrl: '/images/products/0ff81b633033e01c03ca6cb3f95516c0.webp', alt: "Маршмеллоу, Сладкий снег, 130 г, со вкусом клубники со сливками и пломбира", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6617,7 +6617,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1933176-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/AAI07488.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/AAI07488.jpg', alt: "Воздушное суфле \"Пухлый кролик\", пломбир, 150 г", sortOrder: 0 }
+            { id: 'img-1933176-1', url: '/images/products/AAI07488.webp', thumbnailUrl: '/images/products/AAI07488.webp', alt: "Воздушное суфле \"Пухлый кролик\", пломбир, 150 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -6638,7 +6638,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1940047-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1940047_anons_1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1940047_anons_1500.jpg', alt: "Халва подсолнечная, Азовская, 250 г", sortOrder: 0 }
+            { id: 'img-1940047-1', url: '/images/products/1940047_anons_1500.webp', thumbnailUrl: '/images/products/1940047_anons_1500.webp', alt: "Халва подсолнечная, Азовская, 250 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6659,7 +6659,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 44,
         baseOldPrice: 49.5,
         images: [
-            { id: 'img-1952185-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/2a0b7b1e43ccb7939f6db15a0b10c773.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/2a0b7b1e43ccb7939f6db15a0b10c773.jpg', alt: "Вафли, Моё Обожание, 170 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1952185-1', url: '/images/products/2a0b7b1e43ccb7939f6db15a0b10c773.webp', thumbnailUrl: '/images/products/2a0b7b1e43ccb7939f6db15a0b10c773.webp', alt: "Вафли, Моё Обожание, 170 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6680,7 +6680,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910145-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/3ae766a715b9d1c172b3879d7cfcaa5c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/3ae766a715b9d1c172b3879d7cfcaa5c.jpg', alt: "Мармелад жевательный \"Миу микс\", Три кота, 150 г", sortOrder: 0 }
+            { id: 'img-1910145-1', url: '/images/products/3ae766a715b9d1c172b3879d7cfcaa5c.webp', thumbnailUrl: '/images/products/3ae766a715b9d1c172b3879d7cfcaa5c.webp', alt: "Мармелад жевательный \"Миу микс\", Три кота, 150 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6701,7 +6701,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950980-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/770a9226dcc6901ac589ba25d9adb247.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/770a9226dcc6901ac589ba25d9adb247.jpg', alt: "Печенье \"Шоколадное\", Любятово, 304 г", sortOrder: 0 }
+            { id: 'img-1950980-1', url: '/images/products/770a9226dcc6901ac589ba25d9adb247.webp', thumbnailUrl: '/images/products/770a9226dcc6901ac589ba25d9adb247.webp', alt: "Печенье \"Шоколадное\", Любятово, 304 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6722,7 +6722,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1601119-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/9e914e2e45cb377636ee608c51c31574.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/9e914e2e45cb377636ee608c51c31574.jpg', alt: "Подушечки \"Витьба\", 130 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1601119-1', url: '/images/products/9e914e2e45cb377636ee608c51c31574.webp', thumbnailUrl: '/images/products/9e914e2e45cb377636ee608c51c31574.webp', alt: "Подушечки \"Витьба\", 130 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6743,7 +6743,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912115-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f536f469274ce4b31f201902fa23dc66.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f536f469274ce4b31f201902fa23dc66.jpg', alt: "Конфеты \"Маршмеллоу\", 100 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1912115-1', url: '/images/products/f536f469274ce4b31f201902fa23dc66.webp', thumbnailUrl: '/images/products/f536f469274ce4b31f201902fa23dc66.webp', alt: "Конфеты \"Маршмеллоу\", 100 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6764,7 +6764,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 20.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912135-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/04/04b445aeff0605fd00ef1c4534436605.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/04/04b445aeff0605fd00ef1c4534436605.jpg', alt: "Воздушное суфле, Пухлый кролик, кислый вкус, 40 г", sortOrder: 0 }
+            { id: 'img-1912135-1', url: '/images/products/04b445aeff0605fd00ef1c4534436605.webp', thumbnailUrl: '/images/products/04b445aeff0605fd00ef1c4534436605.webp', alt: "Воздушное суфле, Пухлый кролик, кислый вкус, 40 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6785,7 +6785,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1951066-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/28c068ef18702aaeae210a6bbee69fe0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/28c068ef18702aaeae210a6bbee69fe0.jpg', alt: "Пряник тульский \"Лакомка\", 140 г, с начинкой, в ассортименте", sortOrder: 0 }
+            { id: 'img-1951066-1', url: '/images/products/28c068ef18702aaeae210a6bbee69fe0.webp', thumbnailUrl: '/images/products/28c068ef18702aaeae210a6bbee69fe0.webp', alt: "Пряник тульский \"Лакомка\", 140 г, с начинкой, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6806,7 +6806,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1922051-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/5f4a3410c3e221ac8c7f7d21108e2919.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/5f4a3410c3e221ac8c7f7d21108e2919.jpg', alt: "Конфеты жевательные с начинкой \"Fruzzy Duo\", b&b, 220 г", sortOrder: 0 }
+            { id: 'img-1922051-1', url: '/images/products/5f4a3410c3e221ac8c7f7d21108e2919.webp', thumbnailUrl: '/images/products/5f4a3410c3e221ac8c7f7d21108e2919.webp', alt: "Конфеты жевательные с начинкой \"Fruzzy Duo\", b&b, 220 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6827,7 +6827,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1922070-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b225241bd55e287a295f19b47c3324b4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b225241bd55e287a295f19b47c3324b4.jpg', alt: "Конфеты жевательные, Fruzzy, 180 г", sortOrder: 0 }
+            { id: 'img-1922070-1', url: '/images/products/b225241bd55e287a295f19b47c3324b4.webp', thumbnailUrl: '/images/products/b225241bd55e287a295f19b47c3324b4.webp', alt: "Конфеты жевательные, Fruzzy, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6848,7 +6848,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1950917-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cd/cd32f53148e141ff9a9fb66944bfc135.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cd/cd32f53148e141ff9a9fb66944bfc135.jpg', alt: "Печенье с кремовой начинкой, 75 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950917-1', url: '/images/products/cd32f53148e141ff9a9fb66944bfc135.webp', thumbnailUrl: '/images/products/cd32f53148e141ff9a9fb66944bfc135.webp', alt: "Печенье с кремовой начинкой, 75 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6869,7 +6869,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1923086-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/2db95c86c6fb5d8068490bc33245b944.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/2db95c86c6fb5d8068490bc33245b944.jpg', alt: "Драже, M&M's, с арахисом, 145 г", sortOrder: 0 }
+            { id: 'img-1923086-1', url: '/images/products/2db95c86c6fb5d8068490bc33245b944.webp', thumbnailUrl: '/images/products/2db95c86c6fb5d8068490bc33245b944.webp', alt: "Драже, M&M's, с арахисом, 145 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6890,7 +6890,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1912087-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1912087_1500h1500_info.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1912087_1500h1500_info.jpg', alt: "Зефир воздушный \"BBQ Marshmallow\", 200 г", sortOrder: 0 }
+            { id: 'img-1912087-1', url: '/images/products/1912087_1500h1500_info.webp', thumbnailUrl: '/images/products/1912087_1500h1500_info.webp', alt: "Зефир воздушный \"BBQ Marshmallow\", 200 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6911,7 +6911,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920114-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1920114.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1920114.jpg', alt: "Жевательные драже Skittles \"Кисломикс\", 38 г", sortOrder: 0 }
+            { id: 'img-1920114-1', url: '/images/products/1920114.webp', thumbnailUrl: '/images/products/1920114.webp', alt: "Жевательные драже Skittles \"Кисломикс\", 38 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6932,7 +6932,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950590-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/832945977a92b9557c71c37cbd20b941.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Recovery/832945977a92b9557c71c37cbd20b941.jpg', alt: "Печенье сахарное \"Обаяшки\", Сладиал, с посыпкой, 375 г", sortOrder: 0 }
+            { id: 'img-1950590-1', url: '/images/products/832945977a92b9557c71c37cbd20b941.webp', thumbnailUrl: '/images/products/832945977a92b9557c71c37cbd20b941.webp', alt: "Печенье сахарное \"Обаяшки\", Сладиал, с посыпкой, 375 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6953,7 +6953,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1960080-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1960080_2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1960080_2.jpg', alt: "Торт \"Шоколадница\", Коломенское, 230 г", sortOrder: 0 }
+            { id: 'img-1960080-1', url: '/images/products/1960080_2.webp', thumbnailUrl: '/images/products/1960080_2.webp', alt: "Торт \"Шоколадница\", Коломенское, 230 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6974,7 +6974,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 89,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1910170-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1910170_Marmelad_CUPA_CUPS_Fansy_100_g.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1910170_Marmelad_CUPA_CUPS_Fansy_100_g.jpg', alt: "Мармелад \"Фансы\", Chupa Chups, 100 г", sortOrder: 0 }
+            { id: 'img-1910170-1', url: '/images/products/1910170_Marmelad_CUPA_CUPS_Fansy_100_g.webp', thumbnailUrl: '/images/products/1910170_Marmelad_CUPA_CUPS_Fansy_100_g.webp', alt: "Мармелад \"Фансы\", Chupa Chups, 100 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -6995,7 +6995,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902330-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8df218df18e1fdb31ef965a7566c2f52.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8df218df18e1fdb31ef965a7566c2f52.jpg', alt: "Snickers Super, шоколадный батончик, 80 г", sortOrder: 0 }
+            { id: 'img-1902330-1', url: '/images/products/8df218df18e1fdb31ef965a7566c2f52.webp', thumbnailUrl: '/images/products/8df218df18e1fdb31ef965a7566c2f52.webp', alt: "Snickers Super, шоколадный батончик, 80 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7016,7 +7016,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1901067-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1901067_anons_1500x1500.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1901067_anons_1500x1500.jpg', alt: "Шоко фигурка \"Символ года\", Монетный двор, 100 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1901067-1', url: '/images/products/1901067_anons_1500x1500.webp', thumbnailUrl: '/images/products/1901067_anons_1500x1500.webp', alt: "Шоко фигурка \"Символ года\", Монетный двор, 100 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7037,7 +7037,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930581-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4174d979bc4804d24ac2fd9321969be.jpeg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4174d979bc4804d24ac2fd9321969be.jpeg', alt: "Мультизлаковые конфеты \"Loretta\", 150 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1930581-1', url: '/images/products/f4174d979bc4804d24ac2fd9321969be.webp', thumbnailUrl: '/images/products/f4174d979bc4804d24ac2fd9321969be.webp', alt: "Мультизлаковые конфеты \"Loretta\", 150 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7058,7 +7058,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 92,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1930338-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930338.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930338.jpg', alt: "Конфеты \"Хитмикс\" с арахисом, 300 г", sortOrder: 0 }
+            { id: 'img-1930338-1', url: '/images/products/1930338.webp', thumbnailUrl: '/images/products/1930338.webp', alt: "Конфеты \"Хитмикс\" с арахисом, 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7079,7 +7079,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 75,
         baseOldPrice: 79,
         images: [
-            { id: 'img-1950894-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bba914c0576e357259cb94d849b9052a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bba914c0576e357259cb94d849b9052a.jpg', alt: "Печенье сдобное \"Солнечное утро\", Кухмастер, 240 г", sortOrder: 0 }
+            { id: 'img-1950894-1', url: '/images/products/bba914c0576e357259cb94d849b9052a.webp', thumbnailUrl: '/images/products/bba914c0576e357259cb94d849b9052a.webp', alt: "Печенье сдобное \"Солнечное утро\", Кухмастер, 240 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7100,7 +7100,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902217-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/8b110435f7cf94795f2f82f8f51ed78c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/8b110435f7cf94795f2f82f8f51ed78c.jpg', alt: "Конфеты шоколадные \"Minis\", Milky Way, 176 г", sortOrder: 0 }
+            { id: 'img-1902217-1', url: '/images/products/8b110435f7cf94795f2f82f8f51ed78c.webp', thumbnailUrl: '/images/products/8b110435f7cf94795f2f82f8f51ed78c.webp', alt: "Конфеты шоколадные \"Minis\", Milky Way, 176 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7121,7 +7121,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: 133,
         images: [
-            { id: 'img-1912112-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/5dc35b5b690d12362426658e87056651.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/5dc35b5b690d12362426658e87056651.jpg', alt: "Зефир \"Ванильный\", Белёвский десерт, 250 г", sortOrder: 0 }
+            { id: 'img-1912112-1', url: '/images/products/5dc35b5b690d12362426658e87056651.webp', thumbnailUrl: '/images/products/5dc35b5b690d12362426658e87056651.webp', alt: "Зефир \"Ванильный\", Белёвский десерт, 250 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7142,7 +7142,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1922030-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/4527d87a45baa0a878f7a0dae03d0c50.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/4527d87a45baa0a878f7a0dae03d0c50.jpg', alt: "Конфеты жевательные, Fruittella, 41 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1922030-1', url: '/images/products/4527d87a45baa0a878f7a0dae03d0c50.webp', thumbnailUrl: '/images/products/4527d87a45baa0a878f7a0dae03d0c50.webp', alt: "Конфеты жевательные, Fruittella, 41 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7163,7 +7163,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962067-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962067_2_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962067_2_1.jpg', alt: "Пирожное сливочное \"Timi\", Konti, 240 г", sortOrder: 0 }
+            { id: 'img-1962067-1', url: '/images/products/1962067_2_1.webp', thumbnailUrl: '/images/products/1962067_2_1.webp', alt: "Пирожное сливочное \"Timi\", Konti, 240 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7184,7 +7184,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 63,
         baseOldPrice: 69,
         images: [
-            { id: 'img-1950787-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a108df7adbbf666914f22b9738ee34b5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a108df7adbbf666914f22b9738ee34b5.jpg', alt: "Сдобные колечки, Дымка, апельсиновые, 300 г", sortOrder: 0 }
+            { id: 'img-1950787-1', url: '/images/products/a108df7adbbf666914f22b9738ee34b5.webp', thumbnailUrl: '/images/products/a108df7adbbf666914f22b9738ee34b5.webp', alt: "Сдобные колечки, Дымка, апельсиновые, 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7205,7 +7205,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1940039-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/dca1d4225b6a49dc13b86d23aa9df24b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/dca1d4225b6a49dc13b86d23aa9df24b.jpg', alt: "Халва кунжутная, Crown, 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1940039-1', url: '/images/products/dca1d4225b6a49dc13b86d23aa9df24b.webp', thumbnailUrl: '/images/products/dca1d4225b6a49dc13b86d23aa9df24b.webp', alt: "Халва кунжутная, Crown, 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7226,7 +7226,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910223-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86385129aeb21dabb16804b0dac105a8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86385129aeb21dabb16804b0dac105a8.jpg', alt: "Мармелад жевательный с кислым сиропом, 75 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1910223-1', url: '/images/products/86385129aeb21dabb16804b0dac105a8.webp', thumbnailUrl: '/images/products/86385129aeb21dabb16804b0dac105a8.webp', alt: "Мармелад жевательный с кислым сиропом, 75 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7247,7 +7247,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1951060-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1951060.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1951060.jpg', alt: "Пряники \"Имбирные\", Славянский терем, 500 г", sortOrder: 0 }
+            { id: 'img-1951060-1', url: '/images/products/1951060.webp', thumbnailUrl: '/images/products/1951060.webp', alt: "Пряники \"Имбирные\", Славянский терем, 500 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7268,7 +7268,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902271-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/83c71bfa93a442fbd9415b9caab4ac3c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/83c71bfa93a442fbd9415b9caab4ac3c.jpg', alt: "Батончик \"Picnic\", Alpen Gold, 76 г", sortOrder: 0 }
+            { id: 'img-1902271-1', url: '/images/products/83c71bfa93a442fbd9415b9caab4ac3c.webp', thumbnailUrl: '/images/products/83c71bfa93a442fbd9415b9caab4ac3c.webp', alt: "Батончик \"Picnic\", Alpen Gold, 76 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7289,7 +7289,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1951079-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/3c614601f3ee08761ff58d3f3930b04a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/3c614601f3ee08761ff58d3f3930b04a.jpg', alt: "Сырцовые пряники \"Кольцо пряное\", Наслада, 900 г", sortOrder: 0 }
+            { id: 'img-1951079-1', url: '/images/products/3c614601f3ee08761ff58d3f3930b04a.webp', thumbnailUrl: '/images/products/3c614601f3ee08761ff58d3f3930b04a.webp', alt: "Сырцовые пряники \"Кольцо пряное\", Наслада, 900 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7310,7 +7310,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950775-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/35f4375ff7245d008f95cb63de09ade6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/35f4375ff7245d008f95cb63de09ade6.jpg', alt: "Печенье сахарное \"Kremareo\", Кухмастер, 100 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950775-1', url: '/images/products/35f4375ff7245d008f95cb63de09ade6.webp', thumbnailUrl: '/images/products/35f4375ff7245d008f95cb63de09ade6.webp', alt: "Печенье сахарное \"Kremareo\", Кухмастер, 100 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7331,7 +7331,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910260-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8b9e24620f297a9fe5f117804788369.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8b9e24620f297a9fe5f117804788369.jpg', alt: "Мармелад жевательный \"4D-фигурки\", 48 г", sortOrder: 0 }
+            { id: 'img-1910260-1', url: '/images/products/b8b9e24620f297a9fe5f117804788369.webp', thumbnailUrl: '/images/products/b8b9e24620f297a9fe5f117804788369.webp', alt: "Мармелад жевательный \"4D-фигурки\", 48 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7352,7 +7352,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 189,
         baseOldPrice: 199,
         images: [
-            { id: 'img-1900177-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1900177.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1900177.jpg', alt: "Шоколад \"Трюфельный элит\", Коммунарка, 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1900177-1', url: '/images/products/1900177.webp', thumbnailUrl: '/images/products/1900177.webp', alt: "Шоколад \"Трюфельный элит\", Коммунарка, 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7373,7 +7373,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902264-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902264_Sok_batoncik_Milky_Way_52g_2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1902264_Sok_batoncik_Milky_Way_52g_2.jpg', alt: "Шоколадный батончик, Milky Way, 52 г", sortOrder: 0 }
+            { id: 'img-1902264-1', url: '/images/products/1902264_Sok_batoncik_Milky_Way_52g_2.webp', thumbnailUrl: '/images/products/1902264_Sok_batoncik_Milky_Way_52g_2.webp', alt: "Шоколадный батончик, Milky Way, 52 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7394,7 +7394,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 109,
         baseOldPrice: 116,
         images: [
-            { id: 'img-1913027-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b27c509461463d5d1662c979dba1629a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b27c509461463d5d1662c979dba1629a.jpg', alt: "Желе со вкусом фруктов, YUMMY YUMMY, 360 г", sortOrder: 0 }
+            { id: 'img-1913027-1', url: '/images/products/b27c509461463d5d1662c979dba1629a.webp', thumbnailUrl: '/images/products/b27c509461463d5d1662c979dba1629a.webp', alt: "Желе со вкусом фруктов, YUMMY YUMMY, 360 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7415,7 +7415,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1951082-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/371357021301da19bdc8b0ac4d8cc61b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/371357021301da19bdc8b0ac4d8cc61b.jpg', alt: "Пряники, 400 г", sortOrder: 0 }
+            { id: 'img-1951082-1', url: '/images/products/371357021301da19bdc8b0ac4d8cc61b.webp', thumbnailUrl: '/images/products/371357021301da19bdc8b0ac4d8cc61b.webp', alt: "Пряники, 400 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7436,7 +7436,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910129-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/c4879d8c61ebef5e76eaf28912012975.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/c4879d8c61ebef5e76eaf28912012975.jpg', alt: "Мармелад \"Цитрусовое ассорти\", Невский десерт, 300 г", sortOrder: 0 }
+            { id: 'img-1910129-1', url: '/images/products/c4879d8c61ebef5e76eaf28912012975.webp', thumbnailUrl: '/images/products/c4879d8c61ebef5e76eaf28912012975.webp', alt: "Мармелад \"Цитрусовое ассорти\", Невский десерт, 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7457,7 +7457,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 75,
         baseOldPrice: 79,
         images: [
-            { id: 'img-1950982-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fb/fb839073575cd5cea53320f72081ec74.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fb/fb839073575cd5cea53320f72081ec74.jpg', alt: "Печенье рисовое, Русский десерт, 150 г", sortOrder: 0 }
+            { id: 'img-1950982-1', url: '/images/products/fb839073575cd5cea53320f72081ec74.webp', thumbnailUrl: '/images/products/fb839073575cd5cea53320f72081ec74.webp', alt: "Печенье рисовое, Русский десерт, 150 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7478,7 +7478,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 65,
         baseOldPrice: 69,
         images: [
-            { id: 'img-1930468-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930468_3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1930468_3.jpg', alt: "Мягкая карамель \"Сливки-Ванильки\", 200 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1930468-1', url: '/images/products/1930468_3.webp', thumbnailUrl: '/images/products/1930468_3.webp', alt: "Мягкая карамель \"Сливки-Ванильки\", 200 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7499,7 +7499,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950615-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/158_fanni_vanil.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/158_fanni_vanil.jpg', alt: "Печенье-сэндвич \"Funny Сat\" с какао и начинкой, 158 г", sortOrder: 0 }
+            { id: 'img-1950615-1', url: '/images/products/158_fanni_vanil.webp', thumbnailUrl: '/images/products/158_fanni_vanil.webp', alt: "Печенье-сэндвич \"Funny Сat\" с какао и начинкой, 158 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7520,7 +7520,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1962071-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962071_3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1962071_3.jpg', alt: "Бисквитные пирожные, CONFESTORY, 180 г", sortOrder: 0 }
+            { id: 'img-1962071-1', url: '/images/products/1962071_3.webp', thumbnailUrl: '/images/products/1962071_3.webp', alt: "Бисквитные пирожные, CONFESTORY, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7541,7 +7541,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950181-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950181.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950181.jpg', alt: "Крекер \"Cristo Twisto\", Белогорье, 400 г", sortOrder: 0 }
+            { id: 'img-1950181-1', url: '/images/products/1950181.webp', thumbnailUrl: '/images/products/1950181.webp', alt: "Крекер \"Cristo Twisto\", Белогорье, 400 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7562,7 +7562,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1900287-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da65c62260b922970a46a65c13bd8977.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da65c62260b922970a46a65c13bd8977.jpg', alt: "Шоколад молочный, Alpen Gold, 80 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1900287-1', url: '/images/products/da65c62260b922970a46a65c13bd8977.webp', thumbnailUrl: '/images/products/da65c62260b922970a46a65c13bd8977.webp', alt: "Шоколад молочный, Alpen Gold, 80 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7583,7 +7583,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1930265-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/52185f31562bfc9b583c2ea907c7fea2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/52185f31562bfc9b583c2ea907c7fea2.jpg', alt: "Конфеты молочные \"Сливочный каприз\", 300 г", sortOrder: 0 }
+            { id: 'img-1930265-1', url: '/images/products/52185f31562bfc9b583c2ea907c7fea2.webp', thumbnailUrl: '/images/products/52185f31562bfc9b583c2ea907c7fea2.webp', alt: "Конфеты молочные \"Сливочный каприз\", 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7604,7 +7604,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902272-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c520614a5126d20f96e3893c9bed0d7b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c520614a5126d20f96e3893c9bed0d7b.jpg', alt: "Батончик глазированный, Protein Bar, 50 г, со вкусом пломбира", sortOrder: 0 }
+            { id: 'img-1902272-1', url: '/images/products/c520614a5126d20f96e3893c9bed0d7b.webp', thumbnailUrl: '/images/products/c520614a5126d20f96e3893c9bed0d7b.webp', alt: "Батончик глазированный, Protein Bar, 50 г, со вкусом пломбира", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7625,7 +7625,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 31.1,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1972027-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa339f68e378e87ab1ec47a4548249a8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa339f68e378e87ab1ec47a4548249a8.jpg', alt: "Сладкая вата \"Bubble Gum\", Chupa Chups, 11 г", sortOrder: 0 }
+            { id: 'img-1972027-1', url: '/images/products/aa339f68e378e87ab1ec47a4548249a8.webp', thumbnailUrl: '/images/products/aa339f68e378e87ab1ec47a4548249a8.webp', alt: "Сладкая вата \"Bubble Gum\", Chupa Chups, 11 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7646,7 +7646,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1953084-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1953084_4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1953084_4.jpg', alt: "Маффины, в ассортименте", sortOrder: 0 }
+            { id: 'img-1953084-1', url: '/images/products/1953084_4.webp', thumbnailUrl: '/images/products/1953084_4.webp', alt: "Маффины, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7667,7 +7667,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1902170-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/5db0159149a2c4a47cbfe25cd7535ae7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/5db0159149a2c4a47cbfe25cd7535ae7.jpg', alt: "Батончик шоколадный \"Криспер\", Snickers, 60 г", sortOrder: 0 }
+            { id: 'img-1902170-1', url: '/images/products/5db0159149a2c4a47cbfe25cd7535ae7.webp', thumbnailUrl: '/images/products/5db0159149a2c4a47cbfe25cd7535ae7.webp', alt: "Батончик шоколадный \"Криспер\", Snickers, 60 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7688,7 +7688,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910113-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/76725447f7beeae3a89ab5bb37e00885.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/76725447f7beeae3a89ab5bb37e00885.jpg', alt: "Мармелад, Fruittella, 52 г", sortOrder: 0 }
+            { id: 'img-1910113-1', url: '/images/products/76725447f7beeae3a89ab5bb37e00885.webp', thumbnailUrl: '/images/products/76725447f7beeae3a89ab5bb37e00885.webp', alt: "Мармелад, Fruittella, 52 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7709,7 +7709,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920318-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e9921d0027e0b2b3b3c211bb60ca86c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e9921d0027e0b2b3b3c211bb60ca86c.jpg', alt: "Леденцовая карамель \"Музыкальный леденец\", 18 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1920318-1', url: '/images/products/8e9921d0027e0b2b3b3c211bb60ca86c.webp', thumbnailUrl: '/images/products/8e9921d0027e0b2b3b3c211bb60ca86c.webp', alt: "Леденцовая карамель \"Музыкальный леденец\", 18 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7730,7 +7730,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1950474-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/f31479170cab69363e59524e8f471cc7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/f31479170cab69363e59524e8f471cc7.jpg', alt: "Печенье сдобное \"Задумка\", Дымка, 360 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1950474-1', url: '/images/products/f31479170cab69363e59524e8f471cc7.webp', thumbnailUrl: '/images/products/f31479170cab69363e59524e8f471cc7.webp', alt: "Печенье сдобное \"Задумка\", Дымка, 360 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7751,7 +7751,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920354-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/LK_1920354_1_1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/LK_1920354_1_1.jpg', alt: "Трость карамельная \"С Новым годом!\", со вкусом клубники, 40 г", sortOrder: 0 }
+            { id: 'img-1920354-1', url: '/images/products/LK_1920354_1_1.webp', thumbnailUrl: '/images/products/LK_1920354_1_1.webp', alt: "Трость карамельная \"С Новым годом!\", со вкусом клубники, 40 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7772,7 +7772,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1951062-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/14e8a7c90579a7e04cf50b72b9b8d44b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/14e8a7c90579a7e04cf50b72b9b8d44b.jpg', alt: "Пряники с начинкой \"Клюква\", Славянский терем, 500 г", sortOrder: 0 }
+            { id: 'img-1951062-1', url: '/images/products/14e8a7c90579a7e04cf50b72b9b8d44b.webp', thumbnailUrl: '/images/products/14e8a7c90579a7e04cf50b72b9b8d44b.webp', alt: "Пряники с начинкой \"Клюква\", Славянский терем, 500 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7793,7 +7793,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 24.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1950975-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60cae6d888b9ee264a5012ba1b49438f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60cae6d888b9ee264a5012ba1b49438f.jpg', alt: "Печенье сахарное \"Земляничное\", Чайкофский, 100 г", sortOrder: 0 }
+            { id: 'img-1950975-1', url: '/images/products/60cae6d888b9ee264a5012ba1b49438f.webp', thumbnailUrl: '/images/products/60cae6d888b9ee264a5012ba1b49438f.webp', alt: "Печенье сахарное \"Земляничное\", Чайкофский, 100 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7814,7 +7814,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1921019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6a1dcd765c3c78bd152f67e273df2043.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/6a1dcd765c3c78bd152f67e273df2043.jpg', alt: "Карамель \"Пчелка-Ball\" с начинкой, 180 г", sortOrder: 0 }
+            { id: 'img-1921019-1', url: '/images/products/6a1dcd765c3c78bd152f67e273df2043.webp', thumbnailUrl: '/images/products/6a1dcd765c3c78bd152f67e273df2043.webp', alt: "Карамель \"Пчелка-Ball\" с начинкой, 180 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7835,7 +7835,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 159,
         baseOldPrice: 174.5,
         images: [
-            { id: 'img-1961094-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/b5bcc3a9b317d7328de40c905959f7d7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/b5bcc3a9b317d7328de40c905959f7d7.jpg', alt: "Пирог песочный \"Итальянский пай\", Сдобная особа, 400 г", sortOrder: 0 }
+            { id: 'img-1961094-1', url: '/images/products/b5bcc3a9b317d7328de40c905959f7d7.webp', thumbnailUrl: '/images/products/b5bcc3a9b317d7328de40c905959f7d7.webp', alt: "Пирог песочный \"Итальянский пай\", Сдобная особа, 400 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7856,7 +7856,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920151-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/33b9dd8186505c38e1fa9a109c55f448.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/33b9dd8186505c38e1fa9a109c55f448.png', alt: "Леденец карамельный на палочке \"Vil Pop Gum\", ассорти, 224 г", sortOrder: 0 }
+            { id: 'img-1920151-1', url: '/images/products/33b9dd8186505c38e1fa9a109c55f448.webp', thumbnailUrl: '/images/products/33b9dd8186505c38e1fa9a109c55f448.webp', alt: "Леденец карамельный на палочке \"Vil Pop Gum\", ассорти, 224 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7877,7 +7877,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1952157-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/e3bee8b0fffe4dccc4b975abf260355d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/e3bee8b0fffe4dccc4b975abf260355d.jpg', alt: "Вафли сливочные \"Вечерняя тайна\", 120 г", sortOrder: 0 }
+            { id: 'img-1952157-1', url: '/images/products/e3bee8b0fffe4dccc4b975abf260355d.webp', thumbnailUrl: '/images/products/e3bee8b0fffe4dccc4b975abf260355d.webp', alt: "Вафли сливочные \"Вечерняя тайна\", 120 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7898,7 +7898,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 41.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1910070-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1910070_5_2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1910070_5_2.jpg', alt: "Мармелад жевательный, BAMPI, 75 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1910070-1', url: '/images/products/1910070_5_2.webp', thumbnailUrl: '/images/products/1910070_5_2.webp', alt: "Мармелад жевательный, BAMPI, 75 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7919,7 +7919,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920239-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/c122ceee1271c5ad111211606e2749e8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/c122ceee1271c5ad111211606e2749e8.jpg', alt: "Карамель леденцовая \"Мини-Акварельки\", 100 г", sortOrder: 0 }
+            { id: 'img-1920239-1', url: '/images/products/c122ceee1271c5ad111211606e2749e8.webp', thumbnailUrl: '/images/products/c122ceee1271c5ad111211606e2749e8.webp', alt: "Карамель леденцовая \"Мини-Акварельки\", 100 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7940,7 +7940,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1954019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/949fa04aa3709b4ce97e6f43dfed151b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration4_Import/949fa04aa3709b4ce97e6f43dfed151b.jpg', alt: "Пирожное бисквитное, 7DAYS, с кремом \"какао\", 150 г", sortOrder: 0 }
+            { id: 'img-1954019-1', url: '/images/products/949fa04aa3709b4ce97e6f43dfed151b.webp', thumbnailUrl: '/images/products/949fa04aa3709b4ce97e6f43dfed151b.webp', alt: "Пирожное бисквитное, 7DAYS, с кремом \"какао\", 150 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7961,7 +7961,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 94,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1950751-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950751_2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1950751_2.jpg', alt: "Крекер \"Французский Прованс\", Дымка, 485 г", sortOrder: 0 }
+            { id: 'img-1950751-1', url: '/images/products/1950751_2.webp', thumbnailUrl: '/images/products/1950751_2.webp', alt: "Крекер \"Французский Прованс\", Дымка, 485 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -7982,7 +7982,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 20.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1920324-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/22/22103b6719bdbae5665c7faf0b351f1b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/22/22103b6719bdbae5665c7faf0b351f1b.jpg', alt: "Кислые леденцы, 16 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1920324-1', url: '/images/products/22103b6719bdbae5665c7faf0b351f1b.webp', thumbnailUrl: '/images/products/22103b6719bdbae5665c7faf0b351f1b.webp', alt: "Кислые леденцы, 16 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -8003,7 +8003,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 74,
         baseOldPrice: 79,
         images: [
-            { id: 'img-1910155-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1910155.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/_default_upload_bucket/1910155.jpg', alt: "Желейный мармелад, Невский кондитер, ассорти, 350 г", sortOrder: 0 }
+            { id: 'img-1910155-1', url: '/images/products/1910155.webp', thumbnailUrl: '/images/products/1910155.webp', alt: "Желейный мармелад, Невский кондитер, ассорти, 350 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -8024,7 +8024,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 109,
         baseOldPrice: 116,
         images: [
-            { id: 'img-1913030-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5f/5f3ee2e12466b71a3d7e6dc66048419c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5f/5f3ee2e12466b71a3d7e6dc66048419c.jpg', alt: "Желе со вкусом тропических фруктов, YUMMY YUMMY, 300 г", sortOrder: 0 }
+            { id: 'img-1913030-1', url: '/images/products/5f3ee2e12466b71a3d7e6dc66048419c.webp', thumbnailUrl: '/images/products/5f3ee2e12466b71a3d7e6dc66048419c.webp', alt: "Желе со вкусом тропических фруктов, YUMMY YUMMY, 300 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -8045,7 +8045,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 95,
         baseOldPrice: 99,
         images: [
-            { id: 'img-1952209-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e4e2a6c63bd32b9109dcc4fa98f0564.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e4e2a6c63bd32b9109dcc4fa98f0564.jpg', alt: "Вафли, Волжский пекарь, 400 г, в ассортименте", sortOrder: 0 }
+            { id: 'img-1952209-1', url: '/images/products/8e4e2a6c63bd32b9109dcc4fa98f0564.webp', thumbnailUrl: '/images/products/8e4e2a6c63bd32b9109dcc4fa98f0564.webp', alt: "Вафли, Волжский пекарь, 400 г, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -8066,7 +8066,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-1923091-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/bab71b79c8f1325adf136cd3d01f9ef1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/pim/images/Migration3_Import/bab71b79c8f1325adf136cd3d01f9ef1.jpg', alt: "Драже, M&M's, с молочным шоколадом, 145 г", sortOrder: 0 }
+            { id: 'img-1923091-1', url: '/images/products/bab71b79c8f1325adf136cd3d01f9ef1.webp', thumbnailUrl: '/images/products/bab71b79c8f1325adf136cd3d01f9ef1.webp', alt: "Драже, M&M's, с молочным шоколадом, 145 г", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -8087,7 +8087,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5330047-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9e/9ee8260a2680688ce6a99ebe56723702.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9e/9ee8260a2680688ce6a99ebe56723702.jpg', alt: "Свеча бенгальская, 160 мм, 6 цветов", sortOrder: 0 }
+            { id: 'img-5330047-1', url: '/images/products/9ee8260a2680688ce6a99ebe56723702.webp', thumbnailUrl: '/images/products/9ee8260a2680688ce6a99ebe56723702.webp', alt: "Свеча бенгальская, 160 мм, 6 цветов", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8108,7 +8108,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312376-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/dd/dd7803ce3eaa5863afb024ef15d477b8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/dd/dd7803ce3eaa5863afb024ef15d477b8.jpg', alt: "Новогодняя декорация \"Бант\", Снежное кружево, 12 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312376-1', url: '/images/products/dd7803ce3eaa5863afb024ef15d477b8.webp', thumbnailUrl: '/images/products/dd7803ce3eaa5863afb024ef15d477b8.webp', alt: "Новогодняя декорация \"Бант\", Снежное кружево, 12 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8129,7 +8129,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312595-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/14/14cf8953c46642f950d963b6e93e48a0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/14/14cf8953c46642f950d963b6e93e48a0.jpg', alt: "Украшение ёлочное \"Сосульки\", Снежное кружево, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312595-1', url: '/images/products/14cf8953c46642f950d963b6e93e48a0.webp', thumbnailUrl: '/images/products/14cf8953c46642f950d963b6e93e48a0.webp', alt: "Украшение ёлочное \"Сосульки\", Снежное кружево, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8150,7 +8150,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312147-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bfdd63fa8e5782426dee1de9f1493bf3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bfdd63fa8e5782426dee1de9f1493bf3.jpg', alt: "Декорация новогодняя \"Снежинки\", Снежное кружево, 14 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312147-1', url: '/images/products/bfdd63fa8e5782426dee1de9f1493bf3.webp', thumbnailUrl: '/images/products/bfdd63fa8e5782426dee1de9f1493bf3.webp', alt: "Декорация новогодняя \"Снежинки\", Снежное кружево, 14 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8171,7 +8171,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312785-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60c440a92c09879053c5e82e1636fc7b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60c440a92c09879053c5e82e1636fc7b.jpg', alt: "Декорация новогодняя \"Поезд\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312785-1', url: '/images/products/60c440a92c09879053c5e82e1636fc7b.webp', thumbnailUrl: '/images/products/60c440a92c09879053c5e82e1636fc7b.webp', alt: "Декорация новогодняя \"Поезд\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8192,7 +8192,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312196-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d15846bad7694410e0459a9b7b80e11c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d15846bad7694410e0459a9b7b80e11c.jpg', alt: "Бусы новогодние, Снежное кружево, 4 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312196-1', url: '/images/products/d15846bad7694410e0459a9b7b80e11c.webp', thumbnailUrl: '/images/products/d15846bad7694410e0459a9b7b80e11c.webp', alt: "Бусы новогодние, Снежное кружево, 4 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8213,7 +8213,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312684-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7d/7df54f4ea468e7bc5e7dc77d22bdd9a3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7d/7df54f4ea468e7bc5e7dc77d22bdd9a3.jpg', alt: "Бусы новогодние, Снежное кружево, 2,7 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312684-1', url: '/images/products/7df54f4ea468e7bc5e7dc77d22bdd9a3.webp', thumbnailUrl: '/images/products/7df54f4ea468e7bc5e7dc77d22bdd9a3.webp', alt: "Бусы новогодние, Снежное кружево, 2,7 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8234,7 +8234,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312979-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7043e68705f8228fe2ce9d24cd28389.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7043e68705f8228fe2ce9d24cd28389.jpg', alt: "Пазл 3D новогодний, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312979-1', url: '/images/products/a7043e68705f8228fe2ce9d24cd28389.webp', thumbnailUrl: '/images/products/a7043e68705f8228fe2ce9d24cd28389.webp', alt: "Пазл 3D новогодний, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -8255,7 +8255,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312261-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1b482be1cc2e1d3621e0bd3efa3af47.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1b482be1cc2e1d3621e0bd3efa3af47.png', alt: "Шарики новогодние, Снежное кружево, 8 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312261-1', url: '/images/products/a1b482be1cc2e1d3621e0bd3efa3af47.webp', thumbnailUrl: '/images/products/a1b482be1cc2e1d3621e0bd3efa3af47.webp', alt: "Шарики новогодние, Снежное кружево, 8 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8276,7 +8276,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312810-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8a982dd51cc56a84baa748aced7806b6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8a982dd51cc56a84baa748aced7806b6.jpg', alt: "Наклейка новогодняя, Снежное кружево, 27х34 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312810-1', url: '/images/products/8a982dd51cc56a84baa748aced7806b6.webp', thumbnailUrl: '/images/products/8a982dd51cc56a84baa748aced7806b6.webp', alt: "Наклейка новогодняя, Снежное кружево, 27х34 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -8297,7 +8297,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312722-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d3f8ea71b6e6abe92f07d9f5a099f003.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d3f8ea71b6e6abe92f07d9f5a099f003.png', alt: "Украшение ёлочное \"Сани\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312722-1', url: '/images/products/d3f8ea71b6e6abe92f07d9f5a099f003.webp', thumbnailUrl: '/images/products/d3f8ea71b6e6abe92f07d9f5a099f003.webp', alt: "Украшение ёлочное \"Сани\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8318,7 +8318,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312695-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4ee7e5fc6d65afbaed76e0bf7e1c743b.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4ee7e5fc6d65afbaed76e0bf7e1c743b.png', alt: "Декорация новогодняя, Снежное кружево, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312695-1', url: '/images/products/4ee7e5fc6d65afbaed76e0bf7e1c743b.webp', thumbnailUrl: '/images/products/4ee7e5fc6d65afbaed76e0bf7e1c743b.webp', alt: "Декорация новогодняя, Снежное кружево, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8339,7 +8339,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312691-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/812108ac7dc87a6fe0dd381e72068891.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/812108ac7dc87a6fe0dd381e72068891.jpg', alt: "Мишура новогодняя, Снежное кружево, 7,5 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312691-1', url: '/images/products/812108ac7dc87a6fe0dd381e72068891.webp', thumbnailUrl: '/images/products/812108ac7dc87a6fe0dd381e72068891.webp', alt: "Мишура новогодняя, Снежное кружево, 7,5 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8360,7 +8360,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312215-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b79e250249d300304ab07ee37274b23.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b79e250249d300304ab07ee37274b23.png', alt: "Шары новогодние, Снежное кружево, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312215-1', url: '/images/products/1b79e250249d300304ab07ee37274b23.webp', thumbnailUrl: '/images/products/1b79e250249d300304ab07ee37274b23.webp', alt: "Шары новогодние, Снежное кружево, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8381,7 +8381,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312965-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/43/431c5214ada29112641124e6a76f4dfc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/43/431c5214ada29112641124e6a76f4dfc.jpg', alt: "Наклейка флуоресцентная новогодняя \"Морозные узоры\", Снежное кружево, 38х30 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312965-1', url: '/images/products/431c5214ada29112641124e6a76f4dfc.webp', thumbnailUrl: '/images/products/431c5214ada29112641124e6a76f4dfc.webp', alt: "Наклейка флуоресцентная новогодняя \"Морозные узоры\", Снежное кружево, 38х30 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -8402,7 +8402,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312534-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3b/3b2a1a9f818dd0b1f9765b6076b5fd33.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3b/3b2a1a9f818dd0b1f9765b6076b5fd33.jpg', alt: "Украшение новогоднее \"Дождик\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312534-1', url: '/images/products/3b2a1a9f818dd0b1f9765b6076b5fd33.webp', thumbnailUrl: '/images/products/3b2a1a9f818dd0b1f9765b6076b5fd33.webp', alt: "Украшение новогоднее \"Дождик\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8423,7 +8423,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312378-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3a7c2b48fb7cbe8036c5342d1312fb24.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3a7c2b48fb7cbe8036c5342d1312fb24.jpg', alt: "Сувенир новогодний \"Волшебный шар\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312378-1', url: '/images/products/3a7c2b48fb7cbe8036c5342d1312fb24.webp', thumbnailUrl: '/images/products/3a7c2b48fb7cbe8036c5342d1312fb24.webp', alt: "Сувенир новогодний \"Волшебный шар\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8444,7 +8444,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314024-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4a/4abc3141418b6e6a9a0fb31ed919a68d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4a/4abc3141418b6e6a9a0fb31ed919a68d.jpg', alt: "Электрогирлянда, MAGIC TIME, 10 м", sortOrder: 0 }
+            { id: 'img-5314024-1', url: '/images/products/4abc3141418b6e6a9a0fb31ed919a68d.webp', thumbnailUrl: '/images/products/4abc3141418b6e6a9a0fb31ed919a68d.webp', alt: "Электрогирлянда, MAGIC TIME, 10 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8465,7 +8465,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312774-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b31626f0cb6f2e507d0dbe302abe101.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b31626f0cb6f2e507d0dbe302abe101.jpg', alt: "Бантики новогодние, Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312774-1', url: '/images/products/1b31626f0cb6f2e507d0dbe302abe101.webp', thumbnailUrl: '/images/products/1b31626f0cb6f2e507d0dbe302abe101.webp', alt: "Бантики новогодние, Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8486,7 +8486,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312971-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/720d5a1155a658741b9c5029be90fd3b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/720d5a1155a658741b9c5029be90fd3b.jpg', alt: "Набор украшений ёлочных, Снежное кружево, 6 см, 9 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312971-1', url: '/images/products/720d5a1155a658741b9c5029be90fd3b.webp', thumbnailUrl: '/images/products/720d5a1155a658741b9c5029be90fd3b.webp', alt: "Набор украшений ёлочных, Снежное кружево, 6 см, 9 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8507,7 +8507,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314002-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1c96f9ce26b290958b03851097ec67a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a1/a1c96f9ce26b290958b03851097ec67a.jpg', alt: "Дождик-занавес новогодний, Снежное кружево, 1х2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314002-1', url: '/images/products/a1c96f9ce26b290958b03851097ec67a.webp', thumbnailUrl: '/images/products/a1c96f9ce26b290958b03851097ec67a.webp', alt: "Дождик-занавес новогодний, Снежное кружево, 1х2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8528,7 +8528,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312764-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/6030c0b9a2038e7906658c3951ae86b2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/6030c0b9a2038e7906658c3951ae86b2.jpg', alt: "Ель искусственная, Снежное кружево, 70 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312764-1', url: '/images/products/6030c0b9a2038e7906658c3951ae86b2.webp', thumbnailUrl: '/images/products/6030c0b9a2038e7906658c3951ae86b2.webp', alt: "Ель искусственная, Снежное кружево, 70 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8549,7 +8549,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5330053-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/11/1193a6c1025bc216c6721bd09b27420f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/11/1193a6c1025bc216c6721bd09b27420f.jpg', alt: "Хлопушка пружинная, 11 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5330053-1', url: '/images/products/1193a6c1025bc216c6721bd09b27420f.webp', thumbnailUrl: '/images/products/1193a6c1025bc216c6721bd09b27420f.webp', alt: "Хлопушка пружинная, 11 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8570,7 +8570,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312279-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/78/7863c7edb00ba9c4c7ec5f303a627e0d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/78/7863c7edb00ba9c4c7ec5f303a627e0d.jpg', alt: "Украшение новогоднее блестящее, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312279-1', url: '/images/products/7863c7edb00ba9c4c7ec5f303a627e0d.webp', thumbnailUrl: '/images/products/7863c7edb00ba9c4c7ec5f303a627e0d.webp', alt: "Украшение новогоднее блестящее, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8591,7 +8591,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314174-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b5673d559c0b5d7e3755b2c3726f40c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b5673d559c0b5d7e3755b2c3726f40c.jpg', alt: "Удлинитель для гирлянд, 3,5 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314174-1', url: '/images/products/1b5673d559c0b5d7e3755b2c3726f40c.webp', thumbnailUrl: '/images/products/1b5673d559c0b5d7e3755b2c3726f40c.webp', alt: "Удлинитель для гирлянд, 3,5 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8612,7 +8612,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321318-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec97a0e292f55fec490ac7be00679fd9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec97a0e292f55fec490ac7be00679fd9.jpg', alt: "Кружка с крышкой \"Гномик\", Снежное кружево, 400 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321318-1', url: '/images/products/ec97a0e292f55fec490ac7be00679fd9.webp', thumbnailUrl: '/images/products/ec97a0e292f55fec490ac7be00679fd9.webp', alt: "Кружка с крышкой \"Гномик\", Снежное кружево, 400 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8633,7 +8633,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312711-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/73cc9403c6bf1d911585697b1d8b0c46.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/73cc9403c6bf1d911585697b1d8b0c46.jpg', alt: "Шарики ёлочные, Снежное кружево, 12 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312711-1', url: '/images/products/73cc9403c6bf1d911585697b1d8b0c46.webp', thumbnailUrl: '/images/products/73cc9403c6bf1d911585697b1d8b0c46.webp', alt: "Шарики ёлочные, Снежное кружево, 12 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8654,7 +8654,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312966-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c5424ced4fd6d030ea74162417b91845.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c5424ced4fd6d030ea74162417b91845.jpg', alt: "Наклейка новогодняя на окно \"Морозные узоры\", Снежное кружево, 41х29 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312966-1', url: '/images/products/c5424ced4fd6d030ea74162417b91845.webp', thumbnailUrl: '/images/products/c5424ced4fd6d030ea74162417b91845.webp', alt: "Наклейка новогодняя на окно \"Морозные узоры\", Снежное кружево, 41х29 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -8675,7 +8675,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312791-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bf8ed11925992b289535022ba3d785f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bf/bf8ed11925992b289535022ba3d785f0.jpg', alt: "Наклейка новогодняя, Снежное кружево, 57х20,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312791-1', url: '/images/products/bf8ed11925992b289535022ba3d785f0.webp', thumbnailUrl: '/images/products/bf8ed11925992b289535022ba3d785f0.webp', alt: "Наклейка новогодняя, Снежное кружево, 57х20,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -8696,7 +8696,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70dcaba7ed3f495fb56012128c270ecf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70dcaba7ed3f495fb56012128c270ecf.jpg', alt: "Лента упаковочная новогодняя, Снежное кружево, 3,8 см х 2,7 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314019-1', url: '/images/products/70dcaba7ed3f495fb56012128c270ecf.webp', thumbnailUrl: '/images/products/70dcaba7ed3f495fb56012128c270ecf.webp', alt: "Лента упаковочная новогодняя, Снежное кружево, 3,8 см х 2,7 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8717,7 +8717,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5322159-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3d/3d2fbe247fc63581680d4ef74eb4712c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3d/3d2fbe247fc63581680d4ef74eb4712c.jpg', alt: "Салфетка сервировочная, Снежное кружево, 38 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5322159-1', url: '/images/products/3d2fbe247fc63581680d4ef74eb4712c.webp', thumbnailUrl: '/images/products/3d2fbe247fc63581680d4ef74eb4712c.webp', alt: "Салфетка сервировочная, Снежное кружево, 38 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8738,7 +8738,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314172-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70817f6666c66207a3b4174a466e2ebb.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70817f6666c66207a3b4174a466e2ebb.png', alt: "Гирлянда новогодняя \"Домики\", 1,8 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314172-1', url: '/images/products/70817f6666c66207a3b4174a466e2ebb.webp', thumbnailUrl: '/images/products/70817f6666c66207a3b4174a466e2ebb.webp', alt: "Гирлянда новогодняя \"Домики\", 1,8 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8759,7 +8759,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312970-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5bc9d984236ae1a5f511ae07309cd130.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5bc9d984236ae1a5f511ae07309cd130.jpg', alt: "Набор шаров ёлочных, Снежное кружево, 21 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312970-1', url: '/images/products/5bc9d984236ae1a5f511ae07309cd130.webp', thumbnailUrl: '/images/products/5bc9d984236ae1a5f511ae07309cd130.webp', alt: "Набор шаров ёлочных, Снежное кружево, 21 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8780,7 +8780,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310397-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ecbeb29735084a451215886f3ff31ce1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ecbeb29735084a451215886f3ff31ce1.jpg', alt: "Календарь с отрывным блоком, PREZENT, в ассортименте", sortOrder: 0 }
+            { id: 'img-5310397-1', url: '/images/products/ecbeb29735084a451215886f3ff31ce1.webp', thumbnailUrl: '/images/products/ecbeb29735084a451215886f3ff31ce1.webp', alt: "Календарь с отрывным блоком, PREZENT, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8801,7 +8801,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321401-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a365a0dc72ab2d2583c1ecd44956859e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a365a0dc72ab2d2583c1ecd44956859e.jpg', alt: "Кружка, Снежное кружево, 400 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321401-1', url: '/images/products/a365a0dc72ab2d2583c1ecd44956859e.webp', thumbnailUrl: '/images/products/a365a0dc72ab2d2583c1ecd44956859e.webp', alt: "Кружка, Снежное кружево, 400 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8822,7 +8822,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314230-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0f/0f8c0e330f0b389ee017dcb602e60768.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0f/0f8c0e330f0b389ee017dcb602e60768.png', alt: "Украшение ёлочное, Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5314230-1', url: '/images/products/0f8c0e330f0b389ee017dcb602e60768.webp', thumbnailUrl: '/images/products/0f8c0e330f0b389ee017dcb602e60768.webp', alt: "Украшение ёлочное, Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8843,7 +8843,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314185-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a0/a0b86ea499e9cb347304dfaff645ac24.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a0/a0b86ea499e9cb347304dfaff645ac24.jpg', alt: "Наконечник на ёлку \"Звезда\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314185-1', url: '/images/products/a0b86ea499e9cb347304dfaff645ac24.webp', thumbnailUrl: '/images/products/a0b86ea499e9cb347304dfaff645ac24.webp', alt: "Наконечник на ёлку \"Звезда\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8864,7 +8864,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312976-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/76/768689e6642944d57990f187d692770d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/76/768689e6642944d57990f187d692770d.jpg', alt: "Декорация ёлочная \"Птичка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312976-1', url: '/images/products/768689e6642944d57990f187d692770d.webp', thumbnailUrl: '/images/products/768689e6642944d57990f187d692770d.webp', alt: "Декорация ёлочная \"Птичка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8885,7 +8885,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-4030257-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5ee1ea0b84e3308617c04222f01ea2a4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5ee1ea0b84e3308617c04222f01ea2a4.jpg', alt: "Календарь квартальный 2026, в ассортименте", sortOrder: 0 }
+            { id: 'img-4030257-1', url: '/images/products/5ee1ea0b84e3308617c04222f01ea2a4.webp', thumbnailUrl: '/images/products/5ee1ea0b84e3308617c04222f01ea2a4.webp', alt: "Календарь квартальный 2026, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8906,7 +8906,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314210-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e32cdf17d1823c3b801bace99925fc40.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e32cdf17d1823c3b801bace99925fc40.jpg', alt: "Бантики новогодние, Снежное кружево, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5314210-1', url: '/images/products/e32cdf17d1823c3b801bace99925fc40.webp', thumbnailUrl: '/images/products/e32cdf17d1823c3b801bace99925fc40.webp', alt: "Бантики новогодние, Снежное кружево, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8927,7 +8927,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314196-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/546160783af88a448e023bb40e4a473a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/546160783af88a448e023bb40e4a473a.jpg', alt: "Ободок новогодний, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314196-1', url: '/images/products/546160783af88a448e023bb40e4a473a.webp', thumbnailUrl: '/images/products/546160783af88a448e023bb40e4a473a.webp', alt: "Ободок новогодний, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8948,7 +8948,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321174-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/aecf28ccee48dd791af4fb411201e52b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/aecf28ccee48dd791af4fb411201e52b.jpg', alt: "Формы пекарские бумажные, Домашняя кухня, 4 шт.", sortOrder: 0 }
+            { id: 'img-5321174-1', url: '/images/products/aecf28ccee48dd791af4fb411201e52b.webp', thumbnailUrl: '/images/products/aecf28ccee48dd791af4fb411201e52b.webp', alt: "Формы пекарские бумажные, Домашняя кухня, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8969,7 +8969,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312949-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad0e17d03c82a4310971272719974387.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad0e17d03c82a4310971272719974387.jpg', alt: "Мишура новогодняя, Снежное кружево, 12х200 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312949-1', url: '/images/products/ad0e17d03c82a4310971272719974387.webp', thumbnailUrl: '/images/products/ad0e17d03c82a4310971272719974387.webp', alt: "Мишура новогодняя, Снежное кружево, 12х200 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -8990,7 +8990,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312453-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d9/d989c8f1ace24578dacdff08e3327648.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d9/d989c8f1ace24578dacdff08e3327648.jpg', alt: "Мишура новогодняя, Снежное кружево, 30 см, 60 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312453-1', url: '/images/products/d989c8f1ace24578dacdff08e3327648.webp', thumbnailUrl: '/images/products/d989c8f1ace24578dacdff08e3327648.webp', alt: "Мишура новогодняя, Снежное кружево, 30 см, 60 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9011,7 +9011,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314223-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4c/4cdf045c971fd8defb3285265cca1a0e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4c/4cdf045c971fd8defb3285265cca1a0e.jpg', alt: "Мишура новогодняя, Снежное кружево, 9х200 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314223-1', url: '/images/products/4cdf045c971fd8defb3285265cca1a0e.webp', thumbnailUrl: '/images/products/4cdf045c971fd8defb3285265cca1a0e.webp', alt: "Мишура новогодняя, Снежное кружево, 9х200 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9032,7 +9032,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314320-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/246fca0277cf74ddd5eb9497de5c3fba.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/246fca0277cf74ddd5eb9497de5c3fba.png', alt: "Декорация ёлочная \"Домик\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5314320-1', url: '/images/products/246fca0277cf74ddd5eb9497de5c3fba.webp', thumbnailUrl: '/images/products/246fca0277cf74ddd5eb9497de5c3fba.webp', alt: "Декорация ёлочная \"Домик\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9053,7 +9053,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312710-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fd/fd6baab7596096a6ef66c52629cf946f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fd/fd6baab7596096a6ef66c52629cf946f.jpg', alt: "Шарики ёлочные, Снежное кружево, 10 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312710-1', url: '/images/products/fd6baab7596096a6ef66c52629cf946f.webp', thumbnailUrl: '/images/products/fd6baab7596096a6ef66c52629cf946f.webp', alt: "Шарики ёлочные, Снежное кружево, 10 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9074,7 +9074,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314240-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d09bd850de6e6a4136f41fa8ab4a98f5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d09bd850de6e6a4136f41fa8ab4a98f5.jpg', alt: "Сувенир новогодний \"Лошадь\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5314240-1', url: '/images/products/d09bd850de6e6a4136f41fa8ab4a98f5.webp', thumbnailUrl: '/images/products/d09bd850de6e6a4136f41fa8ab4a98f5.webp', alt: "Сувенир новогодний \"Лошадь\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9095,7 +9095,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321398-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/557a0739cb7bfe5107e20a7b5a27ceb9.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/557a0739cb7bfe5107e20a7b5a27ceb9.JPG', alt: "Кружка с крышкой, 320 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321398-1', url: '/images/products/557a0739cb7bfe5107e20a7b5a27ceb9.webp', thumbnailUrl: '/images/products/557a0739cb7bfe5107e20a7b5a27ceb9.webp', alt: "Кружка с крышкой, 320 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9116,7 +9116,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312697-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/08/08cef08942b033f9b91c5f68493edab8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/08/08cef08942b033f9b91c5f68493edab8.jpg', alt: "Декорация подвесная \"Белочка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312697-1', url: '/images/products/08cef08942b033f9b91c5f68493edab8.webp', thumbnailUrl: '/images/products/08cef08942b033f9b91c5f68493edab8.webp', alt: "Декорация подвесная \"Белочка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9137,7 +9137,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312997-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/328af8124b15314d4c7c3d8a5a7ee042.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/328af8124b15314d4c7c3d8a5a7ee042.jpg', alt: "Шпиль на ёлку, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312997-1', url: '/images/products/328af8124b15314d4c7c3d8a5a7ee042.webp', thumbnailUrl: '/images/products/328af8124b15314d4c7c3d8a5a7ee042.webp', alt: "Шпиль на ёлку, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9158,7 +9158,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314179-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5c/5c2829e496a5e8da1e33333fdd60c7f5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5c/5c2829e496a5e8da1e33333fdd60c7f5.jpg', alt: "Декорация \"Девочка\", Снежное кружево, 25 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314179-1', url: '/images/products/5c2829e496a5e8da1e33333fdd60c7f5.webp', thumbnailUrl: '/images/products/5c2829e496a5e8da1e33333fdd60c7f5.webp', alt: "Декорация \"Девочка\", Снежное кружево, 25 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9179,7 +9179,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314215-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91cfc50271ebc7457d9b65dc28b131be.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91cfc50271ebc7457d9b65dc28b131be.jpg', alt: "Наклейка новогодняя, Снежное кружево, 24х33 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314215-1', url: '/images/products/91cfc50271ebc7457d9b65dc28b131be.webp', thumbnailUrl: '/images/products/91cfc50271ebc7457d9b65dc28b131be.webp', alt: "Наклейка новогодняя, Снежное кружево, 24х33 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -9200,7 +9200,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312956-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4fe963d6ad19a72e25097c64cb6fcaa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4fe963d6ad19a72e25097c64cb6fcaa.jpg', alt: "Светильник новогодний \"Домик\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312956-1', url: '/images/products/f4fe963d6ad19a72e25097c64cb6fcaa.webp', thumbnailUrl: '/images/products/f4fe963d6ad19a72e25097c64cb6fcaa.webp', alt: "Светильник новогодний \"Домик\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9221,7 +9221,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312822-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a505faeb147471a5445d2f5fae5ac08c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a505faeb147471a5445d2f5fae5ac08c.jpg', alt: "Удлинитель для гирлянды, 3 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312822-1', url: '/images/products/a505faeb147471a5445d2f5fae5ac08c.webp', thumbnailUrl: '/images/products/a505faeb147471a5445d2f5fae5ac08c.webp', alt: "Удлинитель для гирлянды, 3 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9242,7 +9242,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5322168-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e0/e0e43c0a75a761247e2bc1170473d741.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e0/e0e43c0a75a761247e2bc1170473d741.jpg', alt: "Салфетка на стол, Снежное кружево, 90х35 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5322168-1', url: '/images/products/e0e43c0a75a761247e2bc1170473d741.webp', thumbnailUrl: '/images/products/e0e43c0a75a761247e2bc1170473d741.webp', alt: "Салфетка на стол, Снежное кружево, 90х35 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9263,7 +9263,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314225-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad1944d3ec4bdc68bc2961118c1845e4.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad1944d3ec4bdc68bc2961118c1845e4.png', alt: "Набор шаров ёлочных, Снежное кружево, 6 см, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5314225-1', url: '/images/products/ad1944d3ec4bdc68bc2961118c1845e4.webp', thumbnailUrl: '/images/products/ad1944d3ec4bdc68bc2961118c1845e4.webp', alt: "Набор шаров ёлочных, Снежное кружево, 6 см, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9284,7 +9284,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312964-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ed/ed551651a6b6706b0706ae5c7667a585.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ed/ed551651a6b6706b0706ae5c7667a585.jpg', alt: "Наклейка новогодняя на окно \"Морозные узоры\", Снежное кружево, 42х30 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312964-1', url: '/images/products/ed551651a6b6706b0706ae5c7667a585.webp', thumbnailUrl: '/images/products/ed551651a6b6706b0706ae5c7667a585.webp', alt: "Наклейка новогодняя на окно \"Морозные узоры\", Снежное кружево, 42х30 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -9305,7 +9305,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312943-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06f90ff4cedcccac15195f77c4c6ebd0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06f90ff4cedcccac15195f77c4c6ebd0.jpg', alt: "Мишура \"Новогодняя\", 10х200 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312943-1', url: '/images/products/06f90ff4cedcccac15195f77c4c6ebd0.webp', thumbnailUrl: '/images/products/06f90ff4cedcccac15195f77c4c6ebd0.webp', alt: "Мишура \"Новогодняя\", 10х200 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9326,7 +9326,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312969-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/72274b55c7797d33cac6c121c1518556.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/72274b55c7797d33cac6c121c1518556.jpg', alt: "Гирлянда новогодняя, Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312969-1', url: '/images/products/72274b55c7797d33cac6c121c1518556.webp', thumbnailUrl: '/images/products/72274b55c7797d33cac6c121c1518556.webp', alt: "Гирлянда новогодняя, Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9347,7 +9347,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321268-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/43/43c5e24b9cb28a181a7c0a973a9eb7ca.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/43/43c5e24b9cb28a181a7c0a973a9eb7ca.jpg', alt: "Декоративная тарелка \"Тыква\", 22х18 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321268-1', url: '/images/products/43c5e24b9cb28a181a7c0a973a9eb7ca.webp', thumbnailUrl: '/images/products/43c5e24b9cb28a181a7c0a973a9eb7ca.webp', alt: "Декоративная тарелка \"Тыква\", 22х18 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9368,7 +9368,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321066-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7df4703177baeabe763ab9be39ec704.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7df4703177baeabe763ab9be39ec704.jpg', alt: "Формочка пасхальная, Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321066-1', url: '/images/products/a7df4703177baeabe763ab9be39ec704.webp', thumbnailUrl: '/images/products/a7df4703177baeabe763ab9be39ec704.webp', alt: "Формочка пасхальная, Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9389,7 +9389,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321392-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/af3062312a458cd95e2e4d43f0afb5dd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/af3062312a458cd95e2e4d43f0afb5dd.jpg', alt: "Набор: чашка с блюдцем, 230 мл, 16 см", sortOrder: 0 }
+            { id: 'img-5321392-1', url: '/images/products/af3062312a458cd95e2e4d43f0afb5dd.webp', thumbnailUrl: '/images/products/af3062312a458cd95e2e4d43f0afb5dd.webp', alt: "Набор: чашка с блюдцем, 230 мл, 16 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9410,7 +9410,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314252-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6f/6f407f14e49da6fc5ad384d405d47a8f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6f/6f407f14e49da6fc5ad384d405d47a8f.jpg', alt: "Колпак новогодний, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314252-1', url: '/images/products/6f407f14e49da6fc5ad384d405d47a8f.webp', thumbnailUrl: '/images/products/6f407f14e49da6fc5ad384d405d47a8f.webp', alt: "Колпак новогодний, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9431,7 +9431,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312564-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f6/f6c7522db50b17d54ba971722410b3de.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f6/f6c7522db50b17d54ba971722410b3de.jpg', alt: "Набор стеклянных ёлочных шаров, Снежное кружево, 17 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312564-1', url: '/images/products/f6c7522db50b17d54ba971722410b3de.webp', thumbnailUrl: '/images/products/f6c7522db50b17d54ba971722410b3de.webp', alt: "Набор стеклянных ёлочных шаров, Снежное кружево, 17 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9452,7 +9452,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314316-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/ca507ed92a128d718c135352c35f3e20.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/ca507ed92a128d718c135352c35f3e20.jpg', alt: "Электрогирлянда, 3 м, 20 LED, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314316-1', url: '/images/products/ca507ed92a128d718c135352c35f3e20.webp', thumbnailUrl: '/images/products/ca507ed92a128d718c135352c35f3e20.webp', alt: "Электрогирлянда, 3 м, 20 LED, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9473,7 +9473,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314192-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9c/9cd6bffbe092e345022259573fbfa783.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9c/9cd6bffbe092e345022259573fbfa783.jpg', alt: "Декорация новогодняя, Снежное кружево, 25 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314192-1', url: '/images/products/9cd6bffbe092e345022259573fbfa783.webp', thumbnailUrl: '/images/products/9cd6bffbe092e345022259573fbfa783.webp', alt: "Декорация новогодняя, Снежное кружево, 25 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9494,7 +9494,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314198-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5b27b26f21265b4cef43ecd82b9846f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5b27b26f21265b4cef43ecd82b9846f.jpg', alt: "Ветка новогодняя, Снежное кружево, 45 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314198-1', url: '/images/products/a5b27b26f21265b4cef43ecd82b9846f.webp', thumbnailUrl: '/images/products/a5b27b26f21265b4cef43ecd82b9846f.webp', alt: "Ветка новогодняя, Снежное кружево, 45 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9515,7 +9515,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312992-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06ed19e29656413a6ca73abb48a676c4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06ed19e29656413a6ca73abb48a676c4.jpg', alt: "Венок новогодний, Снежное кружево, 43 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312992-1', url: '/images/products/06ed19e29656413a6ca73abb48a676c4.webp', thumbnailUrl: '/images/products/06ed19e29656413a6ca73abb48a676c4.webp', alt: "Венок новогодний, Снежное кружево, 43 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9536,7 +9536,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312953-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13de150ae367845bc5dfdcc28428b8cf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13de150ae367845bc5dfdcc28428b8cf.jpg', alt: "Фигурка новогодняя \"Лошадка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312953-1', url: '/images/products/13de150ae367845bc5dfdcc28428b8cf.webp', thumbnailUrl: '/images/products/13de150ae367845bc5dfdcc28428b8cf.webp', alt: "Фигурка новогодняя \"Лошадка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9557,7 +9557,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310436-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3a9f8daa589af63a11e2e283c920907d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3a9f8daa589af63a11e2e283c920907d.jpg', alt: "Календарь настольный с отрывным блоком, в ассортименте", sortOrder: 0 }
+            { id: 'img-5310436-1', url: '/images/products/3a9f8daa589af63a11e2e283c920907d.webp', thumbnailUrl: '/images/products/3a9f8daa589af63a11e2e283c920907d.webp', alt: "Календарь настольный с отрывным блоком, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9578,7 +9578,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310416-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/82/82eb2c40cab6bfc82591b71aa4b386e3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/82/82eb2c40cab6bfc82591b71aa4b386e3.jpg', alt: "Набор светящихся шаров, 6 шт.", sortOrder: 0 }
+            { id: 'img-5310416-1', url: '/images/products/82eb2c40cab6bfc82591b71aa4b386e3.webp', thumbnailUrl: '/images/products/82eb2c40cab6bfc82591b71aa4b386e3.webp', alt: "Набор светящихся шаров, 6 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9599,7 +9599,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312996-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/8933b1ac856cbdd25d0dab6d6ecab307.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/8933b1ac856cbdd25d0dab6d6ecab307.jpg', alt: "Наконечник на ёлку \"Звезда\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312996-1', url: '/images/products/8933b1ac856cbdd25d0dab6d6ecab307.webp', thumbnailUrl: '/images/products/8933b1ac856cbdd25d0dab6d6ecab307.webp', alt: "Наконечник на ёлку \"Звезда\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9620,7 +9620,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314233-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/18cd9ff7957338429e6af3b919276dc8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/18cd9ff7957338429e6af3b919276dc8.jpg', alt: "Декорация ёлочная \"Ботиночки\", Снежное кружево, 8 см", sortOrder: 0 }
+            { id: 'img-5314233-1', url: '/images/products/18cd9ff7957338429e6af3b919276dc8.webp', thumbnailUrl: '/images/products/18cd9ff7957338429e6af3b919276dc8.webp', alt: "Декорация ёлочная \"Ботиночки\", Снежное кружево, 8 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9641,7 +9641,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321394-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ed/ed7740bf69dfa769a2af00026141d180.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ed/ed7740bf69dfa769a2af00026141d180.JPG', alt: "Тарелка, 20,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321394-1', url: '/images/products/ed7740bf69dfa769a2af00026141d180.webp', thumbnailUrl: '/images/products/ed7740bf69dfa769a2af00026141d180.webp', alt: "Тарелка, 20,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9662,7 +9662,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314189-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/45/45e95ad9e251d25217c0e6186dcb0891.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/45/45e95ad9e251d25217c0e6186dcb0891.jpg', alt: "Наклейка новогодняя угловая \"Морозные узоры\", Снежное кружево, 31,5х30,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314189-1', url: '/images/products/45e95ad9e251d25217c0e6186dcb0891.webp', thumbnailUrl: '/images/products/45e95ad9e251d25217c0e6186dcb0891.webp', alt: "Наклейка новогодняя угловая \"Морозные узоры\", Снежное кружево, 31,5х30,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -9683,7 +9683,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321445-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/19/19116b37d7f53b03d53fc30b97ac57f6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/19/19116b37d7f53b03d53fc30b97ac57f6.jpg', alt: "Блюдо, Royal Garden, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321445-1', url: '/images/products/19116b37d7f53b03d53fc30b97ac57f6.webp', thumbnailUrl: '/images/products/19116b37d7f53b03d53fc30b97ac57f6.webp', alt: "Блюдо, Royal Garden, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9704,7 +9704,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321305-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/99/993c2dfbcdd0d9edc36342f3e1832e59.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/99/993c2dfbcdd0d9edc36342f3e1832e59.JPG', alt: "Набор: солонка и перечница на подносе, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321305-1', url: '/images/products/993c2dfbcdd0d9edc36342f3e1832e59.webp', thumbnailUrl: '/images/products/993c2dfbcdd0d9edc36342f3e1832e59.webp', alt: "Набор: солонка и перечница на подносе, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9725,7 +9725,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312975-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81c2302e2de48560e6879ca849b3a8b3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81c2302e2de48560e6879ca849b3a8b3.jpg', alt: "Декорация ёлочная \"Ботиночки\", Снежное кружево, 9 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312975-1', url: '/images/products/81c2302e2de48560e6879ca849b3a8b3.webp', thumbnailUrl: '/images/products/81c2302e2de48560e6879ca849b3a8b3.webp', alt: "Декорация ёлочная \"Ботиночки\", Снежное кружево, 9 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9746,7 +9746,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312980-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/56/564215d9aaf627adc5cac1e156366db8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/56/564215d9aaf627adc5cac1e156366db8.jpg', alt: "Фигурка новогодняя \"Щелкунчик\", Снежное кружево, 21,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312980-1', url: '/images/products/564215d9aaf627adc5cac1e156366db8.webp', thumbnailUrl: '/images/products/564215d9aaf627adc5cac1e156366db8.webp', alt: "Фигурка новогодняя \"Щелкунчик\", Снежное кружево, 21,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9767,7 +9767,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5300173-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f95bf842c5a35d2e0471708d15c75088.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f95bf842c5a35d2e0471708d15c75088.jpg', alt: "Колпак карнавальный, 38х31 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5300173-1', url: '/images/products/f95bf842c5a35d2e0471708d15c75088.webp', thumbnailUrl: '/images/products/f95bf842c5a35d2e0471708d15c75088.webp', alt: "Колпак карнавальный, 38х31 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9788,7 +9788,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314228-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b37840991b648d4ebd92e1f82217d3f.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b37840991b648d4ebd92e1f82217d3f.png', alt: "Игрушка ёлочная на клипсе \"Свеча\", Снежное кружево", sortOrder: 0 }
+            { id: 'img-5314228-1', url: '/images/products/8b37840991b648d4ebd92e1f82217d3f.webp', thumbnailUrl: '/images/products/8b37840991b648d4ebd92e1f82217d3f.webp', alt: "Игрушка ёлочная на клипсе \"Свеча\", Снежное кружево", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -9809,7 +9809,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312974-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d61d757f8b18d408d0afa7c13b001495.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d61d757f8b18d408d0afa7c13b001495.jpg', alt: "Декорация подвесная новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312974-1', url: '/images/products/d61d757f8b18d408d0afa7c13b001495.webp', thumbnailUrl: '/images/products/d61d757f8b18d408d0afa7c13b001495.webp', alt: "Декорация подвесная новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9830,7 +9830,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314186-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4b5387bc4c7d9dbb1cf359244d5b3717.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4b5387bc4c7d9dbb1cf359244d5b3717.jpg', alt: "Фигурка \"Лошадка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314186-1', url: '/images/products/4b5387bc4c7d9dbb1cf359244d5b3717.webp', thumbnailUrl: '/images/products/4b5387bc4c7d9dbb1cf359244d5b3717.webp', alt: "Фигурка \"Лошадка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9851,7 +9851,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312805-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/982b0fc3c9d4cb0209fc301c29e6aee2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/982b0fc3c9d4cb0209fc301c29e6aee2.jpg', alt: "Гирлянда новогодняя \"Ёлочки\", Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312805-1', url: '/images/products/982b0fc3c9d4cb0209fc301c29e6aee2.webp', thumbnailUrl: '/images/products/982b0fc3c9d4cb0209fc301c29e6aee2.webp', alt: "Гирлянда новогодняя \"Ёлочки\", Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9872,7 +9872,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310418-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f3a24177b5b011b221a939e938761640.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f3a24177b5b011b221a939e938761640.JPG', alt: "Гирлянда \"Паучки\", 1,5 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5310418-1', url: '/images/products/f3a24177b5b011b221a939e938761640.webp', thumbnailUrl: '/images/products/f3a24177b5b011b221a939e938761640.webp', alt: "Гирлянда \"Паучки\", 1,5 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9893,7 +9893,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314318-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01173f8dab52dbfbe93d8b7122483fb1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01173f8dab52dbfbe93d8b7122483fb1.jpg', alt: "Гирлянда с прищепками \"MOMENTS\", 3 м, 15 LED, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314318-1', url: '/images/products/01173f8dab52dbfbe93d8b7122483fb1.webp', thumbnailUrl: '/images/products/01173f8dab52dbfbe93d8b7122483fb1.webp', alt: "Гирлянда с прищепками \"MOMENTS\", 3 м, 15 LED, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9914,7 +9914,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321119-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/219ce4b3a9f1d88a3feb5923ff3bb542.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/219ce4b3a9f1d88a3feb5923ff3bb542.jpg', alt: "Набор пасхальный \"Пасочница\", Домашняя кухня", sortOrder: 0 }
+            { id: 'img-5321119-1', url: '/images/products/219ce4b3a9f1d88a3feb5923ff3bb542.webp', thumbnailUrl: '/images/products/219ce4b3a9f1d88a3feb5923ff3bb542.webp', alt: "Набор пасхальный \"Пасочница\", Домашняя кухня", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9935,7 +9935,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314243-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a216d89bebef235fa02bc9d49022cac.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a216d89bebef235fa02bc9d49022cac.jpg', alt: "Носок новогодний, Снежное кружево, 35 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314243-1', url: '/images/products/1a216d89bebef235fa02bc9d49022cac.webp', thumbnailUrl: '/images/products/1a216d89bebef235fa02bc9d49022cac.webp', alt: "Носок новогодний, Снежное кружево, 35 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -9956,7 +9956,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314000-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/8356537c40dcad58afee5186863d6976.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/8356537c40dcad58afee5186863d6976.jpg', alt: "Мишура новогодняя, Снежное кружево, 11х200 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314000-1', url: '/images/products/8356537c40dcad58afee5186863d6976.webp', thumbnailUrl: '/images/products/8356537c40dcad58afee5186863d6976.webp', alt: "Мишура новогодняя, Снежное кружево, 11х200 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9977,7 +9977,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312944-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/09/0999ca5d95e17176ed6daa8eb751f65d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/09/0999ca5d95e17176ed6daa8eb751f65d.jpg', alt: "Набор для украшения подарка, Снежное кружево, 11 элементов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312944-1', url: '/images/products/0999ca5d95e17176ed6daa8eb751f65d.webp', thumbnailUrl: '/images/products/0999ca5d95e17176ed6daa8eb751f65d.webp', alt: "Набор для украшения подарка, Снежное кружево, 11 элементов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -9998,7 +9998,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314241-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/954a8c2d0a8ee7bd965d80e661a6cb14.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/954a8c2d0a8ee7bd965d80e661a6cb14.jpg', alt: "Игрушка-антистресс светящаяся, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314241-1', url: '/images/products/954a8c2d0a8ee7bd965d80e661a6cb14.webp', thumbnailUrl: '/images/products/954a8c2d0a8ee7bd965d80e661a6cb14.webp', alt: "Игрушка-антистресс светящаяся, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -10019,7 +10019,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314194-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e07322ac999db23c6f587fd1a289e0e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8e07322ac999db23c6f587fd1a289e0e.jpg', alt: "Наклейки новогодние интерьерные, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314194-1', url: '/images/products/8e07322ac999db23c6f587fd1a289e0e.webp', thumbnailUrl: '/images/products/8e07322ac999db23c6f587fd1a289e0e.webp', alt: "Наклейки новогодние интерьерные, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -10040,7 +10040,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314214-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e94cd721e04f39356e29cb89eb2fae7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e94cd721e04f39356e29cb89eb2fae7.jpg', alt: "Лента упаковочная новогодняя, Снежное кружево, 5 см х 2,7 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314214-1', url: '/images/products/2e94cd721e04f39356e29cb89eb2fae7.webp', thumbnailUrl: '/images/products/2e94cd721e04f39356e29cb89eb2fae7.webp', alt: "Лента упаковочная новогодняя, Снежное кружево, 5 см х 2,7 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10061,7 +10061,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321315-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f9345db5e6b26d4d21dfe1c4760920f1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f9345db5e6b26d4d21dfe1c4760920f1.jpg', alt: "Набор бумажных тарелок, Снежное кружево, 8 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321315-1', url: '/images/products/f9345db5e6b26d4d21dfe1c4760920f1.webp', thumbnailUrl: '/images/products/f9345db5e6b26d4d21dfe1c4760920f1.webp', alt: "Набор бумажных тарелок, Снежное кружево, 8 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10082,7 +10082,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312952-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70e8ee7704e03ddfc47d83440b69fb3d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70e8ee7704e03ddfc47d83440b69fb3d.jpg', alt: "Шар воздушный \"Ёлка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312952-1', url: '/images/products/70e8ee7704e03ddfc47d83440b69fb3d.webp', thumbnailUrl: '/images/products/70e8ee7704e03ddfc47d83440b69fb3d.webp', alt: "Шар воздушный \"Ёлка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10103,7 +10103,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312982-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a50775406903315e4d95aff124841f27.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a50775406903315e4d95aff124841f27.jpg', alt: "Декорация новогодняя \"Девочка\", Снежное кружево, 27 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312982-1', url: '/images/products/a50775406903315e4d95aff124841f27.webp', thumbnailUrl: '/images/products/a50775406903315e4d95aff124841f27.webp', alt: "Декорация новогодняя \"Девочка\", Снежное кружево, 27 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10124,7 +10124,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314022-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/83157545ba2c0cb9d9469d0aca2f2ed2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/83157545ba2c0cb9d9469d0aca2f2ed2.jpg', alt: "Светящаяся палочка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314022-1', url: '/images/products/83157545ba2c0cb9d9469d0aca2f2ed2.webp', thumbnailUrl: '/images/products/83157545ba2c0cb9d9469d0aca2f2ed2.webp', alt: "Светящаяся палочка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10145,7 +10145,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314005-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1d/1d1e8e13ca33163ba04d91af75c11c3c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1d/1d1e8e13ca33163ba04d91af75c11c3c.jpg', alt: "Гирлянда новогодняя \"Эликсир\", Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314005-1', url: '/images/products/1d1e8e13ca33163ba04d91af75c11c3c.webp', thumbnailUrl: '/images/products/1d1e8e13ca33163ba04d91af75c11c3c.webp', alt: "Гирлянда новогодняя \"Эликсир\", Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10166,7 +10166,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314176-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/8460ceab557916fae10d3dec8836030b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/8460ceab557916fae10d3dec8836030b.jpg', alt: "Декорация новогодняя \"Волшебная ночь\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314176-1', url: '/images/products/8460ceab557916fae10d3dec8836030b.webp', thumbnailUrl: '/images/products/8460ceab557916fae10d3dec8836030b.webp', alt: "Декорация новогодняя \"Волшебная ночь\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10187,7 +10187,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5202035-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/14/148057091ac29465ff88445c62e7bdd9.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/14/148057091ac29465ff88445c62e7bdd9.png', alt: "Набор упаковочных верёвок, Снежное кружево, 5 м, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5202035-1', url: '/images/products/148057091ac29465ff88445c62e7bdd9.webp', thumbnailUrl: '/images/products/148057091ac29465ff88445c62e7bdd9.webp', alt: "Набор упаковочных верёвок, Снежное кружево, 5 м, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10208,7 +10208,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314013-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/78/78ad76d9e5539b4a7c0df6a2bb1dd469.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/78/78ad76d9e5539b4a7c0df6a2bb1dd469.jpg', alt: "Украшение ёлочное на клипсе \"Павлин\", Снежное кружево, 18х15х5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314013-1', url: '/images/products/78ad76d9e5539b4a7c0df6a2bb1dd469.webp', thumbnailUrl: '/images/products/78ad76d9e5539b4a7c0df6a2bb1dd469.webp', alt: "Украшение ёлочное на клипсе \"Павлин\", Снежное кружево, 18х15х5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10229,7 +10229,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314213-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e4d2e121c83f0b37ec9ed9ab2599a90e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e4d2e121c83f0b37ec9ed9ab2599a90e.jpg', alt: "Наклейка новогодняя блестящая \"Морозные узоры\", Снежное кружево, 41х24 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314213-1', url: '/images/products/e4d2e121c83f0b37ec9ed9ab2599a90e.webp', thumbnailUrl: '/images/products/e4d2e121c83f0b37ec9ed9ab2599a90e.webp', alt: "Наклейка новогодняя блестящая \"Морозные узоры\", Снежное кружево, 41х24 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -10250,7 +10250,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321317-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9ddd8350962f6197b55bad2a58638cfa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9ddd8350962f6197b55bad2a58638cfa.jpg', alt: "Блюдо декоративное \"Гномик\", Снежное кружево, 23х15х2,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321317-1', url: '/images/products/9ddd8350962f6197b55bad2a58638cfa.webp', thumbnailUrl: '/images/products/9ddd8350962f6197b55bad2a58638cfa.webp', alt: "Блюдо декоративное \"Гномик\", Снежное кружево, 23х15х2,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10271,7 +10271,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321302-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d8/d8de501b0d5ef08c4aac387077b10baf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d8/d8de501b0d5ef08c4aac387077b10baf.jpg', alt: "Маслёнка \"Тыква\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5321302-1', url: '/images/products/d8de501b0d5ef08c4aac387077b10baf.webp', thumbnailUrl: '/images/products/d8de501b0d5ef08c4aac387077b10baf.webp', alt: "Маслёнка \"Тыква\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10292,7 +10292,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314242-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d4/d4afb2a54af6e0203bf66de075347e36.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d4/d4afb2a54af6e0203bf66de075347e36.jpg', alt: "Детский новогодний набор для творчества, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314242-1', url: '/images/products/d4afb2a54af6e0203bf66de075347e36.webp', thumbnailUrl: '/images/products/d4afb2a54af6e0203bf66de075347e36.webp', alt: "Детский новогодний набор для творчества, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10313,7 +10313,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314004-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0a/0af29b22a1fdefda4e083849269e65bf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0a/0af29b22a1fdefda4e083849269e65bf.jpg', alt: "Гирлянда новогодняя, Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314004-1', url: '/images/products/0af29b22a1fdefda4e083849269e65bf.webp', thumbnailUrl: '/images/products/0af29b22a1fdefda4e083849269e65bf.webp', alt: "Гирлянда новогодняя, Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10334,7 +10334,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314317-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e4babc44f600b6ff5dd3469a5aefcdd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e4babc44f600b6ff5dd3469a5aefcdd.jpg', alt: "Электрогирлянда, 5 м, 50 LED, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314317-1', url: '/images/products/5e4babc44f600b6ff5dd3469a5aefcdd.webp', thumbnailUrl: '/images/products/5e4babc44f600b6ff5dd3469a5aefcdd.webp', alt: "Электрогирлянда, 5 м, 50 LED, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10355,7 +10355,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312963-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ea/ead2d60ec98ca2caf00c2888bae5013d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ea/ead2d60ec98ca2caf00c2888bae5013d.jpg', alt: "Мишура новогодняя, Снежное кружево, 9х200 cм, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312963-1', url: '/images/products/ead2d60ec98ca2caf00c2888bae5013d.webp', thumbnailUrl: '/images/products/ead2d60ec98ca2caf00c2888bae5013d.webp', alt: "Мишура новогодняя, Снежное кружево, 9х200 cм, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10376,7 +10376,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314018-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ce3c2425a05bf571701990b054a59bf6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ce3c2425a05bf571701990b054a59bf6.jpg', alt: "Лента упаковочная новогодняя, Снежное кружево, 1,5 см х 2,7 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314018-1', url: '/images/products/ce3c2425a05bf571701990b054a59bf6.webp', thumbnailUrl: '/images/products/ce3c2425a05bf571701990b054a59bf6.webp', alt: "Лента упаковочная новогодняя, Снежное кружево, 1,5 см х 2,7 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10397,7 +10397,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312998-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4502a065431d029d026568bca7845e1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4502a065431d029d026568bca7845e1.jpg', alt: "Мишура новогодняя, Снежное кружево, 14х200 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312998-1', url: '/images/products/f4502a065431d029d026568bca7845e1.webp', thumbnailUrl: '/images/products/f4502a065431d029d026568bca7845e1.webp', alt: "Мишура новогодняя, Снежное кружево, 14х200 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10418,7 +10418,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311076-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/69/6974a8e4c63257cd81a1c8becc24f7e2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/69/6974a8e4c63257cd81a1c8becc24f7e2.jpg', alt: "Салфетки \"Пасха\", Перышко, 20 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5311076-1', url: '/images/products/6974a8e4c63257cd81a1c8becc24f7e2.webp', thumbnailUrl: '/images/products/6974a8e4c63257cd81a1c8becc24f7e2.webp', alt: "Салфетки \"Пасха\", Перышко, 20 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10439,7 +10439,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312790-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/40/40f8cddd8079331ade2350dfba22578a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/40/40f8cddd8079331ade2350dfba22578a.jpg', alt: "Наклейка новогодняя, Снежное кружево, 35х19,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312790-1', url: '/images/products/40f8cddd8079331ade2350dfba22578a.webp', thumbnailUrl: '/images/products/40f8cddd8079331ade2350dfba22578a.webp', alt: "Наклейка новогодняя, Снежное кружево, 35х19,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -10460,7 +10460,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312990-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/63994cafa9a0556e477cb6cfd8114064.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/63/63994cafa9a0556e477cb6cfd8114064.jpg', alt: "Декорация новогодняя \"Ёлка\", Снежное кружево, 31 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312990-1', url: '/images/products/63994cafa9a0556e477cb6cfd8114064.webp', thumbnailUrl: '/images/products/63994cafa9a0556e477cb6cfd8114064.webp', alt: "Декорация новогодняя \"Ёлка\", Снежное кружево, 31 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10481,7 +10481,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314218-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a31d6e5e5d58a973bf2210e803944b0b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a31d6e5e5d58a973bf2210e803944b0b.jpg', alt: "Декорация новогодняя подвесная \"Звёздочка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314218-1', url: '/images/products/a31d6e5e5d58a973bf2210e803944b0b.webp', thumbnailUrl: '/images/products/a31d6e5e5d58a973bf2210e803944b0b.webp', alt: "Декорация новогодняя подвесная \"Звёздочка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10502,7 +10502,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314239-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2ddf553fdc01a1573032c8bd32830424.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2ddf553fdc01a1573032c8bd32830424.jpg', alt: "Украшение ёлочное на клипсе \"Цветок\", Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5314239-1', url: '/images/products/2ddf553fdc01a1573032c8bd32830424.webp', thumbnailUrl: '/images/products/2ddf553fdc01a1573032c8bd32830424.webp', alt: "Украшение ёлочное на клипсе \"Цветок\", Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10523,7 +10523,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321303-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb4b15c960fcf5c616ff694f5e6e52b6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb4b15c960fcf5c616ff694f5e6e52b6.jpg', alt: "Тарелка декоративная \"Тыква\", 31х18 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321303-1', url: '/images/products/eb4b15c960fcf5c616ff694f5e6e52b6.webp', thumbnailUrl: '/images/products/eb4b15c960fcf5c616ff694f5e6e52b6.webp', alt: "Тарелка декоративная \"Тыква\", 31х18 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10544,7 +10544,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321316-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01c69ae29524a88192f3fc097fbf31a6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01c69ae29524a88192f3fc097fbf31a6.jpg', alt: "Набор бумажных стаканов, Снежное кружево, 250 мл, 8 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321316-1', url: '/images/products/01c69ae29524a88192f3fc097fbf31a6.webp', thumbnailUrl: '/images/products/01c69ae29524a88192f3fc097fbf31a6.webp', alt: "Набор бумажных стаканов, Снежное кружево, 250 мл, 8 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10565,7 +10565,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321300-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8f/8fe7a7c4549a6df0563b5d9ef5fd8c73.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8f/8fe7a7c4549a6df0563b5d9ef5fd8c73.jpg', alt: "Набор формочек для печенья \"Тыква\", 4 шт.", sortOrder: 0 }
+            { id: 'img-5321300-1', url: '/images/products/8fe7a7c4549a6df0563b5d9ef5fd8c73.webp', thumbnailUrl: '/images/products/8fe7a7c4549a6df0563b5d9ef5fd8c73.webp', alt: "Набор формочек для печенья \"Тыква\", 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10586,7 +10586,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314216-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df5878573378f359fc8d3f5ac3f0cc03.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df5878573378f359fc8d3f5ac3f0cc03.JPG', alt: "Плакат новогодний, Снежное кружево, 64х24 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314216-1', url: '/images/products/df5878573378f359fc8d3f5ac3f0cc03.webp', thumbnailUrl: '/images/products/df5878573378f359fc8d3f5ac3f0cc03.webp', alt: "Плакат новогодний, Снежное кружево, 64х24 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10607,7 +10607,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314201-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/96/9675ed560737fcb31432fe966bdc3e26.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/96/9675ed560737fcb31432fe966bdc3e26.jpg', alt: "Набор ёлочных украшений, Снежное кружево, 9 шт.", sortOrder: 0 }
+            { id: 'img-5314201-1', url: '/images/products/9675ed560737fcb31432fe966bdc3e26.webp', thumbnailUrl: '/images/products/9675ed560737fcb31432fe966bdc3e26.webp', alt: "Набор ёлочных украшений, Снежное кружево, 9 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10628,7 +10628,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321319-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/719fd5ef763d040665087aa0293b4a6d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/719fd5ef763d040665087aa0293b4a6d.jpg', alt: "Чайник заварочный, Снежное кружево, 800 мл", sortOrder: 0 }
+            { id: 'img-5321319-1', url: '/images/products/719fd5ef763d040665087aa0293b4a6d.webp', thumbnailUrl: '/images/products/719fd5ef763d040665087aa0293b4a6d.webp', alt: "Чайник заварочный, Снежное кружево, 800 мл", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -10649,7 +10649,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314200-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/2602903d536c52ef21bc6f5bd8f87c2a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/2602903d536c52ef21bc6f5bd8f87c2a.jpg', alt: "Мишура новогодняя, Снежное кружево, 14х200 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314200-1', url: '/images/products/2602903d536c52ef21bc6f5bd8f87c2a.webp', thumbnailUrl: '/images/products/2602903d536c52ef21bc6f5bd8f87c2a.webp', alt: "Мишура новогодняя, Снежное кружево, 14х200 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10670,7 +10670,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321393-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/dd/ddb5cb4d55c63b745e22dc9c3c35993e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/dd/ddb5cb4d55c63b745e22dc9c3c35993e.jpg', alt: "Блюдо, 19х19х5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321393-1', url: '/images/products/ddb5cb4d55c63b745e22dc9c3c35993e.webp', thumbnailUrl: '/images/products/ddb5cb4d55c63b745e22dc9c3c35993e.webp', alt: "Блюдо, 19х19х5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10691,7 +10691,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5300174-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44dd9fb36bf6a437000ca29a3003e8a1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44dd9fb36bf6a437000ca29a3003e8a1.jpg', alt: "Чулки карнавальные, 60 den, в ассортименте", sortOrder: 0 }
+            { id: 'img-5300174-1', url: '/images/products/44dd9fb36bf6a437000ca29a3003e8a1.webp', thumbnailUrl: '/images/products/44dd9fb36bf6a437000ca29a3003e8a1.webp', alt: "Чулки карнавальные, 60 den, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10712,7 +10712,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312994-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b1dcbafafd45cb45f72ea0c2438fe56a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b1dcbafafd45cb45f72ea0c2438fe56a.jpg', alt: "Декорация новогодняя \"Ёлка\", Снежное кружево, 26 cм, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312994-1', url: '/images/products/b1dcbafafd45cb45f72ea0c2438fe56a.webp', thumbnailUrl: '/images/products/b1dcbafafd45cb45f72ea0c2438fe56a.webp', alt: "Декорация новогодняя \"Ёлка\", Снежное кружево, 26 cм, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10733,7 +10733,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312988-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/00/006a4747e51edea248619e28e7491fa9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/00/006a4747e51edea248619e28e7491fa9.jpg', alt: "Плакат новогодний, Снежное кружево, 64х24 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312988-1', url: '/images/products/006a4747e51edea248619e28e7491fa9.webp', thumbnailUrl: '/images/products/006a4747e51edea248619e28e7491fa9.webp', alt: "Плакат новогодний, Снежное кружево, 64х24 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10754,7 +10754,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312656-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e0/e05f5e1508559f898ba335ff3e2e0c33.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e0/e05f5e1508559f898ba335ff3e2e0c33.jpg', alt: "Украшение ёлочное, Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312656-1', url: '/images/products/e05f5e1508559f898ba335ff3e2e0c33.webp', thumbnailUrl: '/images/products/e05f5e1508559f898ba335ff3e2e0c33.webp', alt: "Украшение ёлочное, Снежное кружево, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10775,7 +10775,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312946-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e112e5e0761666d47f6ea7fc7dc7628.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e112e5e0761666d47f6ea7fc7dc7628.jpg', alt: "Фигурка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312946-1', url: '/images/products/5e112e5e0761666d47f6ea7fc7dc7628.webp', thumbnailUrl: '/images/products/5e112e5e0761666d47f6ea7fc7dc7628.webp', alt: "Фигурка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10796,7 +10796,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311060-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bbae1e68fe1f3feb8d6636050f6bfbf3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bb/bbae1e68fe1f3feb8d6636050f6bfbf3.jpg', alt: "Наклейки пасхальные с тиснением, в ассортименте", sortOrder: 0 }
+            { id: 'img-5311060-1', url: '/images/products/bbae1e68fe1f3feb8d6636050f6bfbf3.webp', thumbnailUrl: '/images/products/bbae1e68fe1f3feb8d6636050f6bfbf3.webp', alt: "Наклейки пасхальные с тиснением, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -10817,7 +10817,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5303163-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/919dc2c4c49dbd778651402021c5250d.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/919dc2c4c49dbd778651402021c5250d.JPG', alt: "Переводные тату, в ассортименте", sortOrder: 0 }
+            { id: 'img-5303163-1', url: '/images/products/919dc2c4c49dbd778651402021c5250d.webp', thumbnailUrl: '/images/products/919dc2c4c49dbd778651402021c5250d.webp', alt: "Переводные тату, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10838,7 +10838,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312818-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b83ade4ace3b071d68f140ec8aff518b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b83ade4ace3b071d68f140ec8aff518b.jpg', alt: "Гирлянда новогодняя \"Лента\", Снежное кружево, 2,3 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312818-1', url: '/images/products/b83ade4ace3b071d68f140ec8aff518b.webp', thumbnailUrl: '/images/products/b83ade4ace3b071d68f140ec8aff518b.webp', alt: "Гирлянда новогодняя \"Лента\", Снежное кружево, 2,3 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10859,7 +10859,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314003-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d14faa48e4bb755a1d6f97ec826207db.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d14faa48e4bb755a1d6f97ec826207db.jpg', alt: "Гирлянда-растяжка новогодняя, Снежное кружево, 2,7 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314003-1', url: '/images/products/d14faa48e4bb755a1d6f97ec826207db.webp', thumbnailUrl: '/images/products/d14faa48e4bb755a1d6f97ec826207db.webp', alt: "Гирлянда-растяжка новогодняя, Снежное кружево, 2,7 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10880,7 +10880,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5303156-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a225c8b216b630b144b2df0d1293cea9.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a225c8b216b630b144b2df0d1293cea9.JPG', alt: "Переводные наклейки, А5, в ассортименте", sortOrder: 0 }
+            { id: 'img-5303156-1', url: '/images/products/a225c8b216b630b144b2df0d1293cea9.webp', thumbnailUrl: '/images/products/a225c8b216b630b144b2df0d1293cea9.webp', alt: "Переводные наклейки, А5, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -10901,7 +10901,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312972-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1c5e90b986d4a204e8502c118e3eb05c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1c5e90b986d4a204e8502c118e3eb05c.jpg', alt: "Набор украшений ёлочных, Снежное кружево, 9х8,5 см, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312972-1', url: '/images/products/1c5e90b986d4a204e8502c118e3eb05c.webp', thumbnailUrl: '/images/products/1c5e90b986d4a204e8502c118e3eb05c.webp', alt: "Набор украшений ёлочных, Снежное кружево, 9х8,5 см, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10922,7 +10922,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321340-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cf/cfae90d736dc537b17433e6c8ece3abc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cf/cfae90d736dc537b17433e6c8ece3abc.jpg', alt: "Менажница, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321340-1', url: '/images/products/cfae90d736dc537b17433e6c8ece3abc.webp', thumbnailUrl: '/images/products/cfae90d736dc537b17433e6c8ece3abc.webp', alt: "Менажница, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10943,7 +10943,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314007-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15f30e2c5ca6b675b688141d17baeab6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15f30e2c5ca6b675b688141d17baeab6.jpg', alt: "Набор ёлочных украшений, Снежное кружево, 9 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5314007-1', url: '/images/products/15f30e2c5ca6b675b688141d17baeab6.webp', thumbnailUrl: '/images/products/15f30e2c5ca6b675b688141d17baeab6.webp', alt: "Набор ёлочных украшений, Снежное кружево, 9 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -10964,7 +10964,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321404-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ff/ff178eacd3bfe067c9b545ee21549c28.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ff/ff178eacd3bfe067c9b545ee21549c28.jpg', alt: "Форма для выпечки \"Печенье\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321404-1', url: '/images/products/ff178eacd3bfe067c9b545ee21549c28.webp', thumbnailUrl: '/images/products/ff178eacd3bfe067c9b545ee21549c28.webp', alt: "Форма для выпечки \"Печенье\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -10985,7 +10985,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312957-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/022b7d20e53af85d4c1f04e3382cfa2d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/022b7d20e53af85d4c1f04e3382cfa2d.jpg', alt: "Наклейка новогодняя, Снежное кружево, 35х18 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312957-1', url: '/images/products/022b7d20e53af85d4c1f04e3382cfa2d.webp', thumbnailUrl: '/images/products/022b7d20e53af85d4c1f04e3382cfa2d.webp', alt: "Наклейка новогодняя, Снежное кружево, 35х18 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -11006,7 +11006,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312689-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/54882a32c4c4e11c53b8bf5058df8664.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/54882a32c4c4e11c53b8bf5058df8664.jpg', alt: "Гирлянда новогодняя деревянная, Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312689-1', url: '/images/products/54882a32c4c4e11c53b8bf5058df8664.webp', thumbnailUrl: '/images/products/54882a32c4c4e11c53b8bf5058df8664.webp', alt: "Гирлянда новогодняя деревянная, Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11027,7 +11027,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321364-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a3e2d619e01354d19268c8bf8bd99b0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a3e2d619e01354d19268c8bf8bd99b0.jpg', alt: "Тарелка \"Кролик\", Товары к Пасхе, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321364-1', url: '/images/products/1a3e2d619e01354d19268c8bf8bd99b0.webp', thumbnailUrl: '/images/products/1a3e2d619e01354d19268c8bf8bd99b0.webp', alt: "Тарелка \"Кролик\", Товары к Пасхе, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11048,7 +11048,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311065-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e42885dea98eb35c9623c214b00e8b2f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e4/e42885dea98eb35c9623c214b00e8b2f.jpg', alt: "Форма для пасхи, в ассортименте", sortOrder: 0 }
+            { id: 'img-5311065-1', url: '/images/products/e42885dea98eb35c9623c214b00e8b2f.webp', thumbnailUrl: '/images/products/e42885dea98eb35c9623c214b00e8b2f.webp', alt: "Форма для пасхи, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11069,7 +11069,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310366-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f8/f82bb614cdf1e743fb63c3974c468907.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f8/f82bb614cdf1e743fb63c3974c468907.jpg', alt: "Свеча светодиодная, 9х5 см", sortOrder: 0 }
+            { id: 'img-5310366-1', url: '/images/products/f82bb614cdf1e743fb63c3974c468907.webp', thumbnailUrl: '/images/products/f82bb614cdf1e743fb63c3974c468907.webp', alt: "Свеча светодиодная, 9х5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11090,7 +11090,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5303135-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/90/90bac084f025fe0c55388f8d69ef1bc9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/90/90bac084f025fe0c55388f8d69ef1bc9.jpg', alt: "Наклейки объёмные, Love is, 11х20 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5303135-1', url: '/images/products/90bac084f025fe0c55388f8d69ef1bc9.webp', thumbnailUrl: '/images/products/90bac084f025fe0c55388f8d69ef1bc9.webp', alt: "Наклейки объёмные, Love is, 11х20 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -11111,7 +11111,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311059-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f8/f8bc1d7937dbd070be8615bff573a37e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f8/f8bc1d7937dbd070be8615bff573a37e.jpg', alt: "Красители пищевые жидкие, Перцов, 25 г", sortOrder: 0 }
+            { id: 'img-5311059-1', url: '/images/products/f8bc1d7937dbd070be8615bff573a37e.webp', thumbnailUrl: '/images/products/f8bc1d7937dbd070be8615bff573a37e.webp', alt: "Красители пищевые жидкие, Перцов, 25 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11132,7 +11132,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314217-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b4c70e0c7718bb167498d8a5306acf3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b4c70e0c7718bb167498d8a5306acf3.jpg', alt: "Ветка новогодняя блестящая, Снежное кружево, 40 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314217-1', url: '/images/products/1b4c70e0c7718bb167498d8a5306acf3.webp', thumbnailUrl: '/images/products/1b4c70e0c7718bb167498d8a5306acf3.webp', alt: "Ветка новогодняя блестящая, Снежное кружево, 40 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11153,7 +11153,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5303148-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1efb895d94d63c5ff8628a24b00dc560.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1efb895d94d63c5ff8628a24b00dc560.jpg', alt: "Переводные тату \"Драконы на стиле\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5303148-1', url: '/images/products/1efb895d94d63c5ff8628a24b00dc560.webp', thumbnailUrl: '/images/products/1efb895d94d63c5ff8628a24b00dc560.webp', alt: "Переводные тату \"Драконы на стиле\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11174,7 +11174,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5313155-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa1fd3d36aed3e97843177d04c11b4d1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa1fd3d36aed3e97843177d04c11b4d1.jpg', alt: "Декорация подвесная \"Паук\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5313155-1', url: '/images/products/aa1fd3d36aed3e97843177d04c11b4d1.webp', thumbnailUrl: '/images/products/aa1fd3d36aed3e97843177d04c11b4d1.webp', alt: "Декорация подвесная \"Паук\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11195,7 +11195,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312948-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a3e51779ee5aa629d493e45f6f0040b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a3e51779ee5aa629d493e45f6f0040b.jpg', alt: "Набор украшений ёлочных \"Шарики\", Снежное кружево, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312948-1', url: '/images/products/1a3e51779ee5aa629d493e45f6f0040b.webp', thumbnailUrl: '/images/products/1a3e51779ee5aa629d493e45f6f0040b.webp', alt: "Набор украшений ёлочных \"Шарики\", Снежное кружево, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11216,7 +11216,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310209-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d805f480a20e18d1a744d7ddb6e94cb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d805f480a20e18d1a744d7ddb6e94cb.jpg', alt: "Баннер-растяжка \"С 23 февраля!\", Men's Direction, 2,2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5310209-1', url: '/images/products/8d805f480a20e18d1a744d7ddb6e94cb.webp', thumbnailUrl: '/images/products/8d805f480a20e18d1a744d7ddb6e94cb.webp', alt: "Баннер-растяжка \"С 23 февраля!\", Men's Direction, 2,2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11237,7 +11237,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321367-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/56/566383a6b4d31faec4915b5d913e2e18.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/56/566383a6b4d31faec4915b5d913e2e18.jpg', alt: "Набор солонок пасхальный, Товары к Пасхе, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321367-1', url: '/images/products/566383a6b4d31faec4915b5d913e2e18.webp', thumbnailUrl: '/images/products/566383a6b4d31faec4915b5d913e2e18.webp', alt: "Набор солонок пасхальный, Товары к Пасхе, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11258,7 +11258,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321289-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5a/5ae75fa8447e8027f656baed4a0d2d32.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5a/5ae75fa8447e8027f656baed4a0d2d32.jpg', alt: "Набор солонок пасхальный, Товары к Пасхе, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321289-1', url: '/images/products/5ae75fa8447e8027f656baed4a0d2d32.webp', thumbnailUrl: '/images/products/5ae75fa8447e8027f656baed4a0d2d32.webp', alt: "Набор солонок пасхальный, Товары к Пасхе, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11279,7 +11279,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314011-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15f740d0e0ecb03923110fe59ec7f6b8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15f740d0e0ecb03923110fe59ec7f6b8.jpg', alt: "Набор украшений ёлочных блестящих, Снежное кружево, 2 шт.", sortOrder: 0 }
+            { id: 'img-5314011-1', url: '/images/products/15f740d0e0ecb03923110fe59ec7f6b8.webp', thumbnailUrl: '/images/products/15f740d0e0ecb03923110fe59ec7f6b8.webp', alt: "Набор украшений ёлочных блестящих, Снежное кружево, 2 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11300,7 +11300,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5303154-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f89c1f2c28be2d74757dd0393c60c8f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f89c1f2c28be2d74757dd0393c60c8f.jpg', alt: "Ободок карнавальный, 12х13,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5303154-1', url: '/images/products/9f89c1f2c28be2d74757dd0393c60c8f.webp', thumbnailUrl: '/images/products/9f89c1f2c28be2d74757dd0393c60c8f.webp', alt: "Ободок карнавальный, 12х13,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11321,7 +11321,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321339-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7e/7e5e8ce892db881caab58d0fed899228.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7e/7e5e8ce892db881caab58d0fed899228.jpg', alt: "Кружка \"Любовь\", With Love, 350 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321339-1', url: '/images/products/7e5e8ce892db881caab58d0fed899228.webp', thumbnailUrl: '/images/products/7e5e8ce892db881caab58d0fed899228.webp', alt: "Кружка \"Любовь\", With Love, 350 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11342,7 +11342,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312819-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d234e1004a10f2bec761e314c0d9fbc4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d234e1004a10f2bec761e314c0d9fbc4.jpg', alt: "Гирлянда новогодняя \"Шарики\", Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312819-1', url: '/images/products/d234e1004a10f2bec761e314c0d9fbc4.webp', thumbnailUrl: '/images/products/d234e1004a10f2bec761e314c0d9fbc4.webp', alt: "Гирлянда новогодняя \"Шарики\", Снежное кружево, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11363,7 +11363,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310398-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8ac383562941932bdbd341305aa5a462.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8ac383562941932bdbd341305aa5a462.jpg', alt: "Открытка-конверт из дерева, PREZENT, в ассортименте", sortOrder: 0 }
+            { id: 'img-5310398-1', url: '/images/products/8ac383562941932bdbd341305aa5a462.webp', thumbnailUrl: '/images/products/8ac383562941932bdbd341305aa5a462.webp', alt: "Открытка-конверт из дерева, PREZENT, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11384,7 +11384,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314009-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e6/e6502a37f6b01601c9499720bfd1ac3e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e6/e6502a37f6b01601c9499720bfd1ac3e.jpg', alt: "Набор украшений ёлочных, Снежное кружево, 10 см, 4 шт.", sortOrder: 0 }
+            { id: 'img-5314009-1', url: '/images/products/e6502a37f6b01601c9499720bfd1ac3e.webp', thumbnailUrl: '/images/products/e6502a37f6b01601c9499720bfd1ac3e.webp', alt: "Набор украшений ёлочных, Снежное кружево, 10 см, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11405,7 +11405,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321342-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/776cbd3d4270288e84ec6fd17b58dd73.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/776cbd3d4270288e84ec6fd17b58dd73.jpg', alt: "Кружка \"Любовь\", With Love, 500 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321342-1', url: '/images/products/776cbd3d4270288e84ec6fd17b58dd73.webp', thumbnailUrl: '/images/products/776cbd3d4270288e84ec6fd17b58dd73.webp', alt: "Кружка \"Любовь\", With Love, 500 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11426,7 +11426,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210248-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c51e8b459f51e7994ddb622b97b417ec.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c51e8b459f51e7994ddb622b97b417ec.jpg', alt: "Фигурки декоративные \"Птенцы\", Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5210248-1', url: '/images/products/c51e8b459f51e7994ddb622b97b417ec.webp', thumbnailUrl: '/images/products/c51e8b459f51e7994ddb622b97b417ec.webp', alt: "Фигурки декоративные \"Птенцы\", Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11447,7 +11447,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245209-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec9a66ffd12df8ef178812697f756b4a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec9a66ffd12df8ef178812697f756b4a.jpg', alt: "Наклейки объёмные \"Чебурашка\", 18х10 см", sortOrder: 0 }
+            { id: 'img-5245209-1', url: '/images/products/ec9a66ffd12df8ef178812697f756b4a.webp', thumbnailUrl: '/images/products/ec9a66ffd12df8ef178812697f756b4a.webp', alt: "Наклейки объёмные \"Чебурашка\", 18х10 см", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -11468,7 +11468,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312986-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13109d8957080e2c1de8ede84aa24503.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13109d8957080e2c1de8ede84aa24503.jpg', alt: "Наклейка объёмная новогодняя, Снежное кружево, 41х29 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312986-1', url: '/images/products/13109d8957080e2c1de8ede84aa24503.webp', thumbnailUrl: '/images/products/13109d8957080e2c1de8ede84aa24503.webp', alt: "Наклейка объёмная новогодняя, Снежное кружево, 41х29 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -11489,7 +11489,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314026-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9fbc49a570147344b2e8cd5bf7b67a73.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9fbc49a570147344b2e8cd5bf7b67a73.jpg', alt: "Новогоднее оконное украшение с раскраской, MAGIC TIME, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314026-1', url: '/images/products/9fbc49a570147344b2e8cd5bf7b67a73.webp', thumbnailUrl: '/images/products/9fbc49a570147344b2e8cd5bf7b67a73.webp', alt: "Новогоднее оконное украшение с раскраской, MAGIC TIME, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11510,7 +11510,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314207-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/77bf19a6ac48a1da5f7abfa5bc6acfe2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/77bf19a6ac48a1da5f7abfa5bc6acfe2.jpg', alt: "Декорация ёлочная, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314207-1', url: '/images/products/77bf19a6ac48a1da5f7abfa5bc6acfe2.webp', thumbnailUrl: '/images/products/77bf19a6ac48a1da5f7abfa5bc6acfe2.webp', alt: "Декорация ёлочная, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11531,7 +11531,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5330035-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5c/5c72f4d61fe10f72dcbc8cb3227458b3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5c/5c72f4d61fe10f72dcbc8cb3227458b3.jpg', alt: "Свеча бенгальская, 170 мм, 6 шт.", sortOrder: 0 }
+            { id: 'img-5330035-1', url: '/images/products/5c72f4d61fe10f72dcbc8cb3227458b3.webp', thumbnailUrl: '/images/products/5c72f4d61fe10f72dcbc8cb3227458b3.webp', alt: "Свеча бенгальская, 170 мм, 6 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11552,7 +11552,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321281-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/42e2132261e622a9bf0129ed0544aa88.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/42e2132261e622a9bf0129ed0544aa88.jpg', alt: "Набор формочек для печенья \"Сердца\", With Love, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321281-1', url: '/images/products/42e2132261e622a9bf0129ed0544aa88.webp', thumbnailUrl: '/images/products/42e2132261e622a9bf0129ed0544aa88.webp', alt: "Набор формочек для печенья \"Сердца\", With Love, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11573,7 +11573,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321358-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2bd810af30375297b1d93d6d0f1e912c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2bd810af30375297b1d93d6d0f1e912c.jpg', alt: "Кружка \"Для тебя\", With Love, 300 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321358-1', url: '/images/products/2bd810af30375297b1d93d6d0f1e912c.webp', thumbnailUrl: '/images/products/2bd810af30375297b1d93d6d0f1e912c.webp', alt: "Кружка \"Для тебя\", With Love, 300 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11594,7 +11594,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5314231-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fc/fc423cc7f5df38c8185c0b1b4c0c2eb5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fc/fc423cc7f5df38c8185c0b1b4c0c2eb5.jpg', alt: "Украшение ёлочное блестящее, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5314231-1', url: '/images/products/fc423cc7f5df38c8185c0b1b4c0c2eb5.webp', thumbnailUrl: '/images/products/fc423cc7f5df38c8185c0b1b4c0c2eb5.webp', alt: "Украшение ёлочное блестящее, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11615,7 +11615,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321359-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/11/115fc8db1d61f0268b625dda4a468878.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/11/115fc8db1d61f0268b625dda4a468878.jpg', alt: "Кружка \"Цветы\", With Love, 450 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321359-1', url: '/images/products/115fc8db1d61f0268b625dda4a468878.webp', thumbnailUrl: '/images/products/115fc8db1d61f0268b625dda4a468878.webp', alt: "Кружка \"Цветы\", With Love, 450 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11636,7 +11636,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321418-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1cec8dc54a3de2e92473823ab0170f5e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1cec8dc54a3de2e92473823ab0170f5e.jpg', alt: "Набор трубочек с щёткой, With love, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321418-1', url: '/images/products/1cec8dc54a3de2e92473823ab0170f5e.webp', thumbnailUrl: '/images/products/1cec8dc54a3de2e92473823ab0170f5e.webp', alt: "Набор трубочек с щёткой, With love, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11657,7 +11657,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312750-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1f6a74c5ed7200f9bf238348ab7b391.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c1/c1f6a74c5ed7200f9bf238348ab7b391.jpg', alt: "Декорация новогодняя на клипсе, Снежное кружево, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5312750-1', url: '/images/products/c1f6a74c5ed7200f9bf238348ab7b391.webp', thumbnailUrl: '/images/products/c1f6a74c5ed7200f9bf238348ab7b391.webp', alt: "Декорация новогодняя на клипсе, Снежное кружево, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11678,7 +11678,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321338-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7b/7b96a68a927cbd14df3b15076f0e95bb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7b/7b96a68a927cbd14df3b15076f0e95bb.jpg', alt: "Термостакан, With Love, 300 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321338-1', url: '/images/products/7b96a68a927cbd14df3b15076f0e95bb.webp', thumbnailUrl: '/images/products/7b96a68a927cbd14df3b15076f0e95bb.webp', alt: "Термостакан, With Love, 300 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11699,7 +11699,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321425-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0a4bd48d0f6e1422eb7fc2287108be9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0a4bd48d0f6e1422eb7fc2287108be9.jpg', alt: "Кружка \"Мур\", With love, 280 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321425-1', url: '/images/products/b0a4bd48d0f6e1422eb7fc2287108be9.webp', thumbnailUrl: '/images/products/b0a4bd48d0f6e1422eb7fc2287108be9.webp', alt: "Кружка \"Мур\", With love, 280 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11720,7 +11720,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312795-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e63d7d45bde92a41f2a65d4a7902332.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e63d7d45bde92a41f2a65d4a7902332.jpg', alt: "Набор для творчества детский \"Волшебная ёлочка\", Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312795-1', url: '/images/products/2e63d7d45bde92a41f2a65d4a7902332.webp', thumbnailUrl: '/images/products/2e63d7d45bde92a41f2a65d4a7902332.webp', alt: "Набор для творчества детский \"Волшебная ёлочка\", Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11741,7 +11741,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321417-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/73e1701d714f9d41d04fef5e3114c6a5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/73e1701d714f9d41d04fef5e3114c6a5.jpg', alt: "Банка \"Сердце\", With Love, 660 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321417-1', url: '/images/products/73e1701d714f9d41d04fef5e3114c6a5.webp', thumbnailUrl: '/images/products/73e1701d714f9d41d04fef5e3114c6a5.webp', alt: "Банка \"Сердце\", With Love, 660 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11762,7 +11762,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321287-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ee/eefb71ee457d49076978fb40d637ee52.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ee/eefb71ee457d49076978fb40d637ee52.jpg', alt: "Набор формочек для печенья, Men’s Direction, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321287-1', url: '/images/products/eefb71ee457d49076978fb40d637ee52.webp', thumbnailUrl: '/images/products/eefb71ee457d49076978fb40d637ee52.webp', alt: "Набор формочек для печенья, Men’s Direction, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11783,7 +11783,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321419-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abd762c997a67b6de222b30effb04b09.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abd762c997a67b6de222b30effb04b09.jpg', alt: "Набор для фондю \"Любовь\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321419-1', url: '/images/products/abd762c997a67b6de222b30effb04b09.webp', thumbnailUrl: '/images/products/abd762c997a67b6de222b30effb04b09.webp', alt: "Набор для фондю \"Любовь\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11804,7 +11804,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321360-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d265ffb7f70274e6168f27aedb2496cc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d265ffb7f70274e6168f27aedb2496cc.jpg', alt: "Набор подарочный (чашка с блюдцем), With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321360-1', url: '/images/products/d265ffb7f70274e6168f27aedb2496cc.webp', thumbnailUrl: '/images/products/d265ffb7f70274e6168f27aedb2496cc.webp', alt: "Набор подарочный (чашка с блюдцем), With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11825,7 +11825,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311053-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f0/f07864bb32b3878a6e69e673a7832547.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f0/f07864bb32b3878a6e69e673a7832547.jpg', alt: "Тарелка пасхальная, в ассортименте", sortOrder: 0 }
+            { id: 'img-5311053-1', url: '/images/products/f07864bb32b3878a6e69e673a7832547.webp', thumbnailUrl: '/images/products/f07864bb32b3878a6e69e673a7832547.webp', alt: "Тарелка пасхальная, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11846,7 +11846,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321278-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0ba9629c48a74e5827ec9da8904fc6e9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0ba9629c48a74e5827ec9da8904fc6e9.jpg', alt: "Формочка для яиц \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321278-1', url: '/images/products/0ba9629c48a74e5827ec9da8904fc6e9.webp', thumbnailUrl: '/images/products/0ba9629c48a74e5827ec9da8904fc6e9.webp', alt: "Формочка для яиц \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11867,7 +11867,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321259-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/4158929640af533ecbb29643a3367ec7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/4158929640af533ecbb29643a3367ec7.jpg', alt: "Формочка пасхальная, Товары к Пасхе, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5321259-1', url: '/images/products/4158929640af533ecbb29643a3367ec7.webp', thumbnailUrl: '/images/products/4158929640af533ecbb29643a3367ec7.webp', alt: "Формочка пасхальная, Товары к Пасхе, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11888,7 +11888,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312776-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f27532078584e7eea4d120b1199b42aa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f27532078584e7eea4d120b1199b42aa.jpg', alt: "Декорация новогодняя, Снежное кружево, 2 шт., 30 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312776-1', url: '/images/products/f27532078584e7eea4d120b1199b42aa.webp', thumbnailUrl: '/images/products/f27532078584e7eea4d120b1199b42aa.webp', alt: "Декорация новогодняя, Снежное кружево, 2 шт., 30 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11909,7 +11909,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5330049-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3a9ac63023bbc42a2348cda385bbf42e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3a9ac63023bbc42a2348cda385bbf42e.jpg', alt: "Пневмохлопушка, 40 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5330049-1', url: '/images/products/3a9ac63023bbc42a2348cda385bbf42e.webp', thumbnailUrl: '/images/products/3a9ac63023bbc42a2348cda385bbf42e.webp', alt: "Пневмохлопушка, 40 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11930,7 +11930,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321353-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/66247c388086fe943a50ba95e630fe65.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/66247c388086fe943a50ba95e630fe65.JPG', alt: "Кружка, \"Mr. & Mrs.\", 380 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321353-1', url: '/images/products/66247c388086fe943a50ba95e630fe65.webp', thumbnailUrl: '/images/products/66247c388086fe943a50ba95e630fe65.webp', alt: "Кружка, \"Mr. & Mrs.\", 380 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11951,7 +11951,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312763-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa45301b335352680ad2398aeeac554.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa45301b335352680ad2398aeeac554.jpg', alt: "Декорация новогодняя \"Гном\", Снежное кружево, 24/20 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312763-1', url: '/images/products/4fa45301b335352680ad2398aeeac554.webp', thumbnailUrl: '/images/products/4fa45301b335352680ad2398aeeac554.webp', alt: "Декорация новогодняя \"Гном\", Снежное кружево, 24/20 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11972,7 +11972,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5303153-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b7/b772e569dc492e998818cc9f4bd31f09.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b7/b772e569dc492e998818cc9f4bd31f09.jpg', alt: "Заколка карнавальная, 15х6 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5303153-1', url: '/images/products/b772e569dc492e998818cc9f4bd31f09.webp', thumbnailUrl: '/images/products/b772e569dc492e998818cc9f4bd31f09.webp', alt: "Заколка карнавальная, 15х6 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -11993,7 +11993,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310307-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50e9861b4136f3f4f4fa655fd7769de3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50e9861b4136f3f4f4fa655fd7769de3.jpg', alt: "Декорация подвесная, 10 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5310307-1', url: '/images/products/50e9861b4136f3f4f4fa655fd7769de3.webp', thumbnailUrl: '/images/products/50e9861b4136f3f4f4fa655fd7769de3.webp', alt: "Декорация подвесная, 10 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12014,7 +12014,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321357-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b98d6e1f47a408d9166d93d526e63e45.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b98d6e1f47a408d9166d93d526e63e45.jpg', alt: "Набор подарочный (кружка и ложка), With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321357-1', url: '/images/products/b98d6e1f47a408d9166d93d526e63e45.webp', thumbnailUrl: '/images/products/b98d6e1f47a408d9166d93d526e63e45.webp', alt: "Набор подарочный (кружка и ложка), With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12035,7 +12035,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321377-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d027642f4967eca46b55c7d128cb8c22.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d027642f4967eca46b55c7d128cb8c22.jpg', alt: "Креманка \"Виктория\", With Love, 240 мл", sortOrder: 0 }
+            { id: 'img-5321377-1', url: '/images/products/d027642f4967eca46b55c7d128cb8c22.webp', thumbnailUrl: '/images/products/d027642f4967eca46b55c7d128cb8c22.webp', alt: "Креманка \"Виктория\", With Love, 240 мл", sortOrder: 0 }
         ],
         categoryId: 'c3',
         category: cat('c3'),
@@ -12056,7 +12056,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311095-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/6606dee07ec2d43221678cdb8b8cebbc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/6606dee07ec2d43221678cdb8b8cebbc.jpg', alt: "Салфетки, Veiro, трёхслойные, 33х33 см, 20 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5311095-1', url: '/images/products/6606dee07ec2d43221678cdb8b8cebbc.webp', thumbnailUrl: '/images/products/6606dee07ec2d43221678cdb8b8cebbc.webp', alt: "Салфетки, Veiro, трёхслойные, 33х33 см, 20 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12077,7 +12077,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5330024-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/93/933297784f28bbc550ff0a39d4b78740.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/93/933297784f28bbc550ff0a39d4b78740.jpg', alt: "Бенгальская свеча \"Волшебные огни\", 160 мм, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5330024-1', url: '/images/products/933297784f28bbc550ff0a39d4b78740.webp', thumbnailUrl: '/images/products/933297784f28bbc550ff0a39d4b78740.webp', alt: "Бенгальская свеча \"Волшебные огни\", 160 мм, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12098,7 +12098,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5312703-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/7210e1dc4bd4fd1569219fc749de0ae6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/7210e1dc4bd4fd1569219fc749de0ae6.jpg', alt: "Наклейка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
+            { id: 'img-5312703-1', url: '/images/products/7210e1dc4bd4fd1569219fc749de0ae6.webp', thumbnailUrl: '/images/products/7210e1dc4bd4fd1569219fc749de0ae6.webp', alt: "Наклейка новогодняя, Снежное кружево, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12119,7 +12119,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244533-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/16e184aa50131ce451f6fbfc00f6463d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/16e184aa50131ce451f6fbfc00f6463d.jpg', alt: "Спрей для декора окон и зеркал \"Снег\", белый, 160 мл, 40 г", sortOrder: 0 }
+            { id: 'img-5244533-1', url: '/images/products/16e184aa50131ce451f6fbfc00f6463d.webp', thumbnailUrl: '/images/products/16e184aa50131ce451f6fbfc00f6463d.webp', alt: "Спрей для декора окон и зеркал \"Снег\", белый, 160 мл, 40 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12140,7 +12140,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243582-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8a50dc80ab3aafcc7c7572ef198673b0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8a/8a50dc80ab3aafcc7c7572ef198673b0.jpg', alt: "Смеси для окрашивания \"Перламутровый блеск\", Домашняя кухня, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243582-1', url: '/images/products/8a50dc80ab3aafcc7c7572ef198673b0.webp', thumbnailUrl: '/images/products/8a50dc80ab3aafcc7c7572ef198673b0.webp', alt: "Смеси для окрашивания \"Перламутровый блеск\", Домашняя кухня, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12161,7 +12161,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321320-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bdbe68c17efb4010fbe6386a677104fa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bdbe68c17efb4010fbe6386a677104fa.jpg', alt: "Банка с крышкой \"Новогодняя\", Снежное кружево, 550 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321320-1', url: '/images/products/bdbe68c17efb4010fbe6386a677104fa.webp', thumbnailUrl: '/images/products/bdbe68c17efb4010fbe6386a677104fa.webp', alt: "Банка с крышкой \"Новогодняя\", Снежное кружево, 550 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12182,7 +12182,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 13,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5311104-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/125fcdbaebd1a225594bc4c09cf43cc6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/125fcdbaebd1a225594bc4c09cf43cc6.jpg', alt: "Термоплёнка для яиц, 7 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5311104-1', url: '/images/products/125fcdbaebd1a225594bc4c09cf43cc6.webp', thumbnailUrl: '/images/products/125fcdbaebd1a225594bc4c09cf43cc6.webp', alt: "Термоплёнка для яиц, 7 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12203,7 +12203,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244793-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5d2d7a5cf264918dc2318e0256d7c5f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5d2d7a5cf264918dc2318e0256d7c5f.jpg', alt: "Наклейки переводные, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244793-1', url: '/images/products/e5d2d7a5cf264918dc2318e0256d7c5f.webp', thumbnailUrl: '/images/products/e5d2d7a5cf264918dc2318e0256d7c5f.webp', alt: "Наклейки переводные, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12224,7 +12224,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245073-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c7/c730f77f5e50609d9836e07c012fc29d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c7/c730f77f5e50609d9836e07c012fc29d.jpg', alt: "Корзинка пасхальная, Товары к Пасхе, 22х19х9 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245073-1', url: '/images/products/c730f77f5e50609d9836e07c012fc29d.webp', thumbnailUrl: '/images/products/c730f77f5e50609d9836e07c012fc29d.webp', alt: "Корзинка пасхальная, Товары к Пасхе, 22х19х9 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12245,7 +12245,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 27.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244834-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/4785a2eb76c5886769eb02e31a739c07.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/4785a2eb76c5886769eb02e31a739c07.jpg', alt: "Наклейки для пасхального декора, Светлый праздник, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244834-1', url: '/images/products/4785a2eb76c5886769eb02e31a739c07.webp', thumbnailUrl: '/images/products/4785a2eb76c5886769eb02e31a739c07.webp', alt: "Наклейки для пасхального декора, Светлый праздник, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12266,7 +12266,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244214-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4f729921de8e8c48b7b882ea20e88502.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4f729921de8e8c48b7b882ea20e88502.jpg', alt: "Смеси для окрашивания \"Хамелеон\", Домашняя кухня, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244214-1', url: '/images/products/4f729921de8e8c48b7b882ea20e88502.webp', thumbnailUrl: '/images/products/4f729921de8e8c48b7b882ea20e88502.webp', alt: "Смеси для окрашивания \"Хамелеон\", Домашняя кухня, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12287,7 +12287,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243817-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f98fdd7823401deb97d5b243e483027.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f98fdd7823401deb97d5b243e483027.jpg', alt: "Набор для окрашивания яиц \"Перламутровая Пасха\", Домашняя кухня, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243817-1', url: '/images/products/2f98fdd7823401deb97d5b243e483027.webp', thumbnailUrl: '/images/products/2f98fdd7823401deb97d5b243e483027.webp', alt: "Набор для окрашивания яиц \"Перламутровая Пасха\", Домашняя кухня, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12308,7 +12308,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 20.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244213-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be4691b1d1dbfde03e9759a45e79250d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be4691b1d1dbfde03e9759a45e79250d.jpg', alt: "Красители в таблетках, Домашняя кухня, 6 цветов", sortOrder: 0 }
+            { id: 'img-5244213-1', url: '/images/products/be4691b1d1dbfde03e9759a45e79250d.webp', thumbnailUrl: '/images/products/be4691b1d1dbfde03e9759a45e79250d.webp', alt: "Красители в таблетках, Домашняя кухня, 6 цветов", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12329,7 +12329,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243665-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f25276e3989fa1b9353963038c3c50d1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f25276e3989fa1b9353963038c3c50d1.jpg', alt: "Красители для яиц \"Пасхальный набор\", Светлый Праздник, 4х1,25 г", sortOrder: 0 }
+            { id: 'img-5243665-1', url: '/images/products/f25276e3989fa1b9353963038c3c50d1.webp', thumbnailUrl: '/images/products/f25276e3989fa1b9353963038c3c50d1.webp', alt: "Красители для яиц \"Пасхальный набор\", Светлый Праздник, 4х1,25 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12350,7 +12350,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245039-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60b8a88fca3b2a824d3def7d141e3bff.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60b8a88fca3b2a824d3def7d141e3bff.jpg', alt: "Набор мыльных цветов подарочный \"Для тебя\", With Love, 14,5х14,5х7 см, 9 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5245039-1', url: '/images/products/60b8a88fca3b2a824d3def7d141e3bff.webp', thumbnailUrl: '/images/products/60b8a88fca3b2a824d3def7d141e3bff.webp', alt: "Набор мыльных цветов подарочный \"Для тебя\", With Love, 14,5х14,5х7 см, 9 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12371,7 +12371,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244306-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5c2dbaecdf97ba4e944457e3f1689a9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5c2dbaecdf97ba4e944457e3f1689a9.jpg', alt: "Бутылочка с запиской, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244306-1', url: '/images/products/a5c2dbaecdf97ba4e944457e3f1689a9.webp', thumbnailUrl: '/images/products/a5c2dbaecdf97ba4e944457e3f1689a9.webp', alt: "Бутылочка с запиской, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12392,7 +12392,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321396-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/215dfa0046716f72402903b4c847d2f7.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/215dfa0046716f72402903b4c847d2f7.JPG', alt: "Тарелка \"Паутина\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5321396-1', url: '/images/products/215dfa0046716f72402903b4c847d2f7.webp', thumbnailUrl: '/images/products/215dfa0046716f72402903b4c847d2f7.webp', alt: "Тарелка \"Паутина\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12413,7 +12413,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244551-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8b44bd2762dd58ad29f9c42e34511a7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8b44bd2762dd58ad29f9c42e34511a7.jpg', alt: "Ручка \"Любимый пушистик\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244551-1', url: '/images/products/c8b44bd2762dd58ad29f9c42e34511a7.webp', thumbnailUrl: '/images/products/c8b44bd2762dd58ad29f9c42e34511a7.webp', alt: "Ручка \"Любимый пушистик\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12434,7 +12434,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245037-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/32af2494e9c3715f9bb563c403e886df.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/32af2494e9c3715f9bb563c403e886df.jpg', alt: "Ручка гелевая \"Помада\", With Love, 10х1,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245037-1', url: '/images/products/32af2494e9c3715f9bb563c403e886df.webp', thumbnailUrl: '/images/products/32af2494e9c3715f9bb563c403e886df.webp', alt: "Ручка гелевая \"Помада\", With Love, 10х1,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12455,7 +12455,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244549-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d2d2ad9d5ac94cf11f7e5fc56a147aee.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d2d2ad9d5ac94cf11f7e5fc56a147aee.jpg', alt: "Волшебная палочка светящаяся \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244549-1', url: '/images/products/d2d2ad9d5ac94cf11f7e5fc56a147aee.webp', thumbnailUrl: '/images/products/d2d2ad9d5ac94cf11f7e5fc56a147aee.webp', alt: "Волшебная палочка светящаяся \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12476,7 +12476,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244515-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44793fd1a73ed6df97a6e0682e9495ac.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44793fd1a73ed6df97a6e0682e9495ac.jpg', alt: "Игрушка-антистресс новогодняя, Снежное кружево, 7х8 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244515-1', url: '/images/products/44793fd1a73ed6df97a6e0682e9495ac.webp', thumbnailUrl: '/images/products/44793fd1a73ed6df97a6e0682e9495ac.webp', alt: "Игрушка-антистресс новогодняя, Снежное кружево, 7х8 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -12497,7 +12497,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245024-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9aae2415850dbc45eb1685294a7a1796.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9aae2415850dbc45eb1685294a7a1796.jpg', alt: "Ручка \"Машинка\", Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245024-1', url: '/images/products/9aae2415850dbc45eb1685294a7a1796.webp', thumbnailUrl: '/images/products/9aae2415850dbc45eb1685294a7a1796.webp', alt: "Ручка \"Машинка\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -12518,7 +12518,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244215-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/839108a9cea5977498b1430d14de7c50.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/83/839108a9cea5977498b1430d14de7c50.jpg', alt: "Тарелка для пасхального кулича и яиц, Домашняя Кухня, 23,5 см", sortOrder: 0 }
+            { id: 'img-5244215-1', url: '/images/products/839108a9cea5977498b1430d14de7c50.webp', thumbnailUrl: '/images/products/839108a9cea5977498b1430d14de7c50.webp', alt: "Тарелка для пасхального кулича и яиц, Домашняя Кухня, 23,5 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12539,7 +12539,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245166-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85e2d371a567a420c10cf64a631da0f6.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/85e2d371a567a420c10cf64a631da0f6.JPG', alt: "Игрушка светящаяся, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245166-1', url: '/images/products/85e2d371a567a420c10cf64a631da0f6.webp', thumbnailUrl: '/images/products/85e2d371a567a420c10cf64a631da0f6.webp', alt: "Игрушка светящаяся, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -12560,7 +12560,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245017-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4a7b3cd96c367e03e142147e163a778.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f4a7b3cd96c367e03e142147e163a778.jpg', alt: "Набор подарочный, Men's Direction, блокнот 60 листов и ручка, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245017-1', url: '/images/products/f4a7b3cd96c367e03e142147e163a778.webp', thumbnailUrl: '/images/products/f4a7b3cd96c367e03e142147e163a778.webp', alt: "Набор подарочный, Men's Direction, блокнот 60 листов и ручка, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12581,7 +12581,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5313169-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e8687e07b1f87fea012b019b0513f68a.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e8687e07b1f87fea012b019b0513f68a.JPG', alt: "Набор декораций \"Паучки\", 8 шт.", sortOrder: 0 }
+            { id: 'img-5313169-1', url: '/images/products/e8687e07b1f87fea012b019b0513f68a.webp', thumbnailUrl: '/images/products/e8687e07b1f87fea012b019b0513f68a.webp', alt: "Набор декораций \"Паучки\", 8 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12602,7 +12602,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245176-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/67/6776ef871b91744ebfb3fcc02702a91e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/67/6776ef871b91744ebfb3fcc02702a91e.jpg', alt: "Подставка для кулича и 8 яиц, PREZENT, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245176-1', url: '/images/products/6776ef871b91744ebfb3fcc02702a91e.webp', thumbnailUrl: '/images/products/6776ef871b91744ebfb3fcc02702a91e.webp', alt: "Подставка для кулича и 8 яиц, PREZENT, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12623,7 +12623,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321399-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a459708bd387467a905cc80f38de7c2b.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a459708bd387467a905cc80f38de7c2b.JPG', alt: "Набор бумажных тарелок \"Привидение\", 8 шт.", sortOrder: 0 }
+            { id: 'img-5321399-1', url: '/images/products/a459708bd387467a905cc80f38de7c2b.webp', thumbnailUrl: '/images/products/a459708bd387467a905cc80f38de7c2b.webp', alt: "Набор бумажных тарелок \"Привидение\", 8 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12644,7 +12644,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244668-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/93/93461cfbccecd36544ee1d0a683de06b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/93/93461cfbccecd36544ee1d0a683de06b.jpg', alt: "Ручка \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244668-1', url: '/images/products/93461cfbccecd36544ee1d0a683de06b.webp', thumbnailUrl: '/images/products/93461cfbccecd36544ee1d0a683de06b.webp', alt: "Ручка \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12665,7 +12665,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243887-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/166ea1c1718166456bb4e9bd086be345.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/166ea1c1718166456bb4e9bd086be345.jpg', alt: "Набор для творчества детский \"23 февраля\", Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243887-1', url: '/images/products/166ea1c1718166456bb4e9bd086be345.webp', thumbnailUrl: '/images/products/166ea1c1718166456bb4e9bd086be345.webp', alt: "Набор для творчества детский \"23 февраля\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12686,7 +12686,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321352-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e8c2518d120c7da5bf19e48781fabb25.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e8c2518d120c7da5bf19e48781fabb25.jpg', alt: "Кружка \"Силач\", Men's Direction, 600 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321352-1', url: '/images/products/e8c2518d120c7da5bf19e48781fabb25.webp', thumbnailUrl: '/images/products/e8c2518d120c7da5bf19e48781fabb25.webp', alt: "Кружка \"Силач\", Men's Direction, 600 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12707,7 +12707,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5313170-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f0/f0be513bfd657b1f0d3cd9472a2ca844.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f0/f0be513bfd657b1f0d3cd9472a2ca844.jpg', alt: "Декорация \"Паук\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5313170-1', url: '/images/products/f0be513bfd657b1f0d3cd9472a2ca844.webp', thumbnailUrl: '/images/products/f0be513bfd657b1f0d3cd9472a2ca844.webp', alt: "Декорация \"Паук\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12728,7 +12728,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210406-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0fa5d4f9b4ad8e573c63bda963d2fc0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0fa5d4f9b4ad8e573c63bda963d2fc0.jpg', alt: "Доска новогодняя, в ассортименте", sortOrder: 0 }
+            { id: 'img-5210406-1', url: '/images/products/b0fa5d4f9b4ad8e573c63bda963d2fc0.webp', thumbnailUrl: '/images/products/b0fa5d4f9b4ad8e573c63bda963d2fc0.webp', alt: "Доска новогодняя, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12749,7 +12749,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244835-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2fe306ce877a7573874a96d971a9dfb0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2fe306ce877a7573874a96d971a9dfb0.jpg', alt: "Пасхальный набор \"Нежность\", Светлый праздник, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244835-1', url: '/images/products/2fe306ce877a7573874a96d971a9dfb0.webp', thumbnailUrl: '/images/products/2fe306ce877a7573874a96d971a9dfb0.webp', alt: "Пасхальный набор \"Нежность\", Светлый праздник, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12770,7 +12770,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244569-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/105e8d26f9967a7a7c5ae81959bd56d6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/105e8d26f9967a7a7c5ae81959bd56d6.jpg', alt: "Проектор \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244569-1', url: '/images/products/105e8d26f9967a7a7c5ae81959bd56d6.webp', thumbnailUrl: '/images/products/105e8d26f9967a7a7c5ae81959bd56d6.webp', alt: "Проектор \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12791,7 +12791,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245175-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b9d672acf43aa6fe04e6991d27212a02.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b9d672acf43aa6fe04e6991d27212a02.jpg', alt: "Набор пасхальных коробочек под яйцо, PREZENT, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5245175-1', url: '/images/products/b9d672acf43aa6fe04e6991d27212a02.webp', thumbnailUrl: '/images/products/b9d672acf43aa6fe04e6991d27212a02.webp', alt: "Набор пасхальных коробочек под яйцо, PREZENT, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12812,7 +12812,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245036-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a96b6cf4d3e96eed68eedfb9c928c6e0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a96b6cf4d3e96eed68eedfb9c928c6e0.jpg', alt: "Набор подарочный \"Для тебя\", With Love, ручка и брелок, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245036-1', url: '/images/products/a96b6cf4d3e96eed68eedfb9c928c6e0.webp', thumbnailUrl: '/images/products/a96b6cf4d3e96eed68eedfb9c928c6e0.webp', alt: "Набор подарочный \"Для тебя\", With Love, ручка и брелок, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12833,7 +12833,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245169-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/26be5591f71c2ceedab4a3c26de10b1e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/26be5591f71c2ceedab4a3c26de10b1e.jpg', alt: "Набор для творчества детский, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245169-1', url: '/images/products/26be5591f71c2ceedab4a3c26de10b1e.webp', thumbnailUrl: '/images/products/26be5591f71c2ceedab4a3c26de10b1e.webp', alt: "Набор для творчества детский, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12854,7 +12854,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5310417-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50ae5dc4ef92d68322f260c58fa027c8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50ae5dc4ef92d68322f260c58fa027c8.jpg', alt: "Декорация подвесная \"Паук\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5310417-1', url: '/images/products/50ae5dc4ef92d68322f260c58fa027c8.webp', thumbnailUrl: '/images/products/50ae5dc4ef92d68322f260c58fa027c8.webp', alt: "Декорация подвесная \"Паук\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12875,7 +12875,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243478-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/99/99c274b7de716bf85f41fd3c280b431d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/99/99c274b7de716bf85f41fd3c280b431d.jpg', alt: "Наклейка декоративная, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243478-1', url: '/images/products/99c274b7de716bf85f41fd3c280b431d.webp', thumbnailUrl: '/images/products/99c274b7de716bf85f41fd3c280b431d.webp', alt: "Наклейка декоративная, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12896,7 +12896,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245025-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/614003fc85fcf87b25d092cd541c5050.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/614003fc85fcf87b25d092cd541c5050.jpg', alt: "Набор ластиков, Men's Direction, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5245025-1', url: '/images/products/614003fc85fcf87b25d092cd541c5050.webp', thumbnailUrl: '/images/products/614003fc85fcf87b25d092cd541c5050.webp', alt: "Набор ластиков, Men's Direction, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -12917,7 +12917,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244753-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f51289f3fb4635f23762b0cbc09487bc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f51289f3fb4635f23762b0cbc09487bc.jpg', alt: "Набор для творчества пасхальный детский", sortOrder: 0 }
+            { id: 'img-5244753-1', url: '/images/products/f51289f3fb4635f23762b0cbc09487bc.webp', thumbnailUrl: '/images/products/f51289f3fb4635f23762b0cbc09487bc.webp', alt: "Набор для творчества пасхальный детский", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12938,7 +12938,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245058-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3c/3c390ee62ef2bd4022fa30c429bf01bb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3c/3c390ee62ef2bd4022fa30c429bf01bb.jpg', alt: "Ветка пасхальная, Товары к Пасхе, 44 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245058-1', url: '/images/products/3c390ee62ef2bd4022fa30c429bf01bb.webp', thumbnailUrl: '/images/products/3c390ee62ef2bd4022fa30c429bf01bb.webp', alt: "Ветка пасхальная, Товары к Пасхе, 44 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12959,7 +12959,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321356-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81726c165cb40a9fe22be9dfefd912b4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81726c165cb40a9fe22be9dfefd912b4.jpg', alt: "Кружка \"Бородач\", Men's Direction, 350 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321356-1', url: '/images/products/81726c165cb40a9fe22be9dfefd912b4.webp', thumbnailUrl: '/images/products/81726c165cb40a9fe22be9dfefd912b4.webp', alt: "Кружка \"Бородач\", Men's Direction, 350 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -12980,7 +12980,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244660-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6e/6e686f34df1643fe9bd70513140d75c3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6e/6e686f34df1643fe9bd70513140d75c3.jpg', alt: "Гирлянда декоративная \"Цветы\", With Love, 1,5 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244660-1', url: '/images/products/6e686f34df1643fe9bd70513140d75c3.webp', thumbnailUrl: '/images/products/6e686f34df1643fe9bd70513140d75c3.webp', alt: "Гирлянда декоративная \"Цветы\", With Love, 1,5 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13001,7 +13001,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245018-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5bcb9516e867445dd1d62c430ef0f40.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5bcb9516e867445dd1d62c430ef0f40.jpg', alt: "Блокнот с калькулятором, 80 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245018-1', url: '/images/products/d5bcb9516e867445dd1d62c430ef0f40.webp', thumbnailUrl: '/images/products/d5bcb9516e867445dd1d62c430ef0f40.webp', alt: "Блокнот с калькулятором, 80 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13022,7 +13022,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243403-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f218610f3c82bfc7d2bc4d87ef755fc7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f218610f3c82bfc7d2bc4d87ef755fc7.jpg', alt: "Подставка для кулича и 8 яиц, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243403-1', url: '/images/products/f218610f3c82bfc7d2bc4d87ef755fc7.webp', thumbnailUrl: '/images/products/f218610f3c82bfc7d2bc4d87ef755fc7.webp', alt: "Подставка для кулича и 8 яиц, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13043,7 +13043,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244679-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60f0e0719fb5191b956ef1c005a21df6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60f0e0719fb5191b956ef1c005a21df6.jpg', alt: "Ручка-антистресс, Men’s Direction, 18х4 см", sortOrder: 0 }
+            { id: 'img-5244679-1', url: '/images/products/60f0e0719fb5191b956ef1c005a21df6.webp', thumbnailUrl: '/images/products/60f0e0719fb5191b956ef1c005a21df6.webp', alt: "Ручка-антистресс, Men’s Direction, 18х4 см", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13064,7 +13064,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244573-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d7/d7ebe5c18d81cbd247d9a725a94438e7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d7/d7ebe5c18d81cbd247d9a725a94438e7.jpg', alt: "Игрушка мягконабивная \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244573-1', url: '/images/products/d7ebe5c18d81cbd247d9a725a94438e7.webp', thumbnailUrl: '/images/products/d7ebe5c18d81cbd247d9a725a94438e7.webp', alt: "Игрушка мягконабивная \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13085,7 +13085,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243734-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/29/29441db2a7705c3768f62e87e709ec53.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/29/29441db2a7705c3768f62e87e709ec53.jpg', alt: "Органайзер для записей, Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243734-1', url: '/images/products/29441db2a7705c3768f62e87e709ec53.webp', thumbnailUrl: '/images/products/29441db2a7705c3768f62e87e709ec53.webp', alt: "Органайзер для записей, Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13106,7 +13106,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244664-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b96c426742007fd6074d64ffb8840658.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b96c426742007fd6074d64ffb8840658.jpg', alt: "Набор подарочный, With Love, гребень и зеркало, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244664-1', url: '/images/products/b96c426742007fd6074d64ffb8840658.webp', thumbnailUrl: '/images/products/b96c426742007fd6074d64ffb8840658.webp', alt: "Набор подарочный, With Love, гребень и зеркало, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13127,7 +13127,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244550-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9ffe06d716d272f29e48e3ef26cba3b1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9ffe06d716d272f29e48e3ef26cba3b1.jpg', alt: "Ручка-фонарик \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244550-1', url: '/images/products/9ffe06d716d272f29e48e3ef26cba3b1.webp', thumbnailUrl: '/images/products/9ffe06d716d272f29e48e3ef26cba3b1.webp', alt: "Ручка-фонарик \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13148,7 +13148,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244661-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/729811d2c5874f65388065b5677d9d42.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/729811d2c5874f65388065b5677d9d42.jpg', alt: "Набор для творчества \"Цветы\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244661-1', url: '/images/products/729811d2c5874f65388065b5677d9d42.webp', thumbnailUrl: '/images/products/729811d2c5874f65388065b5677d9d42.webp', alt: "Набор для творчества \"Цветы\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13169,7 +13169,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245020-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8822cba3e3a74665aff578d0fedab614.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8822cba3e3a74665aff578d0fedab614.jpg', alt: "Набор подарочный, Men's Direction, ручка и фонарик-брелок с открывалкой, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245020-1', url: '/images/products/8822cba3e3a74665aff578d0fedab614.webp', thumbnailUrl: '/images/products/8822cba3e3a74665aff578d0fedab614.webp', alt: "Набор подарочный, Men's Direction, ручка и фонарик-брелок с открывалкой, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13190,7 +13190,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210440-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/984ebeeef20c6d17798ac1a8ce5b8f4a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/984ebeeef20c6d17798ac1a8ce5b8f4a.jpg', alt: "Декоративные фигурки \"Птенцы\", Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5210440-1', url: '/images/products/984ebeeef20c6d17798ac1a8ce5b8f4a.webp', thumbnailUrl: '/images/products/984ebeeef20c6d17798ac1a8ce5b8f4a.webp', alt: "Декоративные фигурки \"Птенцы\", Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13211,7 +13211,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5200255-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c7/c760f68687916f26b63ba4d2fb344732.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c7/c760f68687916f26b63ba4d2fb344732.jpg', alt: "Коробка подарочная \"Почтовый ящик\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5200255-1', url: '/images/products/c760f68687916f26b63ba4d2fb344732.webp', thumbnailUrl: '/images/products/c760f68687916f26b63ba4d2fb344732.webp', alt: "Коробка подарочная \"Почтовый ящик\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13232,7 +13232,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5301081-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e9d23ee33e5c024a13e5773117ff751.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e9d23ee33e5c024a13e5773117ff751.jpg', alt: "Маска карнавальная, в ассортименте", sortOrder: 0 }
+            { id: 'img-5301081-1', url: '/images/products/5e9d23ee33e5c024a13e5773117ff751.webp', thumbnailUrl: '/images/products/5e9d23ee33e5c024a13e5773117ff751.webp', alt: "Маска карнавальная, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c3',
         category: cat('c3'),
@@ -13253,7 +13253,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245074-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/4945556dafe38c94c84a99f265694a40.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/4945556dafe38c94c84a99f265694a40.jpg', alt: "Корзинка пасхальная, Товары к Пасхе, 14,5х10х16 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245074-1', url: '/images/products/4945556dafe38c94c84a99f265694a40.webp', thumbnailUrl: '/images/products/4945556dafe38c94c84a99f265694a40.webp', alt: "Корзинка пасхальная, Товары к Пасхе, 14,5х10х16 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13274,7 +13274,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246238-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7420e6f2e698a2bf57ee28de327096f2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7420e6f2e698a2bf57ee28de327096f2.jpg', alt: "Настольная игра \"Помощники Деда Мороза\"", sortOrder: 0 }
+            { id: 'img-5246238-1', url: '/images/products/7420e6f2e698a2bf57ee28de327096f2.webp', thumbnailUrl: '/images/products/7420e6f2e698a2bf57ee28de327096f2.webp', alt: "Настольная игра \"Помощники Деда Мороза\"", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13295,7 +13295,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245079-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9deaa207bee4da054a5b03afa93c1cb2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9deaa207bee4da054a5b03afa93c1cb2.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 5 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5245079-1', url: '/images/products/9deaa207bee4da054a5b03afa93c1cb2.webp', thumbnailUrl: '/images/products/9deaa207bee4da054a5b03afa93c1cb2.webp', alt: "Декорация пасхальная, Товары к Пасхе, 5 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13316,7 +13316,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244557-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/89509da5f90a04e4f80b927c281f2da7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/89509da5f90a04e4f80b927c281f2da7.jpg', alt: "Гирлянда \"Люблю\", With Love, 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244557-1', url: '/images/products/89509da5f90a04e4f80b927c281f2da7.webp', thumbnailUrl: '/images/products/89509da5f90a04e4f80b927c281f2da7.webp', alt: "Гирлянда \"Люблю\", With Love, 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13337,7 +13337,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244221-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cca98e35a7ee767295220b2cdcfc097e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cca98e35a7ee767295220b2cdcfc097e.jpg', alt: "Игрушка-антистресс \"Паук\", 15х10х6 см", sortOrder: 0 }
+            { id: 'img-5244221-1', url: '/images/products/cca98e35a7ee767295220b2cdcfc097e.webp', thumbnailUrl: '/images/products/cca98e35a7ee767295220b2cdcfc097e.webp', alt: "Игрушка-антистресс \"Паук\", 15х10х6 см", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13358,7 +13358,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244748-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e3f2f48749fb4ce470fde54b1f4cdf50.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e3f2f48749fb4ce470fde54b1f4cdf50.jpg', alt: "Декорация пасхальная, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244748-1', url: '/images/products/e3f2f48749fb4ce470fde54b1f4cdf50.webp', thumbnailUrl: '/images/products/e3f2f48749fb4ce470fde54b1f4cdf50.webp', alt: "Декорация пасхальная, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13379,7 +13379,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245027-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/411500b8a98b41aa9c1ae8733e856ac1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/411500b8a98b41aa9c1ae8733e856ac1.jpg', alt: "Блокнот \"Для тебя\", Men's Direction, 80 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245027-1', url: '/images/products/411500b8a98b41aa9c1ae8733e856ac1.webp', thumbnailUrl: '/images/products/411500b8a98b41aa9c1ae8733e856ac1.webp', alt: "Блокнот \"Для тебя\", Men's Direction, 80 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13400,7 +13400,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244277-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cf/cf9400350fd3388cc9b0854d2c35bebd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cf/cf9400350fd3388cc9b0854d2c35bebd.jpg', alt: "Декорация подвесная \"Люблю\", With Love, 1 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244277-1', url: '/images/products/cf9400350fd3388cc9b0854d2c35bebd.webp', thumbnailUrl: '/images/products/cf9400350fd3388cc9b0854d2c35bebd.webp', alt: "Декорация подвесная \"Люблю\", With Love, 1 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13421,7 +13421,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245038-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ce38b227dc0dd00ea627ccda94a44b7d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ce38b227dc0dd00ea627ccda94a44b7d.jpg', alt: "Блокнот на кольцах cо значками \"Для тебя\", With Love, 64 листа, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245038-1', url: '/images/products/ce38b227dc0dd00ea627ccda94a44b7d.webp', thumbnailUrl: '/images/products/ce38b227dc0dd00ea627ccda94a44b7d.webp', alt: "Блокнот на кольцах cо значками \"Для тебя\", With Love, 64 листа, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13442,7 +13442,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245082-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aafa5664a7def307a550bcfeb1aaf8a2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aafa5664a7def307a550bcfeb1aaf8a2.jpg', alt: "Игрушка \"Светящийся цыплёнок\", Товары к Пасхе, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245082-1', url: '/images/products/aafa5664a7def307a550bcfeb1aaf8a2.webp', thumbnailUrl: '/images/products/aafa5664a7def307a550bcfeb1aaf8a2.webp', alt: "Игрушка \"Светящийся цыплёнок\", Товары к Пасхе, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13463,7 +13463,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243816-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8f238cf2a800d8cc2d099105a86c761.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b8/b8f238cf2a800d8cc2d099105a86c761.jpg', alt: "Набор для декорирования пасхальных яиц, Домашняя кухня, в ассортименте", sortOrder: 0 }
+            { id: 'img-5243816-1', url: '/images/products/b8f238cf2a800d8cc2d099105a86c761.webp', thumbnailUrl: '/images/products/b8f238cf2a800d8cc2d099105a86c761.webp', alt: "Набор для декорирования пасхальных яиц, Домашняя кухня, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13484,7 +13484,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244559-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2a950f8546562e2511439dc295199000.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2a950f8546562e2511439dc295199000.jpg', alt: "Набор прищепок декоративных \"Любовь\", With Love, 10 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244559-1', url: '/images/products/2a950f8546562e2511439dc295199000.webp', thumbnailUrl: '/images/products/2a950f8546562e2511439dc295199000.webp', alt: "Набор прищепок декоративных \"Любовь\", With Love, 10 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13505,7 +13505,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245061-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/724c0cf07cc85a1fc6350ea16f1dfb01.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/724c0cf07cc85a1fc6350ea16f1dfb01.jpg', alt: "Наклейки декоративные, Товары к Пасхе, 10 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5245061-1', url: '/images/products/724c0cf07cc85a1fc6350ea16f1dfb01.webp', thumbnailUrl: '/images/products/724c0cf07cc85a1fc6350ea16f1dfb01.webp', alt: "Наклейки декоративные, Товары к Пасхе, 10 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13526,7 +13526,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321378-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01f24dd7e1a608d31b67682055f1bd7a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/01/01f24dd7e1a608d31b67682055f1bd7a.jpg', alt: "Стакан \"23 февраля\", ОСЗ, 240 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321378-1', url: '/images/products/01f24dd7e1a608d31b67682055f1bd7a.webp', thumbnailUrl: '/images/products/01f24dd7e1a608d31b67682055f1bd7a.webp', alt: "Стакан \"23 февраля\", ОСЗ, 240 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13547,7 +13547,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244556-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91f206d5bb0d4cba2ecb2acc514366ed.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91f206d5bb0d4cba2ecb2acc514366ed.jpg', alt: "Гирлянда \"Сердца\", With Love, 1,5 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244556-1', url: '/images/products/91f206d5bb0d4cba2ecb2acc514366ed.webp', thumbnailUrl: '/images/products/91f206d5bb0d4cba2ecb2acc514366ed.webp', alt: "Гирлянда \"Сердца\", With Love, 1,5 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13568,7 +13568,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245059-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae5fe8bff2476f0532474bc4ce102ad3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae5fe8bff2476f0532474bc4ce102ad3.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 24 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5245059-1', url: '/images/products/ae5fe8bff2476f0532474bc4ce102ad3.webp', thumbnailUrl: '/images/products/ae5fe8bff2476f0532474bc4ce102ad3.webp', alt: "Декорация пасхальная, Товары к Пасхе, 24 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13589,7 +13589,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245035-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa5f0bc1cf075ac77c9fe7d9b755009.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa5f0bc1cf075ac77c9fe7d9b755009.jpg', alt: "Блокнот \"Для тебя\", With Love, 10,5х14,5 см, 80 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245035-1', url: '/images/products/4fa5f0bc1cf075ac77c9fe7d9b755009.webp', thumbnailUrl: '/images/products/4fa5f0bc1cf075ac77c9fe7d9b755009.webp', alt: "Блокнот \"Для тебя\", With Love, 10,5х14,5 см, 80 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13610,7 +13610,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245259-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/851dfb1dde79dda725a62caded365d76.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/85/851dfb1dde79dda725a62caded365d76.jpg', alt: "Занавес \"Сердца\", With Love, 1х2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245259-1', url: '/images/products/851dfb1dde79dda725a62caded365d76.webp', thumbnailUrl: '/images/products/851dfb1dde79dda725a62caded365d76.webp', alt: "Занавес \"Сердца\", With Love, 1х2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13631,7 +13631,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244560-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/2494d135063b0fabed5ea7b8f07a04dc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/24/2494d135063b0fabed5ea7b8f07a04dc.jpg', alt: "Доска декоративная \"Сердце\", With Love, мелок в комплекте, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244560-1', url: '/images/products/2494d135063b0fabed5ea7b8f07a04dc.webp', thumbnailUrl: '/images/products/2494d135063b0fabed5ea7b8f07a04dc.webp', alt: "Доска декоративная \"Сердце\", With Love, мелок в комплекте, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13652,7 +13652,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245167-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a4812f3d896f104ad6ffe94abdc087e4.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a4812f3d896f104ad6ffe94abdc087e4.JPG', alt: "Игрушка-перевёртыш, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245167-1', url: '/images/products/a4812f3d896f104ad6ffe94abdc087e4.webp', thumbnailUrl: '/images/products/a4812f3d896f104ad6ffe94abdc087e4.webp', alt: "Игрушка-перевёртыш, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13673,7 +13673,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244377-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2da484474a680b01587d9455316e8c2e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2da484474a680b01587d9455316e8c2e.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 24 шт.", sortOrder: 0 }
+            { id: 'img-5244377-1', url: '/images/products/2da484474a680b01587d9455316e8c2e.webp', thumbnailUrl: '/images/products/2da484474a680b01587d9455316e8c2e.webp', alt: "Декорация пасхальная, Товары к Пасхе, 24 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13694,7 +13694,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244675-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3b/3b08748c1ee03773596460e734c93f98.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3b/3b08748c1ee03773596460e734c93f98.jpg', alt: "Светильник \"Волшебный шар\", Men’s Direction, 4,5х4,5х6,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244675-1', url: '/images/products/3b08748c1ee03773596460e734c93f98.webp', thumbnailUrl: '/images/products/3b08748c1ee03773596460e734c93f98.webp', alt: "Светильник \"Волшебный шар\", Men’s Direction, 4,5х4,5х6,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13715,7 +13715,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245160-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ff/ff6f9dc64451c98385600ef00eec7896.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ff/ff6f9dc64451c98385600ef00eec7896.jpg', alt: "Пасхальный набор \"Золотые узоры\", Светлый праздник, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245160-1', url: '/images/products/ff6f9dc64451c98385600ef00eec7896.webp', thumbnailUrl: '/images/products/ff6f9dc64451c98385600ef00eec7896.webp', alt: "Пасхальный набор \"Золотые узоры\", Светлый праздник, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13736,7 +13736,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244673-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f459e3cd529c45d202b51fb246e90509.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f459e3cd529c45d202b51fb246e90509.jpg', alt: "Калькулятор \"Приставка\", Men’s Direction, 11,5х7,9х1,4 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244673-1', url: '/images/products/f459e3cd529c45d202b51fb246e90509.webp', thumbnailUrl: '/images/products/f459e3cd529c45d202b51fb246e90509.webp', alt: "Калькулятор \"Приставка\", Men’s Direction, 11,5х7,9х1,4 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13757,7 +13757,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245021-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7431ed985649b6f1b9965af1464d2a2d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7431ed985649b6f1b9965af1464d2a2d.jpg', alt: "Набор подарочный, Men's Direction, ручка, брелок, многофункциональный нож, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245021-1', url: '/images/products/7431ed985649b6f1b9965af1464d2a2d.webp', thumbnailUrl: '/images/products/7431ed985649b6f1b9965af1464d2a2d.webp', alt: "Набор подарочный, Men's Direction, ручка, брелок, многофункциональный нож, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13778,7 +13778,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244665-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1cd228fad3462a7fe5e7d5e6b2bc0b42.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1c/1cd228fad3462a7fe5e7d5e6b2bc0b42.jpg', alt: "Точилка \"Духи\", With Love, 7х4,8х2,2 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244665-1', url: '/images/products/1cd228fad3462a7fe5e7d5e6b2bc0b42.webp', thumbnailUrl: '/images/products/1cd228fad3462a7fe5e7d5e6b2bc0b42.webp', alt: "Точилка \"Духи\", With Love, 7х4,8х2,2 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13799,7 +13799,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245155-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa3b00d7adb8b0d5c43a3e87e034142.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4f/4fa3b00d7adb8b0d5c43a3e87e034142.jpg', alt: "Магнитный планер для заметок с маркером, PREZENT, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245155-1', url: '/images/products/4fa3b00d7adb8b0d5c43a3e87e034142.webp', thumbnailUrl: '/images/products/4fa3b00d7adb8b0d5c43a3e87e034142.webp', alt: "Магнитный планер для заметок с маркером, PREZENT, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -13820,7 +13820,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244666-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d23232303cc3782d956070c29712be24.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d23232303cc3782d956070c29712be24.jpg', alt: "Набор декораций \"Цветы\", With Love, 27 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244666-1', url: '/images/products/d23232303cc3782d956070c29712be24.webp', thumbnailUrl: '/images/products/d23232303cc3782d956070c29712be24.webp', alt: "Набор декораций \"Цветы\", With Love, 27 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13841,7 +13841,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244671-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da47be00f40862e6b9caa25de06b0418.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da47be00f40862e6b9caa25de06b0418.jpg', alt: "Набор ручек в футляре \"Робот\", Men’s Direction, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244671-1', url: '/images/products/da47be00f40862e6b9caa25de06b0418.webp', thumbnailUrl: '/images/products/da47be00f40862e6b9caa25de06b0418.webp', alt: "Набор ручек в футляре \"Робот\", Men’s Direction, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13862,7 +13862,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245163-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cb/cb6f01aed65c5dbf178f1f3cf2dbb671.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cb/cb6f01aed65c5dbf178f1f3cf2dbb671.jpg', alt: "Набор смесей \"Пернатая компания\", Домашняя кухня", sortOrder: 0 }
+            { id: 'img-5245163-1', url: '/images/products/cb6f01aed65c5dbf178f1f3cf2dbb671.webp', thumbnailUrl: '/images/products/cb6f01aed65c5dbf178f1f3cf2dbb671.webp', alt: "Набор смесей \"Пернатая компания\", Домашняя кухня", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13883,7 +13883,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245022-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e390ede804b4db371f0d44f4d7a07b3a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e390ede804b4db371f0d44f4d7a07b3a.jpg', alt: "Мяч-антистресс, Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245022-1', url: '/images/products/e390ede804b4db371f0d44f4d7a07b3a.webp', thumbnailUrl: '/images/products/e390ede804b4db371f0d44f4d7a07b3a.webp', alt: "Мяч-антистресс, Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13904,7 +13904,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321379-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/708052a9ab014275ff6487905cf3445f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/708052a9ab014275ff6487905cf3445f.jpg', alt: "Стакан для пива \"Тюлип\", ОСЗ, 570 мл", sortOrder: 0 }
+            { id: 'img-5321379-1', url: '/images/products/708052a9ab014275ff6487905cf3445f.webp', thumbnailUrl: '/images/products/708052a9ab014275ff6487905cf3445f.webp', alt: "Стакан для пива \"Тюлип\", ОСЗ, 570 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13925,7 +13925,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245060-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/71d2de8e71931f67ac49cd2254381e34.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/71d2de8e71931f67ac49cd2254381e34.jpg', alt: "Набор для декорирования пасхальный, Товары к Пасхе, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245060-1', url: '/images/products/71d2de8e71931f67ac49cd2254381e34.webp', thumbnailUrl: '/images/products/71d2de8e71931f67ac49cd2254381e34.webp', alt: "Набор для декорирования пасхальный, Товары к Пасхе, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13946,7 +13946,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244728-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/8989943783fdafd5dfa9aa2c60fe8d35.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/8989943783fdafd5dfa9aa2c60fe8d35.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 9 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244728-1', url: '/images/products/8989943783fdafd5dfa9aa2c60fe8d35.webp', thumbnailUrl: '/images/products/8989943783fdafd5dfa9aa2c60fe8d35.webp', alt: "Декорация пасхальная, Товары к Пасхе, 9 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -13967,7 +13967,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244996-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e32c69992a13ec6ef4a954ce29fc680.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e32c69992a13ec6ef4a954ce29fc680.jpg', alt: "Игрушка мягконабивная \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244996-1', url: '/images/products/1e32c69992a13ec6ef4a954ce29fc680.webp', thumbnailUrl: '/images/products/1e32c69992a13ec6ef4a954ce29fc680.webp', alt: "Игрушка мягконабивная \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -13988,7 +13988,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244925-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad9741899d5f987043a0d20a36e1838c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ad/ad9741899d5f987043a0d20a36e1838c.jpg', alt: "Игрушка-перевёртыш, 20х10 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244925-1', url: '/images/products/ad9741899d5f987043a0d20a36e1838c.webp', thumbnailUrl: '/images/products/ad9741899d5f987043a0d20a36e1838c.webp', alt: "Игрушка-перевёртыш, 20х10 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -14009,7 +14009,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244897-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a911fb3810cd83f7ddaf9e94919306a1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a9/a911fb3810cd83f7ddaf9e94919306a1.jpg', alt: "Смеси для окрашивания пищевых продуктов в наборе \"Наши традиции\", Домашняя кухня, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244897-1', url: '/images/products/a911fb3810cd83f7ddaf9e94919306a1.webp', thumbnailUrl: '/images/products/a911fb3810cd83f7ddaf9e94919306a1.webp', alt: "Смеси для окрашивания пищевых продуктов в наборе \"Наши традиции\", Домашняя кухня, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14030,7 +14030,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244542-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/56/56cc525ee32b23b47d94bb2303d26e80.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/56/56cc525ee32b23b47d94bb2303d26e80.jpg', alt: "Декорация \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244542-1', url: '/images/products/56cc525ee32b23b47d94bb2303d26e80.webp', thumbnailUrl: '/images/products/56cc525ee32b23b47d94bb2303d26e80.webp', alt: "Декорация \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14051,7 +14051,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246250-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/18658e15eec1f2bc9691e410cc0f4ca1.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/18/18658e15eec1f2bc9691e410cc0f4ca1.png', alt: "Декоративная тарелка для аксессуров и мелочей \"Чуньдзи\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5246250-1', url: '/images/products/18658e15eec1f2bc9691e410cc0f4ca1.webp', thumbnailUrl: '/images/products/18658e15eec1f2bc9691e410cc0f4ca1.webp', alt: "Декоративная тарелка для аксессуров и мелочей \"Чуньдзи\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14072,7 +14072,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b5/b5bccab42cc23bee1f61a27634a52792.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b5/b5bccab42cc23bee1f61a27634a52792.jpg', alt: "Ручка подарочная \"Для тебя\", Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245019-1', url: '/images/products/b5bccab42cc23bee1f61a27634a52792.webp', thumbnailUrl: '/images/products/b5bccab42cc23bee1f61a27634a52792.webp', alt: "Ручка подарочная \"Для тебя\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14093,7 +14093,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244674-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/61ce6529eec0c1089528480f67e71d40.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/61ce6529eec0c1089528480f67e71d40.jpg', alt: "Точилка \"Космонавт\", Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244674-1', url: '/images/products/61ce6529eec0c1089528480f67e71d40.webp', thumbnailUrl: '/images/products/61ce6529eec0c1089528480f67e71d40.webp', alt: "Точилка \"Космонавт\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14114,7 +14114,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244686-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/527f5d3ad2476001dacfbb40f4e994d7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/527f5d3ad2476001dacfbb40f4e994d7.jpg', alt: "Кошелёк \"Цветы\", With Love, 11,5х9 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244686-1', url: '/images/products/527f5d3ad2476001dacfbb40f4e994d7.webp', thumbnailUrl: '/images/products/527f5d3ad2476001dacfbb40f4e994d7.webp', alt: "Кошелёк \"Цветы\", With Love, 11,5х9 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14135,7 +14135,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 43.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244378-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/12564a3c0215ea30a1c6c575c72e0d26.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/12564a3c0215ea30a1c6c575c72e0d26.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 2 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244378-1', url: '/images/products/12564a3c0215ea30a1c6c575c72e0d26.webp', thumbnailUrl: '/images/products/12564a3c0215ea30a1c6c575c72e0d26.webp', alt: "Декорация пасхальная, Товары к Пасхе, 2 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14156,7 +14156,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245071-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e7/e7e3a2bbb6d8b4c53fcbd4eac4de7a17.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e7/e7e3a2bbb6d8b4c53fcbd4eac4de7a17.jpg', alt: "Набор для декорирования пасхальный, Товары к Пасхе, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245071-1', url: '/images/products/e7e3a2bbb6d8b4c53fcbd4eac4de7a17.webp', thumbnailUrl: '/images/products/e7e3a2bbb6d8b4c53fcbd4eac4de7a17.webp', alt: "Набор для декорирования пасхальный, Товары к Пасхе, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14177,7 +14177,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244692-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/1659e55d4d3e02683c905e7472864014.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/1659e55d4d3e02683c905e7472864014.jpg', alt: "Фляга, Men’s Direction, 175 мл", sortOrder: 0 }
+            { id: 'img-5244692-1', url: '/images/products/1659e55d4d3e02683c905e7472864014.webp', thumbnailUrl: '/images/products/1659e55d4d3e02683c905e7472864014.webp', alt: "Фляга, Men’s Direction, 175 мл", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14198,7 +14198,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245159-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b08ed9781eef80820b28188efc8bb51b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b08ed9781eef80820b28188efc8bb51b.jpg', alt: "Набор пасхальный для семейного творчества \"Весенние песни\", Светлый Праздник", sortOrder: 0 }
+            { id: 'img-5245159-1', url: '/images/products/b08ed9781eef80820b28188efc8bb51b.webp', thumbnailUrl: '/images/products/b08ed9781eef80820b28188efc8bb51b.webp', alt: "Набор пасхальный для семейного творчества \"Весенние песни\", Светлый Праздник", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14219,7 +14219,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244682-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c6bf8f1d4fead8ed0f65e51103f35b4c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c6bf8f1d4fead8ed0f65e51103f35b4c.jpg', alt: "Ручка в подарочной упаковке, With Love, 14,4 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244682-1', url: '/images/products/c6bf8f1d4fead8ed0f65e51103f35b4c.webp', thumbnailUrl: '/images/products/c6bf8f1d4fead8ed0f65e51103f35b4c.webp', alt: "Ручка в подарочной упаковке, With Love, 14,4 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14240,7 +14240,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244337-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91f927292694b66761b6c3fd1d753a02.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91f927292694b66761b6c3fd1d753a02.jpg', alt: "Набор для рукоделия \"Букет\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244337-1', url: '/images/products/91f927292694b66761b6c3fd1d753a02.webp', thumbnailUrl: '/images/products/91f927292694b66761b6c3fd1d753a02.webp', alt: "Набор для рукоделия \"Букет\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14261,7 +14261,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245026-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/badabed45d0e9902645b725c0dd2e89c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/badabed45d0e9902645b725c0dd2e89c.jpg', alt: "Набор подарочный, Men's Direction, блокнот 80 листов, ручка и лента, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245026-1', url: '/images/products/badabed45d0e9902645b725c0dd2e89c.webp', thumbnailUrl: '/images/products/badabed45d0e9902645b725c0dd2e89c.webp', alt: "Набор подарочный, Men's Direction, блокнот 80 листов, ручка и лента, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14282,7 +14282,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245226-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91d3b80d4b5c5bcd5621c35dbf0d48fc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91d3b80d4b5c5bcd5621c35dbf0d48fc.jpg', alt: "Набор декоративных камней \"Любовь\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245226-1', url: '/images/products/91d3b80d4b5c5bcd5621c35dbf0d48fc.webp', thumbnailUrl: '/images/products/91d3b80d4b5c5bcd5621c35dbf0d48fc.webp', alt: "Набор декоративных камней \"Любовь\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14303,7 +14303,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 123,
         baseOldPrice: 174.5,
         images: [
-            { id: 'img-5364004-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3ac97312d0f077191401157f9077c86e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3a/3ac97312d0f077191401157f9077c86e.jpg', alt: "Брелок \"Сарказм\", PrankBank, в ассортименте", sortOrder: 0 }
+            { id: 'img-5364004-1', url: '/images/products/3ac97312d0f077191401157f9077c86e.webp', thumbnailUrl: '/images/products/3ac97312d0f077191401157f9077c86e.webp', alt: "Брелок \"Сарказм\", PrankBank, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14324,7 +14324,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244997-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7f/7f8095d878151ca5d33b896e26ad043d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7f/7f8095d878151ca5d33b896e26ad043d.jpg', alt: "Блокнот \"Люблю\", With Love, 60 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244997-1', url: '/images/products/7f8095d878151ca5d33b896e26ad043d.webp', thumbnailUrl: '/images/products/7f8095d878151ca5d33b896e26ad043d.webp', alt: "Блокнот \"Люблю\", With Love, 60 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14345,7 +14345,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244279-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/87/87ae85d4f25875dbc53bfb930c73d456.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/87/87ae85d4f25875dbc53bfb930c73d456.jpg', alt: "Игрушка мягконабивная \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244279-1', url: '/images/products/87ae85d4f25875dbc53bfb930c73d456.webp', thumbnailUrl: '/images/products/87ae85d4f25875dbc53bfb930c73d456.webp', alt: "Игрушка мягконабивная \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -14366,7 +14366,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244457-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c4/c4bcfa68753f68398ed8cc839651ba13.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c4/c4bcfa68753f68398ed8cc839651ba13.jpg', alt: "Медаль \"23 февраля\", PREZENT, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244457-1', url: '/images/products/c4bcfa68753f68398ed8cc839651ba13.webp', thumbnailUrl: '/images/products/c4bcfa68753f68398ed8cc839651ba13.webp', alt: "Медаль \"23 февраля\", PREZENT, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14387,7 +14387,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244574-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6c/6c3a4b60b0e3e8313a1edbbc922ec075.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6c/6c3a4b60b0e3e8313a1edbbc922ec075.jpg', alt: "Подушка декоративная \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244574-1', url: '/images/products/6c3a4b60b0e3e8313a1edbbc922ec075.webp', thumbnailUrl: '/images/products/6c3a4b60b0e3e8313a1edbbc922ec075.webp', alt: "Подушка декоративная \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c6',
         category: cat('c6'),
@@ -14408,7 +14408,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244325-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5d/5da34ec2c929f70a68d48c74764cca3d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5d/5da34ec2c929f70a68d48c74764cca3d.jpg', alt: "Держатель для телефона \"Машина\", Men's Direction, 13х6,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244325-1', url: '/images/products/5da34ec2c929f70a68d48c74764cca3d.webp', thumbnailUrl: '/images/products/5da34ec2c929f70a68d48c74764cca3d.webp', alt: "Держатель для телефона \"Машина\", Men's Direction, 13х6,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14429,7 +14429,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245040-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/3933be0a7dda33560753bea5ea0f8675.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/3933be0a7dda33560753bea5ea0f8675.jpg', alt: "Игрушка \"Мишка\", With Love, 30 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245040-1', url: '/images/products/3933be0a7dda33560753bea5ea0f8675.webp', thumbnailUrl: '/images/products/3933be0a7dda33560753bea5ea0f8675.webp', alt: "Игрушка \"Мишка\", With Love, 30 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -14450,7 +14450,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 27.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245161-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b8e92a6d0af7b034bb637732b21c5e2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b8e92a6d0af7b034bb637732b21c5e2.jpg', alt: "Наклейки для пасхального декора \"МУЛЬТ\", Светлый праздник", sortOrder: 0 }
+            { id: 'img-5245161-1', url: '/images/products/2b8e92a6d0af7b034bb637732b21c5e2.webp', thumbnailUrl: '/images/products/2b8e92a6d0af7b034bb637732b21c5e2.webp', alt: "Наклейки для пасхального декора \"МУЛЬТ\", Светлый праздник", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14471,7 +14471,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245227-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/0606114a38b55f7358f2d1a4eca762f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/0606114a38b55f7358f2d1a4eca762f0.jpg', alt: "Блокнот \"Мур\", With Love, 60 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245227-1', url: '/images/products/0606114a38b55f7358f2d1a4eca762f0.webp', thumbnailUrl: '/images/products/0606114a38b55f7358f2d1a4eca762f0.webp', alt: "Блокнот \"Мур\", With Love, 60 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14492,7 +14492,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245247-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/749339b6b2f70f7dbc0449fa873cda79.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/749339b6b2f70f7dbc0449fa873cda79.jpg', alt: "Набор \"Мур\": стикеры (40 листов) и ручка, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245247-1', url: '/images/products/749339b6b2f70f7dbc0449fa873cda79.webp', thumbnailUrl: '/images/products/749339b6b2f70f7dbc0449fa873cda79.webp', alt: "Набор \"Мур\": стикеры (40 листов) и ручка, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14513,7 +14513,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210279-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/17a214d38554a29df918aec544e94c77.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/17a214d38554a29df918aec544e94c77.jpg', alt: "Набор подарочный, Men’s Direction, блокнот и ручка, в ассортименте", sortOrder: 0 }
+            { id: 'img-5210279-1', url: '/images/products/17a214d38554a29df918aec544e94c77.webp', thumbnailUrl: '/images/products/17a214d38554a29df918aec544e94c77.webp', alt: "Набор подарочный, Men’s Direction, блокнот и ручка, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14534,7 +14534,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244330-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/41904f4d44a111fe32c49c696da7d252.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/41/41904f4d44a111fe32c49c696da7d252.jpg', alt: "Набор подарочный, Men’s Direction, ручка, фонарик-брелок с открывалкой, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244330-1', url: '/images/products/41904f4d44a111fe32c49c696da7d252.webp', thumbnailUrl: '/images/products/41904f4d44a111fe32c49c696da7d252.webp', alt: "Набор подарочный, Men’s Direction, ручка, фонарик-брелок с открывалкой, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14555,7 +14555,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244663-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91b1fc2db4d4e935a5b38ff24873b1fe.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/91b1fc2db4d4e935a5b38ff24873b1fe.jpg', alt: "Ластик \"Помада\", With Love, 7,4х2 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244663-1', url: '/images/products/91b1fc2db4d4e935a5b38ff24873b1fe.webp', thumbnailUrl: '/images/products/91b1fc2db4d4e935a5b38ff24873b1fe.webp', alt: "Ластик \"Помада\", With Love, 7,4х2 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14576,7 +14576,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210283-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f8b082e02a149088d4ac7826afe7c72.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f8b082e02a149088d4ac7826afe7c72.jpg', alt: "Блокнот \"23 февраля\", Men's Direction, 70 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5210283-1', url: '/images/products/2f8b082e02a149088d4ac7826afe7c72.webp', thumbnailUrl: '/images/products/2f8b082e02a149088d4ac7826afe7c72.webp', alt: "Блокнот \"23 февраля\", Men's Direction, 70 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14597,7 +14597,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245029-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/523a7bbe8af78a894a57aa90b0df8bc7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/523a7bbe8af78a894a57aa90b0df8bc7.jpg', alt: "Игрушка \"Мячик\", Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245029-1', url: '/images/products/523a7bbe8af78a894a57aa90b0df8bc7.webp', thumbnailUrl: '/images/products/523a7bbe8af78a894a57aa90b0df8bc7.webp', alt: "Игрушка \"Мячик\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -14618,7 +14618,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246246-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cc876c61a711f7d92f8625734eeea80.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cc876c61a711f7d92f8625734eeea80.png', alt: "Веер \"Фудзи\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5246246-1', url: '/images/products/7cc876c61a711f7d92f8625734eeea80.webp', thumbnailUrl: '/images/products/7cc876c61a711f7d92f8625734eeea80.webp', alt: "Веер \"Фудзи\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14639,7 +14639,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244322-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5b5ec8c1c67998e95c581a1cfa6dcc6b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5b5ec8c1c67998e95c581a1cfa6dcc6b.jpg', alt: "Набор подарочный, Men’s Direction, ручка, лента и блокнот, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244322-1', url: '/images/products/5b5ec8c1c67998e95c581a1cfa6dcc6b.webp', thumbnailUrl: '/images/products/5b5ec8c1c67998e95c581a1cfa6dcc6b.webp', alt: "Набор подарочный, Men’s Direction, ручка, лента и блокнот, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14660,7 +14660,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244678-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d111ddd23b6e94ea42610566353e93e8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d111ddd23b6e94ea42610566353e93e8.jpg', alt: "Обложка для паспорта \"Электроника\", Men’s Direction, 14х10 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244678-1', url: '/images/products/d111ddd23b6e94ea42610566353e93e8.webp', thumbnailUrl: '/images/products/d111ddd23b6e94ea42610566353e93e8.webp', alt: "Обложка для паспорта \"Электроника\", Men’s Direction, 14х10 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14681,7 +14681,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244565-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2f77b7c6e045682ff47e20cffbf91b8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2f77b7c6e045682ff47e20cffbf91b8.jpg', alt: "Набор декораций \"Сердца\", With Love, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244565-1', url: '/images/products/b2f77b7c6e045682ff47e20cffbf91b8.webp', thumbnailUrl: '/images/products/b2f77b7c6e045682ff47e20cffbf91b8.webp', alt: "Набор декораций \"Сердца\", With Love, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14702,7 +14702,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244320-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2dce049b0f4a4820830ea62638c6e488.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2dce049b0f4a4820830ea62638c6e488.jpg', alt: "Ручка подарочная \"Глобус\", Men's Direction, 14,5 см, синие чернила, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244320-1', url: '/images/products/2dce049b0f4a4820830ea62638c6e488.webp', thumbnailUrl: '/images/products/2dce049b0f4a4820830ea62638c6e488.webp', alt: "Ручка подарочная \"Глобус\", Men's Direction, 14,5 см, синие чернила, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14723,7 +14723,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244321-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/77770720b78f8d4b646b97158f7322e8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/77770720b78f8d4b646b97158f7322e8.jpg', alt: "Ручка-стилус подарочная с фонариком, Men's Direction, синие чернила, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244321-1', url: '/images/products/77770720b78f8d4b646b97158f7322e8.webp', thumbnailUrl: '/images/products/77770720b78f8d4b646b97158f7322e8.webp', alt: "Ручка-стилус подарочная с фонариком, Men's Direction, синие чернила, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14744,7 +14744,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245023-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f56c73710b7f1ca90e486d0a44ceeff7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f56c73710b7f1ca90e486d0a44ceeff7.jpg', alt: "Ручка \"Динозаврик\", Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245023-1', url: '/images/products/f56c73710b7f1ca90e486d0a44ceeff7.webp', thumbnailUrl: '/images/products/f56c73710b7f1ca90e486d0a44ceeff7.webp', alt: "Ручка \"Динозаврик\", Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -14765,7 +14765,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244575-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be75573ab8eae706180febb9976e3bbc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be75573ab8eae706180febb9976e3bbc.jpg', alt: "Зеркало \"Любимые ушки\", With Love, 11х9 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244575-1', url: '/images/products/be75573ab8eae706180febb9976e3bbc.webp', thumbnailUrl: '/images/products/be75573ab8eae706180febb9976e3bbc.webp', alt: "Зеркало \"Любимые ушки\", With Love, 11х9 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14786,7 +14786,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244722-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/440f31b509f41f6dad1e21c55c52c6f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/440f31b509f41f6dad1e21c55c52c6f0.jpg', alt: "Декорация «Птенцы», 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244722-1', url: '/images/products/440f31b509f41f6dad1e21c55c52c6f0.webp', thumbnailUrl: '/images/products/440f31b509f41f6dad1e21c55c52c6f0.webp', alt: "Декорация «Птенцы», 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14807,7 +14807,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244301-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9ae46ea99d06d64544de5e3e4ff9a704.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9ae46ea99d06d64544de5e3e4ff9a704.jpg', alt: "Кошелек для монет \"Сердце\", With Love, 11,5х14 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244301-1', url: '/images/products/9ae46ea99d06d64544de5e3e4ff9a704.webp', thumbnailUrl: '/images/products/9ae46ea99d06d64544de5e3e4ff9a704.webp', alt: "Кошелек для монет \"Сердце\", With Love, 11,5х14 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14828,7 +14828,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244552-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c3dfc3974a2cb68045487abba1d34b6a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c3/c3dfc3974a2cb68045487abba1d34b6a.jpg', alt: "Декоративная корректирующая лента \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244552-1', url: '/images/products/c3dfc3974a2cb68045487abba1d34b6a.webp', thumbnailUrl: '/images/products/c3dfc3974a2cb68045487abba1d34b6a.webp', alt: "Декоративная корректирующая лента \"Люблю\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14849,7 +14849,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 29.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244475-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/04/040d261a0ddd32a54b5e2fef75dc7a83.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/04/040d261a0ddd32a54b5e2fef75dc7a83.jpg', alt: "Пасхальный набор, Светлый Праздник, 4 шт.", sortOrder: 0 }
+            { id: 'img-5244475-1', url: '/images/products/040d261a0ddd32a54b5e2fef75dc7a83.webp', thumbnailUrl: '/images/products/040d261a0ddd32a54b5e2fef75dc7a83.webp', alt: "Пасхальный набор, Светлый Праздник, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14870,7 +14870,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245253-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5596033fa8bac908f051492da9ee314.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e5/e5596033fa8bac908f051492da9ee314.jpg', alt: "Брелок-подвеска для телефона/сумки, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245253-1', url: '/images/products/e5596033fa8bac908f051492da9ee314.webp', thumbnailUrl: '/images/products/e5596033fa8bac908f051492da9ee314.webp', alt: "Брелок-подвеска для телефона/сумки, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14891,7 +14891,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245254-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da719a2a93f01ff1858962fb2459c418.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/da719a2a93f01ff1858962fb2459c418.jpg', alt: "Бутылочка с запиской, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245254-1', url: '/images/products/da719a2a93f01ff1858962fb2459c418.webp', thumbnailUrl: '/images/products/da719a2a93f01ff1858962fb2459c418.webp', alt: "Бутылочка с запиской, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14912,7 +14912,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245261-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/27e5c0b1c629311d878ae8b83924caeb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/27/27e5c0b1c629311d878ae8b83924caeb.jpg', alt: "Мячик на резинке \"Вертайка\", Men’s Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245261-1', url: '/images/products/27e5c0b1c629311d878ae8b83924caeb.webp', thumbnailUrl: '/images/products/27e5c0b1c629311d878ae8b83924caeb.webp', alt: "Мячик на резинке \"Вертайка\", Men’s Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -14933,7 +14933,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245228-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3b/3b64f727a20776a1aa07bc57ad26d64a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3b/3b64f727a20776a1aa07bc57ad26d64a.jpg', alt: "Пенал-косметичка \"Мур\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245228-1', url: '/images/products/3b64f727a20776a1aa07bc57ad26d64a.webp', thumbnailUrl: '/images/products/3b64f727a20776a1aa07bc57ad26d64a.webp', alt: "Пенал-косметичка \"Мур\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14954,7 +14954,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244694-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44bd04bc07c3d8af544b0de87c60a129.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/44/44bd04bc07c3d8af544b0de87c60a129.jpg', alt: "Набор стопок в чехле, Men’s Direction, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244694-1', url: '/images/products/44bd04bc07c3d8af544b0de87c60a129.webp', thumbnailUrl: '/images/products/44bd04bc07c3d8af544b0de87c60a129.webp', alt: "Набор стопок в чехле, Men’s Direction, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14975,7 +14975,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246234-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/884c76542cfd08611c0275bd3f27a896.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/884c76542cfd08611c0275bd3f27a896.jpg', alt: "Корзина \"Ванила скай\" овальная, в ассортименте", sortOrder: 0 }
+            { id: 'img-5246234-1', url: '/images/products/884c76542cfd08611c0275bd3f27a896.webp', thumbnailUrl: '/images/products/884c76542cfd08611c0275bd3f27a896.webp', alt: "Корзина \"Ванила скай\" овальная, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -14996,7 +14996,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244672-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/499a5bb9b226a53d8e81d05855a00882.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/499a5bb9b226a53d8e81d05855a00882.jpg', alt: "Фонарик проекционный, Men’s Direction, 11,5х3 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244672-1', url: '/images/products/499a5bb9b226a53d8e81d05855a00882.webp', thumbnailUrl: '/images/products/499a5bb9b226a53d8e81d05855a00882.webp', alt: "Фонарик проекционный, Men’s Direction, 11,5х3 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15017,7 +15017,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246265-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/23adba0e13cf71909e0a0ebc886854f7.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/23adba0e13cf71909e0a0ebc886854f7.png', alt: "Подушка декоративная, в ассортименте", sortOrder: 0 }
+            { id: 'img-5246265-1', url: '/images/products/23adba0e13cf71909e0a0ebc886854f7.webp', thumbnailUrl: '/images/products/23adba0e13cf71909e0a0ebc886854f7.webp', alt: "Подушка декоративная, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c6',
         category: cat('c6'),
@@ -15038,7 +15038,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5321280-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c4/c4a0ed734ffeddb16a8bfdd3edb96abb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c4/c4a0ed734ffeddb16a8bfdd3edb96abb.jpg', alt: "Кружка \"Люблю\", With Love, 320 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5321280-1', url: '/images/products/c4a0ed734ffeddb16a8bfdd3edb96abb.webp', thumbnailUrl: '/images/products/c4a0ed734ffeddb16a8bfdd3edb96abb.webp', alt: "Кружка \"Люблю\", With Love, 320 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15059,7 +15059,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244334-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e877666b4b2fd6d2060a9078e702b315.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e8/e877666b4b2fd6d2060a9078e702b315.jpg', alt: "Кошелёк для монет \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244334-1', url: '/images/products/e877666b4b2fd6d2060a9078e702b315.webp', thumbnailUrl: '/images/products/e877666b4b2fd6d2060a9078e702b315.webp', alt: "Кошелёк для монет \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15080,7 +15080,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244562-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a2ef8ff306e77f86bc6ca72a497ac988.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a2ef8ff306e77f86bc6ca72a497ac988.jpg', alt: "Корзинка фетровая \"Любовь\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244562-1', url: '/images/products/a2ef8ff306e77f86bc6ca72a497ac988.webp', thumbnailUrl: '/images/products/a2ef8ff306e77f86bc6ca72a497ac988.webp', alt: "Корзинка фетровая \"Любовь\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15101,7 +15101,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5215019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86c8978e88fc975f178d9f5c37358b65.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86c8978e88fc975f178d9f5c37358b65.jpg', alt: "Чековая книжка желаний", sortOrder: 0 }
+            { id: 'img-5215019-1', url: '/images/products/86c8978e88fc975f178d9f5c37358b65.webp', thumbnailUrl: '/images/products/86c8978e88fc975f178d9f5c37358b65.webp', alt: "Чековая книжка желаний", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15122,7 +15122,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244291-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/2116a6cddb57fe471c87ed9ebe9819b2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/21/2116a6cddb57fe471c87ed9ebe9819b2.jpg', alt: "Блокнот \"С любовью\", With Love, 32 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244291-1', url: '/images/products/2116a6cddb57fe471c87ed9ebe9819b2.webp', thumbnailUrl: '/images/products/2116a6cddb57fe471c87ed9ebe9819b2.webp', alt: "Блокнот \"С любовью\", With Love, 32 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15143,7 +15143,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245251-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2c/2c26d48aae3663fb7c52a8eebacd05d9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2c/2c26d48aae3663fb7c52a8eebacd05d9.jpg', alt: "Корректор, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245251-1', url: '/images/products/2c26d48aae3663fb7c52a8eebacd05d9.webp', thumbnailUrl: '/images/products/2c26d48aae3663fb7c52a8eebacd05d9.webp', alt: "Корректор, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15164,7 +15164,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5200279-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/74981ce6065caeb2101193c27d9545fd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/74981ce6065caeb2101193c27d9545fd.jpg', alt: "Коробка подарочная, With Love, 15х15х6,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5200279-1', url: '/images/products/74981ce6065caeb2101193c27d9545fd.webp', thumbnailUrl: '/images/products/74981ce6065caeb2101193c27d9545fd.webp', alt: "Коробка подарочная, With Love, 15х15х6,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15185,7 +15185,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246225-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5c/5c5694f4679140641adbfc7b36504471.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5c/5c5694f4679140641adbfc7b36504471.jpg', alt: "Корзина \"Ванила скай\" круглая, в ассортименте", sortOrder: 0 }
+            { id: 'img-5246225-1', url: '/images/products/5c5694f4679140641adbfc7b36504471.webp', thumbnailUrl: '/images/products/5c5694f4679140641adbfc7b36504471.webp', alt: "Корзина \"Ванила скай\" круглая, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15206,7 +15206,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244017-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f36bebfcb6002f9515ff329d44ea8151.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f36bebfcb6002f9515ff329d44ea8151.jpg', alt: "Фигурка \"Тыква\" керамическая, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244017-1', url: '/images/products/f36bebfcb6002f9515ff329d44ea8151.webp', thumbnailUrl: '/images/products/f36bebfcb6002f9515ff329d44ea8151.webp', alt: "Фигурка \"Тыква\" керамическая, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15227,7 +15227,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243634-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/def831dd92174713b71936bf23e2bca5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/def831dd92174713b71936bf23e2bca5.jpg', alt: "Набор стопок, Men's Direction, в чехле, 3 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5243634-1', url: '/images/products/def831dd92174713b71936bf23e2bca5.webp', thumbnailUrl: '/images/products/def831dd92174713b71936bf23e2bca5.webp', alt: "Набор стопок, Men's Direction, в чехле, 3 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15248,7 +15248,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244162-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7e/7ef929d95340124433dee8d044f2b4b3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7e/7ef929d95340124433dee8d044f2b4b3.jpg', alt: "Набор для декорирования", sortOrder: 0 }
+            { id: 'img-5244162-1', url: '/images/products/7ef929d95340124433dee8d044f2b4b3.webp', thumbnailUrl: '/images/products/7ef929d95340124433dee8d044f2b4b3.webp', alt: "Набор для декорирования", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15269,7 +15269,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245258-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/619854058863e6bc364810fdd5211679.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/619854058863e6bc364810fdd5211679.jpg', alt: "Игрушка-антистресс, Men's Direction, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245258-1', url: '/images/products/619854058863e6bc364810fdd5211679.webp', thumbnailUrl: '/images/products/619854058863e6bc364810fdd5211679.webp', alt: "Игрушка-антистресс, Men's Direction, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -15290,7 +15290,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244687-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/bae230817cdfeb3a846e520960e3f9c1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ba/bae230817cdfeb3a846e520960e3f9c1.jpg', alt: "Блокнот \"Для тебя\", With Love, 10,5х14,5 см, 80 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244687-1', url: '/images/products/bae230817cdfeb3a846e520960e3f9c1.webp', thumbnailUrl: '/images/products/bae230817cdfeb3a846e520960e3f9c1.webp', alt: "Блокнот \"Для тебя\", With Love, 10,5х14,5 см, 80 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15311,7 +15311,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245252-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae05ff590ded5b4f631ade805692706f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae05ff590ded5b4f631ade805692706f.jpg', alt: "Ручка-фонарик, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245252-1', url: '/images/products/ae05ff590ded5b4f631ade805692706f.webp', thumbnailUrl: '/images/products/ae05ff590ded5b4f631ade805692706f.webp', alt: "Ручка-фонарик, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15332,7 +15332,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244084-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0b36b91cc31c0ed2318f4de7288e458e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0b36b91cc31c0ed2318f4de7288e458e.jpg', alt: "Компактное зеркало с расческой, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244084-1', url: '/images/products/0b36b91cc31c0ed2318f4de7288e458e.webp', thumbnailUrl: '/images/products/0b36b91cc31c0ed2318f4de7288e458e.webp', alt: "Компактное зеркало с расческой, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15353,7 +15353,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244386-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2d5a591a8199af689ad806fd032ede8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b2d5a591a8199af689ad806fd032ede8.jpg', alt: "Набор пасхальных наклеек, Товары к Пасхе, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244386-1', url: '/images/products/b2d5a591a8199af689ad806fd032ede8.webp', thumbnailUrl: '/images/products/b2d5a591a8199af689ad806fd032ede8.webp', alt: "Набор пасхальных наклеек, Товары к Пасхе, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15374,7 +15374,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244117-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4e507156107c131195992cdbabfaaedc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4e507156107c131195992cdbabfaaedc.jpg', alt: "Блокнот в подарочной коробке, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244117-1', url: '/images/products/4e507156107c131195992cdbabfaaedc.webp', thumbnailUrl: '/images/products/4e507156107c131195992cdbabfaaedc.webp', alt: "Блокнот в подарочной коробке, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15395,7 +15395,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244375-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b969e2b48035fea69fa94e48babf0ca.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b969e2b48035fea69fa94e48babf0ca.jpg', alt: "Декорация пасхальная, 6 шт.", sortOrder: 0 }
+            { id: 'img-5244375-1', url: '/images/products/1b969e2b48035fea69fa94e48babf0ca.webp', thumbnailUrl: '/images/products/1b969e2b48035fea69fa94e48babf0ca.webp', alt: "Декорация пасхальная, 6 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15416,7 +15416,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244389-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5eaaa095f659c49335b8c79aacc7beb0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5eaaa095f659c49335b8c79aacc7beb0.jpg', alt: "Клипсы пасхальные декоративные, Товары к Пасхе, 5 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244389-1', url: '/images/products/5eaaa095f659c49335b8c79aacc7beb0.webp', thumbnailUrl: '/images/products/5eaaa095f659c49335b8c79aacc7beb0.webp', alt: "Клипсы пасхальные декоративные, Товары к Пасхе, 5 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15437,7 +15437,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244390-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bd563553c873ee8a6ffc4677c1770445.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bd563553c873ee8a6ffc4677c1770445.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244390-1', url: '/images/products/bd563553c873ee8a6ffc4677c1770445.webp', thumbnailUrl: '/images/products/bd563553c873ee8a6ffc4677c1770445.webp', alt: "Декорация пасхальная, Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15458,7 +15458,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244327-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/22/22727b7cfe01765e7a5a8df152711ce9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/22/22727b7cfe01765e7a5a8df152711ce9.jpg', alt: "Ручка \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244327-1', url: '/images/products/22727b7cfe01765e7a5a8df152711ce9.webp', thumbnailUrl: '/images/products/22727b7cfe01765e7a5a8df152711ce9.webp', alt: "Ручка \"Для тебя\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15479,7 +15479,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244387-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae41ff5f13f3d94e87ac33e7a97fa6fa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ae/ae41ff5f13f3d94e87ac33e7a97fa6fa.jpg', alt: "Декорация пасхальная, 9 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244387-1', url: '/images/products/ae41ff5f13f3d94e87ac33e7a97fa6fa.webp', thumbnailUrl: '/images/products/ae41ff5f13f3d94e87ac33e7a97fa6fa.webp', alt: "Декорация пасхальная, 9 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15500,7 +15500,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245233-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/58d996b5a3af701fa70ad0cd12e42137.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/58/58d996b5a3af701fa70ad0cd12e42137.jpg', alt: "Точилка \"Транспорт\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5245233-1', url: '/images/products/58d996b5a3af701fa70ad0cd12e42137.webp', thumbnailUrl: '/images/products/58d996b5a3af701fa70ad0cd12e42137.webp', alt: "Точилка \"Транспорт\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15521,7 +15521,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244276-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df2ec3dfc7e352d6ae62313bcd886ebf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df2ec3dfc7e352d6ae62313bcd886ebf.jpg', alt: "Гелевая ручка \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244276-1', url: '/images/products/df2ec3dfc7e352d6ae62313bcd886ebf.webp', thumbnailUrl: '/images/products/df2ec3dfc7e352d6ae62313bcd886ebf.webp', alt: "Гелевая ручка \"Сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15542,7 +15542,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244371-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b19518db608708ec6d200e799d897857.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b1/b19518db608708ec6d200e799d897857.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244371-1', url: '/images/products/b19518db608708ec6d200e799d897857.webp', thumbnailUrl: '/images/products/b19518db608708ec6d200e799d897857.webp', alt: "Декорация пасхальная, Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15563,7 +15563,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244391-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/95bb57ab107b74a445595cb76a0f7d33.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/95/95bb57ab107b74a445595cb76a0f7d33.jpg', alt: "Клипсы декоративные \"Курочка\", Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5244391-1', url: '/images/products/95bb57ab107b74a445595cb76a0f7d33.webp', thumbnailUrl: '/images/products/95bb57ab107b74a445595cb76a0f7d33.webp', alt: "Клипсы декоративные \"Курочка\", Товары к Пасхе, 6 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15584,7 +15584,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245229-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70b20634a57e3e2e74a1bff131b930e8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70b20634a57e3e2e74a1bff131b930e8.jpg', alt: "Набор \"Мур\": ручка и значок, With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245229-1', url: '/images/products/70b20634a57e3e2e74a1bff131b930e8.webp', thumbnailUrl: '/images/products/70b20634a57e3e2e74a1bff131b930e8.webp', alt: "Набор \"Мур\": ручка и значок, With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15605,7 +15605,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245262-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/28/28852a95042f43c1563abfe00d9cc615.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/28/28852a95042f43c1563abfe00d9cc615.jpg', alt: "Блокнот, With Love, 80 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245262-1', url: '/images/products/28852a95042f43c1563abfe00d9cc615.webp', thumbnailUrl: '/images/products/28852a95042f43c1563abfe00d9cc615.webp', alt: "Блокнот, With Love, 80 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15626,7 +15626,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245238-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cbf1c95a314b2198b06b9348199a4a7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7c/7cbf1c95a314b2198b06b9348199a4a7.jpg', alt: "3D-пазл \"Транспорт\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5245238-1', url: '/images/products/7cbf1c95a314b2198b06b9348199a4a7.webp', thumbnailUrl: '/images/products/7cbf1c95a314b2198b06b9348199a4a7.webp', alt: "3D-пазл \"Транспорт\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -15647,7 +15647,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244335-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a305a1280835c1b6ed6bc39dc4532dd4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a3/a305a1280835c1b6ed6bc39dc4532dd4.jpg', alt: "Блокнот \"Для тебя\", With Love, 96 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244335-1', url: '/images/products/a305a1280835c1b6ed6bc39dc4532dd4.webp', thumbnailUrl: '/images/products/a305a1280835c1b6ed6bc39dc4532dd4.webp', alt: "Блокнот \"Для тебя\", With Love, 96 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15668,7 +15668,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244572-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e3535b2032e9968500a494ead0d6e556.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e3535b2032e9968500a494ead0d6e556.jpg', alt: "Игрушка \"Светящееся сердце\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244572-1', url: '/images/products/e3535b2032e9968500a494ead0d6e556.webp', thumbnailUrl: '/images/products/e3535b2032e9968500a494ead0d6e556.webp', alt: "Игрушка \"Светящееся сердце\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -15689,7 +15689,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245264-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6d/6d435add562797ef149decb58e4bb151.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6d/6d435add562797ef149decb58e4bb151.jpg', alt: "Ластик \"Помада\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245264-1', url: '/images/products/6d435add562797ef149decb58e4bb151.webp', thumbnailUrl: '/images/products/6d435add562797ef149decb58e4bb151.webp', alt: "Ластик \"Помада\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15710,7 +15710,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244380-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6a144d75f95db40723d38172d25896b1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6a/6a144d75f95db40723d38172d25896b1.jpg', alt: "Декорация пасхальная подвесная, Товары к Пасхе, 28 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244380-1', url: '/images/products/6a144d75f95db40723d38172d25896b1.webp', thumbnailUrl: '/images/products/6a144d75f95db40723d38172d25896b1.webp', alt: "Декорация пасхальная подвесная, Товары к Пасхе, 28 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15731,7 +15731,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244328-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7432194bf8e7693158073c290b771f72.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/74/7432194bf8e7693158073c290b771f72.jpg', alt: "Блокнот \"Для тебя\", Men's Direction, 100 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244328-1', url: '/images/products/7432194bf8e7693158073c290b771f72.webp', thumbnailUrl: '/images/products/7432194bf8e7693158073c290b771f72.webp', alt: "Блокнот \"Для тебя\", Men's Direction, 100 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15752,7 +15752,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244373-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/59c603df4df144c190d4301e9a01dc9b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/59c603df4df144c190d4301e9a01dc9b.jpg', alt: "Декорация пасхальная, Товары к Пасхе, 4 шт.", sortOrder: 0 }
+            { id: 'img-5244373-1', url: '/images/products/59c603df4df144c190d4301e9a01dc9b.webp', thumbnailUrl: '/images/products/59c603df4df144c190d4301e9a01dc9b.webp', alt: "Декорация пасхальная, Товары к Пасхе, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15773,7 +15773,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244544-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/98b0fc4c536832de49e330cd5669fac7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/98/98b0fc4c536832de49e330cd5669fac7.jpg', alt: "Блокнот \"Люблю\", With Love, 80 листов, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244544-1', url: '/images/products/98b0fc4c536832de49e330cd5669fac7.webp', thumbnailUrl: '/images/products/98b0fc4c536832de49e330cd5669fac7.webp', alt: "Блокнот \"Люблю\", With Love, 80 листов, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15794,7 +15794,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245236-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/397a386e959e1ba2d9f9c4780c22af2a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/397a386e959e1ba2d9f9c4780c22af2a.jpg', alt: "Набор подарочный, Men's Direction, стакан и открывалка для бутылок, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245236-1', url: '/images/products/397a386e959e1ba2d9f9c4780c22af2a.webp', thumbnailUrl: '/images/products/397a386e959e1ba2d9f9c4780c22af2a.webp', alt: "Набор подарочный, Men's Direction, стакан и открывалка для бутылок, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15815,7 +15815,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 33,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245406-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa912188369f27bc581d9cf2744ffbc3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa912188369f27bc581d9cf2744ffbc3.jpg', alt: "Стопка \"Зверь\", ОСЗ, 50 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245406-1', url: '/images/products/aa912188369f27bc581d9cf2744ffbc3.webp', thumbnailUrl: '/images/products/aa912188369f27bc581d9cf2744ffbc3.webp', alt: "Стопка \"Зверь\", ОСЗ, 50 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15836,7 +15836,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244693-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81a33fcad524369e2834fb8183dffd1b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/81a33fcad524369e2834fb8183dffd1b.jpg', alt: "Ручка-антистресс \"Самолётик\", Men’s Direction, 17 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244693-1', url: '/images/products/81a33fcad524369e2834fb8183dffd1b.webp', thumbnailUrl: '/images/products/81a33fcad524369e2834fb8183dffd1b.webp', alt: "Ручка-антистресс \"Самолётик\", Men’s Direction, 17 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -15857,7 +15857,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245246-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f32e6de9ad9f29fbbec96d38f5bd17bb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f32e6de9ad9f29fbbec96d38f5bd17bb.jpg', alt: "Набор подарочный: брелок и стикеры (70 листов), With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5245246-1', url: '/images/products/f32e6de9ad9f29fbbec96d38f5bd17bb.webp', thumbnailUrl: '/images/products/f32e6de9ad9f29fbbec96d38f5bd17bb.webp', alt: "Набор подарочный: брелок и стикеры (70 листов), With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15878,7 +15878,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244097-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5d/5df56f1dff8ef35c71a1f690bf9ca412.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5d/5df56f1dff8ef35c71a1f690bf9ca412.jpg', alt: "Фляжка, Men's Direction, 198 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244097-1', url: '/images/products/5df56f1dff8ef35c71a1f690bf9ca412.webp', thumbnailUrl: '/images/products/5df56f1dff8ef35c71a1f690bf9ca412.webp', alt: "Фляжка, Men's Direction, 198 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15899,7 +15899,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5245260-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8257299055a1bac6f9d3b49d1c26003.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8257299055a1bac6f9d3b49d1c26003.jpg', alt: "Набор ластиков \"Конструктор\", в ассортименте", sortOrder: 0 }
+            { id: 'img-5245260-1', url: '/images/products/c8257299055a1bac6f9d3b49d1c26003.webp', thumbnailUrl: '/images/products/c8257299055a1bac6f9d3b49d1c26003.webp', alt: "Набор ластиков \"Конструктор\", в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c5',
         category: cat('c5'),
@@ -15920,7 +15920,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210241-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/520e8c19658545d156c17aa014342135.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/520e8c19658545d156c17aa014342135.jpg', alt: "Сувенирная разделочная доска", sortOrder: 0 }
+            { id: 'img-5210241-1', url: '/images/products/520e8c19658545d156c17aa014342135.webp', thumbnailUrl: '/images/products/520e8c19658545d156c17aa014342135.webp', alt: "Сувенирная разделочная доска", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15941,7 +15941,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5210399-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e59c6eaf3d01322bd684ad7c5cb5324.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5e59c6eaf3d01322bd684ad7c5cb5324.jpg', alt: "Доска новогодняя, в ассортименте", sortOrder: 0 }
+            { id: 'img-5210399-1', url: '/images/products/5e59c6eaf3d01322bd684ad7c5cb5324.webp', thumbnailUrl: '/images/products/5e59c6eaf3d01322bd684ad7c5cb5324.webp', alt: "Доска новогодняя, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15962,7 +15962,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244166-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8f80acc9e78144d30bf0d7f694b0eef.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8f80acc9e78144d30bf0d7f694b0eef.jpg', alt: "Набор для творчества пасхальный, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244166-1', url: '/images/products/c8f80acc9e78144d30bf0d7f694b0eef.webp', thumbnailUrl: '/images/products/c8f80acc9e78144d30bf0d7f694b0eef.webp', alt: "Набор для творчества пасхальный, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -15983,7 +15983,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244383-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cc7b2d604ed1571412e3d3625be28ccc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cc7b2d604ed1571412e3d3625be28ccc.jpg', alt: "Детский пасхальный набор для творчества, Товары к Пасхе", sortOrder: 0 }
+            { id: 'img-5244383-1', url: '/images/products/cc7b2d604ed1571412e3d3625be28ccc.webp', thumbnailUrl: '/images/products/cc7b2d604ed1571412e3d3625be28ccc.webp', alt: "Детский пасхальный набор для творчества, Товары к Пасхе", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16004,7 +16004,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244145-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abfc589695af5bfebc548abce247a26e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abfc589695af5bfebc548abce247a26e.jpg', alt: "Декорация пасхальная, 6 шт.", sortOrder: 0 }
+            { id: 'img-5244145-1', url: '/images/products/abfc589695af5bfebc548abce247a26e.webp', thumbnailUrl: '/images/products/abfc589695af5bfebc548abce247a26e.webp', alt: "Декорация пасхальная, 6 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16025,7 +16025,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 27.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5243990-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f496d8dfbeb30b4e2427da5d2e55dc1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f496d8dfbeb30b4e2427da5d2e55dc1.jpg', alt: "Красители пищевые для яиц \"Мимимишки\"", sortOrder: 0 }
+            { id: 'img-5243990-1', url: '/images/products/2f496d8dfbeb30b4e2427da5d2e55dc1.webp', thumbnailUrl: '/images/products/2f496d8dfbeb30b4e2427da5d2e55dc1.webp', alt: "Красители пищевые для яиц \"Мимимишки\"", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16046,7 +16046,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244318-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/71943df3188ea7855d5418ce621ddf53.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/71/71943df3188ea7855d5418ce621ddf53.jpg', alt: "Ручка \"Цветок\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244318-1', url: '/images/products/71943df3188ea7855d5418ce621ddf53.webp', thumbnailUrl: '/images/products/71943df3188ea7855d5418ce621ddf53.webp', alt: "Ручка \"Цветок\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -16067,7 +16067,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5214070-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5decb3b8fd5b7a332c098d428998307.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d5decb3b8fd5b7a332c098d428998307.jpg', alt: "Магнит \"Половинка моя\", With Love, в ассортименте", sortOrder: 0 }
+            { id: 'img-5214070-1', url: '/images/products/d5decb3b8fd5b7a332c098d428998307.webp', thumbnailUrl: '/images/products/d5decb3b8fd5b7a332c098d428998307.webp', alt: "Магнит \"Половинка моя\", With Love, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16088,7 +16088,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5244333-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/42cea522d6d82d5e01d936f2e884c340.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/42/42cea522d6d82d5e01d936f2e884c340.jpg', alt: "Набор подарочный \"Для тебя\", With Love, ручка и брелок, в ассортименте", sortOrder: 0 }
+            { id: 'img-5244333-1', url: '/images/products/42cea522d6d82d5e01d936f2e884c340.webp', thumbnailUrl: '/images/products/42cea522d6d82d5e01d936f2e884c340.webp', alt: "Набор подарочный \"Для тебя\", With Love, ручка и брелок, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -16109,7 +16109,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5246310-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fa/fa02952b80cc52996294a53e1c4b6ef9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fa/fa02952b80cc52996294a53e1c4b6ef9.jpg', alt: "Подставка под кружку, 9х9 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5246310-1', url: '/images/products/fa02952b80cc52996294a53e1c4b6ef9.webp', thumbnailUrl: '/images/products/fa02952b80cc52996294a53e1c4b6ef9.webp', alt: "Подставка под кружку, 9х9 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16130,7 +16130,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014023-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9e/9ee0aed8adedd116e3dfe42139c95783.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9e/9ee0aed8adedd116e3dfe42139c95783.jpg', alt: "Батарейки солевые, ААА, 10 шт.", sortOrder: 0 }
+            { id: 'img-5014023-1', url: '/images/products/9ee0aed8adedd116e3dfe42139c95783.webp', thumbnailUrl: '/images/products/9ee0aed8adedd116e3dfe42139c95783.webp', alt: "Батарейки солевые, ААА, 10 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16151,7 +16151,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014022-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50b52ca2a3748a09bfc94de620f8f32c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/50b52ca2a3748a09bfc94de620f8f32c.jpg', alt: "Батарейки солевые, FLARX, АА, 10 шт.", sortOrder: 0 }
+            { id: 'img-5014022-1', url: '/images/products/50b52ca2a3748a09bfc94de620f8f32c.webp', thumbnailUrl: '/images/products/50b52ca2a3748a09bfc94de620f8f32c.webp', alt: "Батарейки солевые, FLARX, АА, 10 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16172,7 +16172,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014027-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/499aa71b7a94779aa9b255266fb16bc6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/49/499aa71b7a94779aa9b255266fb16bc6.jpg', alt: "Батарейки алкалиновые АА, 4 шт.", sortOrder: 0 }
+            { id: 'img-5014027-1', url: '/images/products/499aa71b7a94779aa9b255266fb16bc6.webp', thumbnailUrl: '/images/products/499aa71b7a94779aa9b255266fb16bc6.webp', alt: "Батарейки алкалиновые АА, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16193,7 +16193,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014004-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f785fdaf85b022606ab7c91b9d2697b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9f/9f785fdaf85b022606ab7c91b9d2697b.jpg', alt: "Батарейки алкалиновые, FLARX, ААА, 4 шт.", sortOrder: 0 }
+            { id: 'img-5014004-1', url: '/images/products/9f785fdaf85b022606ab7c91b9d2697b.webp', thumbnailUrl: '/images/products/9f785fdaf85b022606ab7c91b9d2697b.webp', alt: "Батарейки алкалиновые, FLARX, ААА, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16214,7 +16214,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014026-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d3fc04a71b720b728476a3fd0d4cc56c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d3fc04a71b720b728476a3fd0d4cc56c.jpg', alt: "Набор литиевых батареек, 8 шт.", sortOrder: 0 }
+            { id: 'img-5014026-1', url: '/images/products/d3fc04a71b720b728476a3fd0d4cc56c.webp', thumbnailUrl: '/images/products/d3fc04a71b720b728476a3fd0d4cc56c.webp', alt: "Набор литиевых батареек, 8 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16235,7 +16235,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014093-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4b331b4206837ce7993e2fdabddb6dd3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4b/4b331b4206837ce7993e2fdabddb6dd3.jpg', alt: "Батарейки, Kodak, 4 шт., в ассортименте", sortOrder: 0 }
+            { id: 'img-5014093-1', url: '/images/products/4b331b4206837ce7993e2fdabddb6dd3.webp', thumbnailUrl: '/images/products/4b331b4206837ce7993e2fdabddb6dd3.webp', alt: "Батарейки, Kodak, 4 шт., в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16256,7 +16256,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 56,
         baseOldPrice: 62,
         images: [
-            { id: 'img-5014005-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/10006f9c43016f864228373dbacc13f3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/10/10006f9c43016f864228373dbacc13f3.jpg', alt: "Набор алкалиновых батареек, 14 шт.", sortOrder: 0 }
+            { id: 'img-5014005-1', url: '/images/products/10006f9c43016f864228373dbacc13f3.webp', thumbnailUrl: '/images/products/10006f9c43016f864228373dbacc13f3.webp', alt: "Набор алкалиновых батареек, 14 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16277,7 +16277,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014078-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c554823f4e0f4170b44e087cd9e864f6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c5/c554823f4e0f4170b44e087cd9e864f6.jpg', alt: "Батарейки алкалиновые, GP, АА, 4 шт.", sortOrder: 0 }
+            { id: 'img-5014078-1', url: '/images/products/c554823f4e0f4170b44e087cd9e864f6.webp', thumbnailUrl: '/images/products/c554823f4e0f4170b44e087cd9e864f6.webp', alt: "Батарейки алкалиновые, GP, АА, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16298,7 +16298,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014079-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60fba3c7ab7c0bef531f6e83ae9441d3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60fba3c7ab7c0bef531f6e83ae9441d3.jpg', alt: "Батарейки алкалиновые, GP, ААА, 4 шт.", sortOrder: 0 }
+            { id: 'img-5014079-1', url: '/images/products/60fba3c7ab7c0bef531f6e83ae9441d3.webp', thumbnailUrl: '/images/products/60fba3c7ab7c0bef531f6e83ae9441d3.webp', alt: "Батарейки алкалиновые, GP, ААА, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16319,7 +16319,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014094-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4a/4aa7ab5e7268f454958287fea995e390.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4a/4aa7ab5e7268f454958287fea995e390.png', alt: "Батарейки ААА \"XTRALIFE Alkaline\", Kodak, 4 шт.", sortOrder: 0 }
+            { id: 'img-5014094-1', url: '/images/products/4aa7ab5e7268f454958287fea995e390.webp', thumbnailUrl: '/images/products/4aa7ab5e7268f454958287fea995e390.webp', alt: "Батарейки ААА \"XTRALIFE Alkaline\", Kodak, 4 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16340,7 +16340,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011034-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/239b3d7c0fa79d695eecfbe078e53604.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/239b3d7c0fa79d695eecfbe078e53604.jpg', alt: "Лампа cветодиодная \"ЭРА\", E27, 15 Вт, в ассортименте", sortOrder: 0 }
+            { id: 'img-5011034-1', url: '/images/products/239b3d7c0fa79d695eecfbe078e53604.webp', thumbnailUrl: '/images/products/239b3d7c0fa79d695eecfbe078e53604.webp', alt: "Лампа cветодиодная \"ЭРА\", E27, 15 Вт, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16361,7 +16361,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012691-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d1ac7583577e29a93dc5f34d87aee48a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d1/d1ac7583577e29a93dc5f34d87aee48a.jpg', alt: "Светильник-ночник  аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012691-1', url: '/images/products/d1ac7583577e29a93dc5f34d87aee48a.webp', thumbnailUrl: '/images/products/d1ac7583577e29a93dc5f34d87aee48a.webp', alt: "Светильник-ночник  аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16382,7 +16382,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012087-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/910bb70e3874db9c71a7698fa1a13ba5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/910bb70e3874db9c71a7698fa1a13ba5.jpg', alt: "Фонарик светодиодный, FLARX, 9,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012087-1', url: '/images/products/910bb70e3874db9c71a7698fa1a13ba5.webp', thumbnailUrl: '/images/products/910bb70e3874db9c71a7698fa1a13ba5.webp', alt: "Фонарик светодиодный, FLARX, 9,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16403,7 +16403,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012019-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7541d7384fef5e1be25cdf702827d08.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7541d7384fef5e1be25cdf702827d08.jpg', alt: "Фонарь-лазерная указка, FLARX, 12 насадок, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012019-1', url: '/images/products/a7541d7384fef5e1be25cdf702827d08.webp', thumbnailUrl: '/images/products/a7541d7384fef5e1be25cdf702827d08.webp', alt: "Фонарь-лазерная указка, FLARX, 12 насадок, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16424,7 +16424,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 275,
         baseOldPrice: 299,
         images: [
-            { id: 'img-5012633-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13953571293fb03bbd1e55168622f9c4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13953571293fb03bbd1e55168622f9c4.jpg', alt: "Светильник-ночник \"Шар\", FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012633-1', url: '/images/products/13953571293fb03bbd1e55168622f9c4.webp', thumbnailUrl: '/images/products/13953571293fb03bbd1e55168622f9c4.webp', alt: "Светильник-ночник \"Шар\", FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16445,7 +16445,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 370,
         baseOldPrice: 399,
         images: [
-            { id: 'img-5013470-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c7/c76fa47526d2e14cda6e389c360ff1fa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c7/c76fa47526d2e14cda6e389c360ff1fa.jpg', alt: "Зарядное устройство с аккумуляторными батарейками, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013470-1', url: '/images/products/c76fa47526d2e14cda6e389c360ff1fa.webp', thumbnailUrl: '/images/products/c76fa47526d2e14cda6e389c360ff1fa.webp', alt: "Зарядное устройство с аккумуляторными батарейками, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16466,7 +16466,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013321-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/1703984525be6859bc9e4ce2ec9d1fbc.JPG', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/1703984525be6859bc9e4ce2ec9d1fbc.JPG', alt: "Планшет для рисования, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013321-1', url: '/images/products/1703984525be6859bc9e4ce2ec9d1fbc.webp', thumbnailUrl: '/images/products/1703984525be6859bc9e4ce2ec9d1fbc.webp', alt: "Планшет для рисования, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16487,7 +16487,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014125-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/72188ba95c0559d6aaf8a7f655511abf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/72188ba95c0559d6aaf8a7f655511abf.jpg', alt: "Батарейки аккумуляторные, 4 шт., АА", sortOrder: 0 }
+            { id: 'img-5014125-1', url: '/images/products/72188ba95c0559d6aaf8a7f655511abf.webp', thumbnailUrl: '/images/products/72188ba95c0559d6aaf8a7f655511abf.webp', alt: "Батарейки аккумуляторные, 4 шт., АА", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16508,7 +16508,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011037-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86300b7edc243ba81d3e75a5e6598e75.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86300b7edc243ba81d3e75a5e6598e75.jpg', alt: "Лампа cветодиодная энергосберегающая, ЭРА, Е14 / Е27, в ассортименте", sortOrder: 0 }
+            { id: 'img-5011037-1', url: '/images/products/86300b7edc243ba81d3e75a5e6598e75.webp', thumbnailUrl: '/images/products/86300b7edc243ba81d3e75a5e6598e75.webp', alt: "Лампа cветодиодная энергосберегающая, ЭРА, Е14 / Е27, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16529,7 +16529,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013234-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cb/cbf86f6fb04cef6c1fbd7c0fa19ad69d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cb/cbf86f6fb04cef6c1fbd7c0fa19ad69d.jpg', alt: "Бытовой удлинитель, ЭРА, 3 м, 3 гнезда", sortOrder: 0 }
+            { id: 'img-5013234-1', url: '/images/products/cbf86f6fb04cef6c1fbd7c0fa19ad69d.webp', thumbnailUrl: '/images/products/cbf86f6fb04cef6c1fbd7c0fa19ad69d.webp', alt: "Бытовой удлинитель, ЭРА, 3 м, 3 гнезда", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16550,7 +16550,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014126-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f1/f1b472029bbfcf146bcb9fa6c1618ff6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f1/f1b472029bbfcf146bcb9fa6c1618ff6.jpg', alt: "Батарейки аккумуляторные, 4 шт., ААA", sortOrder: 0 }
+            { id: 'img-5014126-1', url: '/images/products/f1b472029bbfcf146bcb9fa6c1618ff6.webp', thumbnailUrl: '/images/products/f1b472029bbfcf146bcb9fa6c1618ff6.webp', alt: "Батарейки аккумуляторные, 4 шт., ААA", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16571,7 +16571,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013488-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d34fd6e4e4065bff23ca921402ef37e0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d3/d34fd6e4e4065bff23ca921402ef37e0.jpg', alt: "Поворотный сетевой разветвитель, FLARX, 2 гнезда, 2 USB порта, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013488-1', url: '/images/products/d34fd6e4e4065bff23ca921402ef37e0.webp', thumbnailUrl: '/images/products/d34fd6e4e4065bff23ca921402ef37e0.webp', alt: "Поворотный сетевой разветвитель, FLARX, 2 гнезда, 2 USB порта, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16592,7 +16592,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013083-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f436cb826026c34355bd40db8ecaf047.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f4/f436cb826026c34355bd40db8ecaf047.jpg', alt: "Наушники, FLARX, 115 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013083-1', url: '/images/products/f436cb826026c34355bd40db8ecaf047.webp', thumbnailUrl: '/images/products/f436cb826026c34355bd40db8ecaf047.webp', alt: "Наушники, FLARX, 115 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16613,7 +16613,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5014003-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3c/3c939ec7530a110f39f993ea303ca2a3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3c/3c939ec7530a110f39f993ea303ca2a3.jpg', alt: "Батарейка солевая, тип D, 2 шт.", sortOrder: 0 }
+            { id: 'img-5014003-1', url: '/images/products/3c939ec7530a110f39f993ea303ca2a3.webp', thumbnailUrl: '/images/products/3c939ec7530a110f39f993ea303ca2a3.webp', alt: "Батарейка солевая, тип D, 2 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16634,7 +16634,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012701-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/59949de8a6558a061aa3fa05f6e17f38.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/59949de8a6558a061aa3fa05f6e17f38.jpg', alt: "Светильник светодиодный \"Медуза\", FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012701-1', url: '/images/products/59949de8a6558a061aa3fa05f6e17f38.webp', thumbnailUrl: '/images/products/59949de8a6558a061aa3fa05f6e17f38.webp', alt: "Светильник светодиодный \"Медуза\", FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16655,7 +16655,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 209,
         baseOldPrice: 229,
         images: [
-            { id: 'img-5013535-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/82/825bccdb6d22606733767c94f36cb437.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/82/825bccdb6d22606733767c94f36cb437.jpg', alt: "Мини-грелка аккумуляторная для рук, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013535-1', url: '/images/products/825bccdb6d22606733767c94f36cb437.webp', thumbnailUrl: '/images/products/825bccdb6d22606733767c94f36cb437.webp', alt: "Мини-грелка аккумуляторная для рук, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16676,7 +16676,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013560-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86c7e51e28bdc064802645f1f37c8f7a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/86c7e51e28bdc064802645f1f37c8f7a.jpg', alt: "Чехол для телефона водонепроницаемый, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013560-1', url: '/images/products/86c7e51e28bdc064802645f1f37c8f7a.webp', thumbnailUrl: '/images/products/86c7e51e28bdc064802645f1f37c8f7a.webp', alt: "Чехол для телефона водонепроницаемый, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16697,7 +16697,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 39.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011039-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/39ebd1061cfafa2c7f205ef4979123cc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/39/39ebd1061cfafa2c7f205ef4979123cc.jpg', alt: "Лампа накаливания, 230 В, Е 27, в ассортименте", sortOrder: 0 }
+            { id: 'img-5011039-1', url: '/images/products/39ebd1061cfafa2c7f205ef4979123cc.webp', thumbnailUrl: '/images/products/39ebd1061cfafa2c7f205ef4979123cc.webp', alt: "Лампа накаливания, 230 В, Е 27, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16718,7 +16718,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 140,
         baseOldPrice: 174.5,
         images: [
-            { id: 'img-5013547-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5f/5f466af21d406d9d652def5e5b224c6a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5f/5f466af21d406d9d652def5e5b224c6a.jpg', alt: "Подсветка для пылесоса светодиодная, FLARX", sortOrder: 0 }
+            { id: 'img-5013547-1', url: '/images/products/5f466af21d406d9d652def5e5b224c6a.webp', thumbnailUrl: '/images/products/5f466af21d406d9d652def5e5b224c6a.webp', alt: "Подсветка для пылесоса светодиодная, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16739,7 +16739,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013463-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/65/65af246c61f9d7567d53157d45b80c02.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/65/65af246c61f9d7567d53157d45b80c02.jpg', alt: "Пылесос аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5013463-1', url: '/images/products/65af246c61f9d7567d53157d45b80c02.webp', thumbnailUrl: '/images/products/65af246c61f9d7567d53157d45b80c02.webp', alt: "Пылесос аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16760,7 +16760,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013473-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cb/cbf1b449417bcb1ea0fc0c9c8f068ff2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cb/cbf1b449417bcb1ea0fc0c9c8f068ff2.jpg', alt: "Увлажнитель воздуха с функцией аромадиффузора, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013473-1', url: '/images/products/cbf1b449417bcb1ea0fc0c9c8f068ff2.webp', thumbnailUrl: '/images/products/cbf1b449417bcb1ea0fc0c9c8f068ff2.webp', alt: "Увлажнитель воздуха с функцией аромадиффузора, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16781,7 +16781,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011101-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b6/b66b67aa837cb0f066424927475f1aaa.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b6/b66b67aa837cb0f066424927475f1aaa.jpg', alt: "Лампа светодиодная, FLARX, с пультом управления", sortOrder: 0 }
+            { id: 'img-5011101-1', url: '/images/products/b66b67aa837cb0f066424927475f1aaa.webp', thumbnailUrl: '/images/products/b66b67aa837cb0f066424927475f1aaa.webp', alt: "Лампа светодиодная, FLARX, с пультом управления", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16802,7 +16802,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013359-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b7/b7cb60283e4e7f960880cec14a5c0d24.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b7/b7cb60283e4e7f960880cec14a5c0d24.jpg', alt: "Удлинитель электрический, FLARX, с выключателем, 3 розетки, 3 USB-порта", sortOrder: 0 }
+            { id: 'img-5013359-1', url: '/images/products/b7cb60283e4e7f960880cec14a5c0d24.webp', thumbnailUrl: '/images/products/b7cb60283e4e7f960880cec14a5c0d24.webp', alt: "Удлинитель электрический, FLARX, с выключателем, 3 розетки, 3 USB-порта", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16823,7 +16823,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013532-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/ca5c5165ebca7914433076709c35d8fc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/ca5c5165ebca7914433076709c35d8fc.jpg', alt: "Набор для зарядки 5 в 1, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013532-1', url: '/images/products/ca5c5165ebca7914433076709c35d8fc.webp', thumbnailUrl: '/images/products/ca5c5165ebca7914433076709c35d8fc.webp', alt: "Набор для зарядки 5 в 1, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16844,7 +16844,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012487-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aaf18489d82bd30e984e84b859ae0827.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aaf18489d82bd30e984e84b859ae0827.jpg', alt: "Велосипедный фонарь, Top Race, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012487-1', url: '/images/products/aaf18489d82bd30e984e84b859ae0827.webp', thumbnailUrl: '/images/products/aaf18489d82bd30e984e84b859ae0827.webp', alt: "Велосипедный фонарь, Top Race, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16865,7 +16865,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013443-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/33/3399e735e3482116a6ec8f70a0d0bc37.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/33/3399e735e3482116a6ec8f70a0d0bc37.jpg', alt: "Кабель USB 3 в 1, FLARX, с функцией зарядки, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013443-1', url: '/images/products/3399e735e3482116a6ec8f70a0d0bc37.webp', thumbnailUrl: '/images/products/3399e735e3482116a6ec8f70a0d0bc37.webp', alt: "Кабель USB 3 в 1, FLARX, с функцией зарядки, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16886,7 +16886,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012660-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c85a36f19ca732ea116f1337fc49e4dc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c85a36f19ca732ea116f1337fc49e4dc.jpg', alt: "Светильник для растений, ЭРА, светодиодный, 10 Вт, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012660-1', url: '/images/products/c85a36f19ca732ea116f1337fc49e4dc.webp', thumbnailUrl: '/images/products/c85a36f19ca732ea116f1337fc49e4dc.webp', alt: "Светильник для растений, ЭРА, светодиодный, 10 Вт, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16907,7 +16907,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012501-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d21165aaa272ed45a63b00ade720c4ce.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d21165aaa272ed45a63b00ade720c4ce.jpg', alt: "Увеличительное стекло с подсветкой, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012501-1', url: '/images/products/d21165aaa272ed45a63b00ade720c4ce.webp', thumbnailUrl: '/images/products/d21165aaa272ed45a63b00ade720c4ce.webp', alt: "Увеличительное стекло с подсветкой, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16928,7 +16928,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012138-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/afcfff76605d1987bb1f862af11d974f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/afcfff76605d1987bb1f862af11d974f.jpg', alt: "Светодиодный светильник, FLARX, с двухсторонним скотчем, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012138-1', url: '/images/products/afcfff76605d1987bb1f862af11d974f.webp', thumbnailUrl: '/images/products/afcfff76605d1987bb1f862af11d974f.webp', alt: "Светодиодный светильник, FLARX, с двухсторонним скотчем, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -16949,7 +16949,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012702-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48e62adc5336de23a98e890550e06d72.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48e62adc5336de23a98e890550e06d72.jpg', alt: "Лампа аккумуляторная на прищепке, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012702-1', url: '/images/products/48e62adc5336de23a98e890550e06d72.webp', thumbnailUrl: '/images/products/48e62adc5336de23a98e890550e06d72.webp', alt: "Лампа аккумуляторная на прищепке, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16970,7 +16970,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 97,
         baseOldPrice: 124,
         images: [
-            { id: 'img-5013533-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec4cc73be821cfe4ebe9b58b2ae2a79e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ec/ec4cc73be821cfe4ebe9b58b2ae2a79e.jpg', alt: "Держатель подвесной для телефона или пульта управления, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013533-1', url: '/images/products/ec4cc73be821cfe4ebe9b58b2ae2a79e.webp', thumbnailUrl: '/images/products/ec4cc73be821cfe4ebe9b58b2ae2a79e.webp', alt: "Держатель подвесной для телефона или пульта управления, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -16991,7 +16991,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013531-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/30/30593a1ff7963360d31ea3d5b23eca05.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/30/30593a1ff7963360d31ea3d5b23eca05.jpg', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013531-1', url: '/images/products/30593a1ff7963360d31ea3d5b23eca05.webp', thumbnailUrl: '/images/products/30593a1ff7963360d31ea3d5b23eca05.webp', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17012,7 +17012,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013147-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/78/782872ce2bf60f323a06c3a6d7e9415b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/78/782872ce2bf60f323a06c3a6d7e9415b.jpg', alt: "Сетевой фильтр \"Эко\", Эра, 4 гнезда, 1,5 м", sortOrder: 0 }
+            { id: 'img-5013147-1', url: '/images/products/782872ce2bf60f323a06c3a6d7e9415b.webp', thumbnailUrl: '/images/products/782872ce2bf60f323a06c3a6d7e9415b.webp', alt: "Сетевой фильтр \"Эко\", Эра, 4 гнезда, 1,5 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17033,7 +17033,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013544-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/28/28019c2a2d673b1f75670d3c8f2396de.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/28/28019c2a2d673b1f75670d3c8f2396de.jpg', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013544-1', url: '/images/products/28019c2a2d673b1f75670d3c8f2396de.webp', thumbnailUrl: '/images/products/28019c2a2d673b1f75670d3c8f2396de.webp', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17054,7 +17054,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012709-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55f7c3264dd273447b1c424360126561.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55f7c3264dd273447b1c424360126561.jpg', alt: "Светильник-ночник \"Утка\", FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012709-1', url: '/images/products/55f7c3264dd273447b1c424360126561.webp', thumbnailUrl: '/images/products/55f7c3264dd273447b1c424360126561.webp', alt: "Светильник-ночник \"Утка\", FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17075,7 +17075,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013490-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a514f6ebeb05991cf6377ea9802d0f0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1a/1a514f6ebeb05991cf6377ea9802d0f0.jpg', alt: "Термогигрометр комнатный, FLARX", sortOrder: 0 }
+            { id: 'img-5013490-1', url: '/images/products/1a514f6ebeb05991cf6377ea9802d0f0.webp', thumbnailUrl: '/images/products/1a514f6ebeb05991cf6377ea9802d0f0.webp', alt: "Термогигрометр комнатный, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17096,7 +17096,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013352-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/470108dae1b54255afc600fb6525031e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/47/470108dae1b54255afc600fb6525031e.jpg', alt: "Увеличительный экран для телефона, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013352-1', url: '/images/products/470108dae1b54255afc600fb6525031e.webp', thumbnailUrl: '/images/products/470108dae1b54255afc600fb6525031e.webp', alt: "Увеличительный экран для телефона, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17117,7 +17117,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013363-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e2/e2314e9e40e7cb894c3b6deb8d848343.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e2/e2314e9e40e7cb894c3b6deb8d848343.jpg', alt: "Сетевое зарядное устройство на 3 USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013363-1', url: '/images/products/e2314e9e40e7cb894c3b6deb8d848343.webp', thumbnailUrl: '/images/products/e2314e9e40e7cb894c3b6deb8d848343.webp', alt: "Сетевое зарядное устройство на 3 USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17138,7 +17138,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013338-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06e0c326b4998fa33103a72e94e7b86d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06e0c326b4998fa33103a72e94e7b86d.jpg', alt: "Мышь компьютерная беспроводная оптическая, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013338-1', url: '/images/products/06e0c326b4998fa33103a72e94e7b86d.webp', thumbnailUrl: '/images/products/06e0c326b4998fa33103a72e94e7b86d.webp', alt: "Мышь компьютерная беспроводная оптическая, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17159,7 +17159,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013461-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/17c5b722d2ce21f25fb7e43b25ec6f9a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/17/17c5b722d2ce21f25fb7e43b25ec6f9a.jpg', alt: "Наушники беспроводные, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013461-1', url: '/images/products/17c5b722d2ce21f25fb7e43b25ec6f9a.webp', thumbnailUrl: '/images/products/17c5b722d2ce21f25fb7e43b25ec6f9a.webp', alt: "Наушники беспроводные, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17180,7 +17180,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012111-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9b/9bfb53f672d2bb3daabb36d3d99146ef.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9b/9bfb53f672d2bb3daabb36d3d99146ef.jpg', alt: "Ручка-стилус с фонариком, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012111-1', url: '/images/products/9bfb53f672d2bb3daabb36d3d99146ef.webp', thumbnailUrl: '/images/products/9bfb53f672d2bb3daabb36d3d99146ef.webp', alt: "Ручка-стилус с фонариком, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -17201,7 +17201,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013455-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fc/fc59d339522d28f609c361aaf6248a3e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fc/fc59d339522d28f609c361aaf6248a3e.jpg', alt: "Монопод для селфи с пультом управления, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013455-1', url: '/images/products/fc59d339522d28f609c361aaf6248a3e.webp', thumbnailUrl: '/images/products/fc59d339522d28f609c361aaf6248a3e.webp', alt: "Монопод для селфи с пультом управления, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17222,7 +17222,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092505-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55ee4ea72d58d98d758a87898cb52165.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/55ee4ea72d58d98d758a87898cb52165.jpg', alt: "Весы электронные, O'Kitchen, в ассортименте", sortOrder: 0 }
+            { id: 'img-5092505-1', url: '/images/products/55ee4ea72d58d98d758a87898cb52165.webp', thumbnailUrl: '/images/products/55ee4ea72d58d98d758a87898cb52165.webp', alt: "Весы электронные, O'Kitchen, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17243,7 +17243,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013554-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/05/050e50e6de6d52335dfea500dab614e3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/05/050e50e6de6d52335dfea500dab614e3.jpg', alt: "Часы-метеостанция, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013554-1', url: '/images/products/050e50e6de6d52335dfea500dab614e3.webp', thumbnailUrl: '/images/products/050e50e6de6d52335dfea500dab614e3.webp', alt: "Часы-метеостанция, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17264,7 +17264,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013558-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ac/ac90ef46743dd8321e32d5f8d1a1939f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ac/ac90ef46743dd8321e32d5f8d1a1939f.jpg', alt: "Вентилятор настольный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013558-1', url: '/images/products/ac90ef46743dd8321e32d5f8d1a1939f.webp', thumbnailUrl: '/images/products/ac90ef46743dd8321e32d5f8d1a1939f.webp', alt: "Вентилятор настольный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17285,7 +17285,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013534-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ef/ef032fa1691b4d6ae0e98589ab57c57c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ef/ef032fa1691b4d6ae0e98589ab57c57c.jpg', alt: "Удлинитель электрический с выключателем, 1,5 м", sortOrder: 0 }
+            { id: 'img-5013534-1', url: '/images/products/ef032fa1691b4d6ae0e98589ab57c57c.webp', thumbnailUrl: '/images/products/ef032fa1691b4d6ae0e98589ab57c57c.webp', alt: "Удлинитель электрический с выключателем, 1,5 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17306,7 +17306,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013274-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/96/964ab68977579527aed91d92d80bf36f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/96/964ab68977579527aed91d92d80bf36f.jpg', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013274-1', url: '/images/products/964ab68977579527aed91d92d80bf36f.webp', thumbnailUrl: '/images/products/964ab68977579527aed91d92d80bf36f.webp', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17327,7 +17327,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013272-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/591fafdbf9a38da64cb9ffcde9aab799.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/591fafdbf9a38da64cb9ffcde9aab799.jpg', alt: "Ручка-стилус, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013272-1', url: '/images/products/591fafdbf9a38da64cb9ffcde9aab799.webp', thumbnailUrl: '/images/products/591fafdbf9a38da64cb9ffcde9aab799.webp', alt: "Ручка-стилус, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -17348,7 +17348,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013249-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6b2551c7046f8199cf4343ff4ebe0a98.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6b2551c7046f8199cf4343ff4ebe0a98.jpg', alt: "Мышь компьютерная проводная оптическая, FLARX, 120 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013249-1', url: '/images/products/6b2551c7046f8199cf4343ff4ebe0a98.webp', thumbnailUrl: '/images/products/6b2551c7046f8199cf4343ff4ebe0a98.webp', alt: "Мышь компьютерная проводная оптическая, FLARX, 120 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17369,7 +17369,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013555-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/08/0812852a02749e73d82fd4fc06fce384.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/08/0812852a02749e73d82fd4fc06fce384.jpg', alt: "Наушники беспроводные вакуумные, More Choice", sortOrder: 0 }
+            { id: 'img-5013555-1', url: '/images/products/0812852a02749e73d82fd4fc06fce384.webp', thumbnailUrl: '/images/products/0812852a02749e73d82fd4fc06fce384.webp', alt: "Наушники беспроводные вакуумные, More Choice", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17390,7 +17390,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013471-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/76/76488e73b63943599c48ee5752bb42e9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/76/76488e73b63943599c48ee5752bb42e9.jpg', alt: "Наушники накладные беспроводные, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013471-1', url: '/images/products/76488e73b63943599c48ee5752bb42e9.webp', thumbnailUrl: '/images/products/76488e73b63943599c48ee5752bb42e9.webp', alt: "Наушники накладные беспроводные, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17411,7 +17411,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013340-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e2/e20f92e13d2b97b58451405b2a762f9a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e2/e20f92e13d2b97b58451405b2a762f9a.jpg', alt: "Удлинитель сетевой, ЭРА, 1,5 м", sortOrder: 0 }
+            { id: 'img-5013340-1', url: '/images/products/e20f92e13d2b97b58451405b2a762f9a.webp', thumbnailUrl: '/images/products/e20f92e13d2b97b58451405b2a762f9a.webp', alt: "Удлинитель сетевой, ЭРА, 1,5 м", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17432,7 +17432,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 260,
         baseOldPrice: 279,
         images: [
-            { id: 'img-5000020-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7b890c235eb8a55eb21b24f138bbb32.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7b890c235eb8a55eb21b24f138bbb32.jpg', alt: "Паяльный набор, Master Hand", sortOrder: 0 }
+            { id: 'img-5000020-1', url: '/images/products/a7b890c235eb8a55eb21b24f138bbb32.webp', thumbnailUrl: '/images/products/a7b890c235eb8a55eb21b24f138bbb32.webp', alt: "Паяльный набор, Master Hand", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17453,7 +17453,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013510-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f0ecaba4d645a0d98217daa9e54cd31.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2f/2f0ecaba4d645a0d98217daa9e54cd31.jpg', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013510-1', url: '/images/products/2f0ecaba4d645a0d98217daa9e54cd31.webp', thumbnailUrl: '/images/products/2f0ecaba4d645a0d98217daa9e54cd31.webp', alt: "Подставка для телефона, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17474,7 +17474,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 231,
         baseOldPrice: 249,
         images: [
-            { id: 'img-5013424-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f96e22fcf2d05e063b52c2b707390c78.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f9/f96e22fcf2d05e063b52c2b707390c78.jpg', alt: "Сетевое зарядное устройство, FLARX", sortOrder: 0 }
+            { id: 'img-5013424-1', url: '/images/products/f96e22fcf2d05e063b52c2b707390c78.webp', thumbnailUrl: '/images/products/f96e22fcf2d05e063b52c2b707390c78.webp', alt: "Сетевое зарядное устройство, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17495,7 +17495,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013273-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e071d8dc1bbe1dfa91ed831d5451deb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2e/2e071d8dc1bbe1dfa91ed831d5451deb.jpg', alt: "Сетевое зарядное устройство, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013273-1', url: '/images/products/2e071d8dc1bbe1dfa91ed831d5451deb.webp', thumbnailUrl: '/images/products/2e071d8dc1bbe1dfa91ed831d5451deb.webp', alt: "Сетевое зарядное устройство, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17516,7 +17516,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013561-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/65/65f51147ae6d0650c89ed5c683ec4033.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/65/65f51147ae6d0650c89ed5c683ec4033.jpg', alt: "Насос воздушный электрический, FLARX", sortOrder: 0 }
+            { id: 'img-5013561-1', url: '/images/products/65f51147ae6d0650c89ed5c683ec4033.webp', thumbnailUrl: '/images/products/65f51147ae6d0650c89ed5c683ec4033.webp', alt: "Насос воздушный электрический, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17537,7 +17537,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011088-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa3f09be4595c372b8c13adf6ff8d1b8.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aa3f09be4595c372b8c13adf6ff8d1b8.jpg', alt: "Лампа светодиодная, ERGOLUX, 15 Вт, Е27, в ассортименте", sortOrder: 0 }
+            { id: 'img-5011088-1', url: '/images/products/aa3f09be4595c372b8c13adf6ff8d1b8.webp', thumbnailUrl: '/images/products/aa3f09be4595c372b8c13adf6ff8d1b8.webp', alt: "Лампа светодиодная, ERGOLUX, 15 Вт, Е27, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17558,7 +17558,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012703-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5ba55ab626789edadec98ec8721460c1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5b/5ba55ab626789edadec98ec8721460c1.jpg', alt: "Лампа настольная, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012703-1', url: '/images/products/5ba55ab626789edadec98ec8721460c1.webp', thumbnailUrl: '/images/products/5ba55ab626789edadec98ec8721460c1.webp', alt: "Лампа настольная, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17579,7 +17579,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013281-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df6912aca13cc14333ea338dc6c8b016.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/df/df6912aca13cc14333ea338dc6c8b016.jpg', alt: "Метеостанция, FLARX", sortOrder: 0 }
+            { id: 'img-5013281-1', url: '/images/products/df6912aca13cc14333ea338dc6c8b016.webp', thumbnailUrl: '/images/products/df6912aca13cc14333ea338dc6c8b016.webp', alt: "Метеостанция, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17600,7 +17600,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013354-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f5ad73e0faa835c74675b0640f061134.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f5ad73e0faa835c74675b0640f061134.jpg', alt: "Кабель USB 3 в 1, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013354-1', url: '/images/products/f5ad73e0faa835c74675b0640f061134.webp', thumbnailUrl: '/images/products/f5ad73e0faa835c74675b0640f061134.webp', alt: "Кабель USB 3 в 1, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17621,7 +17621,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012670-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d24143b01e217302f936e0b0c0831530.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d24143b01e217302f936e0b0c0831530.jpg', alt: "Кольцевая лампа, FLARX, с держателем для телефона, штативом и кабелем USB", sortOrder: 0 }
+            { id: 'img-5012670-1', url: '/images/products/d24143b01e217302f936e0b0c0831530.webp', thumbnailUrl: '/images/products/d24143b01e217302f936e0b0c0831530.webp', alt: "Кольцевая лампа, FLARX, с держателем для телефона, штативом и кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17642,7 +17642,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013413-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48a0e83a55615ea69b05b8dc170efa92.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48a0e83a55615ea69b05b8dc170efa92.jpg', alt: "Камера на гибком проводе для мобильного телефона, FLARX, USB, с подсветкой, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013413-1', url: '/images/products/48a0e83a55615ea69b05b8dc170efa92.webp', thumbnailUrl: '/images/products/48a0e83a55615ea69b05b8dc170efa92.webp', alt: "Камера на гибком проводе для мобильного телефона, FLARX, USB, с подсветкой, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17663,7 +17663,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012134-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f3dbdc7f9e8638abe1184f2d5b6b0255.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f3dbdc7f9e8638abe1184f2d5b6b0255.jpg', alt: "Зарядное USB-устройство в салон авто 2 в 1, Top Race, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012134-1', url: '/images/products/f3dbdc7f9e8638abe1184f2d5b6b0255.webp', thumbnailUrl: '/images/products/f3dbdc7f9e8638abe1184f2d5b6b0255.webp', alt: "Зарядное USB-устройство в салон авто 2 в 1, Top Race, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17684,7 +17684,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013366-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/bea0fbf3e1dc19d938ca975d01ef6871.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/bea0fbf3e1dc19d938ca975d01ef6871.jpg', alt: "Светодиодная панель для рисования с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013366-1', url: '/images/products/bea0fbf3e1dc19d938ca975d01ef6871.webp', thumbnailUrl: '/images/products/bea0fbf3e1dc19d938ca975d01ef6871.webp', alt: "Светодиодная панель для рисования с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17705,7 +17705,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013448-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/05/051e15a6c7be257b3657335894aa2391.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/05/051e15a6c7be257b3657335894aa2391.jpg', alt: "Держатель для телефона или планшета, HM, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013448-1', url: '/images/products/051e15a6c7be257b3657335894aa2391.webp', thumbnailUrl: '/images/products/051e15a6c7be257b3657335894aa2391.webp', alt: "Держатель для телефона или планшета, HM, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17726,7 +17726,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013550-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a8/a8895ecbd289d1fe69694d69b5a0a0d3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a8/a8895ecbd289d1fe69694d69b5a0a0d3.jpg', alt: "Зарядное устройство, 20 Вт, Type-C, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013550-1', url: '/images/products/a8895ecbd289d1fe69694d69b5a0a0d3.webp', thumbnailUrl: '/images/products/a8895ecbd289d1fe69694d69b5a0a0d3.webp', alt: "Зарядное устройство, 20 Вт, Type-C, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17747,7 +17747,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013509-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2deae8c0965a3c7f11de0261ca8c239d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2deae8c0965a3c7f11de0261ca8c239d.jpg', alt: "Портативное зарядное устройство с кабелем USB, FLARX, в ассортименте.", sortOrder: 0 }
+            { id: 'img-5013509-1', url: '/images/products/2deae8c0965a3c7f11de0261ca8c239d.webp', thumbnailUrl: '/images/products/2deae8c0965a3c7f11de0261ca8c239d.webp', alt: "Портативное зарядное устройство с кабелем USB, FLARX, в ассортименте.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17768,7 +17768,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013332-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60439e99f2c5abaaa70363c89eb39f0c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/60/60439e99f2c5abaaa70363c89eb39f0c.jpg', alt: "Разветвитель USB, FLARX, 4 разъёма, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013332-1', url: '/images/products/60439e99f2c5abaaa70363c89eb39f0c.webp', thumbnailUrl: '/images/products/60439e99f2c5abaaa70363c89eb39f0c.webp', alt: "Разветвитель USB, FLARX, 4 разъёма, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17789,7 +17789,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093850-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8f/8f1b128184862855f881a008f3045f03.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8f/8f1b128184862855f881a008f3045f03.jpg', alt: "Миниварка электрическая, O'Kitchen, 1,3 л, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093850-1', url: '/images/products/8f1b128184862855f881a008f3045f03.webp', thumbnailUrl: '/images/products/8f1b128184862855f881a008f3045f03.webp', alt: "Миниварка электрическая, O'Kitchen, 1,3 л, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17810,7 +17810,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 252,
         baseOldPrice: 279,
         images: [
-            { id: 'img-5013556-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13aa00e9935a9868f788e59865cc632a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/13/13aa00e9935a9868f788e59865cc632a.jpg', alt: "Электронный безмен, FLARX", sortOrder: 0 }
+            { id: 'img-5013556-1', url: '/images/products/13aa00e9935a9868f788e59865cc632a.webp', thumbnailUrl: '/images/products/13aa00e9935a9868f788e59865cc632a.webp', alt: "Электронный безмен, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17831,7 +17831,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013511-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8b5653031cb1ab02779079a61590ea2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c8b5653031cb1ab02779079a61590ea2.jpg', alt: "Беспроводное зарядное устройство с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013511-1', url: '/images/products/c8b5653031cb1ab02779079a61590ea2.webp', thumbnailUrl: '/images/products/c8b5653031cb1ab02779079a61590ea2.webp', alt: "Беспроводное зарядное устройство с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17852,7 +17852,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013514-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cd/cda511f568be11bc67961b24210cee5b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cd/cda511f568be11bc67961b24210cee5b.jpg', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013514-1', url: '/images/products/cda511f568be11bc67961b24210cee5b.webp', thumbnailUrl: '/images/products/cda511f568be11bc67961b24210cee5b.webp', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17873,7 +17873,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013563-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d2cb8e02d0d3aa7899cedc4f47c031e9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d2/d2cb8e02d0d3aa7899cedc4f47c031e9.jpg', alt: "Вентилятор аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013563-1', url: '/images/products/d2cb8e02d0d3aa7899cedc4f47c031e9.webp', thumbnailUrl: '/images/products/d2cb8e02d0d3aa7899cedc4f47c031e9.webp', alt: "Вентилятор аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17894,7 +17894,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092627-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0be8cf84e5650ab66a60cd8b18d1c56d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0be8cf84e5650ab66a60cd8b18d1c56d.jpg', alt: "Весы электронные кухонные, O'Kitchen", sortOrder: 0 }
+            { id: 'img-5092627-1', url: '/images/products/0be8cf84e5650ab66a60cd8b18d1c56d.webp', thumbnailUrl: '/images/products/0be8cf84e5650ab66a60cd8b18d1c56d.webp', alt: "Весы электронные кухонные, O'Kitchen", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17915,7 +17915,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013456-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a4df5af3a7e8ca03af110f516e9c2d3a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a4/a4df5af3a7e8ca03af110f516e9c2d3a.jpg', alt: "Веб-камера с микрофоном для компьютера, FLARX", sortOrder: 0 }
+            { id: 'img-5013456-1', url: '/images/products/a4df5af3a7e8ca03af110f516e9c2d3a.webp', thumbnailUrl: '/images/products/a4df5af3a7e8ca03af110f516e9c2d3a.webp', alt: "Веб-камера с микрофоном для компьютера, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17936,7 +17936,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013557-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5a/5af903703825f4e50b42eee16ac2f56e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5a/5af903703825f4e50b42eee16ac2f56e.jpg', alt: "Вентилятор аккумуляторный, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013557-1', url: '/images/products/5af903703825f4e50b42eee16ac2f56e.webp', thumbnailUrl: '/images/products/5af903703825f4e50b42eee16ac2f56e.webp', alt: "Вентилятор аккумуляторный, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17957,7 +17957,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013536-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/5933223684028c3ae2b11e49e832c437.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/59/5933223684028c3ae2b11e49e832c437.jpg', alt: "Сетевое зарядное устройство, USB + Type-C, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013536-1', url: '/images/products/5933223684028c3ae2b11e49e832c437.webp', thumbnailUrl: '/images/products/5933223684028c3ae2b11e49e832c437.webp', alt: "Сетевое зарядное устройство, USB + Type-C, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17978,7 +17978,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012668-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0c/0c7376e103fa19e426ab80c59d0b59ea.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0c/0c7376e103fa19e426ab80c59d0b59ea.jpg', alt: "Лампа настольная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012668-1', url: '/images/products/0c7376e103fa19e426ab80c59d0b59ea.webp', thumbnailUrl: '/images/products/0c7376e103fa19e426ab80c59d0b59ea.webp', alt: "Лампа настольная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -17999,7 +17999,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012726-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f3d604cfa07e72a21318c544132ebcfc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f3/f3d604cfa07e72a21318c544132ebcfc.jpg', alt: "Фонарь светодиодный аккумуляторный в кейсе с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012726-1', url: '/images/products/f3d604cfa07e72a21318c544132ebcfc.webp', thumbnailUrl: '/images/products/f3d604cfa07e72a21318c544132ebcfc.webp', alt: "Фонарь светодиодный аккумуляторный в кейсе с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18020,7 +18020,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5003029-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06da536aaacf8f12dafd8243ac6054ce.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/06/06da536aaacf8f12dafd8243ac6054ce.jpg', alt: "Лазерный уровень, Master Hand, с рулеткой 2 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5003029-1', url: '/images/products/06da536aaacf8f12dafd8243ac6054ce.webp', thumbnailUrl: '/images/products/06da536aaacf8f12dafd8243ac6054ce.webp', alt: "Лазерный уровень, Master Hand, с рулеткой 2 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18041,7 +18041,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012481-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3c/3c594ed6f6279572a125884d55ddd2cf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/3c/3c594ed6f6279572a125884d55ddd2cf.jpg', alt: "Лампа светодиодная USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012481-1', url: '/images/products/3c594ed6f6279572a125884d55ddd2cf.webp', thumbnailUrl: '/images/products/3c594ed6f6279572a125884d55ddd2cf.webp', alt: "Лампа светодиодная USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18062,7 +18062,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012654-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb5b7b0c2d06c0905bda6559ab4551b3.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb5b7b0c2d06c0905bda6559ab4551b3.jpg', alt: "Лампа настольная аккумуляторная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012654-1', url: '/images/products/eb5b7b0c2d06c0905bda6559ab4551b3.webp', thumbnailUrl: '/images/products/eb5b7b0c2d06c0905bda6559ab4551b3.webp', alt: "Лампа настольная аккумуляторная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18083,7 +18083,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013575-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be97b618db2ba8a36d9b4207b7dd41b9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/be97b618db2ba8a36d9b4207b7dd41b9.jpg', alt: "Наушники беспроводные, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013575-1', url: '/images/products/be97b618db2ba8a36d9b4207b7dd41b9.webp', thumbnailUrl: '/images/products/be97b618db2ba8a36d9b4207b7dd41b9.webp', alt: "Наушники беспроводные, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18104,7 +18104,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013427-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2ac37c9d053307221b7231dbbd4d82fb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2a/2ac37c9d053307221b7231dbbd4d82fb.jpg', alt: "Наушники накладные, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013427-1', url: '/images/products/2ac37c9d053307221b7231dbbd4d82fb.webp', thumbnailUrl: '/images/products/2ac37c9d053307221b7231dbbd4d82fb.webp', alt: "Наушники накладные, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18125,7 +18125,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012002-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d61b431497f7110455dbfc2942927bc5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d61b431497f7110455dbfc2942927bc5.jpg', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012002-1', url: '/images/products/d61b431497f7110455dbfc2942927bc5.webp', thumbnailUrl: '/images/products/d61b431497f7110455dbfc2942927bc5.webp', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18146,7 +18146,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012707-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70f5f7699403f84c5a8fc4a44bb7d1d9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/70/70f5f7699403f84c5a8fc4a44bb7d1d9.jpg', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012707-1', url: '/images/products/70f5f7699403f84c5a8fc4a44bb7d1d9.webp', thumbnailUrl: '/images/products/70f5f7699403f84c5a8fc4a44bb7d1d9.webp', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18167,7 +18167,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013513-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/550e10fc2f6093a79d05b6946c28b3af.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/55/550e10fc2f6093a79d05b6946c28b3af.jpg', alt: "Мышь компьютерная беспроводная оптическая, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013513-1', url: '/images/products/550e10fc2f6093a79d05b6946c28b3af.webp', thumbnailUrl: '/images/products/550e10fc2f6093a79d05b6946c28b3af.webp', alt: "Мышь компьютерная беспроводная оптическая, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18188,7 +18188,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013545-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a56d02901bc74ff8c92f80e8085fb9ca.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a56d02901bc74ff8c92f80e8085fb9ca.jpg', alt: "Наушники беспроводные, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013545-1', url: '/images/products/a56d02901bc74ff8c92f80e8085fb9ca.webp', thumbnailUrl: '/images/products/a56d02901bc74ff8c92f80e8085fb9ca.webp', alt: "Наушники беспроводные, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18209,7 +18209,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012561-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b278fe39da9ec5ed70fa9a2b4dbdc64.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1b/1b278fe39da9ec5ed70fa9a2b4dbdc64.jpg', alt: "Светильник светодиодный с пультом управления, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012561-1', url: '/images/products/1b278fe39da9ec5ed70fa9a2b4dbdc64.webp', thumbnailUrl: '/images/products/1b278fe39da9ec5ed70fa9a2b4dbdc64.webp', alt: "Светильник светодиодный с пультом управления, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18230,7 +18230,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 329,
         baseOldPrice: 349,
         images: [
-            { id: 'img-5012744-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/899300357d7590b1686943ee1ea99eee.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/89/899300357d7590b1686943ee1ea99eee.jpg', alt: "Светильник светодиодный с кабелем USB \"Свеча\", FLARX", sortOrder: 0 }
+            { id: 'img-5012744-1', url: '/images/products/899300357d7590b1686943ee1ea99eee.webp', thumbnailUrl: '/images/products/899300357d7590b1686943ee1ea99eee.webp', alt: "Светильник светодиодный с кабелем USB \"Свеча\", FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18251,7 +18251,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013581-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b27867548a24eaaa4e5ef5a576c121e2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b2/b27867548a24eaaa4e5ef5a576c121e2.jpg', alt: "Коврик для мыши, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013581-1', url: '/images/products/b27867548a24eaaa4e5ef5a576c121e2.webp', thumbnailUrl: '/images/products/b27867548a24eaaa4e5ef5a576c121e2.webp', alt: "Коврик для мыши, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18272,7 +18272,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5093706-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/67/678c3d4434647242154429c76d185bc7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/67/678c3d4434647242154429c76d185bc7.jpg', alt: "Кофеварка электрическая, O'Kitchen, 420 мл, в ассортименте", sortOrder: 0 }
+            { id: 'img-5093706-1', url: '/images/products/678c3d4434647242154429c76d185bc7.webp', thumbnailUrl: '/images/products/678c3d4434647242154429c76d185bc7.webp', alt: "Кофеварка электрическая, O'Kitchen, 420 мл, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c1',
         category: cat('c1'),
@@ -18293,7 +18293,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012743-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/75/754bdbc10c5b0b77d8fc6f61ffbefe49.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/75/754bdbc10c5b0b77d8fc6f61ffbefe49.jpg', alt: "Налобный аккумуляторный фонарь с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012743-1', url: '/images/products/754bdbc10c5b0b77d8fc6f61ffbefe49.webp', thumbnailUrl: '/images/products/754bdbc10c5b0b77d8fc6f61ffbefe49.webp', alt: "Налобный аккумуляторный фонарь с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18314,7 +18314,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012738-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/09/09115e9ac075be0f000cba77ab664a4d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/09/09115e9ac075be0f000cba77ab664a4d.jpg', alt: "Светильник светодиодный на солнечной батарее, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012738-1', url: '/images/products/09115e9ac075be0f000cba77ab664a4d.webp', thumbnailUrl: '/images/products/09115e9ac075be0f000cba77ab664a4d.webp', alt: "Светильник светодиодный на солнечной батарее, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18335,7 +18335,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013553-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48c57d7a20e95cab4ba5cc346c1410c9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/48/48c57d7a20e95cab4ba5cc346c1410c9.jpg', alt: "Сетевое зарядное устройство на 2 USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013553-1', url: '/images/products/48c57d7a20e95cab4ba5cc346c1410c9.webp', thumbnailUrl: '/images/products/48c57d7a20e95cab4ba5cc346c1410c9.webp', alt: "Сетевое зарядное устройство на 2 USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18356,7 +18356,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012643-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b93a646bc274efe4082307bf8efec655.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b9/b93a646bc274efe4082307bf8efec655.jpg', alt: "Велосипедный аккумуляторный фонарь с кабелем USB, Top Race", sortOrder: 0 }
+            { id: 'img-5012643-1', url: '/images/products/b93a646bc274efe4082307bf8efec655.webp', thumbnailUrl: '/images/products/b93a646bc274efe4082307bf8efec655.webp', alt: "Велосипедный аккумуляторный фонарь с кабелем USB, Top Race", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18377,7 +18377,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013538-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a0/a0fed47cb7906c6101e33e374547232d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a0/a0fed47cb7906c6101e33e374547232d.jpg', alt: "Дата-кабель для заряда и передачи данных, More Choice, 1 м, 20 Вт (быстрая зарядка), в ассортименте", sortOrder: 0 }
+            { id: 'img-5013538-1', url: '/images/products/a0fed47cb7906c6101e33e374547232d.webp', thumbnailUrl: '/images/products/a0fed47cb7906c6101e33e374547232d.webp', alt: "Дата-кабель для заряда и передачи данных, More Choice, 1 м, 20 Вт (быстрая зарядка), в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18398,7 +18398,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012700-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/917bc01fb61353c6beb36607cd329de1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/91/917bc01fb61353c6beb36607cd329de1.jpg', alt: "Фонарь аккумуляторный светодиодный с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012700-1', url: '/images/products/917bc01fb61353c6beb36607cd329de1.webp', thumbnailUrl: '/images/products/917bc01fb61353c6beb36607cd329de1.webp', alt: "Фонарь аккумуляторный светодиодный с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18419,7 +18419,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012649-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0b503699f129c6c4160ee7650e027c79.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/0b/0b503699f129c6c4160ee7650e027c79.jpg', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012649-1', url: '/images/products/0b503699f129c6c4160ee7650e027c79.webp', thumbnailUrl: '/images/products/0b503699f129c6c4160ee7650e027c79.webp', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18440,7 +18440,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012688-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/1286ae8c376ff88aeb9cae140db21527.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/1286ae8c376ff88aeb9cae140db21527.jpg', alt: "Лампа настольная, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012688-1', url: '/images/products/1286ae8c376ff88aeb9cae140db21527.webp', thumbnailUrl: '/images/products/1286ae8c376ff88aeb9cae140db21527.webp', alt: "Лампа настольная, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18461,7 +18461,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012662-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1f41811ed2ff84eeed28a51a5b3885d5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1f41811ed2ff84eeed28a51a5b3885d5.jpg', alt: "Фонарь налобный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012662-1', url: '/images/products/1f41811ed2ff84eeed28a51a5b3885d5.webp', thumbnailUrl: '/images/products/1f41811ed2ff84eeed28a51a5b3885d5.webp', alt: "Фонарь налобный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18482,7 +18482,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012728-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/94/943afa483786bad4d0063a2a9ee00d54.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/94/943afa483786bad4d0063a2a9ee00d54.jpg', alt: "Фонарик-зажигалка на аккумуляторной батарее с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012728-1', url: '/images/products/943afa483786bad4d0063a2a9ee00d54.webp', thumbnailUrl: '/images/products/943afa483786bad4d0063a2a9ee00d54.webp', alt: "Фонарик-зажигалка на аккумуляторной батарее с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18503,7 +18503,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012713-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9a111678eac8ec562b76f5ab2618540f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9a/9a111678eac8ec562b76f5ab2618540f.jpg', alt: "Светильник светодиодный с кабелем USB, FLARX, в ассортименнте", sortOrder: 0 }
+            { id: 'img-5012713-1', url: '/images/products/9a111678eac8ec562b76f5ab2618540f.webp', thumbnailUrl: '/images/products/9a111678eac8ec562b76f5ab2618540f.webp', alt: "Светильник светодиодный с кабелем USB, FLARX, в ассортименнте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18524,7 +18524,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013466-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e7/e7df3e83db1ef4e9d1e102ccd43ebcab.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e7/e7df3e83db1ef4e9d1e102ccd43ebcab.jpg', alt: "Увлажнитель воздуха с подсветкой, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013466-1', url: '/images/products/e7df3e83db1ef4e9d1e102ccd43ebcab.webp', thumbnailUrl: '/images/products/e7df3e83db1ef4e9d1e102ccd43ebcab.webp', alt: "Увлажнитель воздуха с подсветкой, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18545,7 +18545,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013541-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/260fd9f3d11d6c9fb970c121ed44dcb9.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/26/260fd9f3d11d6c9fb970c121ed44dcb9.jpg', alt: "Кабель-разветвитель USB, FLARX, 6 в 1, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013541-1', url: '/images/products/260fd9f3d11d6c9fb970c121ed44dcb9.webp', thumbnailUrl: '/images/products/260fd9f3d11d6c9fb970c121ed44dcb9.webp', alt: "Кабель-разветвитель USB, FLARX, 6 в 1, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18566,7 +18566,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012681-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/522a8a546695c9276b328f73d3ae0a11.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/522a8a546695c9276b328f73d3ae0a11.jpg', alt: "Фонарь светодиодный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012681-1', url: '/images/products/522a8a546695c9276b328f73d3ae0a11.webp', thumbnailUrl: '/images/products/522a8a546695c9276b328f73d3ae0a11.webp', alt: "Фонарь светодиодный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18587,7 +18587,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013542-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/0257be1474ec937a845ec3f4a871b88d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/02/0257be1474ec937a845ec3f4a871b88d.jpg', alt: "Сетевое зарядное устройство, FLARX, USB + Type-C, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013542-1', url: '/images/products/0257be1474ec937a845ec3f4a871b88d.webp', thumbnailUrl: '/images/products/0257be1474ec937a845ec3f4a871b88d.webp', alt: "Сетевое зарядное устройство, FLARX, USB + Type-C, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18608,7 +18608,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012671-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/37/3792e8912341bc1785cc60925201cb74.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/37/3792e8912341bc1785cc60925201cb74.jpg', alt: "Налобный аккумуляторный фонарь, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012671-1', url: '/images/products/3792e8912341bc1785cc60925201cb74.webp', thumbnailUrl: '/images/products/3792e8912341bc1785cc60925201cb74.webp', alt: "Налобный аккумуляторный фонарь, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18629,7 +18629,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013426-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/84326500355e19eef1020f8664f27cc2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/84/84326500355e19eef1020f8664f27cc2.jpg', alt: "Ручка-стилус, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013426-1', url: '/images/products/84326500355e19eef1020f8664f27cc2.webp', thumbnailUrl: '/images/products/84326500355e19eef1020f8664f27cc2.webp', alt: "Ручка-стилус, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c7',
         category: cat('c7'),
@@ -18650,7 +18650,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011138-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e0/e04bc3d780d22873b4aeb1b3c10c8707.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e0/e04bc3d780d22873b4aeb1b3c10c8707.jpg', alt: "Лампа светодиодная, BELLIGHT, 25 Вт, E27, в ассортименте", sortOrder: 0 }
+            { id: 'img-5011138-1', url: '/images/products/e04bc3d780d22873b4aeb1b3c10c8707.webp', thumbnailUrl: '/images/products/e04bc3d780d22873b4aeb1b3c10c8707.webp', alt: "Лампа светодиодная, BELLIGHT, 25 Вт, E27, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18671,7 +18671,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013415-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/97/9757d72ce2292fa9b9a56cbd6ba9a2ea.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/97/9757d72ce2292fa9b9a56cbd6ba9a2ea.jpg', alt: "Кабель USB, FLARX, с функцией зарядки, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013415-1', url: '/images/products/9757d72ce2292fa9b9a56cbd6ba9a2ea.webp', thumbnailUrl: '/images/products/9757d72ce2292fa9b9a56cbd6ba9a2ea.webp', alt: "Кабель USB, FLARX, с функцией зарядки, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18692,7 +18692,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012718-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/16fcf6ea9dc970a2852386b2195b103b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/16fcf6ea9dc970a2852386b2195b103b.jpg', alt: "Светильник настольный светодиодный \"Спираль\", FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012718-1', url: '/images/products/16fcf6ea9dc970a2852386b2195b103b.webp', thumbnailUrl: '/images/products/16fcf6ea9dc970a2852386b2195b103b.webp', alt: "Светильник настольный светодиодный \"Спираль\", FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18713,7 +18713,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013551-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d614ba9c8d1a1e65ed99ba9d73c92a43.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d6/d614ba9c8d1a1e65ed99ba9d73c92a43.jpg', alt: "Колонка портативная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013551-1', url: '/images/products/d614ba9c8d1a1e65ed99ba9d73c92a43.webp', thumbnailUrl: '/images/products/d614ba9c8d1a1e65ed99ba9d73c92a43.webp', alt: "Колонка портативная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18734,7 +18734,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013523-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15f75ef92444592681c77e4c60fd7cd7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/15/15f75ef92444592681c77e4c60fd7cd7.jpg', alt: "Часы электронные с подставкой для ручек, FLARX", sortOrder: 0 }
+            { id: 'img-5013523-1', url: '/images/products/15f75ef92444592681c77e4c60fd7cd7.webp', thumbnailUrl: '/images/products/15f75ef92444592681c77e4c60fd7cd7.webp', alt: "Часы электронные с подставкой для ручек, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18755,7 +18755,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012672-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/db2a1925ab3f095a8f44317dc9a74ed5.png', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/db2a1925ab3f095a8f44317dc9a74ed5.png', alt: "Светильник светодиодный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012672-1', url: '/images/products/db2a1925ab3f095a8f44317dc9a74ed5.webp', thumbnailUrl: '/images/products/db2a1925ab3f095a8f44317dc9a74ed5.webp', alt: "Светильник светодиодный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18776,7 +18776,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013552-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0248c1b819961fa59a21e8c3cb0df9f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b0/b0248c1b819961fa59a21e8c3cb0df9f.jpg', alt: "Портативное зарядное устройство с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013552-1', url: '/images/products/b0248c1b819961fa59a21e8c3cb0df9f.webp', thumbnailUrl: '/images/products/b0248c1b819961fa59a21e8c3cb0df9f.webp', alt: "Портативное зарядное устройство с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18797,7 +18797,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012711-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2dbaff3e0826ac160670f3afd0186f13.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2d/2dbaff3e0826ac160670f3afd0186f13.jpg', alt: "Светильник настольный аккумуляторный, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012711-1', url: '/images/products/2dbaff3e0826ac160670f3afd0186f13.webp', thumbnailUrl: '/images/products/2dbaff3e0826ac160670f3afd0186f13.webp', alt: "Светильник настольный аккумуляторный, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18818,7 +18818,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013044-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e1da0c3489e4beb5666cf3424f6b971.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e1da0c3489e4beb5666cf3424f6b971.jpg', alt: "Переходник USB, FLARX, 22,5 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013044-1', url: '/images/products/1e1da0c3489e4beb5666cf3424f6b971.webp', thumbnailUrl: '/images/products/1e1da0c3489e4beb5666cf3424f6b971.webp', alt: "Переходник USB, FLARX, 22,5 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18839,7 +18839,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012676-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/caf9f46ce152daa0dd16c1e2535a2fcd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/caf9f46ce152daa0dd16c1e2535a2fcd.jpg', alt: "Лампа настольная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012676-1', url: '/images/products/caf9f46ce152daa0dd16c1e2535a2fcd.webp', thumbnailUrl: '/images/products/caf9f46ce152daa0dd16c1e2535a2fcd.webp', alt: "Лампа настольная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18860,7 +18860,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012760-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/68/68e7517986784a0dea5ad7098025669b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/68/68e7517986784a0dea5ad7098025669b.jpg', alt: "Светильник настольный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012760-1', url: '/images/products/68e7517986784a0dea5ad7098025669b.webp', thumbnailUrl: '/images/products/68e7517986784a0dea5ad7098025669b.webp', alt: "Светильник настольный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18881,7 +18881,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012712-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/dbbe79e276698404052dec083cbb4ac2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/dbbe79e276698404052dec083cbb4ac2.jpg', alt: "Светильник светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012712-1', url: '/images/products/dbbe79e276698404052dec083cbb4ac2.webp', thumbnailUrl: '/images/products/dbbe79e276698404052dec083cbb4ac2.webp', alt: "Светильник светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18902,7 +18902,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 83,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013530-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/1262a4a6b34067b1e33b0e278a375445.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/12/1262a4a6b34067b1e33b0e278a375445.jpg', alt: "Наушники с микрофоном, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013530-1', url: '/images/products/1262a4a6b34067b1e33b0e278a375445.webp', thumbnailUrl: '/images/products/1262a4a6b34067b1e33b0e278a375445.webp', alt: "Наушники с микрофоном, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18923,7 +18923,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012531-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/97/9771903d8a74c7e645f03ee1fa909a38.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/97/9771903d8a74c7e645f03ee1fa909a38.jpg', alt: "Велосипедный аккумуляторный фонарь с кабелем USB, Top Race, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012531-1', url: '/images/products/9771903d8a74c7e645f03ee1fa909a38.webp', thumbnailUrl: '/images/products/9771903d8a74c7e645f03ee1fa909a38.webp', alt: "Велосипедный аккумуляторный фонарь с кабелем USB, Top Race, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18944,7 +18944,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011139-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/23e1f936de4aa60c80fda0cbe6d81cc4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/23/23e1f936de4aa60c80fda0cbe6d81cc4.jpg', alt: "Лампа светодиодная, ОНЛАЙТ, Е14, 15 Вт, в ассортименте", sortOrder: 0 }
+            { id: 'img-5011139-1', url: '/images/products/23e1f936de4aa60c80fda0cbe6d81cc4.webp', thumbnailUrl: '/images/products/23e1f936de4aa60c80fda0cbe6d81cc4.webp', alt: "Лампа светодиодная, ОНЛАЙТ, Е14, 15 Вт, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18965,7 +18965,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 249,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012573-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7e4ae7dd17a9601409d94afb1625e4b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a7/a7e4ae7dd17a9601409d94afb1625e4b.jpg', alt: "Налобный аккумуляторный фонарь с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012573-1', url: '/images/products/a7e4ae7dd17a9601409d94afb1625e4b.webp', thumbnailUrl: '/images/products/a7e4ae7dd17a9601409d94afb1625e4b.webp', alt: "Налобный аккумуляторный фонарь с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -18986,7 +18986,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012664-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bd60dd48de2b99335ed5d02bbdd6c48d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/bd/bd60dd48de2b99335ed5d02bbdd6c48d.jpg', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012664-1', url: '/images/products/bd60dd48de2b99335ed5d02bbdd6c48d.webp', thumbnailUrl: '/images/products/bd60dd48de2b99335ed5d02bbdd6c48d.webp', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19007,7 +19007,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012722-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c6a30fb15838090c262208dca6dd9ecd.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c6/c6a30fb15838090c262208dca6dd9ecd.jpg', alt: "Светильник светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012722-1', url: '/images/products/c6a30fb15838090c262208dca6dd9ecd.webp', thumbnailUrl: '/images/products/c6a30fb15838090c262208dca6dd9ecd.webp', alt: "Светильник светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19028,7 +19028,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 449,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012689-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/72f6ac9322f0c15c6e3785b56de33ef6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/72/72f6ac9322f0c15c6e3785b56de33ef6.jpg', alt: "Фонарь кемпинговый светодиодный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012689-1', url: '/images/products/72f6ac9322f0c15c6e3785b56de33ef6.webp', thumbnailUrl: '/images/products/72f6ac9322f0c15c6e3785b56de33ef6.webp', alt: "Фонарь кемпинговый светодиодный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19049,7 +19049,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 220,
         baseOldPrice: 249,
         images: [
-            { id: 'img-5012724-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/aff0be33fe6fbd39007c9c50ea9b9e94.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/af/aff0be33fe6fbd39007c9c50ea9b9e94.jpg', alt: "Фонарь светодиодный, FLARX, 12х14х18 см", sortOrder: 0 }
+            { id: 'img-5012724-1', url: '/images/products/aff0be33fe6fbd39007c9c50ea9b9e94.webp', thumbnailUrl: '/images/products/aff0be33fe6fbd39007c9c50ea9b9e94.webp', alt: "Фонарь светодиодный, FLARX, 12х14х18 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19070,7 +19070,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5011136-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7a/7a2e7b8e63a245ae8528354eb9193027.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7a/7a2e7b8e63a245ae8528354eb9193027.jpg', alt: "Лампа светодиодная, ОНЛАЙТ, 20 Вт, Е27", sortOrder: 0 }
+            { id: 'img-5011136-1', url: '/images/products/7a2e7b8e63a245ae8528354eb9193027.webp', thumbnailUrl: '/images/products/7a2e7b8e63a245ae8528354eb9193027.webp', alt: "Лампа светодиодная, ОНЛАЙТ, 20 Вт, Е27", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19091,7 +19091,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013489-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/80/8032dbe70684e2559262b7e61dfd7a99.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/80/8032dbe70684e2559262b7e61dfd7a99.jpg', alt: "Наушники с микрофоном, FLARX, с чехлом, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013489-1', url: '/images/products/8032dbe70684e2559262b7e61dfd7a99.webp', thumbnailUrl: '/images/products/8032dbe70684e2559262b7e61dfd7a99.webp', alt: "Наушники с микрофоном, FLARX, с чехлом, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19112,7 +19112,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012677-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e363512e59c06ba03809086473f9e977.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e3/e363512e59c06ba03809086473f9e977.jpg', alt: "Фонарь велосипедный передний, Top Race", sortOrder: 0 }
+            { id: 'img-5012677-1', url: '/images/products/e363512e59c06ba03809086473f9e977.webp', thumbnailUrl: '/images/products/e363512e59c06ba03809086473f9e977.webp', alt: "Фонарь велосипедный передний, Top Race", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19133,7 +19133,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013299-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7a/7a12fe66b4ceff17fce4f805440a5c42.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7a/7a12fe66b4ceff17fce4f805440a5c42.jpg', alt: "Кабель USB, FLARX, 125 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013299-1', url: '/images/products/7a12fe66b4ceff17fce4f805440a5c42.webp', thumbnailUrl: '/images/products/7a12fe66b4ceff17fce4f805440a5c42.webp', alt: "Кабель USB, FLARX, 125 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19154,7 +19154,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013559-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6b843c7b83bfbd92a5ff3d11bf3d9a1c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6b/6b843c7b83bfbd92a5ff3d11bf3d9a1c.jpg', alt: "Вентилятор аккумуляторный на шею с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013559-1', url: '/images/products/6b843c7b83bfbd92a5ff3d11bf3d9a1c.webp', thumbnailUrl: '/images/products/6b843c7b83bfbd92a5ff3d11bf3d9a1c.webp', alt: "Вентилятор аккумуляторный на шею с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19175,7 +19175,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 499,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012759-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7b/7bc73d02de88bc448dd2ac554944bd2a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/7b/7bc73d02de88bc448dd2ac554944bd2a.jpg', alt: "Светильник настольный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012759-1', url: '/images/products/7bc73d02de88bc448dd2ac554944bd2a.webp', thumbnailUrl: '/images/products/7bc73d02de88bc448dd2ac554944bd2a.webp', alt: "Светильник настольный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19196,7 +19196,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013437-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/52ac9096889c87793c7077949801f6fc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/52/52ac9096889c87793c7077949801f6fc.jpg', alt: "Будильник, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013437-1', url: '/images/products/52ac9096889c87793c7077949801f6fc.webp', thumbnailUrl: '/images/products/52ac9096889c87793c7077949801f6fc.webp', alt: "Будильник, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19217,7 +19217,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013049-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/db922ae073fe2638ba5565240e72aa4c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/db/db922ae073fe2638ba5565240e72aa4c.jpg', alt: "Наушники накладные, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013049-1', url: '/images/products/db922ae073fe2638ba5565240e72aa4c.webp', thumbnailUrl: '/images/products/db922ae073fe2638ba5565240e72aa4c.webp', alt: "Наушники накладные, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19238,7 +19238,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013546-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/735094f0e6e1780abe8a2f3c9fc999b4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/73/735094f0e6e1780abe8a2f3c9fc999b4.jpg', alt: "Наушники с микрофоном, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013546-1', url: '/images/products/735094f0e6e1780abe8a2f3c9fc999b4.webp', thumbnailUrl: '/images/products/735094f0e6e1780abe8a2f3c9fc999b4.webp', alt: "Наушники с микрофоном, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19259,7 +19259,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013597-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/40/40ecb9a0f2ea42e836bb1eb111da8869.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/40/40ecb9a0f2ea42e836bb1eb111da8869.jpg', alt: "Удлинитель электрический, FLARX, 1 розетка, 10 м, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013597-1', url: '/images/products/40ecb9a0f2ea42e836bb1eb111da8869.webp', thumbnailUrl: '/images/products/40ecb9a0f2ea42e836bb1eb111da8869.webp', alt: "Удлинитель электрический, FLARX, 1 розетка, 10 м, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19280,7 +19280,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012729-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b25bfaf22de367a7082c2c7d6a95ba2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b25bfaf22de367a7082c2c7d6a95ba2.jpg', alt: "Фонарь-брелок аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012729-1', url: '/images/products/2b25bfaf22de367a7082c2c7d6a95ba2.webp', thumbnailUrl: '/images/products/2b25bfaf22de367a7082c2c7d6a95ba2.webp', alt: "Фонарь-брелок аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19301,7 +19301,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013371-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e2/e2bedfda233b81c3320a39228a38f2d5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e2/e2bedfda233b81c3320a39228a38f2d5.jpg', alt: "Колонка портативная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013371-1', url: '/images/products/e2bedfda233b81c3320a39228a38f2d5.webp', thumbnailUrl: '/images/products/e2bedfda233b81c3320a39228a38f2d5.webp', alt: "Колонка портативная с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19322,7 +19322,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013562-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8ef7e00f0ee1e60d8758469c95223296.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8e/8ef7e00f0ee1e60d8758469c95223296.jpg', alt: "Электрическая мухобойка, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013562-1', url: '/images/products/8ef7e00f0ee1e60d8758469c95223296.webp', thumbnailUrl: '/images/products/8ef7e00f0ee1e60d8758469c95223296.webp', alt: "Электрическая мухобойка, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19343,7 +19343,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013570-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b262d6cf91839e14b073d747f93a858.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/2b/2b262d6cf91839e14b073d747f93a858.jpg', alt: "Кабель Type-C, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013570-1', url: '/images/products/2b262d6cf91839e14b073d747f93a858.webp', thumbnailUrl: '/images/products/2b262d6cf91839e14b073d747f93a858.webp', alt: "Кабель Type-C, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19364,7 +19364,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013458-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9d7d1db53fafec68b5444a7b53ede814.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9d/9d7d1db53fafec68b5444a7b53ede814.jpg', alt: "Клавиатура проводная, FLARX", sortOrder: 0 }
+            { id: 'img-5013458-1', url: '/images/products/9d7d1db53fafec68b5444a7b53ede814.webp', thumbnailUrl: '/images/products/9d7d1db53fafec68b5444a7b53ede814.webp', alt: "Клавиатура проводная, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19385,7 +19385,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013472-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f5e27e7bc0fb2f084f5a0ec6ce0ea864.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f5/f5e27e7bc0fb2f084f5a0ec6ce0ea864.jpg', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013472-1', url: '/images/products/f5e27e7bc0fb2f084f5a0ec6ce0ea864.webp', thumbnailUrl: '/images/products/f5e27e7bc0fb2f084f5a0ec6ce0ea864.webp', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19406,7 +19406,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012727-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/8665c7669f536cc47fdb17d5e9167e0f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/86/8665c7669f536cc47fdb17d5e9167e0f.jpg', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012727-1', url: '/images/products/8665c7669f536cc47fdb17d5e9167e0f.webp', thumbnailUrl: '/images/products/8665c7669f536cc47fdb17d5e9167e0f.webp', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19427,7 +19427,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012690-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/666765113e4b84f38c387a10c1c3877b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/66/666765113e4b84f38c387a10c1c3877b.jpg', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012690-1', url: '/images/products/666765113e4b84f38c387a10c1c3877b.webp', thumbnailUrl: '/images/products/666765113e4b84f38c387a10c1c3877b.webp', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19448,7 +19448,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013439-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/bea11a2b678c09ee4c92638ecb03b6cb.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/be/bea11a2b678c09ee4c92638ecb03b6cb.jpg', alt: "Bluetooth-наушники, More choice, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013439-1', url: '/images/products/bea11a2b678c09ee4c92638ecb03b6cb.webp', thumbnailUrl: '/images/products/bea11a2b678c09ee4c92638ecb03b6cb.webp', alt: "Bluetooth-наушники, More choice, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19469,7 +19469,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012675-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a281505a3b26f72472d1d8f6756b8b5f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a2/a281505a3b26f72472d1d8f6756b8b5f.jpg', alt: "Светодиодный светильник, Philips", sortOrder: 0 }
+            { id: 'img-5012675-1', url: '/images/products/a281505a3b26f72472d1d8f6756b8b5f.webp', thumbnailUrl: '/images/products/a281505a3b26f72472d1d8f6756b8b5f.webp', alt: "Светодиодный светильник, Philips", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19490,7 +19490,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5006316-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1fa9c149817cff87193a619f8a249e1b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1f/1fa9c149817cff87193a619f8a249e1b.jpg', alt: "Набор термоусадочных трубок с припоем, Master Hand, 50 шт.", sortOrder: 0 }
+            { id: 'img-5006316-1', url: '/images/products/1fa9c149817cff87193a619f8a249e1b.webp', thumbnailUrl: '/images/products/1fa9c149817cff87193a619f8a249e1b.webp', alt: "Набор термоусадочных трубок с припоем, Master Hand, 50 шт.", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19511,7 +19511,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013414-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/353550c6ea46e044557b83f74679e08c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/35/353550c6ea46e044557b83f74679e08c.jpg', alt: "Наушники с микрофоном, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013414-1', url: '/images/products/353550c6ea46e044557b83f74679e08c.webp', thumbnailUrl: '/images/products/353550c6ea46e044557b83f74679e08c.webp', alt: "Наушники с микрофоном, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19532,7 +19532,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013442-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/79/7927c05e6bc8f2a00bdd970553dd734a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/79/7927c05e6bc8f2a00bdd970553dd734a.jpg', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013442-1', url: '/images/products/7927c05e6bc8f2a00bdd970553dd734a.webp', thumbnailUrl: '/images/products/7927c05e6bc8f2a00bdd970553dd734a.webp', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19553,7 +19553,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013457-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/162264e08a642ab1bd32ac79fab9a95b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/16/162264e08a642ab1bd32ac79fab9a95b.jpg', alt: "Мышь компьютерная проводная оптическая, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013457-1', url: '/images/products/162264e08a642ab1bd32ac79fab9a95b.webp', thumbnailUrl: '/images/products/162264e08a642ab1bd32ac79fab9a95b.webp', alt: "Мышь компьютерная проводная оптическая, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19574,7 +19574,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012674-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/dae1d78f165a075fcc1f284c1a52f1d5.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/dae1d78f165a075fcc1f284c1a52f1d5.jpg', alt: "Фонарь светодиодный аккумуляторный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012674-1', url: '/images/products/dae1d78f165a075fcc1f284c1a52f1d5.webp', thumbnailUrl: '/images/products/dae1d78f165a075fcc1f284c1a52f1d5.webp', alt: "Фонарь светодиодный аккумуляторный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19595,7 +19595,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012642-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8810a384ab4eeaeb0adcedcb0d6ac9d6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8810a384ab4eeaeb0adcedcb0d6ac9d6.jpg', alt: "Лампа антимоскитная, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012642-1', url: '/images/products/8810a384ab4eeaeb0adcedcb0d6ac9d6.webp', thumbnailUrl: '/images/products/8810a384ab4eeaeb0adcedcb0d6ac9d6.webp', alt: "Лампа антимоскитная, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19616,7 +19616,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013549-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/caf72a9ebb90d84bb921d337faee0b8f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ca/caf72a9ebb90d84bb921d337faee0b8f.jpg', alt: "Будильник, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013549-1', url: '/images/products/caf72a9ebb90d84bb921d337faee0b8f.webp', thumbnailUrl: '/images/products/caf72a9ebb90d84bb921d337faee0b8f.webp', alt: "Будильник, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19637,7 +19637,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013356-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ac/ac68dcd6672337a03bfa0a429cc8cb79.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ac/ac68dcd6672337a03bfa0a429cc8cb79.jpg', alt: "Стойка телескопическая для телефона, FLARX", sortOrder: 0 }
+            { id: 'img-5013356-1', url: '/images/products/ac68dcd6672337a03bfa0a429cc8cb79.webp', thumbnailUrl: '/images/products/ac68dcd6672337a03bfa0a429cc8cb79.webp', alt: "Стойка телескопическая для телефона, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19658,7 +19658,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012632-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d54c413a162d7610f2a3a6b7ccc07eea.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d5/d54c413a162d7610f2a3a6b7ccc07eea.jpg', alt: "Лампа настольная с USB-кабелем, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012632-1', url: '/images/products/d54c413a162d7610f2a3a6b7ccc07eea.webp', thumbnailUrl: '/images/products/d54c413a162d7610f2a3a6b7ccc07eea.webp', alt: "Лампа настольная с USB-кабелем, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19679,7 +19679,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012732-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f2352ee6e63e3482c4b54f28c4b2fa9a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/f2/f2352ee6e63e3482c4b54f28c4b2fa9a.jpg', alt: "Налобный аккумуляторный фонарь с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012732-1', url: '/images/products/f2352ee6e63e3482c4b54f28c4b2fa9a.webp', thumbnailUrl: '/images/products/f2352ee6e63e3482c4b54f28c4b2fa9a.webp', alt: "Налобный аккумуляторный фонарь с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19700,7 +19700,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013525-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/502acdbed38cf27190add286309e17e7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/50/502acdbed38cf27190add286309e17e7.jpg', alt: "Зарядное USB-устройство в салон авто, Top Race, 6 в 1", sortOrder: 0 }
+            { id: 'img-5013525-1', url: '/images/products/502acdbed38cf27190add286309e17e7.webp', thumbnailUrl: '/images/products/502acdbed38cf27190add286309e17e7.webp', alt: "Зарядное USB-устройство в салон авто, Top Race, 6 в 1", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19721,7 +19721,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013585-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/82/820ee16f9908e5a8afe669ad97df8526.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/82/820ee16f9908e5a8afe669ad97df8526.jpg', alt: "Держатель для телефона, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013585-1', url: '/images/products/820ee16f9908e5a8afe669ad97df8526.webp', thumbnailUrl: '/images/products/820ee16f9908e5a8afe669ad97df8526.webp', alt: "Держатель для телефона, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19742,7 +19742,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 133,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013438-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/76/76c2367476353ed739c88589fcdf1753.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/76/76c2367476353ed739c88589fcdf1753.jpg', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013438-1', url: '/images/products/76c2367476353ed739c88589fcdf1753.webp', thumbnailUrl: '/images/products/76c2367476353ed739c88589fcdf1753.webp', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19763,7 +19763,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012717-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9c/9c7a458b71d538649fe8d8d7ddbf839b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/9c/9c7a458b71d538649fe8d8d7ddbf839b.jpg', alt: "Фонарь налобный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012717-1', url: '/images/products/9c7a458b71d538649fe8d8d7ddbf839b.webp', thumbnailUrl: '/images/products/9c7a458b71d538649fe8d8d7ddbf839b.webp', alt: "Фонарь налобный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19784,7 +19784,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 299,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013394-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ea/ea64a623fa6b76267e92e7ea5d15d387.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ea/ea64a623fa6b76267e92e7ea5d15d387.jpg', alt: "Часы настольные электронные, FLARX, с подсветкой, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013394-1', url: '/images/products/ea64a623fa6b76267e92e7ea5d15d387.webp', thumbnailUrl: '/images/products/ea64a623fa6b76267e92e7ea5d15d387.webp', alt: "Часы настольные электронные, FLARX, с подсветкой, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19805,7 +19805,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012655-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d8/d861f29d545e0b2e7ef2cb873de1cd8c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d8/d861f29d545e0b2e7ef2cb873de1cd8c.jpg', alt: "Фонарь аккумуляторный светодиодный, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012655-1', url: '/images/products/d861f29d545e0b2e7ef2cb873de1cd8c.webp', thumbnailUrl: '/images/products/d861f29d545e0b2e7ef2cb873de1cd8c.webp', alt: "Фонарь аккумуляторный светодиодный, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19826,7 +19826,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012663-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c836ac50ec965a6576ccd154a7b2489c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c8/c836ac50ec965a6576ccd154a7b2489c.jpg', alt: "Фонарь светодиодный аккумуляторный, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012663-1', url: '/images/products/c836ac50ec965a6576ccd154a7b2489c.webp', thumbnailUrl: '/images/products/c836ac50ec965a6576ccd154a7b2489c.webp', alt: "Фонарь светодиодный аккумуляторный, FLARX, с кабелем USB, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19847,7 +19847,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012657-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/36/36c98c665c7c62e2f66ef8f3766e57f4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/36/36c98c665c7c62e2f66ef8f3766e57f4.jpg', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012657-1', url: '/images/products/36c98c665c7c62e2f66ef8f3766e57f4.webp', thumbnailUrl: '/images/products/36c98c665c7c62e2f66ef8f3766e57f4.webp', alt: "Светильник-ночник светодиодный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19868,7 +19868,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012569-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/de71e016f32ae7d8f5706718de5f9a3c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/de/de71e016f32ae7d8f5706718de5f9a3c.jpg', alt: "Светильник-ночник, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012569-1', url: '/images/products/de71e016f32ae7d8f5706718de5f9a3c.webp', thumbnailUrl: '/images/products/de71e016f32ae7d8f5706718de5f9a3c.webp', alt: "Светильник-ночник, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19889,7 +19889,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012710-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/00/00903510dafd0721526a8e857132c0bf.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/00/00903510dafd0721526a8e857132c0bf.jpg', alt: "Фонарь налобный светодиодный, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012710-1', url: '/images/products/00903510dafd0721526a8e857132c0bf.webp', thumbnailUrl: '/images/products/00903510dafd0721526a8e857132c0bf.webp', alt: "Фонарь налобный светодиодный, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19910,7 +19910,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 280,
         baseOldPrice: 299,
         images: [
-            { id: 'img-5012745-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/64/645386592da825dd2b77e4f5e2ba336a.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/64/645386592da825dd2b77e4f5e2ba336a.jpg', alt: "Фонарь светодиодный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
+            { id: 'img-5012745-1', url: '/images/products/645386592da825dd2b77e4f5e2ba336a.webp', thumbnailUrl: '/images/products/645386592da825dd2b77e4f5e2ba336a.webp', alt: "Фонарь светодиодный аккумуляторный, FLARX, с кабелем USB", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19931,7 +19931,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 99,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013507-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/32af64c62ad3dbcb040fd89e0bdd0479.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/32/32af64c62ad3dbcb040fd89e0bdd0479.jpg', alt: "Наушники вакуумные с микрофоном, More Choice, проводные, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013507-1', url: '/images/products/32af64c62ad3dbcb040fd89e0bdd0479.webp', thumbnailUrl: '/images/products/32af64c62ad3dbcb040fd89e0bdd0479.webp', alt: "Наушники вакуумные с микрофоном, More Choice, проводные, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19952,7 +19952,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013297-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ced6651c2ee374a758ebbe028f0f0c2b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ce/ced6651c2ee374a758ebbe028f0f0c2b.jpg', alt: "Обогреватель настольный, Flarx", sortOrder: 0 }
+            { id: 'img-5013297-1', url: '/images/products/ced6651c2ee374a758ebbe028f0f0c2b.webp', thumbnailUrl: '/images/products/ced6651c2ee374a758ebbe028f0f0c2b.webp', alt: "Обогреватель настольный, Flarx", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19973,7 +19973,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 174.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013280-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/36/363b489e5db4a22908e5a4bd5142f194.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/36/363b489e5db4a22908e5a4bd5142f194.jpg', alt: "Мини-штатив для мобильного телефона, FLARX", sortOrder: 0 }
+            { id: 'img-5013280-1', url: '/images/products/363b489e5db4a22908e5a4bd5142f194.webp', thumbnailUrl: '/images/products/363b489e5db4a22908e5a4bd5142f194.webp', alt: "Мини-штатив для мобильного телефона, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -19994,7 +19994,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012730-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b6/b60d4a4794bf10574ecc0d2a296514a2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/b6/b60d4a4794bf10574ecc0d2a296514a2.jpg', alt: "Светильник-ночник \"Птичка\", FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012730-1', url: '/images/products/b60d4a4794bf10574ecc0d2a296514a2.webp', thumbnailUrl: '/images/products/b60d4a4794bf10574ecc0d2a296514a2.webp', alt: "Светильник-ночник \"Птичка\", FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20015,7 +20015,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 229,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012630-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e9/e92a0b88a55792768e4f63a2e78ca8c0.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e9/e92a0b88a55792768e4f63a2e78ca8c0.jpg', alt: "Фонарь кемпинговый, FLARX, 3 варианта освещения, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012630-1', url: '/images/products/e92a0b88a55792768e4f63a2e78ca8c0.webp', thumbnailUrl: '/images/products/e92a0b88a55792768e4f63a2e78ca8c0.webp', alt: "Фонарь кемпинговый, FLARX, 3 варианта освещения, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20036,7 +20036,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 349,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012721-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/544b78d774048a68821455a384462d90.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/544b78d774048a68821455a384462d90.jpg', alt: "Светильник светодиодный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5012721-1', url: '/images/products/544b78d774048a68821455a384462d90.webp', thumbnailUrl: '/images/products/544b78d774048a68821455a384462d90.webp', alt: "Светильник светодиодный с кабелем USB, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20057,7 +20057,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 116,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013446-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e367b95eb47a9ff25b16492c8a8f357.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/1e/1e367b95eb47a9ff25b16492c8a8f357.jpg', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013446-1', url: '/images/products/1e367b95eb47a9ff25b16492c8a8f357.webp', thumbnailUrl: '/images/products/1e367b95eb47a9ff25b16492c8a8f357.webp', alt: "Кабель USB, FLARX, 100 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20078,7 +20078,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 399,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5092769-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5b9ac9e7cc2b99b1e63e45708377c8e.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/a5/a5b9ac9e7cc2b99b1e63e45708377c8e.jpg', alt: "Весы электронные кухонные", sortOrder: 0 }
+            { id: 'img-5092769-1', url: '/images/products/a5b9ac9e7cc2b99b1e63e45708377c8e.webp', thumbnailUrl: '/images/products/a5b9ac9e7cc2b99b1e63e45708377c8e.webp', alt: "Весы электронные кухонные", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20099,7 +20099,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 279,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012723-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/03/033195c106cfbabcc7342c1e057851db.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/03/033195c106cfbabcc7342c1e057851db.jpg', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012723-1', url: '/images/products/033195c106cfbabcc7342c1e057851db.webp', thumbnailUrl: '/images/products/033195c106cfbabcc7342c1e057851db.webp', alt: "Фонарь светодиодный аккумуляторный с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20120,7 +20120,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5013358-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8808067f3fe030619def5d5f36937c1b.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/88/8808067f3fe030619def5d5f36937c1b.jpg', alt: "Будильник, FLARX, в ассортименте", sortOrder: 0 }
+            { id: 'img-5013358-1', url: '/images/products/8808067f3fe030619def5d5f36937c1b.webp', thumbnailUrl: '/images/products/8808067f3fe030619def5d5f36937c1b.webp', alt: "Будильник, FLARX, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20141,7 +20141,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 199,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5012588-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c9/c9d05e856d0930410795e5c600fccaf7.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c9/c9d05e856d0930410795e5c600fccaf7.jpg', alt: "Лампа настольная с кабелем USB, FLARX", sortOrder: 0 }
+            { id: 'img-5012588-1', url: '/images/products/c9d05e856d0930410795e5c600fccaf7.webp', thumbnailUrl: '/images/products/c9d05e856d0930410795e5c600fccaf7.webp', alt: "Лампа настольная с кабелем USB, FLARX", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20162,7 +20162,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 62,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120200-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aae064b1981052d7af17e7aaecbb7265.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/aa/aae064b1981052d7af17e7aaecbb7265.jpg', alt: "Грунт для цветов и комнатных растений, Азбука Роста, 5 л", sortOrder: 0 }
+            { id: 'img-5120200-1', url: '/images/products/aae064b1981052d7af17e7aaecbb7265.webp', thumbnailUrl: '/images/products/aae064b1981052d7af17e7aaecbb7265.webp', alt: "Грунт для цветов и комнатных растений, Азбука Роста, 5 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20183,7 +20183,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120239-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5ef06c71aa2a58a4e766365ea4c6f772.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/5e/5ef06c71aa2a58a4e766365ea4c6f772.jpg', alt: "Дренаж керамзитовый, Царица цветов, 2 л", sortOrder: 0 }
+            { id: 'img-5120239-1', url: '/images/products/5ef06c71aa2a58a4e766365ea4c6f772.webp', thumbnailUrl: '/images/products/5ef06c71aa2a58a4e766365ea4c6f772.webp', alt: "Дренаж керамзитовый, Царица цветов, 2 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20204,7 +20204,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120242-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4e7dd8e58b554193a5ddcc728530ce0c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/4e/4e7dd8e58b554193a5ddcc728530ce0c.jpg', alt: "Вермикулит, Царица цветов, 1,8 л", sortOrder: 0 }
+            { id: 'img-5120242-1', url: '/images/products/4e7dd8e58b554193a5ddcc728530ce0c.webp', thumbnailUrl: '/images/products/4e7dd8e58b554193a5ddcc728530ce0c.webp', alt: "Вермикулит, Царица цветов, 1,8 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20225,7 +20225,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 69,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120025-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ac/ac8cba7be065ea0fe9008b4ae3735ba1.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ac/ac8cba7be065ea0fe9008b4ae3735ba1.jpg', alt: "Грунт для рассады, Родная земля, 10 л", sortOrder: 0 }
+            { id: 'img-5120025-1', url: '/images/products/ac8cba7be065ea0fe9008b4ae3735ba1.webp', thumbnailUrl: '/images/products/ac8cba7be065ea0fe9008b4ae3735ba1.webp', alt: "Грунт для рассады, Родная земля, 10 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20246,7 +20246,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 20.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120291-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/09/094402d355a600e48f09518b2e66a4fc.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/09/094402d355a600e48f09518b2e66a4fc.jpg', alt: "Янтарная кислота, Секрет урожая, 4 г", sortOrder: 0 }
+            { id: 'img-5120291-1', url: '/images/products/094402d355a600e48f09518b2e66a4fc.webp', thumbnailUrl: '/images/products/094402d355a600e48f09518b2e66a4fc.webp', alt: "Янтарная кислота, Секрет урожая, 4 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20267,7 +20267,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 124,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120193-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/54f714d249868e26e6d562c4ff283366.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/54/54f714d249868e26e6d562c4ff283366.jpg', alt: "Почвобрикет \"Крепкая рассада\", БиоМастер, 8 л", sortOrder: 0 }
+            { id: 'img-5120193-1', url: '/images/products/54f714d249868e26e6d562c4ff283366.webp', thumbnailUrl: '/images/products/54f714d249868e26e6d562c4ff283366.webp', alt: "Почвобрикет \"Крепкая рассада\", БиоМастер, 8 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20288,7 +20288,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 24.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120226-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/61af71911b9e3d8739fb489172988459.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/61/61af71911b9e3d8739fb489172988459.jpg', alt: "Фосфорно-калийное удобрение \"Монокалийфосфат\", 10 г", sortOrder: 0 }
+            { id: 'img-5120226-1', url: '/images/products/61af71911b9e3d8739fb489172988459.webp', thumbnailUrl: '/images/products/61af71911b9e3d8739fb489172988459.webp', alt: "Фосфорно-калийное удобрение \"Монокалийфосфат\", 10 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20309,7 +20309,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 14.1,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120137-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/75/75b0500db8c1dcd6639c45de19a6d10c.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/75/75b0500db8c1dcd6639c45de19a6d10c.jpg', alt: "Коренник, Щёлково Агрохим, 5 г", sortOrder: 0 }
+            { id: 'img-5120137-1', url: '/images/products/75b0500db8c1dcd6639c45de19a6d10c.webp', thumbnailUrl: '/images/products/75b0500db8c1dcd6639c45de19a6d10c.webp', alt: "Коренник, Щёлково Агрохим, 5 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20330,7 +20330,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120030-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb1387d838fd50a73b8f05576b60d118.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb1387d838fd50a73b8f05576b60d118.jpg', alt: "\"Фитоспорин-М\", ОЖЗ Кузнецова, 100 г", sortOrder: 0 }
+            { id: 'img-5120030-1', url: '/images/products/eb1387d838fd50a73b8f05576b60d118.webp', thumbnailUrl: '/images/products/eb1387d838fd50a73b8f05576b60d118.webp', alt: "\"Фитоспорин-М\", ОЖЗ Кузнецова, 100 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20351,7 +20351,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 49.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120114-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abcf0aa15ddf981fc7c7a14a72f5680f.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/ab/abcf0aa15ddf981fc7c7a14a72f5680f.jpg', alt: "Удобрение универсальное для комнатных растений, ОЖЗ Кузнецова, 50 г", sortOrder: 0 }
+            { id: 'img-5120114-1', url: '/images/products/abcf0aa15ddf981fc7c7a14a72f5680f.webp', thumbnailUrl: '/images/products/abcf0aa15ddf981fc7c7a14a72f5680f.webp', alt: "Удобрение универсальное для комнатных растений, ОЖЗ Кузнецова, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20372,7 +20372,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 17.4,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120292-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/dab4cffcee1595e768a3fd15dd058348.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/da/dab4cffcee1595e768a3fd15dd058348.jpg', alt: "Борная кислота, Секрет урожая, 10 г", sortOrder: 0 }
+            { id: 'img-5120292-1', url: '/images/products/dab4cffcee1595e768a3fd15dd058348.webp', thumbnailUrl: '/images/products/dab4cffcee1595e768a3fd15dd058348.webp', alt: "Борная кислота, Секрет урожая, 10 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20393,7 +20393,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5130084-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb2660829271622d414a87925a655275.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/eb/eb2660829271622d414a87925a655275.jpg', alt: "Мини-парник с торфяными таблетками, Умный огород, 12 таблеток", sortOrder: 0 }
+            { id: 'img-5130084-1', url: '/images/products/eb2660829271622d414a87925a655275.webp', thumbnailUrl: '/images/products/eb2660829271622d414a87925a655275.webp', alt: "Мини-парник с торфяными таблетками, Умный огород, 12 таблеток", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20414,7 +20414,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 24.7,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120298-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/773e890cb2a3e3563562e570a9733ef6.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/77/773e890cb2a3e3563562e570a9733ef6.jpg', alt: "Удобрение листовое для петуний и балконных цветов \"Leafpower\", FERTIKA, 15 г", sortOrder: 0 }
+            { id: 'img-5120298-1', url: '/images/products/773e890cb2a3e3563562e570a9733ef6.webp', thumbnailUrl: '/images/products/773e890cb2a3e3563562e570a9733ef6.webp', alt: "Удобрение листовое для петуний и балконных цветов \"Leafpower\", FERTIKA, 15 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20435,7 +20435,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 31.1,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120369-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8db02ef3a54db25ceeb9e1e12ef0a167.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8db02ef3a54db25ceeb9e1e12ef0a167.jpg', alt: "Марганцовка (калий марганцовокислый 44,9%), СТК, 10 г", sortOrder: 0 }
+            { id: 'img-5120369-1', url: '/images/products/8db02ef3a54db25ceeb9e1e12ef0a167.webp', thumbnailUrl: '/images/products/8db02ef3a54db25ceeb9e1e12ef0a167.webp', alt: "Марганцовка (калий марганцовокислый 44,9%), СТК, 10 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20456,7 +20456,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 87,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120307-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d085dd0e067cdfe6c7335acfd9d5e577.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/d0/d085dd0e067cdfe6c7335acfd9d5e577.jpg', alt: "Карбамид (мочевина), Сам себе агроном, 0,8 кг", sortOrder: 0 }
+            { id: 'img-5120307-1', url: '/images/products/d085dd0e067cdfe6c7335acfd9d5e577.webp', thumbnailUrl: '/images/products/d085dd0e067cdfe6c7335acfd9d5e577.webp', alt: "Карбамид (мочевина), Сам себе агроном, 0,8 кг", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20477,7 +20477,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5110223-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b654f83fdb0c6242725fa700d022985.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8b/8b654f83fdb0c6242725fa700d022985.jpg', alt: "Коврик для пересадки растений, GreenArt, 66х66 см", sortOrder: 0 }
+            { id: 'img-5110223-1', url: '/images/products/8b654f83fdb0c6242725fa700d022985.webp', thumbnailUrl: '/images/products/8b654f83fdb0c6242725fa700d022985.webp', alt: "Коврик для пересадки растений, GreenArt, 66х66 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20498,7 +20498,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120201-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6e/6e88cdd2e6c1fb4985f0673c7e6e58ec.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/6e/6e88cdd2e6c1fb4985f0673c7e6e58ec.jpg', alt: "Биопрепарат \"Кормилица Микориза\", ОЖЗ Кузнецова, 30 г", sortOrder: 0 }
+            { id: 'img-5120201-1', url: '/images/products/6e88cdd2e6c1fb4985f0673c7e6e58ec.webp', thumbnailUrl: '/images/products/6e88cdd2e6c1fb4985f0673c7e6e58ec.webp', alt: "Биопрепарат \"Кормилица Микориза\", ОЖЗ Кузнецова, 30 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20519,7 +20519,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 149,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120103-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e6/e6c910bee93993a8d807ae5814892fc4.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/e6/e6c910bee93993a8d807ae5814892fc4.jpg', alt: "Нашатырный спирт, СТК, 9,99%, 1 л", sortOrder: 0 }
+            { id: 'img-5120103-1', url: '/images/products/e6c910bee93993a8d807ae5814892fc4.webp', thumbnailUrl: '/images/products/e6c910bee93993a8d807ae5814892fc4.webp', alt: "Нашатырный спирт, СТК, 9,99%, 1 л", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20540,7 +20540,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5130328-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fa/fa9f58d15a1289caa276e1c8765bad4d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/fa/fa9f58d15a1289caa276e1c8765bad4d.jpg', alt: "Поддон для рассады с крышкой, АгроСнабРитейл, 20х9х34 см", sortOrder: 0 }
+            { id: 'img-5130328-1', url: '/images/products/fa9f58d15a1289caa276e1c8765bad4d.webp', thumbnailUrl: '/images/products/fa9f58d15a1289caa276e1c8765bad4d.webp', alt: "Поддон для рассады с крышкой, АгроСнабРитейл, 20х9х34 см", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20561,7 +20561,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 59,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5110170-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/628dfcafcadc33a1c275809721e02b4d.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/62/628dfcafcadc33a1c275809721e02b4d.jpg', alt: "Опора для растений, GreenArt, 50 шт., 40 см, в ассортименте", sortOrder: 0 }
+            { id: 'img-5110170-1', url: '/images/products/628dfcafcadc33a1c275809721e02b4d.webp', thumbnailUrl: '/images/products/628dfcafcadc33a1c275809721e02b4d.webp', alt: "Опора для растений, GreenArt, 50 шт., 40 см, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20582,7 +20582,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 27.5,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120048-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cc3db1c19213ae8730d657c0039f7cb2.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/cc/cc3db1c19213ae8730d657c0039f7cb2.jpg', alt: "Удобрение для борьбы с болезнями растений, Ваше Хозяйство, в ассортименте", sortOrder: 0 }
+            { id: 'img-5120048-1', url: '/images/products/cc3db1c19213ae8730d657c0039f7cb2.webp', thumbnailUrl: '/images/products/cc3db1c19213ae8730d657c0039f7cb2.webp', alt: "Удобрение для борьбы с болезнями растений, Ваше Хозяйство, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20603,7 +20603,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 55,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120370-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d94e71c1e65410a8d2780f4a7ae1bff.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/8d/8d94e71c1e65410a8d2780f4a7ae1bff.jpg', alt: "Наноудобрение для рассады и саженцев, BONA FORTE, 100 г", sortOrder: 0 }
+            { id: 'img-5120370-1', url: '/images/products/8d94e71c1e65410a8d2780f4a7ae1bff.webp', thumbnailUrl: '/images/products/8d94e71c1e65410a8d2780f4a7ae1bff.webp', alt: "Наноудобрение для рассады и саженцев, BONA FORTE, 100 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20624,7 +20624,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 79,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5140115-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c2/c24def382b25f5e34be4cb8967842e38.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/c2/c24def382b25f5e34be4cb8967842e38.jpg', alt: "Набор для выращивания \"Вырасти новогоднюю ель\", вырасти меня!, в ассортименте", sortOrder: 0 }
+            { id: 'img-5140115-1', url: '/images/products/c24def382b25f5e34be4cb8967842e38.webp', thumbnailUrl: '/images/products/c24def382b25f5e34be4cb8967842e38.webp', alt: "Набор для выращивания \"Вырасти новогоднюю ель\", вырасти меня!, в ассортименте", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
@@ -20645,7 +20645,7 @@ export const PRODUCTS: Product[] = [
         basePrice: 35,
         baseOldPrice: undefined,
         images: [
-            { id: 'img-5120194-1', url: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/8138930b86e29c7f871c1d08ffeb1afe.jpg', thumbnailUrl: 'https://img.fix-price.com/insecure/rs:fit:800:800/plain/bit/_marketplace/images/origin/81/8138930b86e29c7f871c1d08ffeb1afe.jpg', alt: "Заправка для рассадных грунтов, SunTerra, 50 г", sortOrder: 0 }
+            { id: 'img-5120194-1', url: '/images/products/8138930b86e29c7f871c1d08ffeb1afe.webp', thumbnailUrl: '/images/products/8138930b86e29c7f871c1d08ffeb1afe.webp', alt: "Заправка для рассадных грунтов, SunTerra, 50 г", sortOrder: 0 }
         ],
         categoryId: 'c4',
         category: cat('c4'),
