@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight, Package, Sparkles, Shield, Truck, Tag, Gift, Star, Flame, Percent, Heart } from 'lucide-react';
+import { ArrowRight, Package, Sparkles, Shield, Truck, Tag, Gift, Star, Flame, Percent, Heart } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,6 +9,7 @@ import { useAppStore, useCatalogStore, useAuthStore, useUIStore, useFavoritesSto
 import { useMockCatalogApi, useMockMarketingApi } from '@/api/mock';
 import type { Product, Banner } from '@/types';
 import { Stories } from '@/components/home/Stories';
+import { MainBanners } from '@/components/home/MainBanners';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { OrganizationSchema, ECommerceSchema } from '@/components/seo/JsonLdSchema';
 
@@ -38,9 +39,7 @@ function ProductCardSkeleton() {
   );
 }
 
-function BannerSkeleton() {
-  return <Skeleton className="h-[200px] md:h-[400px] w-full rounded-2xl mx-4 md:mx-0" />;
-}
+
 
 const quickTags = [
   { label: 'Подарки', icon: Gift, color: 'bg-pink-50 text-pink-600' },
@@ -59,8 +58,6 @@ export function HomePage() {
   const { getBanners } = useMockMarketingApi();
   const [isLoading, setIsLoading] = useState(true);
   const [banners, setBanners] = useState<Banner[]>([]);
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const bannerInterval = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => { loadData(); }, [region]);
 
@@ -126,51 +123,7 @@ export function HomePage() {
         </section>
 
         {/* Hero Banner Carousel */}
-        {isLoading ? (
-          <BannerSkeleton />
-        ) : banners.length > 0 ? (
-          <section className="px-4 md:px-0">
-            <div className="md:container md:mx-auto">
-              <div className="relative rounded-2xl overflow-hidden">
-                <div className="relative h-[200px] md:h-[400px]">
-                  {banners.map((banner, index) => (
-                    <div key={banner.id} className={`absolute inset-0 transition-opacity duration-500 ${index === currentBanner ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                      <img src={banner.image} alt={banner.title} className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-end md:items-center p-6 md:p-10">
-                        <div className="max-w-lg text-white">
-                          <h1 className="text-xl md:text-4xl font-bold mb-2 md:mb-4">{banner.title}</h1>
-                          {banner.subtitle && <p className="text-sm md:text-lg mb-3 md:mb-6 text-white/90">{banner.subtitle}</p>}
-                          <Link to={banner.link}>
-                            <Button className="bg-brand hover:bg-brand-600 text-sm md:text-base active:scale-95 transition-transform">
-                              Подробнее <ArrowRight className="w-4 h-4 ml-2" />
-                            </Button>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {banners.length > 1 && (
-                  <>
-                    <Button variant="ghost" size="icon" className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full" onClick={prevBanner}><ChevronLeft className="w-6 h-6" /></Button>
-                    <Button variant="ghost" size="icon" className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full" onClick={nextBanner}><ChevronRight className="w-6 h-6" /></Button>
-                  </>
-                )}
-                {banners.length > 1 && (
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                    {banners.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToBanner(index)}
-                        className={`h-2 rounded-full transition-all duration-300 ${index === currentBanner ? 'bg-white w-6' : 'bg-white/50 w-2'}`}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </section>
-        ) : null}
+        <MainBanners banners={banners} isLoading={isLoading} />
 
         {/* Navigation Blocks */}
         <section className="px-4 md:container md:mx-auto">

@@ -24,9 +24,9 @@ const MOCK_PROMOTIONS: Promotion[] = [
 ];
 
 const MOCK_BANNERS: Banner[] = [
-  { id: 'b1', title: 'Новые поступления', subtitle: 'Более 1000 новых товаров', image: 'https://placehold.co/1200x400/22c55e/white?text=New', link: '/catalog', linkType: 'internal', position: 'home_main', sortOrder: 1, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
-  { id: 'b2', title: 'Скидки до 50%', subtitle: 'На бытовую химию', image: 'https://placehold.co/1200x400/FFA500/white?text=Sale', link: '/catalog/bytovaya-khimiya', linkType: 'internal', position: 'home_main', sortOrder: 2, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
-  { id: 'b3', title: 'Программа лояльности', subtitle: 'Копите баллы и получайте скидки', image: 'https://placehold.co/1200x400/4169E1/white?text=Loyalty', link: '/account/loyalty', linkType: 'internal', position: 'home_main', sortOrder: 3, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b1', title: 'Новые поступления', subtitle: 'Более 1000 новых товаров', image: '/images/products/shampoo-lifestyle.png', link: '/catalog', linkType: 'internal', position: 'home_main', sortOrder: 1, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b2', title: 'Скидки до 50%', subtitle: 'На бытовую химию', image: '/images/products/tide-lifestyle.png', link: '/catalog/bytovaya-khimiya', linkType: 'internal', position: 'home_main', sortOrder: 2, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b3', title: 'Вкусные предложения', subtitle: 'Любимые напитки и закуски', image: '/images/products/cola-lifestyle.png', link: '/catalog/produkty', linkType: 'internal', position: 'home_main', sortOrder: 3, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
 ];
 
 const MOCK_ORDERS: Order[] = [
