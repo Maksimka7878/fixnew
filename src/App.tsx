@@ -10,6 +10,7 @@ import { useAuthStore } from '@/store';
 import { useAppBadge } from '@/hooks/useAppBadge';
 import { broadcastService } from '@/services/broadcastService';
 import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Lazy load all pages for code splitting
 const HomePage = lazy(() => import('@/pages/public/HomePage').then(m => ({ default: m.HomePage })));
@@ -88,6 +89,7 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  const isMobile = useIsMobile();
   const [showSplash, setShowSplash] = useState(true);
 
   // Update app badge with cart item count
@@ -102,13 +104,17 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Show splash for at least 2 seconds (like a real app launch)
+    if (!isMobile) {
+      setShowSplash(false);
+      return;
+    }
+    // Show splash for 2 seconds only on mobile (like a native app launch)
     const timer = setTimeout(() => {
       setShowSplash(false);
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [isMobile]);
 
   return (
     <BrowserRouter>
@@ -116,7 +122,7 @@ function App() {
       <ScrollToTop />
       <Toaster position="top-right" richColors />
       <AnimatePresence>
-        {showSplash && <SplashScreen key="splash" />}
+        {showSplash && isMobile && <SplashScreen key="splash" />}
       </AnimatePresence>
       <AnimatedRoutes />
     </BrowserRouter>
