@@ -124,7 +124,7 @@ export function OptimizedImage({
 
       {/* Image */}
       {isInView && (
-        <picture>
+        <picture className="block w-full h-full">
           {/* WebP source */}
           {!src.includes('data:') && (
             <source
@@ -157,9 +157,6 @@ export function OptimizedImage({
               'w-full h-full object-cover transition-all duration-500',
               isLoaded ? 'opacity-100 blur-0' : 'opacity-50 blur-xl'
             )}
-            style={{
-              aspectRatio: aspectRatio ? 'auto' : undefined
-            }}
           />
         </picture>
       )}
