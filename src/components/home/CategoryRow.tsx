@@ -8,7 +8,7 @@ const categories = [
         id: 'gifts',
         label: 'Подарки любимым',
         image: '/images/categories/gifts.png',
-        link: '/promotions',
+        link: '/catalog/podarki',
     },
     {
         id: 'products',
@@ -38,7 +38,7 @@ const categories = [
         id: 'sales',
         label: 'Акции',
         image: '/images/categories/sales.png',
-        link: '/promotions',
+        link: '/catalog/aktsii',
     }
 ];
 
