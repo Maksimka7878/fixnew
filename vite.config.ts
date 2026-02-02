@@ -100,14 +100,10 @@ export default defineConfig({
         drop_debugger: true
       }
     },
-    // Code splitting
+    // Code splitting - let Vite handle automatically
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-ui': ['framer-motion', 'lucide-react', 'sonner'],
-          'vendor-utils': ['zustand', 'clsx', 'tailwind-merge', 'date-fns'],
-        }
+        // Removed manualChunks that caused React loading order issues
       }
     },
     // Target modern browsers
