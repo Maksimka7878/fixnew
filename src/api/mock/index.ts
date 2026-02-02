@@ -110,7 +110,7 @@ export function useMockCatalogApi() {
     return { success: true, data: regionId ? MOCK_CATEGORIES.filter((c) => c.regionIds.includes(regionId)) : MOCK_CATEGORIES };
   }, []);
 
-  const getProducts = useCallback(async (params?: { regionId?: string; categoryId?: string; search?: string }): Promise<ApiResponse<Product[]>> => {
+  const getProducts = useCallback(async (params?: { regionId?: string; categoryId?: string; search?: string; limit?: number; offset?: number }): Promise<ApiResponse<Product[]>> => {
     setIsLoading(true);
     await delay(200);
     let products = [...MOCK_PRODUCTS];
@@ -121,8 +121,12 @@ export function useMockCatalogApi() {
       const searchLower = params.search.toLowerCase();
       products = products.filter(p => p.name.toLowerCase().includes(searchLower));
     }
+    // Apply pagination
+    const limit = params?.limit || 48; // Default 48 products per page
+    const offset = params?.offset || 0;
+    const paginatedProducts = products.slice(offset, offset + limit);
     setIsLoading(false);
-    return { success: true, data: products };
+    return { success: true, data: paginatedProducts };
   }, []);
 
   const getProductBySlug = useCallback(async (slug: string): Promise<ApiResponse<Product>> => {

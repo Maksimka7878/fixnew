@@ -66,12 +66,18 @@ export function CatalogPage() {
   const { getCategories, getProducts } = useMockCatalogApi();
   const [isLoading, setIsLoading] = useState(true);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [page, setPage] = useState(1);
+  const ITEMS_PER_PAGE = 48;
 
-  useEffect(() => { loadData(); }, [region]);
+  useEffect(() => { setPage(1); loadData(1); }, [region]);
 
-  const loadData = async () => {
+  const loadData = async (pageNum: number) => {
     setIsLoading(true);
-    const [catRes, prodRes] = await Promise.all([getCategories(region?.id), getProducts({ regionId: region?.id || 'r1' })]);
+    const offset = (pageNum - 1) * ITEMS_PER_PAGE;
+    const [catRes, prodRes] = await Promise.all([
+      getCategories(region?.id),
+      getProducts({ regionId: region?.id || 'r1', limit: ITEMS_PER_PAGE, offset })
+    ]);
     if (catRes.success && catRes.data) setCategories(catRes.data);
     if (prodRes.success && prodRes.data) setProducts(prodRes.data);
     setIsLoading(false);
@@ -155,6 +161,34 @@ export function CatalogPage() {
               </motion.div>
             ))}
           </motion.div>
+        )}
+
+        {/* Pagination */}
+        {!isLoading && products.length > 0 && products.length === ITEMS_PER_PAGE && (
+          <div className="flex justify-center items-center gap-2 mt-8">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setPage(p => Math.max(1, p - 1));
+                loadData(Math.max(1, page - 1));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              disabled={page === 1}
+            >
+              ← Назад
+            </Button>
+            <span className="text-sm text-gray-600">Страница {page}</span>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setPage(p => p + 1);
+                loadData(page + 1);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              Дальше →
+            </Button>
+          </div>
         )}
       </section>
     </div>
