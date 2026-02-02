@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package, Shield, Truck, Sparkles, Star, Tag, Heart } from 'lucide-react';
+import { ArrowRight, Package, Shield, Truck, Sparkles, Star, Heart } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 
 import { Card, CardContent } from '@/components/ui/card';
@@ -81,18 +81,18 @@ export function HomePage() {
       <OrganizationSchema />
       <ECommerceSchema />
       <div className="space-y-6 md:space-y-8 pb-8">
-        {/* Instagram-style Stories */}
-        <section className="pt-4 px-4 md:container md:mx-auto">
-          <Stories />
-        </section>
+        {/* Hero Banner Carousel - FIRST like fix-price.com */}
+        <MainBanners banners={banners} isLoading={isLoading} />
 
-        {/* Categories / Quick Actions */}
+        {/* Large Category Cards - like fix-price.com */}
         <section className="pt-2 md:pt-4">
           <CategoryRow />
         </section>
 
-        {/* Hero Banner Carousel */}
-        <MainBanners banners={banners} isLoading={isLoading} />
+        {/* Instagram-style Stories - mobile only */}
+        <section className="pt-4 px-4 md:hidden">
+          <Stories />
+        </section>
 
         {/* Navigation Blocks */}
         <section className="px-4 md:container md:mx-auto">
@@ -149,38 +149,6 @@ export function HomePage() {
                 </motion.div>
               </Link>
             )}
-          </div>
-        </section>
-
-        {/* Categories Row */}
-        <section className="px-4 md:container md:mx-auto">
-          <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
-            <motion.div
-              className="flex md:grid md:grid-cols-4 gap-3 w-max md:w-full"
-              variants={containerVariants}
-              initial="hidden"
-              animate="show"
-            >
-              {[
-                { to: '/catalog/produkty', icon: Package, color: 'brand', label: 'Продукты' },
-                { to: '/catalog/bytovaya-khimiya', icon: Sparkles, color: 'blue', label: 'Бытовая химия' },
-                { to: '/catalog/kosmetika', icon: Shield, color: 'pink', label: 'Косметика' },
-                { to: '/promotions', icon: Tag, color: 'amber', label: 'Акции' },
-              ].map((cat) => (
-                <motion.div key={cat.to} variants={itemVariants} className="flex-shrink-0 w-[120px] md:w-auto">
-                  <Link to={cat.to}>
-                    <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full hover:-translate-y-1 active:scale-95">
-                      <CardContent className="p-4 md:p-6 flex flex-col items-center text-center">
-                        <div className={`w-12 h-12 bg-${cat.color}-100 rounded-2xl flex items-center justify-center mb-3`}>
-                          <cat.icon className={`w-6 h-6 text-${cat.color}-600`} />
-                        </div>
-                        <h3 className="font-semibold text-sm">{cat.label}</h3>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </section>
 

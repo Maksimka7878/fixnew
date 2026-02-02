@@ -162,15 +162,16 @@ function StoriesComponent() {
     return (
         <>
             {/* Stories Circles */}
-            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide py-2 px-1">
+            <div className="flex items-center gap-3 md:gap-6 lg:gap-8 xl:gap-10 overflow-x-auto scrollbar-hide py-2 px-1 md:justify-center">
                 {mockStories.map((story) => (
                     <motion.button
                         key={story.id}
+                        whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => openStory(story)}
-                        className="flex flex-col items-center gap-1 flex-shrink-0"
+                        className="flex flex-col items-center gap-1.5 md:gap-2 flex-shrink-0"
                     >
-                        <div className={`w-[70px] h-[70px] p-[3px] rounded-full bg-gradient-to-br ${story.color}`}>
+                        <div className={`w-[70px] h-[70px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[120px] xl:h-[120px] p-[3px] rounded-full bg-gradient-to-br ${story.color} transition-shadow hover:shadow-lg`}>
                             <div className="w-full h-full bg-white p-[2px] rounded-full">
                                 <OptimizedImage
                                     src={story.image}
@@ -181,7 +182,7 @@ function StoriesComponent() {
                                 />
                             </div>
                         </div>
-                        <span className="text-[11px] font-medium text-gray-700 max-w-[70px] truncate">
+                        <span className="text-[11px] md:text-sm lg:text-base font-medium text-gray-700 max-w-[70px] md:max-w-[100px] lg:max-w-[120px] truncate">
                             {story.title}
                         </span>
                     </motion.button>
