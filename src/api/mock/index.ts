@@ -25,7 +25,9 @@ const MOCK_PROMOTIONS: Promotion[] = [
 
 const MOCK_BANNERS: Banner[] = [
   { id: 'b1', title: 'Новые поступления', subtitle: 'Более 1000 новых товаров', image: '/images/products/shampoo-lifestyle.webp', link: '/catalog', linkType: 'internal', position: 'home_main', sortOrder: 1, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b4', title: 'Весенняя коллекция', subtitle: 'Обновление вашего дома', image: '/images/marketing/news-new-arrivals.png', link: '/catalog/dom-i-sad', linkType: 'internal', position: 'home_main', sortOrder: 1.5, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
   { id: 'b2', title: 'Скидки до 50%', subtitle: 'На бытовую химию', image: '/images/products/tide-lifestyle.webp', link: '/catalog/bytovaya-khimiya', linkType: 'internal', position: 'home_main', sortOrder: 2, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b5', title: 'Весенняя распродажа', subtitle: 'Скидки на декор и посуду', image: '/images/marketing/promo-spring-sale.png', link: '/catalog/podarki', linkType: 'internal', position: 'home_main', sortOrder: 2.5, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
   { id: 'b3', title: 'Вкусные предложения', subtitle: 'Любимые напитки и закуски', image: '/images/products/cola-lifestyle.webp', link: '/catalog/produkty', linkType: 'internal', position: 'home_main', sortOrder: 3, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
 ];
 

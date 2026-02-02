@@ -1,41 +1,92 @@
-# Implementation Plan: Russian Payment Systems Integration (YooKassa)
+# Plan: Populate 'Gifts' and 'Sales' Categories
 
-## Goal
-Integrate real payment processing for the Russian market, supporting **Bank Cards (Mir, Visa, MC)** and **SBP (Fast Payment System)** using **YooKassa** (formerly Yandex.Checkout) as the provider.
+**Goal:** Fix the issue where 'Gifts' and 'Sales' categories on the homepage link to `/promotions` but should be distinct categories populated with products. Use existing "Popular" and "Recommended" products to populate them.
 
-> [!IMPORTANT]
-> **Security Requirement**: Real payments require a **backend** to store API Secret Keys securely. We cannot do this client-side (in the browser) as it would expose our secrets. This plan includes setting up a lightweight backend (Node.js/Express).
+## Context
+- **Gifts** should correspond to "Popular" products.
+- **Sales** should correspond to "Recommended" products.
+- Currently, these categories link to `/promotions` which displays a different page structure. We want them to act like normal product categories (`/catalog/category-slug`).
 
-## User Review Required
-- [ ] **Provider Choice**: Confirm **YooKassa** is acceptable (Standard for RU, supports SBP & Cards).
-- [ ] **Backend Hosting**: Currently running locally in `/server`. For production, this needs Vercel/VPS.
-- [ ] **Secrets**: Update `/server/.env` with **REAL** YooKassa Test Mode keys to verify payments.
+## Detailed Instructions for Claude
 
-## Proposed Changes
+### 1. Update Mock Data ([src/api/mock/data/products.ts](file:///Users/a1111/Downloads/app/src/api/mock/data/products.ts))
 
-### 1. Architecture: Backend Service (BFF)
-**Status**: ✅ Initialized in `/server`.
-- **Stack**: Node.js, Express, Cors, Axios.
-- **Endpoints**:
-    - `POST /api/payment/create`: Generates payment link.
-    - `POST /api/payment/webhook`: Handles status updates.
+**Step 1.1: Create New Categories**
+Add the following category definitions to the `CATEGORIES` array:
+```typescript
+{
+    id: 'gifts',
+    name: 'Подарки',
+    slug: 'podarki',
+    parentId: null,
+    children: [],
+    sortOrder: 8,
+    isActive: true,
+    regionIds: ['r1', 'r2', 'r3'],
+    image: '/images/icons/icon_gifts.png', // Ensure this image path is valid or reuse an existing one
+    color: 'bg-red-50',
+    icon: 'Gift'
+},
+{
+    id: 'sales',
+    name: 'Акции',
+    slug: 'aktsii',
+    parentId: null,
+    children: [],
+    sortOrder: 9,
+    isActive: true,
+    regionIds: ['r1', 'r2', 'r3'],
+    image: '/images/icons/icon_sales.png', // Ensure this image path is valid or reuse an existing one
+    color: 'bg-yellow-50',
+    icon: 'Percent'
+}
+```
 
-### 2. Frontend Integration
-#### [NEW] `src/api/payment.ts`
-- Service to communicate with our backend server (`http://localhost:3001`).
+**Step 1.2: Duplicate & Reassign Products**
+- Locate the first ~6 products in `PRODUCTS` (these are effectively "Popular").
+- Create deep copies of these product objects.
+- Modify the copies:
+    - Change `categoryId` to `'gifts'`.
+    - Update `category` reference: `category: cat('gifts')`.
+    - Append `-gift` to `id`, `slug`, `sku`, and `barcode` to ensure uniqueness.
+- Locate the next ~6 products in `PRODUCTS` (these are effectively "Recommended").
+- Create deep copies.
+- Modify the copies:
+    - Change `categoryId` to `'sales'`.
+    - Update `category` reference: `category: cat('sales')`.
+    - Append `-sale` to `id`, `slug`, `sku`, and `barcode`.
+- Add all new product copies to the end of the `PRODUCTS` array.
 
-#### [Modify] Checkout Logic (`CartPage` or `CartDrawer`)
-- Add "Pay with Card / SBP" button.
-- **Flow**:
-    1. User clicks "Pay".
-    2. Frontend calls `api/payment/create`.
-    3. Backend returns `confirmationUrl`.
-    4. Frontend redirects `window.location.href = confirmationUrl`.
+### 2. Update Navigation Links ([src/components/home/CategoryRow.tsx](file:///Users/a1111/Downloads/app/src/components/home/CategoryRow.tsx))
 
-### 3. Verification
-- **Sandbox Mode**: Use YooKassa test bank card numbers.
-- **SBP**: Verify QR code generation in sandbox.
+**Step 2.1: Fix Category Links**
+Update the `categories` array links to point to the new catalog pages instead of `/promotions`:
 
-## Next Steps
-- [ ] Implement `src/api/payment.ts` on frontend.
-- [ ] Connect "Pay" button in Cart.
+```typescript
+// Inside CategoryRow.tsx
+const categories = [
+    {
+        id: 'gifts',
+        label: 'Подарки любимым',
+        image: '/images/categories/gifts.png',
+        link: '/catalog/podarki', // CHANGED from '/promotions'
+    },
+    // ... other categories ...
+    {
+        id: 'sales',
+        label: 'Акции',
+        image: '/images/categories/sales.png',
+        link: '/catalog/aktsii', // CHANGED from '/promotions'
+    }
+];
+```
+
+### 3. Verification Steps
+
+1.  **Navigate to Home**.
+2.  Click on the **"Подарки любимым" (Gifts)** card.
+    -   *Expected:* URL changes to `/catalog/podarki`.
+    -   *Expected:* Page displays the products duplicated from the "Popular" list.
+3.  Click on the **"Акции" (Sales)** card.
+    -   *Expected:* URL changes to `/catalog/aktsii`.
+    -   *Expected:* Page displays the products duplicated from the "Recommended" list.
