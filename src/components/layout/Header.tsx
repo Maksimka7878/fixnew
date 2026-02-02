@@ -166,7 +166,7 @@ export function Header() {
           </Link>
 
           {/* Search Bar */}
-          <form onSubmit={handleSearch} className="flex-1 max-w-2xl">
+          <form onSubmit={handleSearch} className="flex-1 max-w-2xl mx-auto">
             <div className="relative group">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-brand transition-colors" />
               <Input
@@ -180,30 +180,51 @@ export function Header() {
           </form>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4 ml-auto">
             <Button variant="ghost" size="icon" onClick={() => navigate('/favorites')} title="Избранное" className="hover:text-brand hover:bg-brand/5">
               <Heart className="w-5 h-5" />
             </Button>
 
-            {/* Notification Bell (Off/On) - using simple disabled look for 'off' based on screenshot */}
             <Button variant="ghost" size="icon" title="Уведомления выключены" className="text-gray-400 hover:text-gray-600">
               <BellOff className="w-5 h-5" />
             </Button>
 
             {isAuthenticated ? (
-              <div className="flex items-center gap-2 ml-2">
-                <Button variant="ghost" onClick={() => navigate('/account')} className="font-medium hover:text-brand hover:bg-brand/5">
-                  <User className="w-5 h-5 mr-2" />
-                  <span>{user?.firstName}</span>
-                </Button>
-              </div>
+              <Button variant="ghost" onClick={() => navigate('/account')} className="font-medium hover:text-brand hover:bg-brand/5">
+                <User className="w-5 h-5 mr-2" />
+                <span>{user?.firstName}</span>
+              </Button>
             ) : (
-              <Button variant="ghost" onClick={() => setAuthModalOpen(true)} className="ml-2 font-medium hover:text-brand hover:bg-brand/5">
+              <Button variant="ghost" onClick={() => setAuthModalOpen(true)} className="font-medium hover:text-brand hover:bg-brand/5">
                 <User className="w-5 h-5 mr-2" />
                 <span>Войти</span>
               </Button>
             )}
+
+            <Button variant="ghost" size="icon" onClick={() => navigate('/cart')} title="Корзина" className="hover:text-brand hover:bg-brand/5 relative">
+              <div className="relative">
+                <Package className="w-6 h-6" /> {/* Using Package as Cart conceptual placeholder if ShoppingCart not imported, checking imports... it's not. Using Package for now or adding ShoppingCart */}
+              </div>
+            </Button>
           </div>
+        </div>
+
+        {/* Secondary Navigation */}
+        <div className="container mx-auto px-4 pb-0">
+          <nav className="flex items-center gap-8 border-t py-3">
+            <Link to="/catalog" className="text-gray-800 hover:text-brand font-medium transition-colors">
+              Каталог
+            </Link>
+            <Link to="/catalog/produkty" className="text-gray-600 hover:text-brand transition-colors">
+              Продукты
+            </Link>
+            <Link to="/catalog/bytovaya-khimiya" className="text-gray-600 hover:text-brand transition-colors">
+              Бытовая химия
+            </Link>
+            <Link to="/catalog/kosmetika" className="text-gray-600 hover:text-brand transition-colors">
+              Косметика
+            </Link>
+          </nav>
         </div>
       </div>
 
