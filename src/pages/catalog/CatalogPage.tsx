@@ -8,7 +8,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useAppStore, useCatalogStore } from '@/store';
 import { useMockCatalogApi } from '@/api/mock';
-import type { Product } from '@/types';
+
+import { ProductCard } from '@/components/product/ProductCard';
 
 // Simplified animations for better mobile performance
 const containerVariants: Variants = {
@@ -148,9 +149,9 @@ export function CatalogPage() {
             initial="hidden"
             animate="show"
           >
-            {products.map((product) => (
+            {products.map((product, index) => (
               <motion.div key={product.id} variants={itemVariants}>
-                <ProductCard product={product} viewMode={viewMode} />
+                <ProductCard product={product} index={index} />
               </motion.div>
             ))}
           </motion.div>
@@ -160,42 +161,4 @@ export function CatalogPage() {
   );
 }
 
-function ProductCard({ product, viewMode }: { product: Product; viewMode: 'grid' | 'list' }) {
-  const { region } = useAppStore();
-  const { getProductRegionData } = useCatalogStore();
-  const regionData = region ? getProductRegionData(product.id, region.id) : null;
 
-  if (viewMode === 'list') {
-    return (
-      <Link to={`/product/${product.id}`}>
-        <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-          <CardContent className="p-4 flex gap-4">
-            <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
-              {product.images && product.images[0] ? <img src={product.images[0].thumbnailUrl} alt={product.name} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-gray-400">📦</div>}
-            </div>
-            <div className="flex-1">
-              <p className="text-xs text-gray-500">{product.sku}</p>
-              <h3 className="font-medium mb-2">{product.name}</h3>
-              {regionData && <span className="font-bold text-brand">{regionData.price.toLocaleString('ru-RU')} ₽</span>}
-            </div>
-          </CardContent>
-        </Card>
-      </Link>
-    );
-  }
-
-  return (
-    <Link to={`/product/${product.id}`}>
-      <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1">
-        <div className="aspect-square bg-gray-100 overflow-hidden">
-          {product.images && product.images[0] ? <img src={product.images[0].thumbnailUrl} alt={product.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" /> : <div className="w-full h-full flex items-center justify-center text-gray-400 text-4xl">📦</div>}
-        </div>
-        <CardContent className="p-3">
-          <p className="text-xs text-gray-500 mb-1">{product.sku}</p>
-          <h3 className="text-sm font-medium line-clamp-2 mb-2">{product.name}</h3>
-          {regionData && <span className="font-bold text-brand">{regionData.price.toLocaleString('ru-RU')} ₽</span>}
-        </CardContent>
-      </Card>
-    </Link>
-  );
-}
