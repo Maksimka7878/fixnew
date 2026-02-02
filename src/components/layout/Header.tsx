@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Menu, X, Heart, Bookmark, User, Package, BellOff } from 'lucide-react';
+import { Search, Menu, X, Heart, Bookmark, User, Package, BellOff, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuthStore, useAppStore, useUIStore } from '@/store';
 import { usePreferredFrameRate } from '@/hooks/usePreferredFrameRate';
-import { toast } from 'sonner';
 import { PWAInstallPrompt } from '@/components/pwa/PWAInstallPrompt';
 import { NotificationCenter } from '@/components/pwa/NotificationCenter';
 
