@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { MapPin, Search, Menu, X, Heart, Bookmark, ChevronDown, LogOut, User, Package } from 'lucide-react';
+import { Search, Menu, X, Heart, Bookmark, User, Package, BellOff } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import { useAuthStore, useAppStore, useUIStore } from '@/store';
 import { usePreferredFrameRate } from '@/hooks/usePreferredFrameRate';
 import { toast } from 'sonner';
@@ -161,91 +160,56 @@ export function Header() {
         </div>
       </div>
 
-      {/* Desktop Header (original) */}
-      <div className="hidden md:block">
-        <div className="bg-brand text-white">
-          <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
-            <button
-              onClick={() => setRegionModalOpen(true)}
-              className="flex items-center gap-1 hover:text-white/80 transition-colors"
-            >
-              <MapPin className="w-4 h-4" />
-              <span>{region?.name || 'Выберите регион'}</span>
-              <ChevronDown className="w-3 h-3" />
-            </button>
-            <div className="flex items-center gap-4">
-              <Link to="/stores" className="hover:text-white/80 transition-colors">
-                Магазины
-              </Link>
-              <Link to="/promotions" className="hover:text-white/80 transition-colors">
-                Акции
-              </Link>
+      {/* Desktop Header (Refactored) */}
+      <div className="hidden md:block border-b">
+        <div className="container mx-auto px-4 h-16 flex items-center gap-8">
+          {/* Logo Area */}
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0 group">
+            <div className="w-10 h-10 bg-brand rounded-xl flex items-center justify-center transition-transform group-hover:scale-105">
+              <span className="text-white font-bold text-lg">FP</span>
             </div>
-          </div>
-        </div>
+            <span className="text-xl font-bold font-heading text-brand uppercase tracking-wide group-hover:text-brand-700 transition-colors">Fix Price</span>
+          </Link>
 
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-              <div className="w-10 h-10">
-                <OptimizedImage src="/logo.webp" alt="Fix Price" priority className="object-contain" />
-              </div>
-              <span className="text-xl font-bold font-heading text-brand uppercase tracking-wide">Fix Price</span>
-            </Link>
+          {/* Search Bar */}
+          <form onSubmit={handleSearch} className="flex-1 max-w-2xl">
+            <div className="relative group">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-brand transition-colors" />
+              <Input
+                type="search"
+                placeholder="Поиск товаров..."
+                className="pl-12 w-full h-11 bg-gray-50 border-transparent focus:bg-white focus:border-brand/20 rounded-xl transition-all shadow-sm group-hover:shadow-md focus:shadow-lg"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </form>
 
-            <form onSubmit={handleSearch} className="flex-1 max-w-xl mx-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <Input
-                  type="search"
-                  placeholder="Поиск товаров..."
-                  className="pl-10 w-full"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
-            </form>
+          {/* Right Actions */}
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon" onClick={() => navigate('/favorites')} title="Избранное" className="hover:text-brand hover:bg-brand/5">
+              <Heart className="w-5 h-5" />
+            </Button>
 
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" onClick={() => navigate('/account/loyalty')}>
-                <Heart className="w-5 h-5" />
-              </Button>
+            {/* Notification Bell (Off/On) - using simple disabled look for 'off' based on screenshot */}
+            <Button variant="ghost" size="icon" title="Уведомления выключены" className="text-gray-400 hover:text-gray-600">
+              <BellOff className="w-5 h-5" />
+            </Button>
 
-              <NotificationCenter />
-
-              {isAuthenticated ? (
-                <div className="flex items-center gap-2">
-                  <Button variant="ghost" onClick={() => navigate('/account')}>
-                    <User className="w-5 h-5 mr-2" />
-                    <span className="hidden lg:inline">{user?.firstName}</span>
-                  </Button>
-                  <Button variant="ghost" size="icon" onClick={handleLogout}>
-                    <LogOut className="w-5 h-5" />
-                  </Button>
-                </div>
-              ) : (
-                <Button variant="ghost" onClick={() => setAuthModalOpen(true)}>
+            {isAuthenticated ? (
+              <div className="flex items-center gap-2 ml-2">
+                <Button variant="ghost" onClick={() => navigate('/account')} className="font-medium hover:text-brand hover:bg-brand/5">
                   <User className="w-5 h-5 mr-2" />
-                  <span>Войти</span>
+                  <span>{user?.firstName}</span>
                 </Button>
-              )}
-            </div>
+              </div>
+            ) : (
+              <Button variant="ghost" onClick={() => setAuthModalOpen(true)} className="ml-2 font-medium hover:text-brand hover:bg-brand/5">
+                <User className="w-5 h-5 mr-2" />
+                <span>Войти</span>
+              </Button>
+            )}
           </div>
-
-          <nav className="flex items-center gap-6 mt-3 pt-3 border-t">
-            <Link to="/catalog" className="text-gray-700 hover:text-brand font-medium transition-colors">
-              Каталог
-            </Link>
-            <Link to="/catalog/produkty" className="text-gray-600 hover:text-brand transition-colors">
-              Продукты
-            </Link>
-            <Link to="/catalog/bytovaya-khimiya" className="text-gray-600 hover:text-brand transition-colors">
-              Бытовая химия
-            </Link>
-            <Link to="/catalog/kosmetika" className="text-gray-600 hover:text-brand transition-colors">
-              Косметика
-            </Link>
-          </nav>
         </div>
       </div>
 
