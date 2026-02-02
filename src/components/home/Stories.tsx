@@ -170,12 +170,12 @@ function StoriesComponent() {
                         onClick={() => openStory(story)}
                         className="flex flex-col items-center gap-1 flex-shrink-0"
                     >
-                        <div className={`p-[3px] rounded-full bg-gradient-to-br ${story.color}`}>
-                            <div className="bg-white p-[2px] rounded-full">
+                        <div className={`w-[70px] h-[70px] p-[3px] rounded-full bg-gradient-to-br ${story.color}`}>
+                            <div className="w-full h-full bg-white p-[2px] rounded-full">
                                 <OptimizedImage
                                     src={story.image}
                                     alt={story.title}
-                                    className="rounded-full border border-gray-100"
+                                    className="w-full h-full rounded-full border border-gray-100"
                                     aspectRatio="1/1"
                                     priority
                                 />
