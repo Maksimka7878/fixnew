@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package, Shield, Truck, Sparkles, Star, Heart } from 'lucide-react';
+import { ArrowRight, Package, Shield, Truck, Sparkles, Star } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useAppStore, useCatalogStore, useAuthStore, useUIStore, useFavoritesStore } from '@/store';
+import { useAppStore, useCatalogStore, useAuthStore, useUIStore } from '@/store';
 import { useMockCatalogApi, useMockMarketingApi } from '@/api/mock';
-import type { Product, Banner } from '@/types';
+import type { Banner } from '@/types';
 import { Stories } from '@/components/home/Stories';
 import { MainBanners } from '@/components/home/MainBanners';
 import { CategoryRow } from '@/components/home/CategoryRow';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { OrganizationSchema, ECommerceSchema } from '@/components/seo/JsonLdSchema';
+import { ProductCard } from '@/components/product/ProductCard';
 
 // Simplified animations for better mobile performance (no transforms)
 const containerVariants: Variants = {
@@ -173,9 +174,9 @@ export function HomePage() {
               initial="hidden"
               animate="show"
             >
-              {products.slice(0, 6).map((product) => (
+              {products.slice(0, 6).map((product, index) => (
                 <motion.div key={product.id} variants={itemVariants} className="flex-shrink-0 w-[160px] md:w-auto">
-                  <ProductCard product={product} />
+                  <ProductCard product={product} index={index} />
                 </motion.div>
               ))}
             </motion.div>
@@ -198,9 +199,9 @@ export function HomePage() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              {products.slice(6, 12).map((product) => (
+              {products.slice(6, 12).map((product, index) => (
                 <motion.div key={product.id} variants={itemVariants} className="flex-shrink-0 w-[160px] md:w-auto">
-                  <ProductCard product={product} />
+                  <ProductCard product={product} index={index + 6} />
                 </motion.div>
               ))}
             </motion.div>
@@ -240,64 +241,4 @@ export function HomePage() {
   );
 }
 
-function ProductCard({ product }: { product: Product }) {
-  const { region } = useAppStore();
-  const { getProductRegionData } = useCatalogStore();
-  const { toggleFavorite, isFavorite } = useFavoritesStore();
-  const regionData = region ? getProductRegionData(product.id, region.id) : null;
-  const isLiked = isFavorite(product.id);
 
-  const handleFavoriteClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleFavorite(product.id);
-  };
-
-  return (
-    <Link to={`/product/${product.id}`}>
-      <Card className={`hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1 active:scale-[0.98] overflow-hidden ${product.outOfStock ? 'opacity-60' : ''}`}>
-        <div className="relative aspect-square bg-gray-100 overflow-hidden">
-          {product.images && product.images[0] ? (
-            <img src={product.images[0].thumbnailUrl} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-4xl">📦</div>
-          )}
-          {/* Favorite Button */}
-          <button
-            onClick={handleFavoriteClick}
-            className="absolute top-2 right-2 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-colors z-10"
-          >
-            <Heart className={`w-4 h-4 transition-colors ${isLiked ? 'text-red-500 fill-red-500' : 'text-gray-400'}`} />
-          </button>
-          {/* Badges */}
-          {product.isNew && (
-            <span className="absolute top-2 left-2 px-2 py-0.5 bg-brand text-white text-[10px] font-medium rounded-full">Новинка</span>
-          )}
-          {product.isBestseller && !product.isNew && (
-            <span className="absolute top-2 left-2 px-2 py-0.5 bg-orange-500 text-white text-[10px] font-medium rounded-full">Хит</span>
-          )}
-          {product.outOfStock && (
-            <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-gray-800 text-white text-[10px] font-medium rounded-full">Нет в наличии</span>
-          )}
-        </div>
-        <CardContent className="p-3">
-          <p className="text-xs text-gray-500 mb-1">{product.sku}</p>
-          <h3 className="text-sm font-medium line-clamp-2 mb-2">{product.name}</h3>
-          {regionData && (
-            <div className="space-y-1">
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="font-bold text-brand">{regionData.price.toLocaleString('ru-RU')} ₽</span>
-                {regionData.oldPrice && <span className="text-xs text-gray-400 line-through">{regionData.oldPrice.toLocaleString('ru-RU')} ₽</span>}
-              </div>
-              {product.cardPrice && (
-                <div className="text-xs text-brand-600 bg-brand-50 px-1.5 py-0.5 rounded inline-block">
-                  {product.cardPrice} ₽ по карте
-                </div>
-              )}
-            </div>
-          )}
-        </CardContent>
-      </Card>
-    </Link>
-  );
-}
