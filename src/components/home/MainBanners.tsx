@@ -68,7 +68,7 @@ export function MainBanners({ banners, isLoading }: MainBannersProps) {
                     onTouchStart={() => setIsPaused(true)}
                     onTouchEnd={() => setIsPaused(false)}
                 >
-                    <div className="relative h-[200px] md:h-[600px]">
+                    <div className="relative h-[200px] md:h-[650px] bg-gray-100">
                         <AnimatePresence initial={false} mode="popLayout">
                             <motion.div
                                 key={current}
@@ -85,7 +85,7 @@ export function MainBanners({ banners, isLoading }: MainBannersProps) {
                                 <OptimizedImage
                                     src={banners[current].image}
                                     alt={banners[current].title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover md:object-contain"
                                     priority={true}
                                 />
                                 {/* Gradient Overlay */}

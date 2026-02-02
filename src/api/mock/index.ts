@@ -29,6 +29,7 @@ const MOCK_BANNERS: Banner[] = [
   { id: 'b2', title: 'Скидки до 50%', subtitle: 'На бытовую химию', image: '/images/products/tide-lifestyle.webp', link: '/catalog/bytovaya-khimiya', linkType: 'internal', position: 'home_main', sortOrder: 2, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
   { id: 'b5', title: 'Весенняя распродажа', subtitle: 'Скидки на декор и посуду', image: '/images/marketing/promo-spring-sale.webp', link: '/catalog/podarki', linkType: 'internal', position: 'home_main', sortOrder: 2.5, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
   { id: 'b3', title: 'Вкусные предложения', subtitle: 'Любимые напитки и закуски', image: 'https://placehold.co/1600x600/e63946/ffffff?text=Coca-Cola+Lifestyle', link: '/catalog/produkty', linkType: 'internal', position: 'home_main', sortOrder: 3, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b6', title: 'Специальное предложение', subtitle: 'Успейте купить', image: '/images/marketing/user-banner.jpg', link: '/catalog', linkType: 'internal', position: 'home_main', sortOrder: 4, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
 ];
 
 const MOCK_ORDERS: Order[] = [
