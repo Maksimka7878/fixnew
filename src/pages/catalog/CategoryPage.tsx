@@ -3,7 +3,7 @@ import { useCatalogStore, useAppStore } from '@/store';
 import { ProductCard } from '@/components/product/ProductCard';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Card, CardContent } from '@/components/ui/card';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useMockCatalogApi } from '@/api/mock';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -34,15 +34,40 @@ function ProductCardSkeleton() {
   );
 }
 
+function PageSkeleton() {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex items-center gap-2 text-sm mb-6">
+        <Skeleton className="h-4 w-16" />
+        <Skeleton className="h-4 w-4" />
+        <Skeleton className="h-4 w-16" />
+        <Skeleton className="h-4 w-4" />
+        <Skeleton className="h-4 w-24" />
+      </div>
+      <Skeleton className="h-9 w-48 mb-8" />
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {Array.from({ length: 10 }).map((_, i) => (
+          <ProductCardSkeleton key={i} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function CategoryPage() {
   const { slug } = useParams<{ slug: string }>();
   const { region } = useAppStore();
   const { categories, products, setCategories, setProducts } = useCatalogStore();
   const { getCategories, getProducts } = useMockCatalogApi();
   const [isLoadingCategories, setIsLoadingCategories] = useState(false);
+  const [isLoadingProducts, setIsLoadingProducts] = useState(false);
 
   const category = categories.find(c => c.slug === slug);
-  const categoryProducts = products.filter(p => p.categoryId === category?.id);
+  const categoryId = category?.id;
+  const categoryProducts = useMemo(
+    () => products.filter(p => p.categoryId === categoryId),
+    [products, categoryId]
+  );
 
   // Load categories if not already loaded
   useEffect(() => {
@@ -57,15 +82,23 @@ export function CategoryPage() {
     }
   }, [categories.length, isLoadingCategories, getCategories, region?.id, setCategories]);
 
+  // Load products when category is found
   useEffect(() => {
-    if (category) {
-      getProducts({ categoryId: category.id }).then(response => {
+    if (categoryId) {
+      setIsLoadingProducts(true);
+      getProducts({ categoryId }).then(response => {
         if (response.success && response.data) {
           setProducts(response.data);
         }
+        setIsLoadingProducts(false);
       });
     }
-  }, [category, getProducts, setProducts]);
+  }, [categoryId, getProducts, setProducts]);
+
+  // Show full page skeleton while categories are loading
+  if (categories.length === 0 || isLoadingCategories) {
+    return <PageSkeleton />;
+  }
 
   if (!category) {
     return (
@@ -77,6 +110,8 @@ export function CategoryPage() {
       </div>
     );
   }
+
+  const isLoading = isLoadingProducts || categoryProducts.length === 0;
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -90,7 +125,7 @@ export function CategoryPage() {
 
       <h1 className="text-3xl font-bold text-gray-900 mb-8">{category.name}</h1>
 
-      {categoryProducts.length === 0 ? (
+      {isLoading ? (
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {Array.from({ length: 10 }).map((_, i) => (
             <ProductCardSkeleton key={i} />
