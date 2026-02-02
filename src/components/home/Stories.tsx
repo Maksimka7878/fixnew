@@ -101,16 +101,16 @@ const mockStories: Story[] = [
     {
         id: '6',
         title: 'Весна',
-        image: '/images/marketing/promo-spring-sale.png',
+        image: '/images/marketing/promo-spring-sale.webp',
         color: 'from-orange-400 to-orange-500',
         slides: [
             {
-                image: '/images/marketing/promo-spring-sale.png',
+                image: '/images/marketing/promo-spring-sale.webp',
                 text: 'Весенняя распродажа',
                 description: 'Скидки до 40% на товары для дома и сада'
             },
             {
-                image: '/images/marketing/news-new-arrivals.png',
+                image: '/images/marketing/news-new-arrivals.webp',
                 text: 'Новый декор',
                 description: 'Создайте уют с нашей новой коллекцией'
             }
