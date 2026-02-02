@@ -1,28 +1,67 @@
-import { useState } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Menu, X, Heart, Bookmark, User, Package, BellOff, ShoppingCart } from 'lucide-react';
+import { Search, Menu, X, Heart, Bookmark, User, Package, BellOff, ShoppingCart, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useAuthStore, useAppStore, useUIStore } from '@/store';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import { useAuthStore, useAppStore, useUIStore, useCartStore } from '@/store';
 import { usePreferredFrameRate } from '@/hooks/usePreferredFrameRate';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useMockCatalogApi } from '@/api/mock';
 import { PWAInstallPrompt } from '@/components/pwa/PWAInstallPrompt';
 import { NotificationCenter } from '@/components/pwa/NotificationCenter';
+import type { Product } from '@/types';
 
 export function Header() {
   const navigate = useNavigate();
   const { user, isAuthenticated } = useAuthStore();
   const { region } = useAppStore();
   const { setRegionModalOpen, setAuthModalOpen, setMobileMenuOpen, isMobileMenuOpen } = useUIStore();
+  const { totalItems } = useCartStore();
   const { durationMultiplier, prefersReducedMotion } = usePreferredFrameRate();
   const [searchQuery, setSearchQuery] = useState('');
   const [showMobileSearch, setShowMobileSearch] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const suggestionsRef = useRef<HTMLDivElement>(null);
+
+  const { getProducts } = useMockCatalogApi();
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+
+  // Load all products for autocomplete
+  useEffect(() => {
+    getProducts({ regionId: region?.id || 'r1' }).then(res => {
+      if (res.success && res.data) setAllProducts(res.data);
+    });
+  }, [getProducts, region?.id]);
+
+  // Live autocomplete suggestions
+  const suggestions = useMemo(() => {
+    if (!debouncedSearchQuery.trim() || debouncedSearchQuery.length < 2) return [];
+    const q = debouncedSearchQuery.toLowerCase();
+    return allProducts
+      .filter(p => p.name.toLowerCase().includes(q))
+      .slice(0, 5);
+  }, [debouncedSearchQuery, allProducts]);
+
+  // Close suggestions on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(e.target as Node)) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
       setShowMobileSearch(false);
+      setShowSuggestions(false);
     }
   };
 
@@ -118,7 +157,7 @@ export function Header() {
                     variant="ghost"
                     size="icon"
                     className="shrink-0 text-gray-500"
-                    onClick={() => setShowMobileSearch(false)}
+                    onClick={() => { setShowMobileSearch(false); setShowSuggestions(false); }}
                   >
                     <X className="w-5 h-5" />
                   </Button>
@@ -127,13 +166,52 @@ export function Header() {
                     placeholder="Поиск товаров..."
                     className="flex-1 bg-gray-50 border-transparent focus:bg-white focus:border-brand/20 transition-all h-10 rounded-xl"
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                      setShowSuggestions(true);
+                    }}
                     autoFocus
                   />
                   <Button type="submit" size="icon" className="bg-brand hover:bg-brand-600 text-white shrink-0 rounded-xl h-10 w-10">
                     <Search className="w-4 h-4" />
                   </Button>
                 </form>
+                {/* Mobile Autocomplete Suggestions */}
+                <AnimatePresence>
+                  {showSuggestions && suggestions.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="mt-2 bg-white rounded-xl shadow-lg border overflow-hidden"
+                    >
+                      {suggestions.map((product) => (
+                        <button
+                          key={product.id}
+                          type="button"
+                          onClick={() => {
+                            navigate(`/product/${product.id}`);
+                            setShowSuggestions(false);
+                            setShowMobileSearch(false);
+                            setSearchQuery('');
+                          }}
+                          className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors text-left"
+                        >
+                          <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                            {product.images?.[0] && (
+                              <OptimizedImage src={product.images[0].thumbnailUrl} alt={product.name} aspectRatio="1/1" />
+                            )}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium truncate">{product.name}</p>
+                            <p className="text-xs text-brand font-bold">{product.basePrice} ₽</p>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-gray-400" />
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
           )}
@@ -166,15 +244,54 @@ export function Header() {
 
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="flex-1 max-w-2xl mx-auto">
-            <div className="relative group">
+            <div className="relative group" ref={suggestionsRef}>
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-brand transition-colors" />
               <Input
                 type="search"
                 placeholder="Поиск товаров..."
                 className="pl-12 w-full h-11 bg-gray-50 border-transparent focus:bg-white focus:border-brand/20 rounded-xl transition-all shadow-sm group-hover:shadow-md focus:shadow-lg"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setShowSuggestions(true);
+                }}
+                onFocus={() => setShowSuggestions(true)}
               />
+              {/* Autocomplete Suggestions Dropdown */}
+              <AnimatePresence>
+                {showSuggestions && suggestions.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute z-50 top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border overflow-hidden"
+                  >
+                    {suggestions.map((product) => (
+                      <button
+                        key={product.id}
+                        type="button"
+                        onClick={() => {
+                          navigate(`/product/${product.id}`);
+                          setShowSuggestions(false);
+                          setSearchQuery('');
+                        }}
+                        className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors text-left"
+                      >
+                        <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                          {product.images?.[0] && (
+                            <OptimizedImage src={product.images[0].thumbnailUrl} alt={product.name} aspectRatio="1/1" />
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium truncate">{product.name}</p>
+                          <p className="text-xs text-brand font-bold">{product.basePrice} ₽</p>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400" />
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </form>
 
@@ -203,6 +320,11 @@ export function Header() {
             <Button variant="ghost" size="icon" onClick={() => navigate('/cart')} title="Корзина" className="hover:text-brand hover:bg-brand/5 relative">
               <div className="relative">
                 <ShoppingCart className="w-6 h-6" />
+                {totalItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] h-[18px] flex items-center justify-center border-2 border-white shadow-sm">
+                    {totalItems > 99 ? '99+' : totalItems}
+                  </span>
+                )}
               </div>
             </Button>
           </div>
