@@ -1,6 +1,6 @@
 import { useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Heart, Plus, Minus } from 'lucide-react';
+import { Heart, Plus, Minus, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Product } from '@/types';
 import { useCartStore, useUserProfileStore } from '@/store';
@@ -95,6 +95,43 @@ function ProductCardComponent({ product, index = 0 }: ProductCardProps) {
                                 className={`w-5 h-5 transition-colors ${isHeart ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}
                             />
                         </motion.button>
+
+                        {/* Quick Add to Cart (Bottom Right on Image) */}
+                        <div className="absolute bottom-3 right-3 z-20" onClick={(e) => e.stopPropagation()}>
+                            {quantity > 0 ? (
+                                <div className="flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full shadow-md px-1 py-0.5">
+                                    <motion.button
+                                        whileTap={{ scale: 0.9 }}
+                                        className="w-8 h-8 flex items-center justify-center text-brand hover:bg-brand/10 rounded-full transition-colors"
+                                        onClick={() => {
+                                            if (quantity > 1) {
+                                                updateQuantity(product.id, quantity - 1);
+                                            } else {
+                                                removeItem(product.id);
+                                            }
+                                        }}
+                                    >
+                                        <Minus className="w-4 h-4" />
+                                    </motion.button>
+                                    <span className="font-bold text-brand text-sm min-w-[20px] text-center">{quantity}</span>
+                                    <motion.button
+                                        whileTap={{ scale: 0.9 }}
+                                        className="w-8 h-8 flex items-center justify-center text-brand hover:bg-brand/10 rounded-full transition-colors"
+                                        onClick={() => addItem(product)}
+                                    >
+                                        <Plus className="w-4 h-4" />
+                                    </motion.button>
+                                </div>
+                            ) : (
+                                <motion.button
+                                    whileTap={{ scale: 0.9 }}
+                                    className="w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center shadow-lg hover:bg-brand-700 transition-colors"
+                                    onClick={handleAddToCart}
+                                >
+                                    <ShoppingCart className="w-5 h-5" />
+                                </motion.button>
+                            )}
+                        </div>
                     </div>
                 </div>
 
