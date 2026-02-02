@@ -3,6 +3,7 @@
  * Polls for admin broadcast messages and displays notifications
  */
 
+import { API_URL } from '@/config';
 import { notificationService } from './notificationService';
 
 interface BroadcastMessage {
@@ -47,8 +48,10 @@ class BroadcastService {
    */
   private async poll() {
     try {
+      if (!API_URL || API_URL.includes('localhost') && window.location.hostname !== 'localhost') return;
+
       const response = await fetch(
-        `http://localhost:3001/api/messages?since=${this.lastPollTime}`
+        `${API_URL}/messages?since=${this.lastPollTime}`
       );
 
       if (!response.ok) {

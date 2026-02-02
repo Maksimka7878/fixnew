@@ -182,7 +182,7 @@
 
   .pt-safe {
     /* Dynamic Island requires more space than regular notch */
-    padding-top: max(env(safe-area-inset-top, 0px), 12px);
+    padding-top: env(safe-area-inset-top, 0px);
   }
 
   .px-safe {
