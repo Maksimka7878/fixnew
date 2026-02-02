@@ -7,37 +7,37 @@ const categories = [
     {
         id: 'gifts',
         label: 'Подарки любимым',
-        image: '/images/categories/gifts.png',
+        image: '/images/categories/gifts.webp',
         link: '/catalog/podarki',
     },
     {
         id: 'products',
         label: 'Продукты',
-        image: '/images/categories/food.png',
+        image: '/images/categories/food.webp',
         link: '/catalog/produkty',
     },
     {
         id: 'cleaning',
         label: 'Бытовая химия',
-        image: '/images/categories/cleaning.png',
+        image: '/images/categories/cleaning.webp',
         link: '/catalog/bytovaya-khimiya',
     },
     {
         id: 'home',
         label: 'Для дома',
-        image: '/images/categories/home.png',
+        image: '/images/categories/home.webp',
         link: '/catalog/dom-i-sad',
     },
     {
         id: 'cosmetics',
         label: 'Косметика',
-        image: '/images/categories/cosmetics.png',
+        image: '/images/categories/cosmetics.webp',
         link: '/catalog/kosmetika',
     },
     {
         id: 'sales',
         label: 'Акции',
-        image: '/images/categories/sales.png',
+        image: '/images/categories/sales.webp',
         link: '/catalog/aktsii',
     }
 ];

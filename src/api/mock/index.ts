@@ -24,9 +24,9 @@ const MOCK_PROMOTIONS: Promotion[] = [
 ];
 
 const MOCK_BANNERS: Banner[] = [
-  { id: 'b1', title: 'Новые поступления', subtitle: 'Более 1000 новых товаров', image: '/images/products/shampoo-lifestyle.png', link: '/catalog', linkType: 'internal', position: 'home_main', sortOrder: 1, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
-  { id: 'b2', title: 'Скидки до 50%', subtitle: 'На бытовую химию', image: '/images/products/tide-lifestyle.png', link: '/catalog/bytovaya-khimiya', linkType: 'internal', position: 'home_main', sortOrder: 2, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
-  { id: 'b3', title: 'Вкусные предложения', subtitle: 'Любимые напитки и закуски', image: '/images/products/cola-lifestyle.png', link: '/catalog/produkty', linkType: 'internal', position: 'home_main', sortOrder: 3, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b1', title: 'Новые поступления', subtitle: 'Более 1000 новых товаров', image: '/images/products/shampoo-lifestyle.webp', link: '/catalog', linkType: 'internal', position: 'home_main', sortOrder: 1, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b2', title: 'Скидки до 50%', subtitle: 'На бытовую химию', image: '/images/products/tide-lifestyle.webp', link: '/catalog/bytovaya-khimiya', linkType: 'internal', position: 'home_main', sortOrder: 2, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
+  { id: 'b3', title: 'Вкусные предложения', subtitle: 'Любимые напитки и закуски', image: '/images/products/cola-lifestyle.webp', link: '/catalog/produkty', linkType: 'internal', position: 'home_main', sortOrder: 3, regionIds: ['r1', 'r2', 'r3'], startDate: '2024-01-01', endDate: '2024-12-31', isActive: true },
 ];
 
 const MOCK_ORDERS: Order[] = [
@@ -98,21 +98,21 @@ export function useMockCatalogApi() {
 
   const getRegions = useCallback(async (): Promise<ApiResponse<Region[]>> => {
     setIsLoading(true);
-    await delay(500);
+    await delay(100);
     setIsLoading(false);
     return { success: true, data: MOCK_REGIONS };
   }, []);
 
   const getCategories = useCallback(async (regionId?: string): Promise<ApiResponse<Category[]>> => {
     setIsLoading(true);
-    await delay(600);
+    await delay(150);
     setIsLoading(false);
     return { success: true, data: regionId ? MOCK_CATEGORIES.filter((c) => c.regionIds.includes(regionId)) : MOCK_CATEGORIES };
   }, []);
 
   const getProducts = useCallback(async (params?: { regionId?: string; categoryId?: string; search?: string }): Promise<ApiResponse<Product[]>> => {
     setIsLoading(true);
-    await delay(800);
+    await delay(200);
     let products = [...MOCK_PRODUCTS];
     if (params?.categoryId) {
       products = products.filter(p => p.categoryId === params.categoryId);
@@ -127,7 +127,7 @@ export function useMockCatalogApi() {
 
   const getProductBySlug = useCallback(async (slug: string): Promise<ApiResponse<Product>> => {
     setIsLoading(true);
-    await delay(600);
+    await delay(150);
     const product = MOCK_PRODUCTS.find(p => p.slug === slug);
     setIsLoading(false);
     if (product) {
@@ -138,7 +138,7 @@ export function useMockCatalogApi() {
 
   const searchProducts = useCallback(async (query: string): Promise<ApiResponse<Product[]>> => {
     setIsLoading(true);
-    await delay(500);
+    await delay(150);
     const searchLower = query.toLowerCase();
     const products = MOCK_PRODUCTS.filter(p =>
       p.name.toLowerCase().includes(searchLower) ||
@@ -150,7 +150,7 @@ export function useMockCatalogApi() {
 
   const scanBarcode = useCallback(async (barcode: string, _regionId: string): Promise<ApiResponse<ScanResult>> => {
     setIsLoading(true);
-    await delay(1000);
+    await delay(300);
     setIsLoading(false);
     const product = MOCK_PRODUCTS.find((p) => p.barcode === barcode);
     return { success: true, data: { barcode, format: 'EAN-13', product, found: !!product } };
@@ -167,14 +167,14 @@ export function useMockMarketingApi() {
 
   const getPromotions = useCallback(async (regionId?: string): Promise<ApiResponse<Promotion[]>> => {
     setIsLoading(true);
-    await delay(600);
+    await delay(150);
     setIsLoading(false);
     return { success: true, data: regionId ? MOCK_PROMOTIONS.filter((p) => p.regionIds.includes(regionId)) : MOCK_PROMOTIONS };
   }, []);
 
   const getBanners = useCallback(async (params: { position: Banner['position']; regionId: string }): Promise<ApiResponse<Banner[]>> => {
     setIsLoading(true);
-    await delay(500);
+    await delay(100);
     setIsLoading(false);
     return { success: true, data: MOCK_BANNERS.filter((b) => b.position === params.position && b.regionIds.includes(params.regionId)) };
   }, []);
@@ -190,7 +190,7 @@ export function useMockOrdersApi() {
 
   const createOrder = useCallback(async (_orderData: any): Promise<ApiResponse<Order>> => {
     setIsLoading(true);
-    await delay(1500);
+    await delay(400);
     const order: Order = { id: 'o1', orderNumber: 'FP-001', userId: 'u1', status: 'new', items: [], delivery: { method: 'pickup', cost: 0, estimatedDate: new Date().toISOString() }, payment: { method: 'card', status: 'pending' }, summary: { subtotal: 1000, deliveryCost: 0, discount: 0, bonusUsed: 0, total: 1000 }, bonuses: { earned: 50, used: 0, rate: 0.05 }, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
     setIsLoading(false);
     return { success: true, data: order };
@@ -198,7 +198,7 @@ export function useMockOrdersApi() {
 
   const getOrders = useCallback(async (_userId: string): Promise<ApiResponse<Order[]>> => {
     setIsLoading(true);
-    await delay(800);
+    await delay(200);
     setIsLoading(false);
     return { success: true, data: MOCK_ORDERS };
   }, []);
@@ -214,7 +214,7 @@ export function useMockLoyaltyApi() {
 
   const getLoyaltyInfo = useCallback(async (_userId: string): Promise<ApiResponse<LoyaltyInfo>> => {
     setIsLoading(true);
-    await delay(600);
+    await delay(150);
     setIsLoading(false);
     const info: LoyaltyInfo = {
       cardNumber: '1234 5678 9012 3456',
@@ -227,7 +227,7 @@ export function useMockLoyaltyApi() {
 
   const getLoyaltyHistory = useCallback(async (_userId: string): Promise<ApiResponse<LoyaltyTransaction[]>> => {
     setIsLoading(true);
-    await delay(500);
+    await delay(150);
     const transactions: LoyaltyTransaction[] = [
       { id: 't1', type: 'earn', points: 50, description: 'Начисление за заказ #FP-2024-001', createdAt: '2024-01-15T10:00:00Z' },
       { id: 't2', type: 'earn', points: 30, description: 'Начисление за заказ #FP-2024-002', createdAt: '2024-01-17T12:00:00Z' },
