@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { useCatalogStore } from '@/store';
+import { useCatalogStore, useAppStore } from '@/store';
 import { ProductCard } from '@/components/product/ProductCard';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Card, CardContent } from '@/components/ui/card';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useMockCatalogApi } from '@/api/mock';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -36,11 +36,26 @@ function ProductCardSkeleton() {
 
 export function CategoryPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { categories, products, setProducts } = useCatalogStore();
-  const { getProducts } = useMockCatalogApi();
+  const { region } = useAppStore();
+  const { categories, products, setCategories, setProducts } = useCatalogStore();
+  const { getCategories, getProducts } = useMockCatalogApi();
+  const [isLoadingCategories, setIsLoadingCategories] = useState(false);
 
   const category = categories.find(c => c.slug === slug);
   const categoryProducts = products.filter(p => p.categoryId === category?.id);
+
+  // Load categories if not already loaded
+  useEffect(() => {
+    if (categories.length === 0 && !isLoadingCategories) {
+      setIsLoadingCategories(true);
+      getCategories(region?.id).then(response => {
+        if (response.success && response.data) {
+          setCategories(response.data);
+        }
+        setIsLoadingCategories(false);
+      });
+    }
+  }, [categories.length, isLoadingCategories, getCategories, region?.id, setCategories]);
 
   useEffect(() => {
     if (category) {
