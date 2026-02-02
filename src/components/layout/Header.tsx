@@ -202,7 +202,7 @@ export function Header() {
 
             <Button variant="ghost" size="icon" onClick={() => navigate('/cart')} title="Корзина" className="hover:text-brand hover:bg-brand/5 relative">
               <div className="relative">
-                <Package className="w-6 h-6" /> {/* Using Package as Cart conceptual placeholder if ShoppingCart not imported, checking imports... it's not. Using Package for now or adding ShoppingCart */}
+                <ShoppingCart className="w-6 h-6" />
               </div>
             </Button>
           </div>
