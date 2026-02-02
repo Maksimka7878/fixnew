@@ -52,7 +52,7 @@ export function MainBanners({ banners, isLoading }: MainBannersProps) {
 
     if (isLoading) {
         return (
-            <div className="w-full h-[200px] md:h-[400px] bg-gray-200 animate-pulse rounded-2xl" />
+            <div className="w-full h-[200px] md:h-[600px] bg-gray-200 animate-pulse rounded-2xl" />
         );
     }
 
@@ -68,7 +68,7 @@ export function MainBanners({ banners, isLoading }: MainBannersProps) {
                     onTouchStart={() => setIsPaused(true)}
                     onTouchEnd={() => setIsPaused(false)}
                 >
-                    <div className="relative h-[200px] md:h-[400px]">
+                    <div className="relative h-[200px] md:h-[600px]">
                         <AnimatePresence initial={false} mode="popLayout">
                             <motion.div
                                 key={current}
@@ -85,7 +85,7 @@ export function MainBanners({ banners, isLoading }: MainBannersProps) {
                                 <OptimizedImage
                                     src={banners[current].image}
                                     alt={banners[current].title}
-                                    className="w-full h-full"
+                                    className="w-full h-full object-cover"
                                     priority={true}
                                 />
                                 {/* Gradient Overlay */}
