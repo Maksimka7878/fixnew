@@ -210,19 +210,29 @@ export function Header() {
 
         {/* Secondary Navigation */}
         <div className="container mx-auto px-4 pb-0">
-          <nav className="flex items-center gap-8 border-t py-3">
-            <Link to="/catalog" className="text-gray-800 hover:text-brand font-medium transition-colors">
+          <nav className="flex items-center gap-4 lg:gap-8 border-t py-3 overflow-x-auto scrollbar-hide">
+            <Link to="/catalog" className="text-gray-800 hover:text-brand font-bold transition-colors whitespace-nowrap">
               Каталог
             </Link>
-            <Link to="/catalog/produkty" className="text-gray-600 hover:text-brand transition-colors">
-              Продукты
-            </Link>
-            <Link to="/catalog/bytovaya-khimiya" className="text-gray-600 hover:text-brand transition-colors">
-              Бытовая химия
-            </Link>
-            <Link to="/catalog/kosmetika" className="text-gray-600 hover:text-brand transition-colors">
-              Косметика
-            </Link>
+            {[
+              { to: '/catalog/produkty', label: 'Продукты' },
+              { to: '/catalog/bytovaya-khimiya', label: 'Бытовая химия' },
+              { to: '/catalog/kosmetika', label: 'Косметика' },
+              { to: '/catalog/dom-i-sad', label: 'Дом и сад' },
+              { to: '/catalog/igrushki', label: 'Игрушки' },
+              { to: '/catalog/tekstil', label: 'Текстиль' },
+              { to: '/catalog/kantstovary', label: 'Канцтовары' },
+              { to: '/catalog/podarki', label: 'Подарки' },
+              { to: '/catalog/aktsii', label: 'Акции' },
+            ].map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="text-gray-600 hover:text-brand transition-colors whitespace-nowrap text-sm lg:text-base"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
