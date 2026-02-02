@@ -12,7 +12,7 @@ import { NotificationCenter } from '@/components/pwa/NotificationCenter';
 
 export function Header() {
   const navigate = useNavigate();
-  const { user, isAuthenticated, logout } = useAuthStore();
+  const { user, isAuthenticated } = useAuthStore();
   const { region } = useAppStore();
   const { setRegionModalOpen, setAuthModalOpen, setMobileMenuOpen, isMobileMenuOpen } = useUIStore();
   const { durationMultiplier, prefersReducedMotion } = usePreferredFrameRate();
@@ -25,12 +25,6 @@ export function Header() {
       navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
       setShowMobileSearch(false);
     }
-  };
-
-  const handleLogout = () => {
-    logout();
-    toast.success('Вы вышли из системы');
-    navigate('/');
   };
 
   return (
