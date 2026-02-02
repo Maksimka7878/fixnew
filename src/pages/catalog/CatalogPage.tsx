@@ -110,12 +110,12 @@ export function CatalogPage() {
             {rootCategories.map((category) => (
               <motion.div key={category.id} variants={itemVariants} className="flex justify-center">
                 <Link to={`/catalog/${category.slug}`} className="flex flex-col items-center gap-2 group w-full max-w-[100px]">
-                  <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md group-active:scale-95 ${category.color || 'bg-gray-100'}`}>
+                  <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md group-active:scale-95 overflow-hidden ${category.color || 'bg-gray-100'}`}>
                     {category.image ? (
                       <img
                         src={category.image}
                         alt={category.name}
-                        className="w-4/5 h-4/5 object-contain drop-shadow-md"
+                        className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-300"
                       />
                     ) : (
                       <span className="text-3xl">📦</span>
