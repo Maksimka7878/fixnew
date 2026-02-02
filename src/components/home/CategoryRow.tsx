@@ -14,7 +14,7 @@ const categories = [
         id: 'products',
         label: 'Продукты',
         image: '/images/categories/food.png',
-        link: '/catalog/products',
+        link: '/catalog/produkty',
     },
     {
         id: 'cleaning',
@@ -26,13 +26,13 @@ const categories = [
         id: 'home',
         label: 'Для дома',
         image: '/images/categories/home.png',
-        link: '/catalog/home',
+        link: '/catalog/dom-i-sad',
     },
     {
         id: 'cosmetics',
         label: 'Косметика',
         image: '/images/categories/cosmetics.png',
-        link: '/catalog/cosmetics',
+        link: '/catalog/kosmetika',
     },
     {
         id: 'sales',
