@@ -108,35 +108,41 @@ export function Header() {
         </div>
 
         {/* Mobile Search Overlay */}
+        {/* Mobile Search Overlay */}
         <AnimatePresence>
           {showMobileSearch && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute inset-x-0 top-0 bg-white z-50 p-3 shadow-lg"
+              key="mobile-search-bar"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="overflow-hidden bg-white border-b relative z-40"
             >
-              <form onSubmit={handleSearch} className="flex items-center gap-2">
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setShowMobileSearch(false)}
-                >
-                  <X className="w-5 h-5" />
-                </Button>
-                <Input
-                  type="search"
-                  placeholder="Поиск товаров..."
-                  className="flex-1"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  autoFocus
-                />
-                <Button type="submit" className="bg-brand hover:bg-brand-600">
-                  <Search className="w-4 h-4" />
-                </Button>
-              </form>
+              <div className="p-3">
+                <form onSubmit={handleSearch} className="flex items-center gap-2">
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    className="shrink-0 text-gray-500"
+                    onClick={() => setShowMobileSearch(false)}
+                  >
+                    <X className="w-5 h-5" />
+                  </Button>
+                  <Input
+                    type="search"
+                    placeholder="Поиск товаров..."
+                    className="flex-1 bg-gray-50 border-transparent focus:bg-white focus:border-brand/20 transition-all h-10 rounded-xl"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    autoFocus
+                  />
+                  <Button type="submit" size="icon" className="bg-brand hover:bg-brand-600 text-white shrink-0 rounded-xl h-10 w-10">
+                    <Search className="w-4 h-4" />
+                  </Button>
+                </form>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
